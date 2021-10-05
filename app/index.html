@@ -16,13 +16,27 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+h2, .areaHighlight {
+  color: #206095;
+  margin-bottom:-10px;
+}
+
+.indicatorValues {
+  font-weight: bold;
+  font-size:19px;
+}
+
+.bar-label {
+  margin-bottom:0px;
+}
+
 #dropdown {
   position: relative;
-  height: auto;
+  height: 170px;
   max-width: 700px;
   background-color: #dee7ef;
   /* width: 100%; */
-  margin-top: 25px;
+  /* margin-top: 25px; */
   padding-top: 5px;
   padding-bottom: 30px;
   padding-left:15px;
@@ -38,6 +52,12 @@ body {
 
 #label {
 	font-weight:bold;
+
+}
+
+#plot {
+  height:600px;
+  overflow: scroll;
 }
 
 .axis path,
@@ -54,7 +74,12 @@ body {
 .axis text, #xaxislabel {
   font-family: 'Open Sans', sans-serif;
   fill: rgb(102,102,102);
-  font-size:16px;
+  font-size:14px;
+}
+
+.label tspan {
+  font-weight:bold;
+
 }
 
 .cells path {
@@ -99,7 +124,7 @@ body {
 
 .label {
 	white-space: nowrap;
-	font-size: 16px;
+	font-size: 14px;
 	color: #333;
 	font-weight: normal;
 	font-family: "Open Sans", Helvetica, sans-serif;
@@ -267,9 +292,10 @@ a {
 
 @media (min-width: 600px) {
   #map {
-    height: 280px;
+    height: 200px;
     width: 100%;
     max-width: 800px;
+    border: 2px solid #206095;
   }
 }
 
@@ -281,6 +307,26 @@ a {
 }
 
 
+/* table styling */
+
+#postable th {
+  background-color: #0a6060;
+  color: #fff;
+}
+
+
+#negtable th {
+  background-color: #d13135;
+  color: #fff;
+}
+
+tr {
+  height:35px;
+}
+
+.numberCol {
+  text-align: right;
+}
 /* Bootstrap Grid */
 
     .row:before,
@@ -296,17 +342,26 @@ a {
     .row {
       margin-right: 0px;
       margin-left: 0px;
+      margin-bottom:30px;
     }
 
+    .col-sm-2,
+    .col-sm-3,
     .col-sm-4,
     .col-sm-6,
     .col-sm-8,
+    .col-xs-4,
     .col-xs-12,
     .col-sm-12 {
       position: relative;
       min-height: 1px;
       /* padding-right: 15px;
       padding-left: 15px; */
+    }
+
+    .col-xs-4 {
+      float: left;
+      width: 33.33333333%;
     }
 
     .col-xs-12 {
@@ -324,7 +379,8 @@ a {
 
       .col-sm-8 {
         float: left;
-        width: 66.66666667%;
+        margin-right: 15px;
+        width: calc(66.66666667% - 15px);
       }
 
       .col-sm-6 {
@@ -335,6 +391,16 @@ a {
       .col-sm-4 {
         float: left;
         width: 33.33333333%;
+      }
+
+      .col-sm-3 {
+        float: left;
+        width: 25%;
+      }
+
+      .col-sm-2 {
+        float: left;
+        width: 16.66666666%;
       }
 
       .col-sm-pull-4 {
@@ -358,8 +424,8 @@ a {
   <div class="row">
     <div class="col-sm-8">
       <div id="dropdown">
-        <h2>Select a primary area</h2>
-        <p>Select an area within England and Wales</p>
+        <h2>Select an initial area</h2>
+        <p>Choose from local authorities within England and Wales</p>
       </div>
     </div>
     <div class="col-sm-4">
@@ -369,26 +435,31 @@ a {
   </div>
 
   <div class="row">
-    <div class="col-sm-12 col-xs-12" id="stackedBar">
-      <div>Row for stackedbar</div>
+    <div class="col-sm-12 col-xs-12" id="iconArray">
+      <h3 id="measuresLabel">Distribution of measures</h3>
     </div>
   </div>
 
 
   <div class="row">
+    <h3 id="standoutLabel">Stand out measures</h3>
     <div class="col-sm-6 col-xs-12" id="postable">
     </div>
     <div class="col-sm-6 col-xs-12" id="negtable">
     </div>
   </div>
 
-  <div id="info">
+  <div class="row">
+    <h3 id="measuresLabel">Explore all measures</h3>
+    <div id="info">
+
+    </div>
+    <div id="legend"></div>
+    <div id="plot">
+    	<svg width="100%"></svg>
+    </div>
+    <div id="source"></div>
   </div>
-  <div id="legend"></div>
-  <div>
-  	<svg width="100%"></svg>
-  </div>
-  <div id="source"></div>
   <h6 class="">Download this chart</h6>
   <a class="btn btn--primary" href="image.png" download>Image</a>
   <a class="btn btn--primary" title="Download as csv" href="datadownload.csv" target="_blank">.csv</a>
@@ -403,6 +474,7 @@ a {
   <script src="../lib/topojson.v2.min.js"></script>
   <script src='../lib/mapbox-gl.js'></script>
   <script src='../lib/turf.min.js'></script>
+  <script src='../lib/d3-iconarray.js'></script>
 
   <!-- <script src="../lib/jitter.js"></script> -->
 
@@ -418,13 +490,19 @@ a {
 
     clicked = false;
 
-  	var svg = d3.select("svg"),
-  		margin = {top: 23, right: 12, bottom: 20, left: 190},
+  	var svg = d3.select("svg");
 
-  		svgwidth =  parseInt(svg.style("width"));
-      heightper = dvc.essential.heightperstrip;
+    svgwidth =  parseInt(svg.style("width"));
 
-      heightper = heightper;
+
+    if(svgwidth < dvc.optional.mobileBreakpoint) {
+  		  margin = {top: 23, right: 12, bottom: 20, left: 20};
+        heightper = dvc.essential.heightperstrip;
+    } else {
+        margin = {top: 23, right: 12, bottom: 20, left: 400};
+        heightper = dvc.essential.heightperstrip/2;
+    }
+
   		width = svgwidth - margin.left - margin.right;
 
       //get unique groups
@@ -471,89 +549,87 @@ a {
           d3.selectAll(".cellsselected").classed("cellsselected",false);
         });
 
-      console.log(groupeddata[j])
-
-  	  // var simulation = d3.forceSimulation(groupeddata[j])
-  		//   .force("x", d3.forceX(function(d) { return x(d.value); }).strength(2))
-  		//   .force("y", d3.forceY(heightper / 2))
-  		//   .force("collide", d3.forceCollide(dvc.essential.dotradius))
-  		//   .stop();
-      //
-  	  // for (var i = 0; i < 120; ++i) simulation.tick();
 
   	  if(svgwidth < dvc.optional.mobileBreakpoint) {
   		  numberticks = dvc.optional.x_num_ticks_sm_md[0];
+
+        g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)+5).attr("x",-margin.left)
+
+        var cell = g.append("g");
+
+        cell.append("rect")
+        .attr("x",x(x.domain()[0]))
+        .attr("width",x(x.domain()[1]) - x(x.domain()[0]))
+        .attr("y",10 + (heightper/2))
+        .attr("height",(heightper/2)-20)
+        .attr("fill","#d9ebfb")
+        .attr("opacity",0.5)
+
+        cell.selectAll(".circles")
+          .data(groupeddata[j])
+          .enter()
+          .append("circle")
+          .attr("class", "cells")
+          .attr("r", dvc.essential.dotradius)
+          .attr("cx", function(d) {return x(d.value); })
+          .attr("cy", function(d) { return (heightper/2) + Math.random()*(heightper/4) + heightper/8; })
+          .attr("class", function(d,i) { return "cell " + "cellgroup"+d.unique.replace(/[, ]+/g, "").trim()})
+          .attr("fill", dvc.essential.colour_palette[0])
+          .attr("opacity",0.7)
+          .attr("pointer-events","all")
+          .on("mouseover", function(d,i) {
+            pathidstr = d3.select(this).attr("class");
+            pathgroup = pathidstr.split(" ")[1];
+            //console.log(pathgroup);
+            //d3.selectAll(".cell").classed("cellsselected",false);
+            d3.selectAll(".cellsselected").classed("cellsselected",false);
+            d3.selectAll("." + pathgroup).classed("cellsselected",true).raise();
+          })
+
+            d3.select("#info").html("");
+            $("#dropselect").val("").trigger("chosen:updated");
+
+
   	  } else {
   		  numberticks = dvc.optional.x_num_ticks_sm_md[1];
+
+        g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)+5).attr("x",-margin.left)
+
+        var cell = g.append("g");
+
+        cell.append("rect")
+        .attr("x",x(x.domain()[0]))
+        .attr("width",x(x.domain()[1]) - x(x.domain()[0]))
+        .attr("y",10)
+        .attr("height",heightper-20)
+        .attr("fill","#d9ebfb")
+        .attr("opacity",0.5)
+
+        cell.selectAll(".circles")
+          .data(groupeddata[j])
+          .enter()
+          .append("circle")
+          .attr("class", "cells")
+          .attr("r", dvc.essential.dotradius)
+          .attr("cx", function(d) {return x(d.value); })
+          .attr("cy", function(d) { return Math.random()*(heightper/2) + heightper/4; })
+          .attr("class", function(d,i) { return "cell " + "cellgroup"+d.unique.replace(/[, ]+/g, "").trim()})
+          .attr("fill", dvc.essential.colour_palette[0])
+          .attr("opacity",0.7)
+          .attr("pointer-events","all")
+          .on("mouseover", function(d,i) {
+            pathidstr = d3.select(this).attr("class");
+            pathgroup = pathidstr.split(" ")[1];
+            //console.log(pathgroup);
+            //d3.selectAll(".cell").classed("cellsselected",false);
+            d3.selectAll(".cellsselected").classed("cellsselected",false);
+            d3.selectAll("." + pathgroup).classed("cellsselected",true).raise();
+          })
+
+            d3.select("#info").html("");
+            $("#dropselect").val("").trigger("chosen:updated");
+
   	  }
-
-
-      g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)+5).attr("x",-margin.left)
-
-      var cell = g.append("g");
-
-      cell.append("rect")
-      .attr("x",x(x.domain()[0]))
-      .attr("width",x(x.domain()[1]) - x(x.domain()[0]))
-      .attr("y",10)
-      .attr("height",heightper-20)
-      .attr("fill","#d9ebfb")
-      .attr("opacity",0.5)
-
-      cell.selectAll(".circles")
-        .data(groupeddata[j])
-        .enter()
-        .append("circle")
-  		  .attr("class", "cells")
-  		  .attr("r", dvc.essential.dotradius)
-  		  .attr("cx", function(d) {return x(d.value); })
-  		  .attr("cy", function(d) { return Math.random()*(heightper/2) + heightper/4; })
-  		  .attr("class", function(d,i) { return "cell " + "cellgroup"+d.unique.replace(/[, ]+/g, "").trim()})
-  		  .attr("fill", dvc.essential.colour_palette[0])
-        .attr("opacity",0.7)
-        .attr("pointer-events","all")
-        .on("mouseover", function(d,i) {
-          pathidstr = d3.select(this).attr("class");
-          pathgroup = pathidstr.split(" ")[1];
-          //console.log(pathgroup);
-          //d3.selectAll(".cell").classed("cellsselected",false);
-          d3.selectAll(".cellsselected").classed("cellsselected",false);
-          d3.selectAll("." + pathgroup).classed("cellsselected",true).raise();
-        })
-        // .on("mouseout", function(d,i) {
-        //   //d3.selectAll(".cellsselected").classed("cellsselected",false);
-        // });
-
-  	  // cell.append("path")
-  		//   .attr("d", function(d) { return "M" + d.join("L") + "Z"; })
-      //   .attr("class", function(d,i) { return "path" + (runningtotal + i)+ " "+d.data.group.replace(/[, ]+/g, "").trim()})
-      //   .on("mouseover", function(d,i) {
-      //     pathidstr = d3.select(this).attr("class");
-      //     pathgroup = pathidstr.split(" ")[1];
-      //     pathid=pathidstr.split(" ")[0].substr(4)
-      //
-  		// 	  changetext(d.data.value, d.data.group);
-  		// 	  $("#dropselect").val(pathgroup).trigger("chosen:updated");
-      //     d3.selectAll(".cell").classed("notselected",true)
-  		// 	  d3.select(".cell" + pathid).classed("cellsselected",true)
-  		//   })
-  		//   .on("mouseout", function(d,i) {
-      //     pathidstr = d3.select(this).attr("class");
-      //     pathid = +pathidstr.substr(4);
-
-  			  d3.select("#info").html("");
-          $("#dropselect").val("").trigger("chosen:updated");
-  			  //d3.selectAll(".cell").classed("cellsselected",false)
-          //d3.selectAll(".cell").classed("notselected",false)
-
-  			  // if(clicked == true) {
-  				//  changetext(d.data.value, d.data.unique)
-          //
-          //   $("#dropselect").val("id" + pathid).trigger("chosen:updated");
-  				//   d3.select(".cell" + pathid).classed("cellsselected",true)
-          //
-  			  // }
-  		  //})
 
 
         if(j==0) {
@@ -652,12 +728,12 @@ a {
         							d3.selectAll(".cells path").style("pointer-events","none")
 
         							dropcode = $('#dropselect').val();
-                      console.log(dropcode)
+                      dropname = $('#dropselect option:selected').text();
                       dropcodeid = +dropcode.substr(2);
 
                       zoomToArea(dropcode);
-                      updateTable(dropcode);
-                      createStackedBar(dropcode);
+                      updateTable(dropcode, dropname);
+                      createiconArray(dropcode, dropname);
 
                       d3.selectAll(".cell").classed("notselected",true)
         							d3.selectAll(".cellgroup" + dropcode.replace(/[, ]+/g, "").trim()).classed("cellspermselected", true).raise();
@@ -758,7 +834,7 @@ function makeMap () {
 		  container: 'map', // container id
 		  style: 'data/style.json', //stylesheet location //includes key for API
 		  center: [-2.5, 54], // starting position
-		  minZoom: 3.5,//
+		  minZoom: 2,//
 		  zoom: 4.5, // starting zoom
 		  maxZoom: 13, //
 		  attributionControl: false //
@@ -849,7 +925,7 @@ function zoomToArea(code) {
   specific = turf.extent(specificpolygon[0].geometry);
 
   map.fitBounds([[specific[0],specific[1]], [specific[2], specific[3]]], {
-      padding: {top: 30, bottom:30, left: 30, right: 30}
+      padding: {top: 30, bottom:30, left: 30, right: 30}, animate: false
   });
 
 }
@@ -866,25 +942,27 @@ function makeTable () {
 
 /* Build basic table skeleton */
 
-postable = d3.select("#postable").append("table");
+postable = d3.select("#postable").append("table").attr("width","95%");
 
 posheadertable = postable.append("tr");
 
-posheadertable.append("th").text("Indicator");
-posheadertable.append("th").text("Value");
+posheadertable.append("th").attr("width","70%").text("Postive indicators");
+posheadertable.append("th").attr("width","30%").text("Value");
 
-negtable = d3.select("#negtable").append("table");
+negtable = d3.select("#negtable").append("table").attr("width","95%");
 
 negheadertable = negtable.append("tr");
 
-negheadertable.append("th").text("Indicator");
-negheadertable.append("th").text("Value");
+negheadertable.append("th").attr("width","70%").text("Negative indicators");
+negheadertable.append("th").attr("width","30%").text("Value");
 
 
 }
 
 
-function updateTable (code) {
+function updateTable (code, name) {
+
+d3.select("#standoutLabel").html("Stand out measures for <span class='areaHighlight'>" + name + "</span>");
 
 /* Delete existing rows */
 
@@ -898,12 +976,21 @@ PosFilteredData = graphic_data.filter(function(d) {
   }
 });
 
+if(PosFilteredData.length == 0) {
+
+  tablelines = postable.append("tr").attr("class","tablelines");
+
+  tablelines.append("td").text("No stand out indicators");
+  tablelines.append("td").attr("class","numberCol").text("");
+
+}
+
 PosFilteredData.forEach(function(d){
 
   tablelines = postable.append("tr").attr("class","tablelines");
 
   tablelines.append("td").text(d.id);
-  tablelines.append("td").text(d.real);
+  tablelines.append("td").attr("class","numberCol").text(d.real);
 
 
 })
@@ -915,12 +1002,21 @@ NegFilteredData = graphic_data.filter(function(d) {
   }
 });
 
+if(NegFilteredData.length == 0) {
+
+  tablelines = negtable.append("tr").attr("class","tablelines");
+
+  tablelines.append("td").text("No stand out indicators");
+  tablelines.append("td").attr("class","numberCol").text("");
+
+}
+
 NegFilteredData.forEach(function(d){
 
   tablelines = negtable.append("tr").attr("class","tablelines");
 
   tablelines.append("td").text(d.id);
-  tablelines.append("td").text(d.real);
+  tablelines.append("td").attr("class","numberCol").text(d.real);
 
 
 })
@@ -930,9 +1026,9 @@ NegFilteredData.forEach(function(d){
 
 /*** END OF Table Code ***/
 
-/*** Stacked Bar Code ***/
+/*** Icon Array Bar Code ***/
 
-function createStackedBar (code) {
+function createiconArray (code, dropname) {
 
   areaIndicators = graphic_data.filter(function(d) {
     if(d['unique'] == code) {
@@ -940,27 +1036,150 @@ function createStackedBar (code) {
     }
   });
 
-  console.log(areaIndicators)
+  console.log(areaIndicators);
 
-  positiveIndictors = areaIndicators.filter(function(d) {
+
+
+  middleIndicators = areaIndicators.filter(function(d) {
+    if(d['value'] >= (dvc.essential.threshold*-1) && d['value'] <= (dvc.essential.threshold)) {
+      return d;
+    }
+  });
+
+  middleIndicatorsObj = {"group": "Neutral" , "value": middleIndicators.length};
+
+  console.log(middleIndicatorsObj);
+
+  positiveIndicators = areaIndicators.filter(function(d) {
     if(d['value'] > (dvc.essential.threshold)) {
       return d;
     }
   });
 
-  negativeIndictors = areaIndicators.filter(function(d) {
+  postiveIndicatorsObj = {"group": "Positive" , "value": positiveIndicators.length};
+
+  negativeIndicators = areaIndicators.filter(function(d) {
     if(d['value'] < (dvc.essential.threshold*-1)) {
       return d;
     }
   });
 
-  d3.select("#stackedBar").selectAll(".dummytext").remove();
+  negativeIndicatorsObj = {"group": "Negative" , "value": negativeIndicators.length};
 
-  d3.select("#stackedBar").append("div").attr("class","dummytext").text(positiveIndictors.length + " Positive indicators");
-  d3.select("#stackedBar").append("div").attr("class","dummytext").text((areaIndicators.length - positiveIndictors.length - negativeIndictors.length) + " Middling indicators ");
-  d3.select("#stackedBar").append("div").attr("class","dummytext").text(negativeIndictors.length + " Negative indicators ");
+  // d3.select("#iconArray").selectAll(".dummytext").remove();
+  //
+  // d3.select("#iconArray").append("div").attr("class","dummytext").text(positiveIndicators.length + " Positive indicators");
+  // d3.select("#iconArray").append("div").attr("class","dummytext").text((areaIndicators.length - positiveIndicators.length - negativeIndicators.length) + " Middling indicators ");
+  // d3.select("#iconArray").append("div").attr("class","dummytext").text(negativeIndicators.length + " Negative indicators ");
+  //
+console.log(positiveIndicators);
+console.log(negativeIndicators);
+console.log(middleIndicators)
+
+//  postiveIndicatorsObj.concat(middleIndicatorsObj,negativeIndicatorsObj)
+
+dataIcon = [];
+
+dataIcon.push(postiveIndicatorsObj,middleIndicatorsObj,negativeIndicatorsObj)
+  console.log(dataIcon)
 
 
+  sumMeasures = areaIndicators.length;
+
+  drawIconArray (dataIcon, dropname, sumMeasures);
+
+
+}
+
+
+function drawIconArray (graphic_data, code, sumMeasures) {
+
+  /*update Label*/
+
+  d3.select("#measuresLabel").html("Distribution of " + sumMeasures + " measures for <span class='areaHighlight'>" + code + "</span>");
+
+
+  var graphic = d3.select('#iconArray');
+
+  graphic.selectAll(".col-sm-3").remove()
+
+  chart_width=parseInt(graphic.style('width'));
+
+  if(chart_width <= dvc.optional.mobileBreakpoint) {
+    dotRadius = dvc.essential.dotRadius[1];
+  } else {
+    dotRadius = dvc.essential.dotRadius[0];
+  }
+
+        dotmargin={top:dotRadius*2,
+                  right:dotRadius*2,
+                  bottom:dotRadius*2,
+                  left:dotRadius}
+
+        var x = d3.scaleLinear()
+  				.range([0, (2*dvc.essential.gridWidth+2)*dotRadius])
+  				.domain([0, dvc.essential.gridWidth]);
+
+        var y = d3.scaleLinear()
+            .range([0,dvc.essential.gridHeight*dotRadius+dotmargin.top])
+            .domain([0,dvc.essential.gridHeight])
+
+        var colour = d3.scaleOrdinal()
+                      .domain(graphic_data.map(function(d){return d.group}))
+                      .range(dvc.essential.colour_palette_icon)
+
+        var layout= d3_iconarray.layout()
+          .width(dvc.essential.gridWidth)
+          .height(dvc.essential.gridHeight)
+          .widthFirst(dvc.essential.widthFirst)
+
+
+        //create layouts for each group
+        layouts={}
+        for(i=0;i<graphic_data.length;i++){
+          layouts[graphic_data[i].group]=layout(d3.range(0,graphic_data[i].value,1))
+        }
+
+        graphic.selectAll('icons')
+        .data(graphic_data)
+      	.enter()
+      	.append('div')
+        .attr('class','col-sm-3 col-xs-4')
+      	.call(arrayBars);
+
+
+
+        function arrayBars(parent){
+        		parent.append('p')
+        			.attr('class','bar-label')
+        			.html(function(d){
+        				return d.group + "<br><span class='indicatorValues'>" +  d.value + "<span>";
+        			});
+
+        		parent.append('svg')
+        			.attr('width', ((2*dvc.essential.gridWidth+2)*dotRadius)+dotmargin.left+dotmargin.right)
+              .attr('height', 2*(dvc.essential.gridHeight*dotRadius+dotmargin.top+dotmargin.bottom))
+        		.append('g')
+        			.attr('transform','translate('+dotmargin.left+','+dotmargin.top+')')
+        			.attr('class',function(d){return d.group})
+        		.selectAll('circle')
+        			.data(function(d){
+                var thislayout = layout( d3.range(0, d.value, 1) );
+                thislayout.forEach(function(e){
+                  e["group"]=d.group
+                })
+                return thislayout })
+        		.enter()
+        			.append('circle')
+        				.attr('cx',function(d){ return x(d.position.x); })
+        				.attr('cy',function(d){ return 2*y(d.position.y); })
+        				.attr('r', dotRadius)
+                .attr('fill',function(d,i){return colour(d.group)})
+        }
+
+        d3.selectAll('svg')
+        .selectAll('circles')
+        .attr('fill',function(d,i){return dvc.essential.colour_palette_icon[i]})
 
 }
 
