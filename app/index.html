@@ -295,7 +295,7 @@ a {
     height: 200px;
     width: 100%;
     max-width: 800px;
-    border: 2px solid #206095;
+    border: 2px solid #dee7ef;
   }
 }
 
@@ -310,18 +310,29 @@ a {
 /* table styling */
 
 #postable th {
-  background-color: #0a6060;
+  background-color: #1a9f9e;
   color: #fff;
 }
 
 
 #negtable th {
-  background-color: #d13135;
+  background-color: #043b56;
   color: #fff;
 }
 
+th {
+  height:45px;
+}
+
 tr {
-  height:35px;
+  height:40px;
+  background-color:#f5f5f6;
+}
+
+td {
+
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .numberCol {
@@ -433,20 +444,21 @@ tr {
       </div>
     </div>
   </div>
-
+<!--
   <div class="row">
     <div class="col-sm-12 col-xs-12" id="iconArray">
       <h3 id="measuresLabel">Distribution of measures</h3>
     </div>
-  </div>
+  </div> -->
 
 
   <div class="row">
     <h3 id="standoutLabel">Stand out measures</h3>
-    <div class="col-sm-6 col-xs-12" id="postable">
-    </div>
     <div class="col-sm-6 col-xs-12" id="negtable">
     </div>
+    <div class="col-sm-6 col-xs-12" id="postable">
+    </div>
+
   </div>
 
   <div class="row">
@@ -562,7 +574,8 @@ tr {
         .attr("width",x(x.domain()[1]) - x(x.domain()[0]))
         .attr("y",10 + (heightper/2))
         .attr("height",(heightper/2)-20)
-        .attr("fill","#d9ebfb")
+        .attr("rx",(heightper/2))
+        .attr("fill","#f5f5f6")
         .attr("opacity",0.5)
 
         cell.selectAll(".circles")
@@ -575,7 +588,7 @@ tr {
           .attr("cy", function(d) { return (heightper/2) + Math.random()*(heightper/4) + heightper/8; })
           .attr("class", function(d,i) { return "cell " + "cellgroup"+d.unique.replace(/[, ]+/g, "").trim()})
           .attr("fill", dvc.essential.colour_palette[0])
-          .attr("opacity",0.7)
+          .attr("opacity",0.5)
           .attr("pointer-events","all")
           .on("mouseover", function(d,i) {
             pathidstr = d3.select(this).attr("class");
@@ -601,8 +614,9 @@ tr {
         .attr("x",x(x.domain()[0]))
         .attr("width",x(x.domain()[1]) - x(x.domain()[0]))
         .attr("y",10)
+        .attr("rx",(heightper/4))
         .attr("height",heightper-20)
-        .attr("fill","#d9ebfb")
+        .attr("fill","#f5f5f6")
         .attr("opacity",0.5)
 
         cell.selectAll(".circles")
@@ -615,7 +629,7 @@ tr {
           .attr("cy", function(d) { return Math.random()*(heightper/2) + heightper/4; })
           .attr("class", function(d,i) { return "cell " + "cellgroup"+d.unique.replace(/[, ]+/g, "").trim()})
           .attr("fill", dvc.essential.colour_palette[0])
-          .attr("opacity",0.7)
+          .attr("opacity",0.5)
           .attr("pointer-events","all")
           .on("mouseover", function(d,i) {
             pathidstr = d3.select(this).attr("class");
@@ -733,7 +747,7 @@ tr {
 
                       zoomToArea(dropcode);
                       updateTable(dropcode, dropname);
-                      createiconArray(dropcode, dropname);
+                      //createiconArray(dropcode, dropname);
 
                       d3.selectAll(".cell").classed("notselected",true)
         							d3.selectAll(".cellgroup" + dropcode.replace(/[, ]+/g, "").trim()).classed("cellspermselected", true).raise();
@@ -890,7 +904,7 @@ function makeMap () {
 				"source": "area",
 				"layout": {},
 				"paint": {
-					"line-color": "black",
+					"line-color": "#206095",
 					"line-width": 3
 				},
 				"filter": ["==", "AREACD", ""]
@@ -942,14 +956,14 @@ function makeTable () {
 
 /* Build basic table skeleton */
 
-postable = d3.select("#postable").append("table").attr("width","95%");
+postable = d3.select("#postable").append("table").attr("width","98%");
 
 posheadertable = postable.append("tr");
 
 posheadertable.append("th").attr("width","70%").text("Postive indicators");
 posheadertable.append("th").attr("width","30%").text("Value");
 
-negtable = d3.select("#negtable").append("table").attr("width","95%");
+negtable = d3.select("#negtable").append("table").attr("width","98%");
 
 negheadertable = negtable.append("tr");
 
@@ -962,12 +976,20 @@ negheadertable.append("th").attr("width","30%").text("Value");
 
 function updateTable (code, name) {
 
-d3.select("#standoutLabel").html("Stand out measures for <span class='areaHighlight'>" + name + "</span>");
+//d3.select("#standoutLabel").html("Stand out measures for <span class='areaHighlight'>" + name + "</span>");
 
 /* Delete existing rows */
 
 d3.selectAll(".tablelines").remove();
 
+
+areaIndicators = graphic_data.filter(function(d) {
+    if(d['unique'] == code) {
+      return d;
+    }
+  });
+
+console.log(areaIndicators)
 
 /* First filter the data for the area selected */
 PosFilteredData = graphic_data.filter(function(d) {
@@ -1021,167 +1043,181 @@ NegFilteredData.forEach(function(d){
 
 })
 
+
+//Out of the xx indicators for Fareham, xx were classified as positive, xx as negative and xx as neutral
+
+if(PosFilteredData.length == 0) {
+  waswerenone = "were";
+} else if(PosFilteredData.length ==1) {
+  waswerenone = "was";
+} else {
+  waswerenone = "were";
+}
+
+d3.select("#standoutLabel").html("Out of the " + areaIndicators.length + " measures available for <span class='areaHighlight'>" + name + "</span>, " + PosFilteredData.length + " " + waswerenone + " classified as positive, " + NegFilteredData.length + " as negative and " + (areaIndicators.length - (PosFilteredData.length + NegFilteredData.length))  + " as neutral");
+
+
 }
 
 
 /*** END OF Table Code ***/
 
-/*** Icon Array Bar Code ***/
-
-function createiconArray (code, dropname) {
-
-  areaIndicators = graphic_data.filter(function(d) {
-    if(d['unique'] == code) {
-      return d;
-    }
-  });
-
-  console.log(areaIndicators);
-
-
-
-  middleIndicators = areaIndicators.filter(function(d) {
-    if(d['value'] >= (dvc.essential.threshold*-1) && d['value'] <= (dvc.essential.threshold)) {
-      return d;
-    }
-  });
-
-  middleIndicatorsObj = {"group": "Neutral" , "value": middleIndicators.length};
-
-  console.log(middleIndicatorsObj);
-
-  positiveIndicators = areaIndicators.filter(function(d) {
-    if(d['value'] > (dvc.essential.threshold)) {
-      return d;
-    }
-  });
-
-  postiveIndicatorsObj = {"group": "Positive" , "value": positiveIndicators.length};
-
-  negativeIndicators = areaIndicators.filter(function(d) {
-    if(d['value'] < (dvc.essential.threshold*-1)) {
-      return d;
-    }
-  });
-
-  negativeIndicatorsObj = {"group": "Negative" , "value": negativeIndicators.length};
-
-  // d3.select("#iconArray").selectAll(".dummytext").remove();
-  //
-  // d3.select("#iconArray").append("div").attr("class","dummytext").text(positiveIndicators.length + " Positive indicators");
-  // d3.select("#iconArray").append("div").attr("class","dummytext").text((areaIndicators.length - positiveIndicators.length - negativeIndicators.length) + " Middling indicators ");
-  // d3.select("#iconArray").append("div").attr("class","dummytext").text(negativeIndicators.length + " Negative indicators ");
-  //
-console.log(positiveIndicators);
-console.log(negativeIndicators);
-console.log(middleIndicators)
-
-//  postiveIndicatorsObj.concat(middleIndicatorsObj,negativeIndicatorsObj)
-
-dataIcon = [];
-
-dataIcon.push(postiveIndicatorsObj,middleIndicatorsObj,negativeIndicatorsObj)
-  console.log(dataIcon)
-
-
-  sumMeasures = areaIndicators.length;
-
-  drawIconArray (dataIcon, dropname, sumMeasures);
-
-
-}
-
-
-function drawIconArray (graphic_data, code, sumMeasures) {
-
-  /*update Label*/
-
-  d3.select("#measuresLabel").html("Distribution of " + sumMeasures + " measures for <span class='areaHighlight'>" + code + "</span>");
-
-
-  var graphic = d3.select('#iconArray');
-
-  graphic.selectAll(".col-sm-3").remove()
-
-  chart_width=parseInt(graphic.style('width'));
-
-  if(chart_width <= dvc.optional.mobileBreakpoint) {
-    dotRadius = dvc.essential.dotRadius[1];
-  } else {
-    dotRadius = dvc.essential.dotRadius[0];
-  }
-
-        dotmargin={top:dotRadius*2,
-                  right:dotRadius*2,
-                  bottom:dotRadius*2,
-                  left:dotRadius}
-
-        var x = d3.scaleLinear()
-  				.range([0, (2*dvc.essential.gridWidth+2)*dotRadius])
-  				.domain([0, dvc.essential.gridWidth]);
-
-        var y = d3.scaleLinear()
-            .range([0,dvc.essential.gridHeight*dotRadius+dotmargin.top])
-            .domain([0,dvc.essential.gridHeight])
-
-        var colour = d3.scaleOrdinal()
-                      .domain(graphic_data.map(function(d){return d.group}))
-                      .range(dvc.essential.colour_palette_icon)
-
-        var layout= d3_iconarray.layout()
-          .width(dvc.essential.gridWidth)
-          .height(dvc.essential.gridHeight)
-          .widthFirst(dvc.essential.widthFirst)
-
-
-        //create layouts for each group
-        layouts={}
-        for(i=0;i<graphic_data.length;i++){
-          layouts[graphic_data[i].group]=layout(d3.range(0,graphic_data[i].value,1))
-        }
-
-        graphic.selectAll('icons')
-        .data(graphic_data)
-      	.enter()
-      	.append('div')
-        .attr('class','col-sm-3 col-xs-4')
-      	.call(arrayBars);
-
-
-
-        function arrayBars(parent){
-        		parent.append('p')
-        			.attr('class','bar-label')
-        			.html(function(d){
-        				return d.group + "<br><span class='indicatorValues'>" +  d.value + "<span>";
-        			});
-
-        		parent.append('svg')
-        			.attr('width', ((2*dvc.essential.gridWidth+2)*dotRadius)+dotmargin.left+dotmargin.right)
-              .attr('height', 2*(dvc.essential.gridHeight*dotRadius+dotmargin.top+dotmargin.bottom))
-        		.append('g')
-        			.attr('transform','translate('+dotmargin.left+','+dotmargin.top+')')
-        			.attr('class',function(d){return d.group})
-        		.selectAll('circle')
-        			.data(function(d){
-                var thislayout = layout( d3.range(0, d.value, 1) );
-                thislayout.forEach(function(e){
-                  e["group"]=d.group
-                })
-                return thislayout })
-        		.enter()
-        			.append('circle')
-        				.attr('cx',function(d){ return x(d.position.x); })
-        				.attr('cy',function(d){ return 2*y(d.position.y); })
-        				.attr('r', dotRadius)
-                .attr('fill',function(d,i){return colour(d.group)})
-        }
-
-        d3.selectAll('svg')
-        .selectAll('circles')
-        .attr('fill',function(d,i){return dvc.essential.colour_palette_icon[i]})
-
-}
+// /*** Icon Array Bar Code ***/
+//
+// function createiconArray (code, dropname) {
+//
+//   areaIndicators = graphic_data.filter(function(d) {
+//     if(d['unique'] == code) {
+//       return d;
+//     }
+//   });
+//
+//   console.log(areaIndicators);
+//
+//
+//
+//   middleIndicators = areaIndicators.filter(function(d) {
+//     if(d['value'] >= (dvc.essential.threshold*-1) && d['value'] <= (dvc.essential.threshold)) {
+//       return d;
+//     }
+//   });
+//
+//   middleIndicatorsObj = {"group": "Neutral" , "value": middleIndicators.length};
+//
+//   console.log(middleIndicatorsObj);
+//
+//   positiveIndicators = areaIndicators.filter(function(d) {
+//     if(d['value'] > (dvc.essential.threshold)) {
+//       return d;
+//     }
+//   });
+//
+//   postiveIndicatorsObj = {"group": "Positive" , "value": positiveIndicators.length};
+//
+//   negativeIndicators = areaIndicators.filter(function(d) {
+//     if(d['value'] < (dvc.essential.threshold*-1)) {
+//       return d;
+//     }
+//   });
+//
+//   negativeIndicatorsObj = {"group": "Negative" , "value": negativeIndicators.length};
+//
+//   // d3.select("#iconArray").selectAll(".dummytext").remove();
+//   //
+//   // d3.select("#iconArray").append("div").attr("class","dummytext").text(positiveIndicators.length + " Positive indicators");
+//   // d3.select("#iconArray").append("div").attr("class","dummytext").text((areaIndicators.length - positiveIndicators.length - negativeIndicators.length) + " Middling indicators ");
+//   // d3.select("#iconArray").append("div").attr("class","dummytext").text(negativeIndicators.length + " Negative indicators ");
+//   //
+// console.log(positiveIndicators);
+// console.log(negativeIndicators);
+// console.log(middleIndicators)
+//
+// //  postiveIndicatorsObj.concat(middleIndicatorsObj,negativeIndicatorsObj)
+//
+// dataIcon = [];
+//
+// dataIcon.push(postiveIndicatorsObj,middleIndicatorsObj,negativeIndicatorsObj)
+//   console.log(dataIcon)
+//
+//
+//   sumMeasures = areaIndicators.length;
+//
+//   drawIconArray (dataIcon, dropname, sumMeasures);
+//
+//
+// }
+//
+//
+// function drawIconArray (graphic_data, code, sumMeasures) {
+//
+//   /*update Label*/
+//
+//   d3.select("#measuresLabel").html("Distribution of " + sumMeasures + " measures for <span class='areaHighlight'>" + code + "</span>");
+//
+//
+//   var graphic = d3.select('#iconArray');
+//
+//   graphic.selectAll(".col-sm-3").remove()
+//
+//   chart_width=parseInt(graphic.style('width'));
+//
+//   if(chart_width <= dvc.optional.mobileBreakpoint) {
+//     dotRadius = dvc.essential.dotRadius[1];
+//   } else {
+//     dotRadius = dvc.essential.dotRadius[0];
+//   }
+//
+//         dotmargin={top:dotRadius*2,
+//                   right:dotRadius*2,
+//                   bottom:dotRadius*2,
+//                   left:dotRadius}
+//
+//         var x = d3.scaleLinear()
+//   				.range([0, (2*dvc.essential.gridWidth+2)*dotRadius])
+//   				.domain([0, dvc.essential.gridWidth]);
+//
+//         var y = d3.scaleLinear()
+//             .range([0,dvc.essential.gridHeight*dotRadius+dotmargin.top])
+//             .domain([0,dvc.essential.gridHeight])
+//
+//         var colour = d3.scaleOrdinal()
+//                       .domain(graphic_data.map(function(d){return d.group}))
+//                       .range(dvc.essential.colour_palette_icon)
+//
+//         var layout= d3_iconarray.layout()
+//           .width(dvc.essential.gridWidth)
+//           .height(dvc.essential.gridHeight)
+//           .widthFirst(dvc.essential.widthFirst)
+//
+//
+//         //create layouts for each group
+//         layouts={}
+//         for(i=0;i<graphic_data.length;i++){
+//           layouts[graphic_data[i].group]=layout(d3.range(0,graphic_data[i].value,1))
+//         }
+//
+//         graphic.selectAll('icons')
+//         .data(graphic_data)
+//       	.enter()
+//       	.append('div')
+//         .attr('class','col-sm-3 col-xs-4')
+//       	.call(arrayBars);
+//
+//
+//
+//         function arrayBars(parent){
+//         		parent.append('p')
+//         			.attr('class','bar-label')
+//         			.html(function(d){
+//         				return d.group + "<br><span class='indicatorValues'>" +  d.value + "<span>";
+//         			});
+//
+//         		parent.append('svg')
+//         			.attr('width', ((2*dvc.essential.gridWidth+2)*dotRadius)+dotmargin.left+dotmargin.right)
+//               .attr('height', 2*(dvc.essential.gridHeight*dotRadius+dotmargin.top+dotmargin.bottom))
+//         		.append('g')
+//         			.attr('transform','translate('+dotmargin.left+','+dotmargin.top+')')
+//         			.attr('class',function(d){return d.group})
+//         		.selectAll('circle')
+//         			.data(function(d){
+//                 var thislayout = layout( d3.range(0, d.value, 1) );
+//                 thislayout.forEach(function(e){
+//                   e["group"]=d.group
+//                 })
+//                 return thislayout })
+//         		.enter()
+//         			.append('circle')
+//         				.attr('cx',function(d){ return x(d.position.x); })
+//         				.attr('cy',function(d){ return 2*y(d.position.y); })
+//         				.attr('r', dotRadius)
+//                 .attr('fill',function(d,i){return colour(d.group)})
+//         }
+//
+//         d3.selectAll('svg')
+//         .selectAll('circles')
+//         .attr('fill',function(d,i){return dvc.essential.colour_palette_icon[i]})
+//
+// }
 
   }
 
