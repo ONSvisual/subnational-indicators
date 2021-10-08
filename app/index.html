@@ -55,9 +55,15 @@ h2, .areaHighlight {
 
 }
 
+.hierarchyLabel {
+  font-size: 20px;
+  font-weight:bold;
+  fill: #206095;
+}
+
 #plot {
-  height:600px;
-  overflow: scroll;
+  /* height:600px;
+  overflow: scroll; */
 }
 
 .axis path,
@@ -508,20 +514,52 @@ td {
 
 
     if(svgwidth < dvc.optional.mobileBreakpoint) {
-  		  margin = {top: 23, right: 12, bottom: 20, left: 20};
+  		  margin = {top: 40, right: 12, bottom: 20, left: 20};
         heightper = dvc.essential.heightperstrip;
     } else {
-        margin = {top: 23, right: 12, bottom: 20, left: 400};
+        margin = {top: 40, right: 12, bottom: 20, left: 400};
         heightper = dvc.essential.heightperstrip/2;
     }
 
   		width = svgwidth - margin.left - margin.right;
 
-      //get unique groups
+      spaceForLabels = 50;
+      runningTotalOfCategories = 0;
+
+
+      // Work out how many categories there are, and how many variables within each
+
+      categoryCount = d3.nest()
+        .key(function(d) { return d.Category; })
+        .key(function(d) { return d.id; })
+        .rollup(function(ids) {
+            return ids.length;
+        })
+        .entries(graphic_data);
+
+        console.log(categoryCount)
+
+      breakingPoints = []
+
+      for(var m = 0; m < categoryCount.length; m++) {
+        if(m==0) {
+          breakingPoints.push(0);
+          breakingPoints.push(+categoryCount[m].values.length);
+        }
+
+        if(m>0) {
+          breakingPoints.push(+categoryCount[m].values.length + breakingPoints[m]);
+        }
+
+       }
+
+
+      //get unique groups/variables
     	var groups = graphic_data.map(function(obj) { return obj.id; });
       groups = groups.filter(function(v,i) { return groups.indexOf(v) == i; });
 
-  		height = (heightper*groups.length) + margin.top + margin.bottom;
+
+  		height = (heightper*groups.length) + (spaceForLabels*(breakingPoints.length-1)) + margin.top + margin.bottom;
 
       svg.attr("height",height + "px")
 
@@ -536,27 +574,40 @@ td {
   	  x.domain(dvc.essential.xAxisScale);
   	}
 
-    console.log(x.domain())
-    console.log(graphic_data)
-
     groupeddata = {}
 
     separate = heightper;
 
     runningtotal = 0;
 
+
+
     for(var j = 0; j < groups.length; j++) {
 
     groupeddata[j] =  graphic_data.filter(function(v,i) { return v.id == groups[j]; });
 
+
+
     if(j>0) {
       runningtotal = runningtotal + groupeddata[j-1].length;
+      //console.log(runningtotal)
+    }
+
+
+    /* add a bit of spacing to allow for the hierarchy labelling */
+    if(breakingPoints.indexOf(j) != -1) {
+      runningTotalOfCategories++;
+
+      currGap = spaceForLabels*runningTotalOfCategories;
+      console.log(j +" " + currGap);
     }
 
 
 
+
+
     	var g = svg.append("g")
-    		.attr("transform", "translate(" + margin.left + "," + (margin.top + (separate*j)) + ")")
+    		.attr("transform", "translate(" + margin.left + "," + (currGap + margin.top + (separate*j)) + ")")
         .on("mouseout",function(){
           d3.selectAll(".cellsselected").classed("cellsselected",false);
         });
@@ -564,6 +615,10 @@ td {
 
   	  if(svgwidth < dvc.optional.mobileBreakpoint) {
   		  numberticks = dvc.optional.x_num_ticks_sm_md[0];
+
+        if(breakingPoints.indexOf(j) != -1) {
+          g.append("text").attr("class","hierarchyLabel").text(categoryCount[breakingPoints.indexOf(j)].key).attr("y",-10).attr("x",-margin.left)
+        }
 
         g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)+5).attr("x",-margin.left)
 
@@ -606,7 +661,13 @@ td {
   	  } else {
   		  numberticks = dvc.optional.x_num_ticks_sm_md[1];
 
-        g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)+5).attr("x",-margin.left)
+        /* add hierarchy labelling */
+        if(breakingPoints.indexOf(j) != -1) {
+          g.append("text").attr("class","hierarchyLabel").text(categoryCount[breakingPoints.indexOf(j)].key).attr("y",-10).attr("x",-margin.left)
+        }
+
+        g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)-5).attr("x",-margin.left)
+        g.append("text").attr("class","label " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("yo").attr("y",(heightper/2)+13).attr("x",-margin.left)
 
         var cell = g.append("g");
 
@@ -649,14 +710,14 @@ td {
         if(j==0) {
             g.append("g")
               .attr("class", "axis axis--x")
-              .attr("transform", "translate(0,0)")
+              .attr("transform", "translate(0," + -currGap + ")")
               .call(d3.axisTop(x).ticks(numberticks, ".0s").tickSize(0));
           }
 
           if(j==groups.length-1){
             g.append("g")
           	  .attr("class", "axis axis--x")
-          	  .attr("transform", "translate(0," + (-heightper*(groups.length-1)) + ")")
+          	  .attr("transform", "translate(0," + (-heightper*(groups.length-1) - (spaceForLabels*(breakingPoints.length-1))) + ")")
           	  .call(d3.axisBottom(x)
                       .ticks(numberticks, ".0s")
                       .tickSize(height-heightper)
@@ -667,7 +728,7 @@ td {
           }
         }
 
-        annotationCreation();
+      //  annotationCreation();
 
         function annotationCreation(){
             //create line breaks for annotation
@@ -747,6 +808,7 @@ td {
 
                       zoomToArea(dropcode);
                       updateTable(dropcode, dropname);
+                      updatePlotValues (dropcode, dropname);
                       //createiconArray(dropcode, dropname);
 
                       d3.selectAll(".cell").classed("notselected",true)
@@ -830,6 +892,22 @@ td {
   	if (pymChild) {
   		pymChild.sendHeight();
   	}
+
+
+function updatePlotValues (code, name) {
+
+  areaIndicators = graphic_data.filter(function(d) {
+        if(d['unique'] == code) {
+          return d;
+        }
+      });
+
+  areaIndicators.forEach(function(d){
+    d3.select("." + d.id.replace(/[|&;$%@"<>()+, \d]/g, "")).text(d.real)
+
+
+  })
+}
 
 
 /*** Map Code ***/
