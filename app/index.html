@@ -83,10 +83,12 @@ h2, .areaHighlight {
   font-size:14px;
 }
 
-.label tspan {
+.labeltspan {
   font-weight:bold;
+  font-size:14px;
 
 }
+
 
 .cells path {
   fill: none;
@@ -100,9 +102,10 @@ h2, .areaHighlight {
 .cellspermselected {
   opacity:1;
   stroke-width: 2px;
-  stroke: #000;
+  stroke: #fff;
+  r:7;
   pointer-events: none;
-  fill:rgba(255,255,255,1);
+  fill: #206095;
 }
 
 
@@ -111,6 +114,7 @@ h2, .areaHighlight {
   stroke-width: 2px;
   stroke: #000;
   pointer-events: none;
+  /* fill: #206095; */
   fill:rgba(255,255,255,0);
 }
 
@@ -132,7 +136,7 @@ h2, .areaHighlight {
 	white-space: nowrap;
 	font-size: 14px;
 	color: #333;
-	font-weight: normal;
+	font-weight: 600;
 	font-family: "Open Sans", Helvetica, sans-serif;
 }
 
@@ -469,9 +473,10 @@ td {
 
   <div class="row">
     <h3 id="measuresLabel">Explore all measures</h3>
-    <div id="info">
-
-    </div>
+    <details id="indic_Pop" class="detailsvar" role="group" style="padding: 0px 0px 30px 10px; min-height: 20px; width: 441.997px;">
+      <summary id="summary0" style="font-weight: bold; font-size: 16px; color: rgb(32, 96, 149);">Select areas to compare</summary>
+      <div>Select will be here</div>
+    </details>
     <div id="legend"></div>
     <div id="plot">
     	<svg width="100%"></svg>
@@ -612,6 +617,11 @@ td {
           d3.selectAll(".cellsselected").classed("cellsselected",false);
         });
 
+      if(j == groups.length-1) {
+
+        g.lower()
+      }
+
 
   	  if(svgwidth < dvc.optional.mobileBreakpoint) {
   		  numberticks = dvc.optional.x_num_ticks_sm_md[0];
@@ -667,7 +677,13 @@ td {
         }
 
         g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)-5).attr("x",-margin.left)
-        g.append("text").attr("class","label " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("yo").attr("y",(heightper/2)+13).attr("x",-margin.left)
+        textValues = g.append("text").attr("y",(heightper/2)+13).attr("x",-margin.left);
+        textValues.append("tspan").attr("class","labeltspan labelfirst " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
+        textValues.append("tspan").attr("class","labeltspan label2nd " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
+        textValues.append("tspan").attr("class","labeltspan label3rd " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
+        textValues.append("tspan").attr("class","labeltspan label4th " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
+        textValues.append("tspan").attr("class","labeltspan label5th " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
+
 
         var cell = g.append("g");
 
@@ -711,20 +727,45 @@ td {
             g.append("g")
               .attr("class", "axis axis--x")
               .attr("transform", "translate(0," + -currGap + ")")
-              .call(d3.axisTop(x).ticks(numberticks, ".0s").tickSize(0));
+              .call(d3.axisTop(x)
+                      //.ticks(numberticks, ".0s")
+                      .tickValues(dvc.essential.tickValuesForLabels)
+                      .tickFormat(function(d,i){return dvc.essential.tickValueLabels[i]})
+                      .tickSize(0));
           }
 
           if(j==groups.length-1){
             g.append("g")
-          	  .attr("class", "axis axis--x")
+          	  .attr("class", "axis axis--x axis--x-bottom")
+              .lower()
           	  .attr("transform", "translate(0," + (-heightper*(groups.length-1) - (spaceForLabels*(breakingPoints.length-1))) + ")")
           	  .call(d3.axisBottom(x)
-                      .ticks(numberticks, ".0s")
+                      .tickValues(dvc.essential.tickBands)
+                      //.tickFormat(function(d,i){return dvc.essential.tickValueLabels[i]})
                       .tickSize(height-heightper)
 
               );
+
+            g.append("rect")
+              .attr("x",x(dvc.essential.tickBands[0]))
+              .attr("y",(-heightper*(groups.length-1) - (spaceForLabels*(breakingPoints.length-1))))
+              .attr("width",x(dvc.essential.tickBands[2]) - x(dvc.essential.tickBands[0]))
+              .attr("height",(heightper * groups.length) + (spaceForLabels*(breakingPoints.length-1)))
+              .attr("fill","#ddd")
+              .attr("opacity",0.2)
+              .lower()
+
           svg.attr("height",parseInt(svg.attr("height"))+8+"px")
-          g.selectAll(".axis--x line").style("stroke", "#ddd").attr("stroke-dasharray", "2,2");
+          g.selectAll(".axis--x line").attr("stroke", "#ddd").attr("stroke-dasharray", "2,2");
+
+          g.select(".axis--x-bottom")
+              .selectAll("line")
+              .attr("class",function(d,i) {if(i==1){return "centreLine"}})
+              .style("stroke", function(d,i) {if(i==1){return "orange"} else {return "#ddd"}})
+              .style("stroke-width", function(d,i) {if(i==1){return "2px"} else {return "1px"}})
+              .attr("stroke-dasharray", function(d,i) {if(i==1){return "none"} else {return "stroke-dasharray", "2,2"}})
+
+            //d3.select(".axis--x-bottom");
           }
         }
 
@@ -809,6 +850,7 @@ td {
                       zoomToArea(dropcode);
                       updateTable(dropcode, dropname);
                       updatePlotValues (dropcode, dropname);
+                      createLegend(dropname);
                       //createiconArray(dropcode, dropname);
 
                       d3.selectAll(".cell").classed("notselected",true)
@@ -841,6 +883,9 @@ td {
         						d3.selectAll(".cell").classed("cellspermselected", false);
         						d3.selectAll(".cells path").style("pointer-events","all");
                     resetZoom();
+                    clearPlotValues("");
+                    clearLegend();
+                    clearTable();
 
         					}
         			});
@@ -850,31 +895,40 @@ td {
           d3.select("#info").html("<span id='label'>1-year survival estimate: " + formatValue(value) + "%</span>");
       }
 
-      var legend = d3.select('#legend')
-  			.append('ul')
-  			.attr('class', 'key')
-  			.selectAll('g')
-  			.data(["Male","Female"])
-  			.enter()
-  			.append('li')
-  			//.style("background-color", function(d , i) { return dvc.essential.colour_palette[i]; })
-  			.attr('class', function(d, i) { return 'key-item key-' + i + ' b '+ d.replace(' ', '-').toLowerCase(); })
-  			// .on("mouseover",function(d, i){
-  			// 	d3.selectAll(".key-item").style("opacity",0.2);
-  			// 	d3.selectAll(".key-" + i).style("opacity",1);
-  			// 	d3.selectAll(".cell").style("opacity",0.2);
-  			// 	//d3.selectAll(".cellkey" + d).style("opacity",1);
-  			// })
-  			// .on("mouseout",function(d, i){
-  			// 	d3.selectAll(".key-item").style("opacity",1);
-  			// 	d3.selectAll(".cell").style("opacity",1);
-  			// })
-  		legend.append('b').attr("class", "legendBlocks")
-  			.style("background-color", function(d , i) { return dvc.essential.colour_palette[i]; });
-  		legend.append('label').text(function(d,i) {
-  			var value = parseFloat(d).toFixed(1);
-  			return d;
-  		});
+
+
+      function createLegend(areaname) {
+
+        d3.select("#legend").selectAll("*").remove()
+
+        var legend = d3.select('#legend')
+          .append('ul')
+          .attr('class', 'key')
+          .selectAll('g')
+          .data([areaname])
+          .enter()
+          .append('li')
+          .attr('class', function(d, i) { return 'key-item key-' + i + ' b '+ d.replace(' ', '-').toLowerCase(); })
+
+        legend.append('b').attr("class", "legendBlocks")
+          .style("background-color", function(d , i) { return dvc.essential.colour_palette[i+1]; });
+        legend.append('label').text(function(d,i) {
+          var value = parseFloat(d).toFixed(1);
+          return d;
+        });
+
+      }
+
+      function clearLegend(areaname) {
+
+        d3.select("#legend").selectAll("*").remove()
+
+
+      }
+
+
+
+
 
 
   	//add xaxislabel
@@ -903,10 +957,15 @@ function updatePlotValues (code, name) {
       });
 
   areaIndicators.forEach(function(d){
-    d3.select("." + d.id.replace(/[|&;$%@"<>()+, \d]/g, "")).text(d.real)
+    d3.select("." + d.id.replace(/[|&;$%@"<>()+, \d]/g, "")).attr("fill",dvc.essential.colour_palette[1]).text(d.real)
 
 
   })
+}
+
+function clearPlotValues() {
+  d3.selectAll(".labeltspan").text("")
+
 }
 
 
@@ -1048,6 +1107,8 @@ negheadertable = negtable.append("tr");
 negheadertable.append("th").attr("width","70%").text("Negative indicators");
 negheadertable.append("th").attr("width","30%").text("Value");
 
+formatTableNum = d3.format(".1f");
+
 
 }
 
@@ -1067,7 +1128,6 @@ areaIndicators = graphic_data.filter(function(d) {
     }
   });
 
-console.log(areaIndicators)
 
 /* First filter the data for the area selected */
 PosFilteredData = graphic_data.filter(function(d) {
@@ -1090,7 +1150,7 @@ PosFilteredData.forEach(function(d){
   tablelines = postable.append("tr").attr("class","tablelines");
 
   tablelines.append("td").text(d.id);
-  tablelines.append("td").attr("class","numberCol").text(d.real);
+  tablelines.append("td").attr("class","numberCol").text(formatTableNum(d.real));
 
 
 })
@@ -1116,7 +1176,7 @@ NegFilteredData.forEach(function(d){
   tablelines = negtable.append("tr").attr("class","tablelines");
 
   tablelines.append("td").text(d.id);
-  tablelines.append("td").attr("class","numberCol").text(d.real);
+  tablelines.append("td").attr("class","numberCol").text(formatTableNum(d.real));
 
 
 })
@@ -1134,6 +1194,14 @@ if(PosFilteredData.length == 0) {
 
 d3.select("#standoutLabel").html("Out of the " + areaIndicators.length + " measures available for <span class='areaHighlight'>" + name + "</span>, " + PosFilteredData.length + " " + waswerenone + " classified as positive, " + NegFilteredData.length + " as negative and " + (areaIndicators.length - (PosFilteredData.length + NegFilteredData.length))  + " as neutral");
 
+
+}
+
+function clearTable() {
+
+  d3.selectAll(".tablelines").remove();
+
+  d3.select("#standoutLabel").html("Stand out measures");
 
 }
 
