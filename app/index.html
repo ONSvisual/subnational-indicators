@@ -43,6 +43,50 @@ h2, .areaHighlight {
   padding-right: 15px;
 }
 
+
+
+
+.search-choice:nth-child(1)  {
+    background-color: #27A0CC !important;
+    border: 2px solid #27A0CC !important;
+    color: #fff !important;
+}
+
+.search-choice:nth-child(2) {
+    background-color:  #871A5B !important;
+    border: 2px solid #871A5B !important;
+    color: #fff !important;
+}
+
+.search-choice:nth-child(3)  {
+    background-color:  #A8BD3A !important;
+    border: 2px solid #A8BD3A !important;
+    color: #000 !important;
+}
+
+.search-choice:nth-child(4)  {
+    background-color:  #F66068 !important;
+    border: 2px solid #F66068 !important;
+}
+
+
+.search-choice:nth-child(1) button {
+  background: url('./assets/img/x_close_slate.svg') no-repeat right 0 top 50%;
+
+}
+
+.search-choice:nth-child(2) button {
+  background: url('./assets/img/x_close_slate.svg') no-repeat right 0 top 50%;
+
+}
+
+
+.search-choice-close:focus {
+    outline: orange 3px solid;
+    box-shadow: 0 0 0 6px black;
+}
+
+
 #info {
 	height:25px;
 	width:100%;
@@ -106,6 +150,14 @@ h2, .areaHighlight {
   r:7;
   pointer-events: none;
   fill: #206095;
+}
+
+.cellspermselected2 {
+  opacity:1;
+  stroke-width: 2px;
+  stroke: #fff;
+  r:7;
+  pointer-events: none;
 }
 
 
@@ -473,9 +525,9 @@ td {
 
   <div class="row">
     <h3 id="measuresLabel">Explore all measures</h3>
-    <details id="indic_Pop" class="detailsvar" role="group" style="padding: 0px 0px 30px 10px; min-height: 20px; width: 441.997px;">
+    <details id="indic_Pop" class="detailsvar" role="group" style="padding: 0px 0px 30px 10px; min-height: 20px; width: 100%">
       <summary id="summary0" style="font-weight: bold; font-size: 16px; color: rgb(32, 96, 149);">Select areas to compare</summary>
-      <div>Select will be here</div>
+      <div id="multidrop"></div>
     </details>
     <div id="legend"></div>
     <div id="plot">
@@ -656,12 +708,16 @@ td {
           .attr("opacity",0.5)
           .attr("pointer-events","all")
           .on("mouseover", function(d,i) {
+            d3.selectAll(".cellsselected").classed("cellsselected",false);
+            d3.selectAll("." + pathgroup).classed("cellsselected",true);
+          })
+          .on("mouseover", function(d,i) {
             pathidstr = d3.select(this).attr("class");
             pathgroup = pathidstr.split(" ")[1];
             //console.log(pathgroup);
             //d3.selectAll(".cell").classed("cellsselected",false);
-            d3.selectAll(".cellsselected").classed("cellsselected",false);
-            d3.selectAll("." + pathgroup).classed("cellsselected",true).raise();
+
+            d3.selectAll("." + pathgroup).classed("cellsselected",true);
           })
 
             d3.select("#info").html("");
@@ -714,7 +770,7 @@ td {
             //console.log(pathgroup);
             //d3.selectAll(".cell").classed("cellsselected",false);
             d3.selectAll(".cellsselected").classed("cellsselected",false);
-            d3.selectAll("." + pathgroup).classed("cellsselected",true).raise();
+            d3.selectAll("." + pathgroup).classed("cellsselected",true);
           })
 
             d3.select("#info").html("");
@@ -804,6 +860,7 @@ td {
         }//end of annotationCreation
 
         selectlist(graphic_data);
+        multiselect(graphic_data);
 
         function selectlist(datacsv) {
 
@@ -850,7 +907,7 @@ td {
                       zoomToArea(dropcode);
                       updateTable(dropcode, dropname);
                       updatePlotValues (dropcode, dropname);
-                      createLegend(dropname);
+                      createLegend();
                       //createiconArray(dropcode, dropname);
 
                       d3.selectAll(".cell").classed("notselected",true)
@@ -891,13 +948,100 @@ td {
         			});
             } //end selectlist
 
+
+      function multiselect(datacsv) {
+
+        var dropnames = datacsv.map(function(d,i){return d.group}).filter(function(item,pos,val){return val.indexOf(item)==pos})
+        var dropcodes =  datacsv.map(function(d,i){return d.unique}).filter(function(item,pos,val){return val.indexOf(item)==pos})
+
+        var menuarea = d3.zip(dropnames,dropcodes).sort(function(a, b){ return d3.ascending(a[0], b[0]); });
+
+        console.log(menuarea);
+        //clear dropdown
+        d3.select("#selmulti").selectAll("*").remove()
+
+        // Build option menu for occupations
+        var optns = d3.select("#multidrop").append("div").attr("id","selmulti").append("select")
+          .attr("id","dropselect2")
+          .attr("width","width:100%")
+          .attr("multiple",true)
+          .attr("class","chosen-select");
+
+        optns.append("option")
+
+        optns.selectAll("p").data(menuarea).enter().append("option")
+          .attr("value",function(d){return d[1]})
+          .text(function(d){ return d[0]});
+
+  			myId=null;
+
+        listnames = [];
+  			listcodes = [];
+        oldlistname = [];
+
+  			$('#dropselect2').chosen({width: "98%", max_selected_options: 3/*, allow_single_deselect:true*/}).on('change',function(evt,params){
+
+  								if(typeof params.selected != 'undefined') {
+
+                    console.log(params);
+                    listcodes.push(params.selected);
+
+                    listnames.push(dropnames[dropcodes.indexOf(params.selected)])
+
+
+                    //need some better code to build select list of names in selected order
+                    //console.log($("#dropselect2 :selected").map(function (i, element) { return jQuery(element).text(); }).get())
+
+                    //selectCellsforcomparison areas
+                    d3.selectAll(".cell").classed("notselected",true)
+
+                    listcodes.forEach(function(d,i) {
+                      console.log(d)
+                        d3.selectAll(".cellgroup" + d.replace(/[, ]+/g, "").trim()).attr("fill",dvc.essential.colour_palette[i+2]).classed("cellspermselected2", true).raise();
+                    });
+                    createLegend();
+
+
+                  //  console.log(listcodes)
+
+  								} else {
+
+                    var indexdesel = listcodes.indexOf(params.deselected);
+
+                    listcodes.splice(indexdesel,1);
+                    listnames.splice(indexdesel,1);
+
+                    d3.selectAll(".cellspermselected2").classed("cellspermselected2",false).attr("fill",dvc.essential.colour_palette[0])
+                    listcodes.forEach(function(d,i) {
+                        d3.selectAll(".cellgroup" + d.replace(/[, ]+/g, "").trim()).attr("fill",dvc.essential.colour_palette[i+2]).classed("cellspermselected2", true).raise();
+                    });
+                    createLegend();
+
+                  //  console.log(listcodes);
+
+
+                  }
+
+  			});
+
+      };
+
+      function addCloseButtonDesc() {
+          d3.selectAll(".search-choice-close").selectAll("span").remove();
+          d3.selectAll(".search-choice-close").append("span").attr("class","visuallyhidden").text(function(d,i) {return "remove " + babynames[listcodes[i].substr(5)]})
+      }
+
       function changetext(value,id) {
           d3.select("#info").html("<span id='label'>1-year survival estimate: " + formatValue(value) + "%</span>");
       }
 
 
 
-      function createLegend(areaname) {
+      function createLegend() {
+
+        areaname = d3.merge([[dropname],listnames])
+
+        console.log(areaname)
 
         d3.select("#legend").selectAll("*").remove()
 
@@ -905,10 +1049,10 @@ td {
           .append('ul')
           .attr('class', 'key')
           .selectAll('g')
-          .data([areaname])
+          .data(areaname)
           .enter()
           .append('li')
-          .attr('class', function(d, i) { return 'key-item key-' + i + ' b '+ d.replace(' ', '-').toLowerCase(); })
+          .attr('class', function(d, i) { return 'key-item key-' + i})
 
         legend.append('b').attr("class", "legendBlocks")
           .style("background-color", function(d , i) { return dvc.essential.colour_palette[i+1]; });
