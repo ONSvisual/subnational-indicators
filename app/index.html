@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Cancer survival 1-year estimates</title>
+  <title>Sub-national indicators</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="Interactive tool that shows how a number of indicators compare across an area.">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,bold" rel="stylesheet">
-  <link href='css/mapbox-gl.css' rel='stylesheet'/>
+  <link href="https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.css" rel="stylesheet" />
   <link href="./css/style-chosen.css" rel="stylesheet"/>
 
 <style>
@@ -134,9 +135,11 @@ h2, .areaHighlight {
 }
 
 
-.cells path {
+.cell path {
   fill: none;
   pointer-events: all;
+  stroke-width: 2px;
+  stroke: rgba(255,255,255,0)
 }
 
 .notselected {
@@ -384,6 +387,8 @@ a {
 
 th {
   height:45px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 tr {
@@ -399,6 +404,10 @@ td {
 
 .numberCol {
   text-align: right;
+}
+
+.textCol {
+  text-align: left;
 }
 /* Bootstrap Grid */
 
@@ -487,6 +496,14 @@ td {
     }
 
 
+    #tooltip {
+      background: rgba(32, 96, 149, 0.8);
+      color: #fff;
+      border-radius: 5px;
+      padding: 5px;
+    }
+
+
 
 
 </style>
@@ -497,8 +514,8 @@ td {
   <div class="row">
     <div class="col-sm-8">
       <div id="dropdown">
-        <h2>Select an initial area</h2>
-        <p>Choose from local authorities within England and Wales</p>
+        <h2>Select an area</h2>
+        <p>Choose from local authorities within the UK</p>
       </div>
     </div>
     <div class="col-sm-4">
@@ -531,14 +548,15 @@ td {
     </details>
     <div id="legend"></div>
     <div id="plot">
+      <div id="tooltip" display="none" style="position: absolute; display: none;"></div>
     	<svg width="100%"></svg>
     </div>
     <div id="source"></div>
   </div>
-  <h6 class="">Download this chart</h6>
+  <!-- <h6 class="">Download this chart</h6>
   <a class="btn btn--primary" href="image.png" download>Image</a>
   <a class="btn btn--primary" title="Download as csv" href="datadownload.csv" target="_blank">.csv</a>
-  <a class="btn btn--primary" title="Download as xls" href="data.xlsx" target="_blank">.xlsx</a>
+  <a class="btn btn--primary" title="Download as xls" href="data.xlsx" target="_blank">.xlsx</a> -->
 
   <script src="https://cdn.ons.gov.uk/vendor/d3/4.13.0/d3.min.js"></script>
   <script src="https://cdn.ons.gov.uk/vendor/pym/1.3.2/pym.min.js"></script>
@@ -547,8 +565,8 @@ td {
   <script src="../lib/modernizr.svg.min.js"></script>
   <script src="../lib/d3-queue.min.js"></script>
   <script src="../lib/topojson.v2.min.js"></script>
-  <script src='../lib/mapbox-gl.js'></script>
-  <script src='../lib/turf.min.js'></script>
+  <script src="https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
   <script src='../lib/d3-iconarray.js'></script>
 
   <!-- <script src="../lib/jitter.js"></script> -->
@@ -574,7 +592,7 @@ td {
   		  margin = {top: 40, right: 12, bottom: 20, left: 20};
         heightper = dvc.essential.heightperstrip;
     } else {
-        margin = {top: 40, right: 12, bottom: 20, left: 400};
+        margin = {top: 40, right: 12, bottom: 20, left: 300};
         heightper = dvc.essential.heightperstrip/2;
     }
 
@@ -699,7 +717,7 @@ td {
           .data(groupeddata[j])
           .enter()
           .append("circle")
-          .attr("class", "cells")
+          .attr("class", "cell")
           .attr("r", dvc.essential.dotradius)
           .attr("cx", function(d) {return x(d.value); })
           .attr("cy", function(d) { return (heightper/2) + Math.random()*(heightper/4) + heightper/8; })
@@ -707,15 +725,18 @@ td {
           .attr("fill", dvc.essential.colour_palette[0])
           .attr("opacity",0.5)
           .attr("pointer-events","all")
-          .on("mouseover", function(d,i) {
+          .on("mouseout", function(d,i) {
             d3.selectAll(".cellsselected").classed("cellsselected",false);
-            d3.selectAll("." + pathgroup).classed("cellsselected",true);
+            hideTooltip();
+
+            //d3.selectAll("." + pathgroup).classed("cellsselected",true);
           })
           .on("mouseover", function(d,i) {
             pathidstr = d3.select(this).attr("class");
             pathgroup = pathidstr.split(" ")[1];
             //console.log(pathgroup);
-            //d3.selectAll(".cell").classed("cellsselected",false);
+            //d3.selectAll(".cell").classed("cellsselected",false);showTooltip(evt, 'This is blue')
+
 
             d3.selectAll("." + pathgroup).classed("cellsselected",true);
           })
@@ -732,13 +753,16 @@ td {
           g.append("text").attr("class","hierarchyLabel").text(categoryCount[breakingPoints.indexOf(j)].key).attr("y",-10).attr("x",-margin.left)
         }
 
-        g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)-5).attr("x",-margin.left)
-        textValues = g.append("text").attr("y",(heightper/2)+13).attr("x",-margin.left);
-        textValues.append("tspan").attr("class","labeltspan labelfirst " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
-        textValues.append("tspan").attr("class","labeltspan label2nd " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
-        textValues.append("tspan").attr("class","labeltspan label3rd " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
-        textValues.append("tspan").attr("class","labeltspan label4th " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
-        textValues.append("tspan").attr("class","labeltspan label5th " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
+        g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)+5).attr("x",-margin.left)
+
+
+        //g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)-5).attr("x",-margin.left)
+        //textValues = g.append("text").attr("y",(heightper/2)+13).attr("x",-margin.left);
+        // textValues.append("tspan").attr("class","labeltspan labelfirst " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
+        // textValues.append("tspan").attr("class","labeltspan label2nd " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
+        // textValues.append("tspan").attr("class","labeltspan label3rd " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
+        // textValues.append("tspan").attr("class","labeltspan label4th " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
+        // textValues.append("tspan").attr("class","labeltspan label5th " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
 
 
         var cell = g.append("g");
@@ -756,7 +780,7 @@ td {
           .data(groupeddata[j])
           .enter()
           .append("circle")
-          .attr("class", "cells")
+          .attr("class", "cell")
           .attr("r", dvc.essential.dotradius)
           .attr("cx", function(d) {return x(d.value); })
           .attr("cy", function(d) { return Math.random()*(heightper/2) + heightper/4; })
@@ -765,12 +789,22 @@ td {
           .attr("opacity",0.5)
           .attr("pointer-events","all")
           .on("mouseover", function(d,i) {
-            pathidstr = d3.select(this).attr("class");
-            pathgroup = pathidstr.split(" ")[1];
+            // console.log(d)
+            // pathidstr = d3.select(this);
+            // pathidstring = pathidstr.attr("class");
+            pathgroup = "cellgroup" + d.unique;
+
             //console.log(pathgroup);
             //d3.selectAll(".cell").classed("cellsselected",false);
-            d3.selectAll(".cellsselected").classed("cellsselected",false);
-            d3.selectAll("." + pathgroup).classed("cellsselected",true);
+
+            d3.selectAll("." + pathgroup).classed("cellsselected",true)//.raise();
+
+            showTooltip(d3.event.pageX,d3.event.pageY, d.group)
+
+          })
+          .on("mouseout", function(d,i) {
+            d3.selectAll(".cellsselected").classed("cellsselected",false)//.lower();
+            hideTooltip();
           })
 
             d3.select("#info").html("");
@@ -797,15 +831,15 @@ td {
           	  .attr("transform", "translate(0," + (-heightper*(groups.length-1) - (spaceForLabels*(breakingPoints.length-1))) + ")")
           	  .call(d3.axisBottom(x)
                       .tickValues(dvc.essential.tickBands)
-                      //.tickFormat(function(d,i){return dvc.essential.tickValueLabels[i]})
+                      .tickFormat(d3.format(".1f"))
                       .tickSize(height-heightper)
 
               );
 
             g.append("rect")
-              .attr("x",x(dvc.essential.tickBands[0]))
+              .attr("x",x(dvc.essential.tickBands[1]))
               .attr("y",(-heightper*(groups.length-1) - (spaceForLabels*(breakingPoints.length-1))))
-              .attr("width",x(dvc.essential.tickBands[2]) - x(dvc.essential.tickBands[0]))
+              .attr("width",x(dvc.essential.tickBands[3]) - x(dvc.essential.tickBands[1]))
               .attr("height",(heightper * groups.length) + (spaceForLabels*(breakingPoints.length-1)))
               .attr("fill","#ddd")
               .attr("opacity",0.2)
@@ -816,10 +850,10 @@ td {
 
           g.select(".axis--x-bottom")
               .selectAll("line")
-              .attr("class",function(d,i) {if(i==1){return "centreLine"}})
-              .style("stroke", function(d,i) {if(i==1){return "orange"} else {return "#ddd"}})
-              .style("stroke-width", function(d,i) {if(i==1){return "2px"} else {return "1px"}})
-              .attr("stroke-dasharray", function(d,i) {if(i==1){return "none"} else {return "stroke-dasharray", "2,2"}})
+              .attr("class",function(d,i) {if(i==2){return "centreLine"}})
+              .style("stroke", function(d,i) {if(i==2){return "orange"} else {return "#ddd"}})
+              .style("stroke-width", function(d,i) {if(i==2){return "2px"} else {return "1px"}})
+              .attr("stroke-dasharray", function(d,i) {if(i==2){return "none"} else {return "stroke-dasharray", "2,2"}})
 
             //d3.select(".axis--x-bottom");
           }
@@ -898,7 +932,7 @@ td {
         					//if(typeof params != 'undefined') {
                       clicked = true;
         							d3.selectAll(".cell").classed("cellspermselected", false);
-        							d3.selectAll(".cells path").style("pointer-events","none")
+        							d3.selectAll(".cell path").style("pointer-events","none")
 
         							dropcode = $('#dropselect').val();
                       dropname = $('#dropselect option:selected').text();
@@ -923,7 +957,7 @@ td {
                           clicked = false;
 
                           d3.select(".cell" + dropcodeid).classed("cellspermselected",false)
-                          d3.selectAll(".cells path").style("pointer-events","all")
+                          d3.selectAll(".cell path").style("pointer-events","all")
 
                           d3.select("#info").html("");
 
@@ -938,7 +972,7 @@ td {
 
                     d3.selectAll(".cell").classed("notselected",false)
         						d3.selectAll(".cell").classed("cellspermselected", false);
-        						d3.selectAll(".cells path").style("pointer-events","all");
+        						d3.selectAll(".cell path").style("pointer-events","all");
                     resetZoom();
                     clearPlotValues("");
                     clearLegend();
@@ -979,7 +1013,7 @@ td {
   			listcodes = [];
         oldlistname = [];
 
-  			$('#dropselect2').chosen({width: "98%", max_selected_options: 3/*, allow_single_deselect:true*/}).on('change',function(evt,params){
+  			$('#dropselect2').chosen({width: "98%", max_selected_options: 3, placeholder_text_multiple:"Choose upto 3 areas"}).on('change',function(evt,params){
 
   								if(typeof params.selected != 'undefined') {
 
@@ -1035,7 +1069,19 @@ td {
           d3.select("#info").html("<span id='label'>1-year survival estimate: " + formatValue(value) + "%</span>");
       }
 
+      function showTooltip(left, top, text) {
 
+        let tooltip = document.getElementById("tooltip");
+        tooltip.innerHTML = text;
+        tooltip.style.display = "block";
+        tooltip.style.left = +left + 10 + 'px';
+        tooltip.style.top = +top + 10 + 'px';
+      }
+
+      function hideTooltip() {
+        var tooltip = document.getElementById("tooltip");
+        tooltip.style.display = "none";
+      }
 
       function createLegend() {
 
@@ -1085,7 +1131,7 @@ td {
 
 
   	//add source
-  	  d3.select("#source").text("Source: " + dvc.essential.sourceText);
+  	  //d3.select("#source").text("Source: " + dvc.essential.sourceText);
 
   	if (pymChild) {
   		pymChild.sendHeight();
@@ -1125,20 +1171,20 @@ function makeMap () {
 	function ready (error, geog){
 
 		//set up basemap
-		map = new mapboxgl.Map({
+		map = new maplibregl.Map({
 		  container: 'map', // container id
 		  style: 'data/style.json', //stylesheet location //includes key for API
 		  center: [-2.5, 54], // starting position
-		  minZoom: 2,//
-		  zoom: 4.5, // starting zoom
+		  minZoom: 1,//
+		  zoom: 2.5, // starting zoom
 		  maxZoom: 13, //
 		  attributionControl: false //
 		});
 		//add fullscreen option
-		//map.addControl(new mapboxgl.FullscreenControl());
+		//map.addControl(new maplibregl.FullscreenControl());
 
 		// Add zoom and rotation controls to the map.
-		//map.addControl(new mapboxgl.NavigationControl());
+		//map.addControl(new maplibregl.NavigationControl());
 
 		// Disable map rotation using right click + drag
 		map.dragRotate.disable();
@@ -1151,7 +1197,7 @@ function makeMap () {
 		map.touchZoomRotate.disableRotation();
 
 		//add compact attribution
-		map.addControl(new mapboxgl.AttributionControl({
+		map.addControl(new maplibregl.AttributionControl({
 			compact: true
 		}));
 
@@ -1161,7 +1207,7 @@ function makeMap () {
 		}
 
 		//Work out extend of loaded geography file so we can set map to fit total extent
-		bounds = turf.extent(areas);
+		bounds = turf.bbox(areas);
 
 		//set map to total extent
 		setTimeout(function(){
@@ -1217,7 +1263,7 @@ function zoomToArea(code) {
   console.log(specificpolygon)
   map.setFilter("state-fills-hover", ["==", "AREACD", code]);
 
-  specific = turf.extent(specificpolygon[0].geometry);
+  specific = turf.bbox(specificpolygon[0].geometry);
 
   map.fitBounds([[specific[0],specific[1]], [specific[2], specific[3]]], {
       padding: {top: 30, bottom:30, left: 30, right: 30}, animate: false
@@ -1241,15 +1287,15 @@ postable = d3.select("#postable").append("table").attr("width","98%");
 
 posheadertable = postable.append("tr");
 
-posheadertable.append("th").attr("width","70%").text("Postive indicators");
-posheadertable.append("th").attr("width","30%").text("Value");
+posheadertable.append("th").attr("width","70%").attr("class","textCol").text("Postive indicators");
+posheadertable.append("th").attr("width","30%").attr("class","numberCol").text("Value");
 
 negtable = d3.select("#negtable").append("table").attr("width","98%");
 
 negheadertable = negtable.append("tr");
 
-negheadertable.append("th").attr("width","70%").text("Negative indicators");
-negheadertable.append("th").attr("width","30%").text("Value");
+negheadertable.append("th").attr("width","70%").attr("class","textCol").text("Negative indicators");
+negheadertable.append("th").attr("width","30%").attr("class","numberCol").text("Value");
 
 formatTableNum = d3.format(".1f");
 
