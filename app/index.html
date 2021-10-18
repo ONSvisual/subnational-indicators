@@ -726,12 +726,12 @@ td {
           .attr("fill", dvc.essential.colour_palette[0])
           .attr("opacity",0.5)
           .attr("pointer-events","all")
-          // .on("mouseout", function(d,i) {
-          //   d3.selectAll(".cellsselected").classed("cellsselected",false);
-          //   hideTooltip();
-          //
-          //   //d3.selectAll("." + pathgroup).classed("cellsselected",true);
-          // })
+          .on("mouseout", function(d,i) {
+            d3.selectAll(".cellsselected").classed("cellsselected",false).attr("pointer-events","all")
+            hideTooltip();
+
+            //d3.selectAll("." + pathgroup).classed("cellsselected",true);
+          })
           .on("mouseover", function(d,i) {
             pathidstr = d3.select(this).attr("class");
             pathgroup = pathidstr.split(" ")[1];
