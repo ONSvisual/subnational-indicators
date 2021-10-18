@@ -135,7 +135,7 @@ h2, .areaHighlight {
 }
 
 
-.cell path {
+.cell circle {
   fill: none;
   pointer-events: all;
   stroke-width: 2px;
@@ -604,6 +604,7 @@ td {
 
       // Work out how many categories there are, and how many variables within each
 
+      console.log(graphic_data)
       categoryCount = d3.nest()
         .key(function(d) { return d.Category; })
         .key(function(d) { return d.id; })
@@ -683,9 +684,9 @@ td {
 
     	var g = svg.append("g")
     		.attr("transform", "translate(" + margin.left + "," + (currGap + margin.top + (separate*j)) + ")")
-        .on("mouseout",function(){
-          d3.selectAll(".cellsselected").classed("cellsselected",false);
-        });
+        // .on("mouseout",function(){
+        //   d3.selectAll(".cellsselected").classed("cellsselected",false);
+        // });
 
       if(j == groups.length-1) {
 
@@ -725,12 +726,12 @@ td {
           .attr("fill", dvc.essential.colour_palette[0])
           .attr("opacity",0.5)
           .attr("pointer-events","all")
-          .on("mouseout", function(d,i) {
-            d3.selectAll(".cellsselected").classed("cellsselected",false);
-            hideTooltip();
-
-            //d3.selectAll("." + pathgroup).classed("cellsselected",true);
-          })
+          // .on("mouseout", function(d,i) {
+          //   d3.selectAll(".cellsselected").classed("cellsselected",false);
+          //   hideTooltip();
+          //
+          //   //d3.selectAll("." + pathgroup).classed("cellsselected",true);
+          // })
           .on("mouseover", function(d,i) {
             pathidstr = d3.select(this).attr("class");
             pathgroup = pathidstr.split(" ")[1];
@@ -788,6 +789,10 @@ td {
           .attr("fill", dvc.essential.colour_palette[0])
           .attr("opacity",0.5)
           .attr("pointer-events","all")
+          .on("mouseout", function(d,i) {
+            d3.selectAll(".cellsselected").classed("cellsselected",false)//.lower();
+            hideTooltip();
+          })
           .on("mouseover", function(d,i) {
             // console.log(d)
             // pathidstr = d3.select(this);
@@ -802,10 +807,7 @@ td {
             showTooltip(d3.event.pageX,d3.event.pageY, d.group)
 
           })
-          .on("mouseout", function(d,i) {
-            d3.selectAll(".cellsselected").classed("cellsselected",false)//.lower();
-            hideTooltip();
-          })
+
 
             d3.select("#info").html("");
             $("#dropselect").val("").trigger("chosen:updated");
@@ -903,7 +905,6 @@ td {
 
         			var menuarea = d3.zip(dropnames,dropcodes).sort(function(a, b){ return d3.ascending(a[0], b[0]); });
 
-              console.log(menuarea);
               //clear dropdown
               d3.select("#sel").selectAll("*").remove()
 
@@ -932,7 +933,7 @@ td {
         					//if(typeof params != 'undefined') {
                       clicked = true;
         							d3.selectAll(".cell").classed("cellspermselected", false);
-        							d3.selectAll(".cell path").style("pointer-events","none")
+        							d3.selectAll(".cell").style("pointer-events","none")
 
         							dropcode = $('#dropselect').val();
                       dropname = $('#dropselect option:selected').text();
@@ -957,7 +958,7 @@ td {
                           clicked = false;
 
                           d3.select(".cell" + dropcodeid).classed("cellspermselected",false)
-                          d3.selectAll(".cell path").style("pointer-events","all")
+                          d3.selectAll(".cell").style("pointer-events","all")
 
                           d3.select("#info").html("");
 
@@ -972,7 +973,7 @@ td {
 
                     d3.selectAll(".cell").classed("notselected",false)
         						d3.selectAll(".cell").classed("cellspermselected", false);
-        						d3.selectAll(".cell path").style("pointer-events","all");
+        						d3.selectAll(".cell").style("pointer-events","all");
                     resetZoom();
                     clearPlotValues("");
                     clearLegend();
@@ -1074,8 +1075,15 @@ td {
         let tooltip = document.getElementById("tooltip");
         tooltip.innerHTML = text;
         tooltip.style.display = "block";
-        tooltip.style.left = +left + 10 + 'px';
-        tooltip.style.top = +top + 10 + 'px';
+
+        if(d3.event.pageX < svgwidth/2) {
+          tooltip.style.left = +left + 10 + 'px';
+          tooltip.style.top = +top + 10 + 'px';
+        } else {
+          tooltip.style.left = (+left - 10 - parseInt(d3.select("#tooltip").style("width"))) + 'px';
+          tooltip.style.top = +top + 10 + 'px';
+        }
+
       }
 
       function hideTooltip() {
@@ -1564,7 +1572,28 @@ function clearTable() {
   	dvc=config
   		//load chart data
   		d3.csv(dvc.essential.graphic_data_url, function(error, data) {
-  			graphic_data = data;
+        console.log(data)
+
+
+  			graphic_data = data.filter(function(d,i) {
+
+          if (+d.value > dvc.essential.outlierLimits[1])
+            {d.value = (+dvc.essential.outlierLimits[1] + 0.2).toString();
+              return d;
+            }
+          else if (+d.value < dvc.essential.outlierLimits[0])
+            {d.value = (+dvc.essential.outlierLimits[0] - 0.2).toString();
+              return d;
+            }
+          else if (+d.value <= dvc.essential.outlierLimits[1] && +d.value >= dvc.essential.outlierLimits[0] && d.value != "NA")
+          {
+            return d;
+          }
+        });
+
+        //strip out null values
+
+        console.log(graphic_data)
 
           pymChild = new pym.Child({ renderCallback: drawGraphic});
   			//use pym to create iframed chart dependent on specified variables

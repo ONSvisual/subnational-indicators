@@ -15,7 +15,8 @@
             "dotRadius": [8,5],
             "tickValuesForLabels": [-5,0,5],
             "tickValueLabels": ["◀ Negative","Average","Positive ►"],
-            "tickBands": [-7.5,-0.8,0,0.8,7.5]
+            "tickBands": [-7.5,-0.8,0,0.8,7.5],
+            "outlierLimits" : [-7.5,7.5]
     },
     "optional" : {
             "mobileBreakpoint" : 610,
