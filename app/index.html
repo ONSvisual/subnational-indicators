@@ -103,7 +103,7 @@ h2, .areaHighlight {
 .hierarchyLabel {
   font-size: 20px;
   font-weight:bold;
-  fill: #206095;
+  fill: #000;
 }
 
 #plot {
@@ -551,7 +551,11 @@ td {
       <div id="tooltip" display="none" style="position: absolute; display: none;"></div>
     	<svg width="100%"></svg>
     </div>
-    <div id="source"></div>
+  </div>
+  <div class="row">
+    <div id="dataTable">
+      <h3 id="measuresLabel">Data table for selected areas</h3>
+    </div>
   </div>
   <!-- <h6 class="">Download this chart</h6>
   <a class="btn btn--primary" href="image.png" download>Image</a>
@@ -633,6 +637,8 @@ td {
       //get unique groups/variables
     	var groups = graphic_data.map(function(obj) { return obj.id; });
       groups = groups.filter(function(v,i) { return groups.indexOf(v) == i; });
+
+
 
 
   		height = (heightper*groups.length) + (spaceForLabels*(breakingPoints.length-1)) + margin.top + margin.bottom;
@@ -933,7 +939,7 @@ td {
         					//if(typeof params != 'undefined') {
                       clicked = true;
         							d3.selectAll(".cell").classed("cellspermselected", false);
-        							d3.selectAll(".cell").style("pointer-events","none")
+        							d3.selectAll(".cell").attr("pointer-events","all")
 
         							dropcode = $('#dropselect').val();
                       dropname = $('#dropselect option:selected').text();
@@ -943,10 +949,11 @@ td {
                       updateTable(dropcode, dropname);
                       updatePlotValues (dropcode, dropname);
                       createLegend();
+                      createDataTable(dropcode, dropname);
                       //createiconArray(dropcode, dropname);
 
                       d3.selectAll(".cell").classed("notselected",true)
-        							d3.selectAll(".cellgroup" + dropcode.replace(/[, ]+/g, "").trim()).classed("cellspermselected", true).raise();
+        							d3.selectAll(".cellgroup" + dropcode.replace(/[, ]+/g, "").trim()).classed("cellspermselected", true).attr("pointer-events","all").raise();
 
                       //datafilter = datacsv.filter(function(d,i) {return "id" + i == dropcode})
         							// changetext(datafilter[0].value,datafilter[0].unique )
@@ -958,7 +965,7 @@ td {
                           clicked = false;
 
                           d3.select(".cell" + dropcodeid).classed("cellspermselected",false)
-                          d3.selectAll(".cell").style("pointer-events","all")
+                          d3.selectAll(".cell").attr("pointer-events","all")
 
                           d3.select("#info").html("");
 
@@ -973,7 +980,7 @@ td {
 
                     d3.selectAll(".cell").classed("notselected",false)
         						d3.selectAll(".cell").classed("cellspermselected", false);
-        						d3.selectAll(".cell").style("pointer-events","all");
+        						d3.selectAll(".cell").attr("pointer-events","all");
                     resetZoom();
                     clearPlotValues("");
                     clearLegend();
@@ -1286,6 +1293,7 @@ function resetZoom() {
 }
 
 makeTable();
+createDataTable();
 
 function makeTable () {
 
@@ -1400,6 +1408,14 @@ function clearTable() {
   d3.selectAll(".tablelines").remove();
 
   d3.select("#standoutLabel").html("Stand out measures");
+
+}
+
+
+function createDataTable () {
+
+  console.log(groups);
+
 
 }
 

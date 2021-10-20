@@ -7,7 +7,7 @@
             "xAxisScale":[-8,8],
             "heightperstrip":100,
             "dotradius":5,
-            "threshold":0.8,
+            "threshold":1,
             "colour_palette_icon": ["#0a6060", "#e2d377", "#d13135", "#A8BD3A", "27A0CC"],
             "gridWidth":"8",
             "gridHeight":"2",
@@ -15,7 +15,7 @@
             "dotRadius": [8,5],
             "tickValuesForLabels": [-5,0,5],
             "tickValueLabels": ["◀ Negative","Average","Positive ►"],
-            "tickBands": [-7.5,-0.8,0,0.8,7.5],
+            "tickBands": [-7.5,-1,0,1,7.5],
             "outlierLimits" : [-7.5,7.5]
     },
     "optional" : {
