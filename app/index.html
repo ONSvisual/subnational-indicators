@@ -1454,7 +1454,7 @@ if(typeof dropname !== 'undefined') {
 
   tabletable = d3.select("#dataHTMLTable").append("table").attr("width","98%");
 
-  headerRow = tabletable.append('tr')
+  headerRow = tabletable.append('thead').append('tr')
   headerRow.append("th").attr("width","70%").attr("class","textCol").text("Indicator");
   headerRow.append("th").attr("width","70%").attr("class","textCol").text("Period");
   headerRow.append("th").attr("width","70%").attr("class","textCol").text("Unit");
@@ -1468,7 +1468,7 @@ if(typeof dropname !== 'undefined') {
   })
 
 
-
+  tablebody = tabletable.append('tbody')
 
 
 areaIndicators.sort(function(a, b) {return d3.ascending(a.group, b.group); }).forEach(function(d,i) {
@@ -1477,7 +1477,7 @@ areaIndicators.sort(function(a, b) {return d3.ascending(a.group, b.group); }).fo
 
    if(areanamessorted.indexOf(d.group) == 0) {
 
-     tablelines = tabletable.append("tr").attr("class","tablelines").attr("id","tablelines" + d.id.replace(/[, ]+/g, "").trim());
+     tablelines = tablebody.append("tr").attr("class","tablelines").attr("id","tablelines" + d.id.replace(/[, ]+/g, "").trim());
 
      tablelines.append("td").text(d.id);
      tablelines.append("td").text(d.Period);
