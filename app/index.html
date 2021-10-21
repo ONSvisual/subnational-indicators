@@ -866,7 +866,7 @@ td {
 
             //d3.select(".axis--x-bottom");
           }
-        }
+        }//end j loop
 
       //  annotationCreation();
 
@@ -1454,16 +1454,17 @@ if(typeof dropname !== 'undefined') {
 
   tabletable = d3.select("#dataHTMLTable").append("table").attr("width","98%");
 
-  tabletable.append("th").attr("width","70%").attr("class","textCol").text("Indicator");
-  tabletable.append("th").attr("width","70%").attr("class","textCol").text("Period");
-  tabletable.append("th").attr("width","70%").attr("class","textCol").text("Unit");
+  headerRow = tabletable.append('tr')
+  headerRow.append("th").attr("width","70%").attr("class","textCol").text("Indicator");
+  headerRow.append("th").attr("width","70%").attr("class","textCol").text("Period");
+  headerRow.append("th").attr("width","70%").attr("class","textCol").text("Unit");
 
   //add column for each area
 
   console.log(areanamessorted)
 
   areanamessorted.forEach(function(d,i) {
-    tabletable.append("th").attr("width","30%").attr("class","numberCol").text(d);
+    headerRow.append("th").attr("width","30%").attr("class","numberCol").text(d);
   })
 
 
