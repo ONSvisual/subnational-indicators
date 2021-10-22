@@ -402,6 +402,11 @@ td {
   padding-right: 10px;
 }
 
+.suffix {
+  width:10px;
+  display:inline-block;
+}
+
 .numberCol {
   text-align: right;
 }
@@ -609,7 +614,6 @@ td {
 
       // Work out how many categories there are, and how many variables within each
 
-      console.log(graphic_data)
       categoryCount = d3.nest()
         .key(function(d) { return d.Category; })
         .key(function(d) { return d.id; })
@@ -618,7 +622,6 @@ td {
         })
         .entries(graphic_data);
 
-        console.log(categoryCount)
 
       breakingPoints = []
 
@@ -673,7 +676,6 @@ td {
 
     if(j>0) {
       runningtotal = runningtotal + groupeddata[j-1].length;
-      //console.log(runningtotal)
     }
 
 
@@ -682,7 +684,6 @@ td {
       runningTotalOfCategories++;
 
       currGap = spaceForLabels*runningTotalOfCategories;
-      console.log(j +" " + currGap);
     }
 
 
@@ -937,7 +938,6 @@ td {
         					if($('#dropselect').val() != "") {
 
 
-                    console.log(params)
         					//if(typeof params != 'undefined') {
                       clicked = true;
         							d3.selectAll(".cell").classed("cellspermselected", false);
@@ -955,7 +955,7 @@ td {
                       //createiconArray(dropcode, dropname);
 
                       d3.selectAll(".cell").classed("notselected",true)
-        							d3.selectAll(".cellgroup" + dropcode.replace(/[, ]+/g, "").trim()).classed("cellspermselected", true).attr("pointer-events","all").raise();
+        							d3.selectAll(".cellgroup" + dropcode.replace(/[, ]+/g, "").trim()).classed("cellspermselected", true).attr("pointer-events","all").each(function(){d3.select(this).raise()});
 
                       //datafilter = datacsv.filter(function(d,i) {return "id" + i == dropcode})
         							// changetext(datafilter[0].value,datafilter[0].unique )
@@ -1000,7 +1000,6 @@ td {
 
         var menuarea = d3.zip(dropnames,dropcodes).sort(function(a, b){ return d3.ascending(a[0], b[0]); });
 
-        console.log(menuarea);
         //clear dropdown
         d3.select("#selmulti").selectAll("*").remove()
 
@@ -1027,7 +1026,6 @@ td {
 
   								if(typeof params.selected != 'undefined') {
 
-                    console.log(params);
                     listcodes.push(params.selected);
 
                     listnames.push(dropnames[dropcodes.indexOf(params.selected)])
@@ -1040,7 +1038,6 @@ td {
                     d3.selectAll(".cell").classed("notselected",true)
 
                     listcodes.forEach(function(d,i) {
-                      console.log(d)
                         d3.selectAll(".cellgroup" + d.replace(/[, ]+/g, "").trim()).attr("fill",dvc.essential.colour_palette[i+2]).classed("cellspermselected2", true).raise();
                     });
                     createLegend();
@@ -1110,7 +1107,6 @@ td {
             areaname = listnames;
         }
 
-        console.log(areaname)
 
         d3.select("#legend").selectAll("*").remove()
 
@@ -1280,10 +1276,7 @@ pymChild.sendHeight();
 
 function zoomToArea(code) {
 
-  console.log(code)
-
   specificpolygon = areas.features.filter(function(d) {return d.properties.AREACD == code})
-  console.log(specificpolygon)
   map.setFilter("state-fills-hover", ["==", "AREACD", code]);
 
   specific = turf.bbox(specificpolygon[0].geometry);
@@ -1309,14 +1302,14 @@ function makeTable () {
 
 postable = d3.select("#postable").append("table").attr("width","98%");
 
-posheadertable = postable.append("tr");
+posheadertable = postable.append('thead').append("tr");
 
 posheadertable.append("th").attr("width","70%").attr("class","textCol").text("Postive indicators");
 posheadertable.append("th").attr("width","30%").attr("class","numberCol").text("Value");
 
 negtable = d3.select("#negtable").append("table").attr("width","98%");
 
-negheadertable = negtable.append("tr");
+negheadertable = negtable.append('thead').append("tr");
 
 negheadertable.append("th").attr("width","70%").attr("class","textCol").text("Negative indicators");
 negheadertable.append("th").attr("width","30%").attr("class","numberCol").text("Value");
@@ -1337,22 +1330,18 @@ d3.selectAll(".tablelines").remove();
 
 
 areaIndicators = graphic_data.filter(function(d) {
-    if(d['unique'] == code) {
-      return d;
-    }
-  });
+    return d['unique'] == code
+});
 
 
 /* First filter the data for the area selected */
-PosFilteredData = graphic_data.filter(function(d) {
-  if(d['unique'] == code && d['value'] > dvc.essential.threshold) {
-    return d;
-  }
+PosFilteredData = areaIndicators.filter(function(d) {
+  return d['value'] > dvc.essential.threshold
 });
 
 if(PosFilteredData.length == 0) {
-
-  tablelines = postable.append("tr").attr("class","tablelines");
+  tablebody = postable.append('tbody')
+  tablelines = tablebody.append("tr").attr("class","tablelines");
 
   tablelines.append("td").text("No stand out indicators");
   tablelines.append("td").attr("class","numberCol").text("");
@@ -1360,25 +1349,23 @@ if(PosFilteredData.length == 0) {
 }
 
 PosFilteredData.forEach(function(d){
-
-  tablelines = postable.append("tr").attr("class","tablelines");
+  tablebody = postable.append('tbody')
+  tablelines = tablebody.append("tr").attr("class","tablelines");
 
   tablelines.append("td").text(d.id);
-  tablelines.append("td").attr("class","numberCol").text(formatTableNum(d.real));
+  tablelines.append("td").attr("class","numberCol").html(prefixer(d)+formatTableNum(d.real)+"<span class='suffix'>"+suffixer(d)+"</span>");
 
 
 })
 
 
-NegFilteredData = graphic_data.filter(function(d) {
-  if(d['unique'] == code && d['value'] < (dvc.essential.threshold*-1)) {
-    return d;
-  }
+NegFilteredData = areaIndicators.filter(function(d) {
+  return d['value'] < (dvc.essential.threshold*-1)
 });
 
 if(NegFilteredData.length == 0) {
-
-  tablelines = negtable.append("tr").attr("class","tablelines");
+  tablebody = negtable.append('tbody')
+  tablelines = tablebody.append("tr").attr("class","tablelines");
 
   tablelines.append("td").text("No stand out indicators");
   tablelines.append("td").attr("class","numberCol").text("");
@@ -1386,11 +1373,11 @@ if(NegFilteredData.length == 0) {
 }
 
 NegFilteredData.forEach(function(d){
-
-  tablelines = negtable.append("tr").attr("class","tablelines");
+  tablebody = negtable.append('tbody')
+  tablelines = tablebody.append("tr").attr("class","tablelines");
 
   tablelines.append("td").text(d.id);
-  tablelines.append("td").attr("class","numberCol").text(formatTableNum(d.real));
+  tablelines.append("td").attr("class","numberCol").html(prefixer(d)+formatTableNum(d.real)+"<span class='suffix'>"+suffixer(d)+"</span>");
 
 
 })
@@ -1409,6 +1396,16 @@ if(PosFilteredData.length == 0) {
 d3.select("#standoutLabel").html("Out of the " + areaIndicators.length + " measures available for <span class='areaHighlight'>" + name + "</span>, " + PosFilteredData.length + " " + waswerenone + " classified as positive, " + NegFilteredData.length + " as negative and " + (areaIndicators.length - (PosFilteredData.length + NegFilteredData.length))  + " as neutral");
 
 
+}
+
+function prefixer(d){
+  if(d.Measure=="Pounds"){return "£"}else{return"&nbsp;"}
+}
+
+function suffixer(d){
+  if(d.Measure=="Metres"){return "m"}
+  else if(d.Measure=="Percentage"){return "%"}
+  else{return "&nbsp;"}
 }
 
 function clearTable() {
@@ -1449,7 +1446,6 @@ if(typeof dropname !== 'undefined') {
       }
   });
 
-  console.log(areaIndicators)
 
   //add all the columns we need
 
@@ -1462,8 +1458,6 @@ if(typeof dropname !== 'undefined') {
 
   //add column for each area
 
-  console.log(areanamessorted)
-
   areanamessorted.forEach(function(d,i) {
     headerRow.append("th").attr("width","30%").attr("class","numberCol").text(d);
   })
@@ -1474,7 +1468,6 @@ if(typeof dropname !== 'undefined') {
 
 areaIndicators.sort(function(a, b) {return d3.ascending(a.group, b.group); }).forEach(function(d,i) {
 
-   console.log(d.group + " " + d.id + " " + d.real)
 
    if(areanamessorted.indexOf(d.group) == 0) {
 
@@ -1689,7 +1682,6 @@ areaIndicators.sort(function(a, b) {return d3.ascending(a.group, b.group); }).fo
 
         //strip out null values
 
-        console.log(graphic_data)
 
           pymChild = new pym.Child({ renderCallback: drawGraphic});
   			//use pym to create iframed chart dependent on specified variables
