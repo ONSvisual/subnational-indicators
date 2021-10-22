@@ -854,7 +854,7 @@ td {
               .attr("opacity",0.2)
               .lower()
 
-          svg.attr("height",parseInt(svg.attr("height"))+8+"px")
+          svg.attr("height",parseInt(svg.attr("height"))+20+"px")
           g.selectAll(".axis--x line").attr("stroke", "#ddd").attr("stroke-dasharray", "2,2");
 
           g.select(".axis--x-bottom")
@@ -1145,7 +1145,7 @@ td {
 
   	//add xaxislabel
   	  svg.append("g")
-  	  .attr("transform", "translate(" + (svgwidth - margin.right) +"," + (height+4) + ")")
+  	  .attr("transform", "translate(" + (svgwidth - margin.right) +"," + (height+20) + ")")
   		.append("text")
   		.attr("id","xaxislabel")
   		.attr("text-anchor", "end")

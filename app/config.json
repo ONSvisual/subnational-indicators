@@ -3,7 +3,7 @@
             "graphic_data_url": "data.csv",
             "colour_palette": ["#aabfcd","#206095", "#27A0CC", "#871A5B", "#A8BD3A", "#F66068"],
             "sourceText":["Office for National Statistics"],
-            "xAxisLabel":"Standard deviations from mean",
+            "xAxisLabel":"Standard deviations from median",
             "xAxisScale":[-8,8],
             "heightperstrip":100,
             "dotradius":5,
