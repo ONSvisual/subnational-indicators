@@ -701,26 +701,26 @@ td {
         g.lower()
       }
 
+      /* add hierarchy labelling */
+      if(breakingPoints.indexOf(j) != -1) {
+        g.append("text").attr("class","hierarchyLabel").text(categoryCount[breakingPoints.indexOf(j)].key).attr("y",-10).attr("x",-margin.left).call(wrap, svgwidth)
+      }
+
+      g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)+5).attr("x",-margin.left)
+
+      var cell = g.append("g");
 
   	  if(svgwidth < dvc.optional.mobileBreakpoint) {
   		  numberticks = dvc.optional.x_num_ticks_sm_md[0];
 
-        if(breakingPoints.indexOf(j) != -1) {
-          g.append("text").attr("class","hierarchyLabel").text(categoryCount[breakingPoints.indexOf(j)].key).attr("y",-10).attr("x",-margin.left)
-        }
-
-        g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)+5).attr("x",-margin.left)
-
-        var cell = g.append("g");
-
         cell.append("rect")
-        .attr("x",x(x.domain()[0]))
-        .attr("width",x(x.domain()[1]) - x(x.domain()[0]))
-        .attr("y",10 + (heightper/2))
-        .attr("height",(heightper/2)-20)
-        .attr("rx",(heightper/2))
-        .attr("fill","#f5f5f6")
-        .attr("opacity",0.5)
+          .attr("x",x(x.domain()[0]))
+          .attr("width",x(x.domain()[1]) - x(x.domain()[0]))
+          .attr("y",10 + (heightper/2))
+          .attr("height",(heightper/2)-20)
+          .attr("rx",(heightper/2))
+          .attr("fill","#f5f5f6")
+          .attr("opacity",0.5)
 
         cell.selectAll(".circles")
           .data(groupeddata[j])
@@ -756,25 +756,6 @@ td {
 
   	  } else {
   		  numberticks = dvc.optional.x_num_ticks_sm_md[1];
-
-        /* add hierarchy labelling */
-        if(breakingPoints.indexOf(j) != -1) {
-          g.append("text").attr("class","hierarchyLabel").text(categoryCount[breakingPoints.indexOf(j)].key).attr("y",-10).attr("x",-margin.left)
-        }
-
-        g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)+5).attr("x",-margin.left)
-
-
-        //g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)-5).attr("x",-margin.left)
-        //textValues = g.append("text").attr("y",(heightper/2)+13).attr("x",-margin.left);
-        // textValues.append("tspan").attr("class","labeltspan labelfirst " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
-        // textValues.append("tspan").attr("class","labeltspan label2nd " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
-        // textValues.append("tspan").attr("class","labeltspan label3rd " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
-        // textValues.append("tspan").attr("class","labeltspan label4th " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
-        // textValues.append("tspan").attr("class","labeltspan label5th " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
-
-
-        var cell = g.append("g");
 
         cell.append("rect")
         .attr("x",x(x.domain()[0]))
@@ -1177,6 +1158,29 @@ function clearPlotValues() {
 
 }
 
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        x = text.attr("x"),
+        y = text.attr("y"),
+        tspan = text.text(null).append("tspan").attr("x", x).attr("y", y)//.attr("dy", dy + "em");
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", x).attr("y", y).attr("dy", ++lineNumber * lineHeight + "em").text(word);
+      }
+    }
+  });
+}
 
 /*** Map Code ***/
 
@@ -1257,6 +1261,8 @@ function makeMap () {
 			}, 'place_city');
 
 		}
+
+
 
 /*** End Map Code ***/
 
