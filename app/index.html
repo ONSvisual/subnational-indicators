@@ -599,17 +599,18 @@ td {
 
 
     if(svgwidth < dvc.optional.mobileBreakpoint) {
-  		  margin = {top: 40, right: 12, bottom: 20, left: 20};
-        heightper = dvc.essential.heightperstrip;
+      var size = "sm";
     } else {
-        margin = {top: 40, right: 12, bottom: 20, left: 300};
-        heightper = dvc.essential.heightperstrip/2;
+      var size = "lg";
     }
+
+    margin = dvc.optional.margin[size];
+    heightper = dvc.essential.heightperstrip[size];
 
   		width = svgwidth - margin.left - margin.right;
 
-      spaceForLabels = 50;
-      runningTotalOfCategories = 0;
+      spaceForLabels = 60;
+      currGap = 0;
 
 
       // Work out how many categories there are, and how many variables within each
@@ -681,13 +682,8 @@ td {
 
     /* add a bit of spacing to allow for the hierarchy labelling */
     if(breakingPoints.indexOf(j) != -1) {
-      runningTotalOfCategories++;
-
-      currGap = spaceForLabels*runningTotalOfCategories;
+      currGap += spaceForLabels;
     }
-
-
-
 
 
     	var g = svg.append("g")
@@ -703,21 +699,32 @@ td {
 
       /* add hierarchy labelling */
       if(breakingPoints.indexOf(j) != -1) {
-        g.append("text").attr("class","hierarchyLabel").text(categoryCount[breakingPoints.indexOf(j)].key).attr("y",-10).attr("x",-margin.left).call(wrap, svgwidth)
+        var hierarchyLabel = g.append("text").attr("class","hierarchyLabel").text(categoryCount[breakingPoints.indexOf(j)].key).attr("y",-10).attr("x",-margin.left).call(wrap, svgwidth);
+        var hierarchyLabelLines = hierarchyLabel.selectAll("tspan").size();
+        // add extra gap if hierarchy labels go onto multiple lines
+        if (hierarchyLabelLines > 1) {
+          var extraGap = 20*(hierarchyLabelLines-1);
+          currGap += extraGap;
+          g.attr("transform", "translate(" + margin.left + "," + (currGap + margin.top + (separate*j)) + ")");
+          hierarchyLabel.attr("y", hierarchyLabel.attr("y") - extraGap);
+        };
       }
 
       g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)+5).attr("x",-margin.left)
 
-      var cell = g.append("g");
+      var cell = g.append("g").attr("class", "cell-group");
 
   	  if(svgwidth < dvc.optional.mobileBreakpoint) {
+        // set label y on mobile
+        g.select(".label").attr("y", 20);
+
   		  numberticks = dvc.optional.x_num_ticks_sm_md[0];
 
         cell.append("rect")
           .attr("x",x(x.domain()[0]))
           .attr("width",x(x.domain()[1]) - x(x.domain()[0]))
-          .attr("y",10 + (heightper/2))
-          .attr("height",(heightper/2)-20)
+          .attr("y",23)
+          .attr("height",heightper/2)
           .attr("rx",(heightper/2))
           .attr("fill","#f5f5f6")
           .attr("opacity",0.5)
@@ -729,7 +736,7 @@ td {
           .attr("class", "cell")
           .attr("r", dvc.essential.dotradius)
           .attr("cx", function(d) {return x(d.value); })
-          .attr("cy", function(d) { return (heightper/2) + Math.random()*(heightper/4) + heightper/8; })
+          .attr("cy", function(d) { return 23 + 5 + Math.random()*(heightper/2 -10) ; })
           .attr("class", function(d,i) { return "cell " + "cellgroup"+d.unique.replace(/[, ]+/g, "").trim()})
           .attr("fill", dvc.essential.colour_palette[0])
           .attr("opacity",0.5)
@@ -1167,8 +1174,7 @@ function wrap(text, width) {
         lineNumber = 0,
         lineHeight = 1.1, // ems
         x = text.attr("x"),
-        y = text.attr("y"),
-        tspan = text.text(null).append("tspan").attr("x", x).attr("y", y)//.attr("dy", dy + "em");
+        tspan = text.text(null).append("tspan").attr("x", x);
     while (word = words.pop()) {
       line.push(word);
       tspan.text(line.join(" "));
@@ -1176,7 +1182,7 @@ function wrap(text, width) {
         line.pop();
         tspan.text(line.join(" "));
         line = [word];
-        tspan = text.append("tspan").attr("x", x).attr("y", y).attr("dy", ++lineNumber * lineHeight + "em").text(word);
+        tspan = text.append("tspan").attr("x", x).attr("dy", lineHeight + "em").text(word);
       }
     }
   });
