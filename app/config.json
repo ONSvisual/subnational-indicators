@@ -1,6 +1,6 @@
 {
     "essential" : {
-            "graphic_data_url": "data.csv",
+            "graphic_data_url": "revised_data.csv",
             "colour_palette": ["#aabfcd","#206095", "#27A0CC", "#871A5B", "#A8BD3A", "#F66068"],
             "sourceText":["Office for National Statistics"],
             "xAxisLabel":"Standard deviations from median",
