@@ -1,395 +1,395 @@
 unique,group,Indicator,id,Category,Period,Measure,unit,real,mean,median,z_score,value
-E06000001,Hartlepool,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22332,28609.5994832041,24311,-0.2129999171,-0.3082006957
-E07000215,Tandridge,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,33822,28609.5994832041,24311,0.1768575521,1.481201019
-E07000084,Basingstoke and Deane,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,41276,28609.5994832041,24311,0.4297729198,2.6420539678
-E06000002,Middlesbrough,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17415,28609.5994832041,24311,-0.3798344841,-1.0739525
-E06000003,Redcar and Cleveland,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17415,28609.5994832041,24311,-0.3798344841,-1.0739525
-E06000004,Stockton-on-Tees,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22332,28609.5994832041,24311,-0.2129999171,-0.3082006957
-E07000216,Waverley,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,39856,28609.5994832041,24311,0.3815921012,2.4209094565
-E07000217,Woking,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,39856,28609.5994832041,24311,0.3815921012,2.4209094565
-E06000005,Darlington,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24416,28609.5994832041,24311,-0.1422894762,0.016352235
-E06000006,Halton,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23272,28609.5994832041,24311,-0.1811055723,-0.1618092586
-E07000218,North Warwickshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,34302,28609.5994832041,24311,0.193144026,1.5559540933
-E07000219,Nuneaton and Bedworth,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,34302,28609.5994832041,24311,0.193144026,1.5559540933
-E06000007,Warrington,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,36937,28609.5994832041,24311,0.2825499817,1.9663173237
-E06000008,Blackburn with Darwen,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20846,28609.5994832041,24311,-0.2634201259,-0.5396237547
-E07000220,Rugby,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,34302,28609.5994832041,24311,0.193144026,1.5559540933
-E07000221,Stratford-on-Avon,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,34302,28609.5994832041,24311,0.193144026,1.5559540933
-E06000009,Blackpool,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20149,28609.5994832041,24311,-0.2870694432,-0.6481714479
-E06000010,"Kingston upon Hull, City of",GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23786,28609.5994832041,24311,-0.1636654732,-0.081761175
-E07000222,Warwick,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,34302,28609.5994832041,24311,0.193144026,1.5559540933
-E07000223,Adur,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24447,28609.5994832041,24311,-0.1412376414,0.0211800377
-E06000011,East Riding of Yorkshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21032,28609.5994832041,24311,-0.2571091172,-0.5106569384
-E06000012,North East Lincolnshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23042,28609.5994832041,24311,-0.1889095077,-0.19762844
-E07000224,Arun,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24447,28609.5994832041,24311,-0.1412376414,0.0211800377
-E06000013,North Lincolnshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23042,28609.5994832041,24311,-0.1889095077,-0.19762844
-E06000014,York,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,29913,28609.5994832041,24311,0.0442245802,0.8724306707
-E07000225,Chichester,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24447,28609.5994832041,24311,-0.1412376414,0.0211800377
-E07000226,Crawley,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,32014,28609.5994832041,24311,0.1155118337,1.199631106
-E06000015,Derby,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,28873,28609.5994832041,24311,0.0089372201,0.7104656765
-E06000016,Leicester,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,25656,28609.5994832041,24311,-0.1002160852,0.2094643435
-E07000227,Horsham,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,32014,28609.5994832041,24311,0.1155118337,1.199631106
-E07000228,Mid Sussex,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,32014,28609.5994832041,24311,0.1155118337,1.199631106
-E06000017,Rutland,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24848,28609.5994832041,24311,-0.1276316497,0.0836300018
-E06000018,Nottingham,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,31713,28609.5994832041,24311,0.1052988574,1.1527546991
-E07000229,Worthing,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24447,28609.5994832041,24311,-0.1412376414,0.0211800377
-E07000234,Bromsgrove,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24311,28609.5994832041,24311,-0.1458521423,0
-E06000019,"Herefordshire, County of",GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20758,28609.5994832041,24311,-0.2664059794,-0.553328485
-E06000020,Telford and Wrekin,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,25785,28609.5994832041,24311,-0.0958390954,0.2295542322
-E07000235,Malvern Hills,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24311,28609.5994832041,24311,-0.1458521423,0
-E07000236,Redditch,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24311,28609.5994832041,24311,-0.1458521423,0
-E06000021,Stoke-on-Trent,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23683,28609.5994832041,24311,-0.167160279,-0.0978019388
-E07000237,Worcester,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24311,28609.5994832041,24311,-0.1458521423,0
-E07000085,East Hampshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,29158,28609.5994832041,24311,0.018607314,0.7548503143
-E06000022,Bath and North East Somerset,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,30523,28609.5994832041,24311,0.0649219741,0.9674293692
-E07000238,Wychavon,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24311,28609.5994832041,24311,-0.1458521423,0
-E07000086,Eastleigh,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24232,28609.5994832041,24311,-0.1485326245,-0.0123031101
-E06000023,"Bristol, City of",GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,33093,28609.5994832041,24311,0.1521224699,1.3676697875
-E07000239,Wyre Forest,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24311,28609.5994832041,24311,-0.1458521423,0
-E07000087,Fareham,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24232,28609.5994832041,24311,-0.1485326245,-0.0123031101
-E06000024,North Somerset,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,30523,28609.5994832041,24311,0.0649219741,0.9674293692
-E07000240,St Albans,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
-E07000088,Gosport,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24232,28609.5994832041,24311,-0.1485326245,-0.0123031101
-E06000025,South Gloucestershire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,30523,28609.5994832041,24311,0.0649219741,0.9674293692
-E07000241,Welwyn Hatfield,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
-E07000089,Hart,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,41276,28609.5994832041,24311,0.4297729198,2.6420539678
-E06000026,Plymouth,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21995,28609.5994832041,24311,-0.2244343789,-0.3606835832
-E07000242,East Hertfordshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
-E07000090,Havant,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24232,28609.5994832041,24311,-0.1485326245,-0.0123031101
-E06000027,Torbay,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,14500,28609.5994832041,24311,-0.478740883,-1.5279216904
-E07000243,Stevenage,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
-E07000091,New Forest,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,29158,28609.5994832041,24311,0.018607314,0.7548503143
-E06000030,Swindon,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,43094,28609.5994832041,24311,0.4914579398,2.9251812365
-E07000244,East Suffolk,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,25397,28609.5994832041,24311,-0.1090039951,0.1691288305
-E07000092,Rushmoor,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,41276,28609.5994832041,24311,0.4297729198,2.6420539678
-E06000031,Peterborough,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,33088,28609.5994832041,24311,0.1519528191,1.3668911097
-E07000245,West Suffolk,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,25397,28609.5994832041,24311,-0.1090039951,0.1691288305
-E07000093,Test Valley,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,29158,28609.5994832041,24311,0.018607314,0.7548503143
-E06000032,Luton,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,29617,28609.5994832041,24311,0.0341812546,0.8263329415
-E07000246,Somerset West and Taunton,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21608,28609.5994832041,24311,-0.2375653485,-0.4209532493
-E07000094,Winchester,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,29158,28609.5994832041,24311,0.018607314,0.7548503143
-E06000033,Southend-on-Sea,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17266,28609.5994832041,24311,-0.3848900771,-1.0971571001
-E08000001,Bolton,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,18058,28609.5994832041,24311,-0.3580173951,-0.9738145276
-E07000095,Broxbourne,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
-E07000143,Breckland,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,18797,28609.5994832041,24311,-0.3329430114,-0.8587259404
-E06000034,Thurrock,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,25262,28609.5994832041,24311,-0.1135845659,0.1481045283
-E08000002,Bury,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17603,28609.5994832041,24311,-0.3734556152,-1.0446742126
-E07000096,Dacorum,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
-E06000035,Medway,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21060,28609.5994832041,24311,-0.2561590729,-0.5062963424
-E07000144,Broadland,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,25574,28609.5994832041,24311,-0.1029983579,0.1966940266
-E08000003,Manchester,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,44356,28609.5994832041,24311,0.5342777941,3.1217195275
-E07000098,Hertsmere,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
-E06000036,Bracknell Forest,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,50654,28609.5994832041,24311,0.7479699038,4.1025421558
-E07000145,Great Yarmouth,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,25574,28609.5994832041,24311,-0.1029983579,0.1966940266
-E08000004,Oldham,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17603,28609.5994832041,24311,-0.3734556152,-1.0446742126
-E07000099,North Hertfordshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
-E06000037,West Berkshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,50654,28609.5994832041,24311,0.7479699038,4.1025421558
-E07000146,King's Lynn and West Norfolk,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,18349,28609.5994832041,24311,-0.3481437203,-0.9284954763
-E08000005,Rochdale,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17603,28609.5994832041,24311,-0.3734556152,-1.0446742126
-E07000102,Three Rivers,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
-E06000038,Reading,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,50654,28609.5994832041,24311,0.7479699038,4.1025421558
-E07000147,North Norfolk,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,18349,28609.5994832041,24311,-0.3481437203,-0.9284954763
-E08000006,Salford,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,35042,28609.5994832041,24311,0.21825234,1.6711984161
-E07000103,Watford,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
-E06000039,Slough,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,50654,28609.5994832041,24311,0.7479699038,4.1025421558
-E07000148,Norwich,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,25574,28609.5994832041,24311,-0.1029983579,0.1966940266
-E08000007,Stockport,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20163,28609.5994832041,24311,-0.286594421,-0.6459911499
-E07000105,Ashford,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,25686,28609.5994832041,24311,-0.0991981806,0.2141364106
-E06000040,Windsor and Maidenhead,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,50654,28609.5994832041,24311,0.7479699038,4.1025421558
-E07000149,South Norfolk,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,18797,28609.5994832041,24311,-0.3329430114,-0.8587259404
-E08000008,Tameside,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20163,28609.5994832041,24311,-0.286594421,-0.6459911499
-E07000106,Canterbury,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19546,28609.5994832041,24311,-0.307529326,-0.7420799974
-E06000041,Wokingham,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,50654,28609.5994832041,24311,0.7479699038,4.1025421558
-E07000150,Corby,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21252,28609.5994832041,24311,-0.2496444833,-0.4763951127
-E08000009,Trafford,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,35042,28609.5994832041,24311,0.21825234,1.6711984161
-E07000107,Dartford,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23637,28609.5994832041,24311,-0.1687210661,-0.1049657751
-E06000042,Milton Keynes,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,54031,28609.5994832041,24311,0.8625520338,4.6284611802
-E07000151,Daventry,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,30741,28609.5994832041,24311,0.0723187477,1.0013797237
-E08000010,Wigan,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,18058,28609.5994832041,24311,-0.3580173951,-0.9738145276
-E07000108,Dover,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19546,28609.5994832041,24311,-0.307529326,-0.7420799974
-E06000043,Brighton and Hove,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,30017,28609.5994832041,24311,0.0477533162,0.8886271701
-E07000152,East Northamptonshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21252,28609.5994832041,24311,-0.2496444833,-0.4763951127
-E08000011,Knowsley,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23272,28609.5994832041,24311,-0.1811055723,-0.1618092586
-E07000109,Gravesham,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23637,28609.5994832041,24311,-0.1687210661,-0.1049657751
-E06000044,Portsmouth,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,27832,28609.5994832041,24311,-0.0263840702,0.5483449467
-E08000012,Liverpool,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,27182,28609.5994832041,24311,-0.0484386703,0.4471168253
-E07000153,Kettering,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21252,28609.5994832041,24311,-0.2496444833,-0.4763951127
-E07000154,Northampton,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,30741,28609.5994832041,24311,0.0723187477,1.0013797237
-E07000155,South Northamptonshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,30741,28609.5994832041,24311,0.0723187477,1.0013797237
-E07000110,Maidstone,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,25686,28609.5994832041,24311,-0.0991981806,0.2141364106
-E07000156,Wellingborough,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21252,28609.5994832041,24311,-0.2496444833,-0.4763951127
-E06000045,Southampton,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,30865,28609.5994832041,24311,0.0765260868,1.0206909346
-E08000013,St. Helens,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23272,28609.5994832041,24311,-0.1811055723,-0.1618092586
-E06000046,Isle of Wight,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,18849,28609.5994832041,24311,-0.3311786433,-0.8506276907
-E07000163,Craven,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24361,28609.5994832041,24311,-0.1441556346,0.0077867786
-E07000111,Sevenoaks,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,33179,28609.5994832041,24311,0.1550404631,1.3810630466
-E08000014,Sefton,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,15217,28609.5994832041,24311,-0.4544129626,-1.4162592858
-E06000047,County Durham,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,16925,28609.5994832041,24311,-0.3964602596,-1.1502629299
-E07000164,Hambleton,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24361,28609.5994832041,24311,-0.1441556346,0.0077867786
-E07000112,Folkestone and Hythe,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19546,28609.5994832041,24311,-0.307529326,-0.7420799974
-E08000015,Wirral,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,15831,28609.5994832041,24311,-0.433579848,-1.320637645
-E06000049,Cheshire East,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,38361,28609.5994832041,24311,0.330866521,2.1880847773
-E07000165,Harrogate,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24361,28609.5994832041,24311,-0.1441556346,0.0077867786
-E07000113,Swale,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23637,28609.5994832041,24311,-0.1687210661,-0.1049657751
-E08000016,Barnsley,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17909,28609.5994832041,24311,-0.3630729881,-0.9970191277
-E06000050,Cheshire West and Chester,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,30567,28609.5994832041,24311,0.0664149009,0.9742817343
-E07000166,Richmondshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24361,28609.5994832041,24311,-0.1441556346,0.0077867786
-E07000114,Thanet,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19546,28609.5994832041,24311,-0.307529326,-0.7420799974
-E08000017,Doncaster,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17909,28609.5994832041,24311,-0.3630729881,-0.9970191277
-E06000051,Shropshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19223,28609.5994832041,24311,-0.3184887658,-0.792382587
-E07000167,Ryedale,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24361,28609.5994832041,24311,-0.1441556346,0.0077867786
-E07000115,Tonbridge and Malling,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,33179,28609.5994832041,24311,0.1550404631,1.3810630466
-E08000018,Rotherham,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17909,28609.5994832041,24311,-0.3630729881,-0.9970191277
-E06000052,Cornwall,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20055,28609.5994832041,24311,-0.2902588777,-0.6628105916
-E07000168,Scarborough,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24361,28609.5994832041,24311,-0.1441556346,0.0077867786
-E07000116,Tunbridge Wells,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,33179,28609.5994832041,24311,0.1550404631,1.3810630466
-E08000019,Sheffield,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22263,28609.5994832041,24311,-0.2153410977,-0.3189464501
-E06000053,Isles of Scilly,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20055,28609.5994832041,24311,-0.2902588777,-0.6628105916
-E07000169,Selby,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24361,28609.5994832041,24311,-0.1441556346,0.0077867786
-E07000117,Burnley,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19007,28609.5994832041,24311,-0.325817679,-0.8260214704
-E08000021,Newcastle upon Tyne,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23379,28609.5994832041,24311,-0.1774750458,-0.1451455525
-E06000054,Wiltshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23141,28609.5994832041,24311,-0.1855504225,-0.1822106185
-E07000170,Ashfield,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19779,28609.5994832041,24311,-0.2996236002,-0.7057936093
-E07000118,Chorley,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20269,28609.5994832041,24311,-0.2829978247,-0.6294831794
-E08000022,North Tyneside,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23379,28609.5994832041,24311,-0.1774750458,-0.1451455525
-E06000055,Bedford,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,25159,28609.5994832041,24311,-0.1170793718,0.1320637645
-E07000171,Bassetlaw,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19779,28609.5994832041,24311,-0.2996236002,-0.7057936093
-E07000119,Fylde,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,32365,28609.5994832041,24311,0.1274213178,1.2542942916
-E08000023,South Tyneside,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23379,28609.5994832041,24311,-0.1774750458,-0.1451455525
-E06000056,Central Bedfordshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21499,28609.5994832041,24311,-0.2412637353,-0.4379284266
-E07000172,Broxtowe,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,18745,28609.5994832041,24311,-0.3347073794,-0.8668241901
-E07000120,Hyndburn,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19007,28609.5994832041,24311,-0.325817679,-0.8260214704
-E08000024,Sunderland,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,25431,28609.5994832041,24311,-0.1078503699,0.1744238399
-E06000057,Northumberland,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,16005,28609.5994832041,24311,-0.4276760013,-1.2935396556
-E07000173,Gedling,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,18745,28609.5994832041,24311,-0.3347073794,-0.8668241901
-E07000121,Lancaster,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17845,28609.5994832041,24311,-0.3652445179,-1.0069862043
-E08000025,Birmingham,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24345,28609.5994832041,24311,-0.1446985171,0.0052950094
-E06000058,"Bournemouth, Christchurch and Poole",GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,26932,28609.5994832041,24311,-0.0569212088,0.4081829325
-E07000174,Mansfield,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19779,28609.5994832041,24311,-0.2996236002,-0.7057936093
-E07000122,Pendle,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19007,28609.5994832041,24311,-0.325817679,-0.8260214704
-E08000026,Coventry,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,26671,28609.5994832041,24311,-0.065776979,0.3675359484
-E07000175,Newark and Sherwood,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19779,28609.5994832041,24311,-0.2996236002,-0.7057936093
-E07000123,Preston,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,32365,28609.5994832041,24311,0.1274213178,1.2542942916
-E08000027,Dudley,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17120,28609.5994832041,24311,-0.3898438796,-1.1198944935
-E07000176,Rushcliffe,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,18745,28609.5994832041,24311,-0.3347073794,-0.8668241901
-E07000124,Ribble Valley,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,32365,28609.5994832041,24311,0.1274213178,1.2542942916
-E08000028,Sandwell,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20515,28609.5994832041,24311,-0.2746510068,-0.5911722288
-E07000177,Cherwell,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,32961,28609.5994832041,24311,0.1476436895,1.3471126921
-E07000125,Rossendale,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19007,28609.5994832041,24311,-0.325817679,-0.8260214704
-E07000178,Oxford,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,32961,28609.5994832041,24311,0.1476436895,1.3471126921
-E07000126,South Ribble,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,32365,28609.5994832041,24311,0.1274213178,1.2542942916
-E07000179,South Oxfordshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,32961,28609.5994832041,24311,0.1476436895,1.3471126921
-E07000127,West Lancashire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20269,28609.5994832041,24311,-0.2829978247,-0.6294831794
-E07000180,Vale of White Horse,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,32961,28609.5994832041,24311,0.1476436895,1.3471126921
-E07000128,Wyre,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17845,28609.5994832041,24311,-0.3652445179,-1.0069862043
-E07000181,West Oxfordshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,32961,28609.5994832041,24311,0.1476436895,1.3471126921
-E07000129,Blaby,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24848,28609.5994832041,24311,-0.1276316497,0.0836300018
-E07000187,Mendip,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21608,28609.5994832041,24311,-0.2375653485,-0.4209532493
-E07000130,Charnwood,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24848,28609.5994832041,24311,-0.1276316497,0.0836300018
-E07000188,Sedgemoor,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21608,28609.5994832041,24311,-0.2375653485,-0.4209532493
-E07000131,Harborough,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24848,28609.5994832041,24311,-0.1276316497,0.0836300018
-E07000189,South Somerset,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21608,28609.5994832041,24311,-0.2375653485,-0.4209532493
-E07000132,Hinckley and Bosworth,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24848,28609.5994832041,24311,-0.1276316497,0.0836300018
-E07000192,Cannock Chase,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21483,28609.5994832041,24311,-0.2418066178,-0.4404201958
-E07000133,Melton,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24848,28609.5994832041,24311,-0.1276316497,0.0836300018
-E07000193,East Staffordshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21483,28609.5994832041,24311,-0.2418066178,-0.4404201958
-E07000134,North West Leicestershire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24848,28609.5994832041,24311,-0.1276316497,0.0836300018
-E07000194,Lichfield,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21483,28609.5994832041,24311,-0.2418066178,-0.4404201958
-E07000195,Newcastle-under-Lyme,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21483,28609.5994832041,24311,-0.2418066178,-0.4404201958
-E07000196,South Staffordshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21483,28609.5994832041,24311,-0.2418066178,-0.4404201958
-E07000197,Stafford,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21483,28609.5994832041,24311,-0.2418066178,-0.4404201958
-E07000198,Staffordshire Moorlands,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21483,28609.5994832041,24311,-0.2418066178,-0.4404201958
-E07000199,Tamworth,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21483,28609.5994832041,24311,-0.2418066178,-0.4404201958
-E07000200,Babergh,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,25397,28609.5994832041,24311,-0.1090039951,0.1691288305
-E07000202,Ipswich,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,25397,28609.5994832041,24311,-0.1090039951,0.1691288305
-E07000203,Mid Suffolk,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,25397,28609.5994832041,24311,-0.1090039951,0.1691288305
-E07000207,Elmbridge,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,39856,28609.5994832041,24311,0.3815921012,2.4209094565
-E07000208,Epsom and Ewell,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,33822,28609.5994832041,24311,0.1768575521,1.481201019
-E07000209,Guildford,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,39856,28609.5994832041,24311,0.3815921012,2.4209094565
-E07000210,Mole Valley,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,33822,28609.5994832041,24311,0.1768575521,1.481201019
-E07000135,Oadby and Wigston,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24848,28609.5994832041,24311,-0.1276316497,0.0836300018
-E07000211,Reigate and Banstead,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,33822,28609.5994832041,24311,0.1768575521,1.481201019
-E07000136,Boston,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20407,28609.5994832041,24311,-0.2783154635,-0.6079916705
-E07000212,Runnymede,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,39856,28609.5994832041,24311,0.3815921012,2.4209094565
-E07000137,East Lindsey,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20407,28609.5994832041,24311,-0.2783154635,-0.6079916705
-E07000213,Spelthorne,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,39856,28609.5994832041,24311,0.3815921012,2.4209094565
-E07000138,Lincoln,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20407,28609.5994832041,24311,-0.2783154635,-0.6079916705
-E07000214,Surrey Heath,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,39856,28609.5994832041,24311,0.3815921012,2.4209094565
-E07000139,North Kesteven,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20407,28609.5994832041,24311,-0.2783154635,-0.6079916705
-E07000140,South Holland,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20407,28609.5994832041,24311,-0.2783154635,-0.6079916705
-E07000141,South Kesteven,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20407,28609.5994832041,24311,-0.2783154635,-0.6079916705
-E07000142,West Lindsey,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20407,28609.5994832041,24311,-0.2783154635,-0.6079916705
-E08000029,Solihull,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,47786,28609.5994832041,24311,0.6506582222,3.6558925372
-E08000030,Walsall,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,16900,28609.5994832041,24311,-0.3973085134,-1.1541563192
-E08000031,Wolverhampton,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19797,28609.5994832041,24311,-0.2990128574,-0.702990369
-E08000032,Bradford,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,18464,28609.5994832041,24311,-0.3442417526,-0.9105858856
-E08000033,Calderdale,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19181,28609.5994832041,24311,-0.3199138322,-0.798923481
-E08000034,Kirklees,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19181,28609.5994832041,24311,-0.3199138322,-0.798923481
-E08000035,Leeds,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,34510,28609.5994832041,24311,0.200201498,1.5883470921
-E08000036,Wakefield,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23198,28609.5994832041,24311,-0.1836164037,-0.1733336909
-E08000037,Gateshead,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23379,28609.5994832041,24311,-0.1774750458,-0.1451455525
-E09000001,City of London,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,374290,28609.5994832041,24311,11.7289892155,54.5041795222
-E09000002,Barking and Dagenham,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20295,28609.5994832041,24311,-0.2821156407,-0.6254340545
-E09000003,Barnet,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23499,28609.5994832041,24311,-0.1734034274,-0.1264572839
-E09000004,Bexley,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23452,28609.5994832041,24311,-0.1749981446,-0.1337768558
-E09000005,Brent,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,27588,28609.5994832041,24311,-0.0346630278,0.5103454673
-E09000006,Bromley,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24683,28609.5994832041,24311,-0.1332301251,0.0579336325
-E09000007,Camden,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,374290,28609.5994832041,24311,11.7289892155,54.5041795222
-E09000008,Croydon,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,25178,28609.5994832041,24311,-0.1164346988,0.1350227404
-E09000009,Ealing,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,27971,28609.5994832041,24311,-0.0216677788,0.5699921911
-E09000010,Enfield,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24442,28609.5994832041,24311,-0.1414072922,0.0204013598
-E09000011,Greenwich,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23452,28609.5994832041,24311,-0.1749981446,-0.1337768558
-E09000012,Hackney,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24819,28609.5994832041,24311,-0.1286156241,0.0791136702
-E09000013,Hammersmith and Fulham,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,64189,28609.5994832041,24311,1.2072145379,6.2104231139
-E09000014,Haringey,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,47122,28609.5994832041,24311,0.6281286,3.5524841179
-E09000015,Harrow,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,37486,28609.5994832041,24311,0.3011776363,2.0518161524
-E09000016,Havering,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20295,28609.5994832041,24311,-0.2821156407,-0.6254340545
-E09000017,Hillingdon,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,37486,28609.5994832041,24311,0.3011776363,2.0518161524
-E09000018,Hounslow,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,54886,28609.5994832041,24311,0.8915623154,4.7616150937
-E09000019,Islington,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,47122,28609.5994832041,24311,0.6281286,3.5524841179
-E09000020,Kensington and Chelsea,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,64189,28609.5994832041,24311,1.2072145379,6.2104231139
-E09000021,Kingston upon Thames,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,26371,28609.5994832041,24311,-0.0759560252,0.320815277
-E09000022,Lambeth,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,40293,28609.5994832041,24311,0.3964195785,2.4889659012
-E09000023,Lewisham,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,40974,28609.5994832041,24311,0.4195260133,2.5950218253
-E09000024,Merton,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,26371,28609.5994832041,24311,-0.0759560252,0.320815277
-E09000025,Newham,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24819,28609.5994832041,24311,-0.1286156241,0.0791136702
-E09000026,Redbridge,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,16659,28609.5994832041,24311,-0.4054856806,-1.1916885919
-E09000027,Richmond upon Thames,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,54886,28609.5994832041,24311,0.8915623154,4.7616150937
-E09000028,Southwark,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,40974,28609.5994832041,24311,0.4195260133,2.5950218253
-E09000029,Sutton,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,26371,28609.5994832041,24311,-0.0759560252,0.320815277
-E09000030,Tower Hamlets,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,106209,28609.5994832041,24311,2.6329596079,12.7544318217
-E09000031,Waltham Forest,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,16659,28609.5994832041,24311,-0.4054856806,-1.1916885919
-E09000032,Wandsworth,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24052,28609.5994832041,24311,-0.1546400522,-0.040335513
-E09000033,Westminster,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,277041,28609.5994832041,24311,8.4293156717,39.3590509449
-N09000001,Antrim and Newtownabbey,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22593,28609.5994832041,24311,-0.2041441469,-0.2675537116
-N09000002,"Armagh City, Banbridge and Craigavon",GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,18465,28609.5994832041,24311,-0.3442078225,-0.9104301501
-N09000003,Belfast,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,38714,28609.5994832041,24311,0.3428438654,2.243059434
-N09000004,Causeway Coast and Glens,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,15170,28609.5994832041,24311,-0.4560076798,-1.4235788576
-N09000005,Derry City and Strabane,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19643,28609.5994832041,24311,-0.3042381011,-0.726973647
-N09000006,Fermanagh and Omagh,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19352,28609.5994832041,24311,-0.3141117759,-0.7722926983
-N09000007,Lisburn and Castlereagh,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21746,28609.5994832041,24311,-0.2328829873,-0.3994617405
-N09000008,Mid and East Antrim,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17070,28609.5994832041,24311,-0.3915403873,-1.1276812721
-N09000009,Mid Ulster,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23169,28609.5994832041,24311,-0.1846003782,-0.1778500225
-N09000010,"Newry, Mourne and Down",GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17485,28609.5994832041,24311,-0.3774593734,-1.06305101
-N09000011,Ards and North Down,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,12900,28609.5994832041,24311,-0.5330291293,-1.7770986046
-S12000005,Clackmannanshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19979,28609.5994832041,24311,-0.2928375694,-0.674646495
-S12000006,Dumfries and Galloway,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24252,28609.5994832041,24311,-0.1478540214,-0.0091883987
-E06000059,Dorset,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20996,28609.5994832041,24311,-0.2583306028,-0.516263419
-E07000004,Aylesbury Vale,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,NA,28609.5994832041,24311,NA,NA
-E07000005,Chiltern,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,NA,28609.5994832041,24311,NA,NA
-E07000006,South Bucks,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,NA,28609.5994832041,24311,NA,NA
-E07000007,Wycombe,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,NA,28609.5994832041,24311,NA,NA
-E07000008,Cambridge,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,31084,28609.5994832041,24311,0.0839567905,1.0547970247
-E07000009,East Cambridgeshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,31084,28609.5994832041,24311,0.0839567905,1.0547970247
-E07000010,Fenland,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,31084,28609.5994832041,24311,0.0839567905,1.0547970247
-E07000011,Huntingdonshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,31084,28609.5994832041,24311,0.0839567905,1.0547970247
-E07000012,South Cambridgeshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,31084,28609.5994832041,24311,0.0839567905,1.0547970247
-E07000026,Allerdale,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22226,28609.5994832041,24311,-0.2165965134,-0.3247086662
-E07000027,Barrow-in-Furness,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22226,28609.5994832041,24311,-0.2165965134,-0.3247086662
-E07000028,Carlisle,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,26307,28609.5994832041,24311,-0.078127555,0.3108482004
-E07000029,Copeland,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22226,28609.5994832041,24311,-0.2165965134,-0.3247086662
-E07000030,Eden,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,26307,28609.5994832041,24311,-0.078127555,0.3108482004
-E07000031,South Lakeland,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,26307,28609.5994832041,24311,-0.078127555,0.3108482004
-E07000032,Amber Valley,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20372,28609.5994832041,24311,-0.2795030188,-0.6134424155
-E07000033,Bolsover,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20915,28609.5994832041,24311,-0.2610789452,-0.5288780003
-E07000034,Chesterfield,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20915,28609.5994832041,24311,-0.2610789452,-0.5288780003
-E07000035,Derbyshire Dales,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20372,28609.5994832041,24311,-0.2795030188,-0.6134424155
-E07000036,Erewash,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20372,28609.5994832041,24311,-0.2795030188,-0.6134424155
-E07000037,High Peak,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20372,28609.5994832041,24311,-0.2795030188,-0.6134424155
-E07000038,North East Derbyshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20915,28609.5994832041,24311,-0.2610789452,-0.5288780003
-E07000039,South Derbyshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20372,28609.5994832041,24311,-0.2795030188,-0.6134424155
-E07000040,East Devon,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22821,28609.5994832041,24311,-0.1964080718,-0.2320460013
-E07000041,Exeter,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22821,28609.5994832041,24311,-0.1964080718,-0.2320460013
-E07000042,Mid Devon,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22821,28609.5994832041,24311,-0.1964080718,-0.2320460013
-E07000043,North Devon,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22821,28609.5994832041,24311,-0.1964080718,-0.2320460013
-E07000044,South Hams,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22821,28609.5994832041,24311,-0.1964080718,-0.2320460013
-E07000045,Teignbridge,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22821,28609.5994832041,24311,-0.1964080718,-0.2320460013
-E07000046,Torridge,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22821,28609.5994832041,24311,-0.1964080718,-0.2320460013
-E07000047,West Devon,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22821,28609.5994832041,24311,-0.1964080718,-0.2320460013
-E07000061,Eastbourne,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17077,28609.5994832041,24311,-0.3913028762,-1.1265911231
-E07000062,Hastings,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17077,28609.5994832041,24311,-0.3913028762,-1.1265911231
-E07000063,Lewes,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17077,28609.5994832041,24311,-0.3913028762,-1.1265911231
-E07000064,Rother,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17077,28609.5994832041,24311,-0.3913028762,-1.1265911231
-E07000065,Wealden,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17077,28609.5994832041,24311,-0.3913028762,-1.1265911231
-E07000066,Basildon,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22633,28609.5994832041,24311,-0.2027869407,-0.2613242887
-E07000067,Braintree,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20122,28609.5994832041,24311,-0.2879855573,-0.6523763083
-E07000068,Brentwood,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,30448,28609.5994832041,24311,0.0623772126,0.9557492013
-E07000069,Castle Point,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22633,28609.5994832041,24311,-0.2027869407,-0.2613242887
-E07000070,Chelmsford,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,30448,28609.5994832041,24311,0.0623772126,0.9557492013
-E07000071,Colchester,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20122,28609.5994832041,24311,-0.2879855573,-0.6523763083
-E07000072,Epping Forest,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,28069,28609.5994832041,24311,-0.0183426237,0.5852542771
-E07000073,Harlow,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,28069,28609.5994832041,24311,-0.0183426237,0.5852542771
-E07000074,Maldon,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,30448,28609.5994832041,24311,0.0623772126,0.9557492013
-E07000075,Rochford,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22633,28609.5994832041,24311,-0.2027869407,-0.2613242887
-E07000076,Tendring,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20122,28609.5994832041,24311,-0.2879855573,-0.6523763083
-E07000077,Uttlesford,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,28069,28609.5994832041,24311,-0.0183426237,0.5852542771
-E07000078,Cheltenham,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,28642,28609.5994832041,24311,0.0010993545,0.6744907595
-E07000079,Cotswold,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,28642,28609.5994832041,24311,0.0010993545,0.6744907595
-E07000080,Forest of Dean,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,28642,28609.5994832041,24311,0.0010993545,0.6744907595
-E07000081,Gloucester,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,28642,28609.5994832041,24311,0.0010993545,0.6744907595
-S12000008,East Ayrshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,16122,28609.5994832041,24311,-0.4237061732,-1.2753185937
-E07000082,Stroud,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,28642,28609.5994832041,24311,0.0010993545,0.6744907595
-E07000083,Tewkesbury,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,28642,28609.5994832041,24311,0.0010993545,0.6744907595
-S12000010,East Lothian,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17625,28609.5994832041,24311,-0.3727091518,-1.04124803
-S12000011,East Renfrewshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19449,28609.5994832041,24311,-0.310820551,-0.7571863479
-S12000013,Na h-Eileanan Siar,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21158,28609.5994832041,24311,-0.2528339178,-0.4910342564
-S12000014,Falkirk,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24947,28609.5994832041,24311,-0.1242725644,0.0990478234
-S12000017,Highland,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22325,28609.5994832041,24311,-0.2132374281,-0.3092908447
-S12000017,Highland,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22325,28609.5994832041,24311,-0.2132374281,-0.3092908447
-S12000017,Highland,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,27447,28609.5994832041,24311,-0.0394471795,0.4883867517
-S12000017,Highland,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,27447,28609.5994832041,24311,-0.0394471795,0.4883867517
-S12000017,Highland,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24994,28609.5994832041,24311,-0.1226778472,0.1063673952
-S12000017,Highland,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24994,28609.5994832041,24311,-0.1226778472,0.1063673952
-S12000018,Inverclyde,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19449,28609.5994832041,24311,-0.310820551,-0.7571863479
-S12000019,Midlothian,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17625,28609.5994832041,24311,-0.3727091518,-1.04124803
-S12000020,Moray,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,27447,28609.5994832041,24311,-0.0394471795,0.4883867517
-S12000020,Moray,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,27447,28609.5994832041,24311,-0.0394471795,0.4883867517
-S12000021,North Ayrshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,16122,28609.5994832041,24311,-0.4237061732,-1.2753185937
-S12000021,North Ayrshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24994,28609.5994832041,24311,-0.1226778472,0.1063673952
-S12000023,Orkney Islands,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,25139,28609.5994832041,24311,-0.1177579748,0.1289490531
-S12000026,Scottish Borders,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,20844,28609.5994832041,24311,-0.2634879862,-0.5399352258
-S12000027,Shetland Islands,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,32618,28609.5994832041,24311,0.1360056467,1.2936953911
-S12000028,South Ayrshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22043,28609.5994832041,24311,-0.2228057316,-0.3532082758
-S12000029,South Lanarkshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21358,28609.5994832041,24311,-0.246047887,-0.4598871422
-S12000030,Stirling,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,28302,28609.5994832041,24311,-0.0104368978,0.6215406652
-S12000033,Aberdeen City,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,35203,28609.5994832041,24311,0.2237150948,1.696271843
-S12000034,Aberdeenshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,35203,28609.5994832041,24311,0.2237150948,1.696271843
-S12000035,Argyll and Bute,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,16860,28609.5994832041,24311,-0.3986657196,-1.1603857421
-S12000035,Argyll and Bute,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24994,28609.5994832041,24311,-0.1226778472,0.1063673952
-S12000035,Argyll and Bute,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24994,28609.5994832041,24311,-0.1226778472,0.1063673952
-S12000036,City of Edinburgh,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,46027,28609.5994832041,24311,0.5909750814,3.3819536672
-S12000038,Renfrewshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19449,28609.5994832041,24311,-0.310820551,-0.7571863479
-S12000039,West Dunbartonshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,16860,28609.5994832041,24311,-0.3986657196,-1.1603857421
-S12000040,West Lothian,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,26917,28609.5994832041,24311,-0.0574301611,0.4058468989
-S12000041,Angus,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21338,28609.5994832041,24311,-0.2467264901,-0.4630018536
-S12000042,Dundee City,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,21338,28609.5994832041,24311,-0.2467264901,-0.4630018536
-S12000045,East Dunbartonshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,16860,28609.5994832041,24311,-0.3986657196,-1.1603857421
-S12000047,Fife,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19979,28609.5994832041,24311,-0.2928375694,-0.674646495
-S12000048,Perth and Kinross,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,28302,28609.5994832041,24311,-0.0104368978,0.6215406652
-S12000049,Glasgow City,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,35032,28609.5994832041,24311,0.2179130384,1.6696410603
-S12000050,North Lanarkshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,23699,28609.5994832041,24311,-0.1666173966,-0.0953101697
-W06000001,Isle of Anglesey,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,16131,28609.5994832041,24311,-0.4234008019,-1.2739169736
-W06000002,Gwynedd,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19720,28609.5994832041,24311,-0.3016254792,-0.714982008
-W06000003,Conwy,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17658,28609.5994832041,24311,-0.3715894567,-1.0361087561
-W06000004,Denbighshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17658,28609.5994832041,24311,-0.3715894567,-1.0361087561
-W06000005,Flintshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,27593,28609.5994832041,24311,-0.034493377,0.5111241451
-W06000006,Wrexham,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,27593,28609.5994832041,24311,-0.034493377,0.5111241451
-W06000008,Ceredigion,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,18574,28609.5994832041,24311,-0.3405094357,-0.8934549728
-W06000009,Pembrokeshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,18574,28609.5994832041,24311,-0.3405094357,-0.8934549728
-W06000010,Carmarthenshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,18574,28609.5994832041,24311,-0.3405094357,-0.8934549728
-W06000011,Swansea,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,22939,28609.5994832041,24311,-0.1924043136,-0.2136692039
-W06000012,Neath Port Talbot,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19836,28609.5994832041,24311,-0.2976895814,-0.6969166817
-W06000013,Bridgend,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,19836,28609.5994832041,24311,-0.2976895814,-0.6969166817
-W06000014,Vale of Glamorgan,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,27629,28609.5994832041,24311,-0.0332718915,0.5167306257
-W06000015,Cardiff,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,27629,28609.5994832041,24311,-0.0332718915,0.5167306257
-W06000016,Rhondda Cynon Taf,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17439,28609.5994832041,24311,-0.3790201605,-1.0702148463
-W06000018,Caerphilly,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,16180,28609.5994832041,24311,-0.4217382243,-1.2662859306
-W06000019,Blaenau Gwent,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,16180,28609.5994832041,24311,-0.4217382243,-1.2662859306
-W06000020,Torfaen,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,16180,28609.5994832041,24311,-0.4217382243,-1.2662859306
-W06000021,Monmouthshire,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24815,28609.5994832041,24311,-0.1287513447,0.078490728
-W06000022,Newport,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,24815,28609.5994832041,24311,-0.1287513447,0.078490728
-W06000023,Powys,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17098,28609.5994832041,24311,-0.390590343,-1.1233206761
-W06000024,Merthyr Tydfil,GVA per capita,Gross Value Added,Boosting Living Standards,2019,Per capita,Per capita,17439,28609.5994832041,24311,-0.3790201605,-1.0702148463
+E06000001,Hartlepool,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22332,28609.5994832041,24311,-0.2129999171,-0.3082006957
+E07000215,Tandridge,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,33822,28609.5994832041,24311,0.1768575521,1.481201019
+E07000084,Basingstoke and Deane,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,41276,28609.5994832041,24311,0.4297729198,2.6420539678
+E06000002,Middlesbrough,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17415,28609.5994832041,24311,-0.3798344841,-1.0739525
+E06000003,Redcar and Cleveland,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17415,28609.5994832041,24311,-0.3798344841,-1.0739525
+E06000004,Stockton-on-Tees,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22332,28609.5994832041,24311,-0.2129999171,-0.3082006957
+E07000216,Waverley,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,39856,28609.5994832041,24311,0.3815921012,2.4209094565
+E07000217,Woking,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,39856,28609.5994832041,24311,0.3815921012,2.4209094565
+E06000005,Darlington,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24416,28609.5994832041,24311,-0.1422894762,0.016352235
+E06000006,Halton,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23272,28609.5994832041,24311,-0.1811055723,-0.1618092586
+E07000218,North Warwickshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,34302,28609.5994832041,24311,0.193144026,1.5559540933
+E07000219,Nuneaton and Bedworth,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,34302,28609.5994832041,24311,0.193144026,1.5559540933
+E06000007,Warrington,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,36937,28609.5994832041,24311,0.2825499817,1.9663173237
+E06000008,Blackburn with Darwen,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20846,28609.5994832041,24311,-0.2634201259,-0.5396237547
+E07000220,Rugby,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,34302,28609.5994832041,24311,0.193144026,1.5559540933
+E07000221,Stratford-on-Avon,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,34302,28609.5994832041,24311,0.193144026,1.5559540933
+E06000009,Blackpool,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20149,28609.5994832041,24311,-0.2870694432,-0.6481714479
+E06000010,"Kingston upon Hull, City of",GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23786,28609.5994832041,24311,-0.1636654732,-0.081761175
+E07000222,Warwick,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,34302,28609.5994832041,24311,0.193144026,1.5559540933
+E07000223,Adur,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24447,28609.5994832041,24311,-0.1412376414,0.0211800377
+E06000011,East Riding of Yorkshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21032,28609.5994832041,24311,-0.2571091172,-0.5106569384
+E06000012,North East Lincolnshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23042,28609.5994832041,24311,-0.1889095077,-0.19762844
+E07000224,Arun,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24447,28609.5994832041,24311,-0.1412376414,0.0211800377
+E06000013,North Lincolnshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23042,28609.5994832041,24311,-0.1889095077,-0.19762844
+E06000014,York,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,29913,28609.5994832041,24311,0.0442245802,0.8724306707
+E07000225,Chichester,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24447,28609.5994832041,24311,-0.1412376414,0.0211800377
+E07000226,Crawley,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,32014,28609.5994832041,24311,0.1155118337,1.199631106
+E06000015,Derby,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,28873,28609.5994832041,24311,0.0089372201,0.7104656765
+E06000016,Leicester,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,25656,28609.5994832041,24311,-0.1002160852,0.2094643435
+E07000227,Horsham,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,32014,28609.5994832041,24311,0.1155118337,1.199631106
+E07000228,Mid Sussex,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,32014,28609.5994832041,24311,0.1155118337,1.199631106
+E06000017,Rutland,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24848,28609.5994832041,24311,-0.1276316497,0.0836300018
+E06000018,Nottingham,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,31713,28609.5994832041,24311,0.1052988574,1.1527546991
+E07000229,Worthing,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24447,28609.5994832041,24311,-0.1412376414,0.0211800377
+E07000234,Bromsgrove,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24311,28609.5994832041,24311,-0.1458521423,0
+E06000019,"Herefordshire, County of",GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20758,28609.5994832041,24311,-0.2664059794,-0.553328485
+E06000020,Telford and Wrekin,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,25785,28609.5994832041,24311,-0.0958390954,0.2295542322
+E07000235,Malvern Hills,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24311,28609.5994832041,24311,-0.1458521423,0
+E07000236,Redditch,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24311,28609.5994832041,24311,-0.1458521423,0
+E06000021,Stoke-on-Trent,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23683,28609.5994832041,24311,-0.167160279,-0.0978019388
+E07000237,Worcester,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24311,28609.5994832041,24311,-0.1458521423,0
+E07000085,East Hampshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,29158,28609.5994832041,24311,0.018607314,0.7548503143
+E06000022,Bath and North East Somerset,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,30523,28609.5994832041,24311,0.0649219741,0.9674293692
+E07000238,Wychavon,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24311,28609.5994832041,24311,-0.1458521423,0
+E07000086,Eastleigh,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24232,28609.5994832041,24311,-0.1485326245,-0.0123031101
+E06000023,"Bristol, City of",GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,33093,28609.5994832041,24311,0.1521224699,1.3676697875
+E07000239,Wyre Forest,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24311,28609.5994832041,24311,-0.1458521423,0
+E07000087,Fareham,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24232,28609.5994832041,24311,-0.1485326245,-0.0123031101
+E06000024,North Somerset,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,30523,28609.5994832041,24311,0.0649219741,0.9674293692
+E07000240,St Albans,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
+E07000088,Gosport,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24232,28609.5994832041,24311,-0.1485326245,-0.0123031101
+E06000025,South Gloucestershire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,30523,28609.5994832041,24311,0.0649219741,0.9674293692
+E07000241,Welwyn Hatfield,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
+E07000089,Hart,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,41276,28609.5994832041,24311,0.4297729198,2.6420539678
+E06000026,Plymouth,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21995,28609.5994832041,24311,-0.2244343789,-0.3606835832
+E07000242,East Hertfordshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
+E07000090,Havant,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24232,28609.5994832041,24311,-0.1485326245,-0.0123031101
+E06000027,Torbay,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,14500,28609.5994832041,24311,-0.478740883,-1.5279216904
+E07000243,Stevenage,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
+E07000091,New Forest,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,29158,28609.5994832041,24311,0.018607314,0.7548503143
+E06000030,Swindon,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,43094,28609.5994832041,24311,0.4914579398,2.9251812365
+E07000244,East Suffolk,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,25397,28609.5994832041,24311,-0.1090039951,0.1691288305
+E07000092,Rushmoor,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,41276,28609.5994832041,24311,0.4297729198,2.6420539678
+E06000031,Peterborough,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,33088,28609.5994832041,24311,0.1519528191,1.3668911097
+E07000245,West Suffolk,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,25397,28609.5994832041,24311,-0.1090039951,0.1691288305
+E07000093,Test Valley,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,29158,28609.5994832041,24311,0.018607314,0.7548503143
+E06000032,Luton,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,29617,28609.5994832041,24311,0.0341812546,0.8263329415
+E07000246,Somerset West and Taunton,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21608,28609.5994832041,24311,-0.2375653485,-0.4209532493
+E07000094,Winchester,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,29158,28609.5994832041,24311,0.018607314,0.7548503143
+E06000033,Southend-on-Sea,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17266,28609.5994832041,24311,-0.3848900771,-1.0971571001
+E08000001,Bolton,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,18058,28609.5994832041,24311,-0.3580173951,-0.9738145276
+E07000095,Broxbourne,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
+E07000143,Breckland,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,18797,28609.5994832041,24311,-0.3329430114,-0.8587259404
+E06000034,Thurrock,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,25262,28609.5994832041,24311,-0.1135845659,0.1481045283
+E08000002,Bury,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17603,28609.5994832041,24311,-0.3734556152,-1.0446742126
+E07000096,Dacorum,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
+E06000035,Medway,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21060,28609.5994832041,24311,-0.2561590729,-0.5062963424
+E07000144,Broadland,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,25574,28609.5994832041,24311,-0.1029983579,0.1966940266
+E08000003,Manchester,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,44356,28609.5994832041,24311,0.5342777941,3.1217195275
+E07000098,Hertsmere,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
+E06000036,Bracknell Forest,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,50654,28609.5994832041,24311,0.7479699038,4.1025421558
+E07000145,Great Yarmouth,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,25574,28609.5994832041,24311,-0.1029983579,0.1966940266
+E08000004,Oldham,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17603,28609.5994832041,24311,-0.3734556152,-1.0446742126
+E07000099,North Hertfordshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
+E06000037,West Berkshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,50654,28609.5994832041,24311,0.7479699038,4.1025421558
+E07000146,King's Lynn and West Norfolk,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,18349,28609.5994832041,24311,-0.3481437203,-0.9284954763
+E08000005,Rochdale,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17603,28609.5994832041,24311,-0.3734556152,-1.0446742126
+E07000102,Three Rivers,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
+E06000038,Reading,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,50654,28609.5994832041,24311,0.7479699038,4.1025421558
+E07000147,North Norfolk,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,18349,28609.5994832041,24311,-0.3481437203,-0.9284954763
+E08000006,Salford,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,35042,28609.5994832041,24311,0.21825234,1.6711984161
+E07000103,Watford,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,34947,28609.5994832041,24311,0.2150289753,1.6564035368
+E06000039,Slough,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,50654,28609.5994832041,24311,0.7479699038,4.1025421558
+E07000148,Norwich,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,25574,28609.5994832041,24311,-0.1029983579,0.1966940266
+E08000007,Stockport,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20163,28609.5994832041,24311,-0.286594421,-0.6459911499
+E07000105,Ashford,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,25686,28609.5994832041,24311,-0.0991981806,0.2141364106
+E06000040,Windsor and Maidenhead,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,50654,28609.5994832041,24311,0.7479699038,4.1025421558
+E07000149,South Norfolk,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,18797,28609.5994832041,24311,-0.3329430114,-0.8587259404
+E08000008,Tameside,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20163,28609.5994832041,24311,-0.286594421,-0.6459911499
+E07000106,Canterbury,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19546,28609.5994832041,24311,-0.307529326,-0.7420799974
+E06000041,Wokingham,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,50654,28609.5994832041,24311,0.7479699038,4.1025421558
+E07000150,Corby,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21252,28609.5994832041,24311,-0.2496444833,-0.4763951127
+E08000009,Trafford,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,35042,28609.5994832041,24311,0.21825234,1.6711984161
+E07000107,Dartford,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23637,28609.5994832041,24311,-0.1687210661,-0.1049657751
+E06000042,Milton Keynes,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,54031,28609.5994832041,24311,0.8625520338,4.6284611802
+E07000151,Daventry,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,30741,28609.5994832041,24311,0.0723187477,1.0013797237
+E08000010,Wigan,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,18058,28609.5994832041,24311,-0.3580173951,-0.9738145276
+E07000108,Dover,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19546,28609.5994832041,24311,-0.307529326,-0.7420799974
+E06000043,Brighton and Hove,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,30017,28609.5994832041,24311,0.0477533162,0.8886271701
+E07000152,East Northamptonshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21252,28609.5994832041,24311,-0.2496444833,-0.4763951127
+E08000011,Knowsley,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23272,28609.5994832041,24311,-0.1811055723,-0.1618092586
+E07000109,Gravesham,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23637,28609.5994832041,24311,-0.1687210661,-0.1049657751
+E06000044,Portsmouth,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,27832,28609.5994832041,24311,-0.0263840702,0.5483449467
+E08000012,Liverpool,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,27182,28609.5994832041,24311,-0.0484386703,0.4471168253
+E07000153,Kettering,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21252,28609.5994832041,24311,-0.2496444833,-0.4763951127
+E07000154,Northampton,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,30741,28609.5994832041,24311,0.0723187477,1.0013797237
+E07000155,South Northamptonshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,30741,28609.5994832041,24311,0.0723187477,1.0013797237
+E07000110,Maidstone,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,25686,28609.5994832041,24311,-0.0991981806,0.2141364106
+E07000156,Wellingborough,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21252,28609.5994832041,24311,-0.2496444833,-0.4763951127
+E06000045,Southampton,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,30865,28609.5994832041,24311,0.0765260868,1.0206909346
+E08000013,St. Helens,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23272,28609.5994832041,24311,-0.1811055723,-0.1618092586
+E06000046,Isle of Wight,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,18849,28609.5994832041,24311,-0.3311786433,-0.8506276907
+E07000163,Craven,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24361,28609.5994832041,24311,-0.1441556346,0.0077867786
+E07000111,Sevenoaks,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,33179,28609.5994832041,24311,0.1550404631,1.3810630466
+E08000014,Sefton,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,15217,28609.5994832041,24311,-0.4544129626,-1.4162592858
+E06000047,County Durham,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,16925,28609.5994832041,24311,-0.3964602596,-1.1502629299
+E07000164,Hambleton,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24361,28609.5994832041,24311,-0.1441556346,0.0077867786
+E07000112,Folkestone and Hythe,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19546,28609.5994832041,24311,-0.307529326,-0.7420799974
+E08000015,Wirral,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,15831,28609.5994832041,24311,-0.433579848,-1.320637645
+E06000049,Cheshire East,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,38361,28609.5994832041,24311,0.330866521,2.1880847773
+E07000165,Harrogate,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24361,28609.5994832041,24311,-0.1441556346,0.0077867786
+E07000113,Swale,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23637,28609.5994832041,24311,-0.1687210661,-0.1049657751
+E08000016,Barnsley,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17909,28609.5994832041,24311,-0.3630729881,-0.9970191277
+E06000050,Cheshire West and Chester,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,30567,28609.5994832041,24311,0.0664149009,0.9742817343
+E07000166,Richmondshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24361,28609.5994832041,24311,-0.1441556346,0.0077867786
+E07000114,Thanet,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19546,28609.5994832041,24311,-0.307529326,-0.7420799974
+E08000017,Doncaster,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17909,28609.5994832041,24311,-0.3630729881,-0.9970191277
+E06000051,Shropshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19223,28609.5994832041,24311,-0.3184887658,-0.792382587
+E07000167,Ryedale,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24361,28609.5994832041,24311,-0.1441556346,0.0077867786
+E07000115,Tonbridge and Malling,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,33179,28609.5994832041,24311,0.1550404631,1.3810630466
+E08000018,Rotherham,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17909,28609.5994832041,24311,-0.3630729881,-0.9970191277
+E06000052,Cornwall,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20055,28609.5994832041,24311,-0.2902588777,-0.6628105916
+E07000168,Scarborough,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24361,28609.5994832041,24311,-0.1441556346,0.0077867786
+E07000116,Tunbridge Wells,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,33179,28609.5994832041,24311,0.1550404631,1.3810630466
+E08000019,Sheffield,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22263,28609.5994832041,24311,-0.2153410977,-0.3189464501
+E06000053,Isles of Scilly,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20055,28609.5994832041,24311,-0.2902588777,-0.6628105916
+E07000169,Selby,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24361,28609.5994832041,24311,-0.1441556346,0.0077867786
+E07000117,Burnley,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19007,28609.5994832041,24311,-0.325817679,-0.8260214704
+E08000021,Newcastle upon Tyne,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23379,28609.5994832041,24311,-0.1774750458,-0.1451455525
+E06000054,Wiltshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23141,28609.5994832041,24311,-0.1855504225,-0.1822106185
+E07000170,Ashfield,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19779,28609.5994832041,24311,-0.2996236002,-0.7057936093
+E07000118,Chorley,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20269,28609.5994832041,24311,-0.2829978247,-0.6294831794
+E08000022,North Tyneside,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23379,28609.5994832041,24311,-0.1774750458,-0.1451455525
+E06000055,Bedford,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,25159,28609.5994832041,24311,-0.1170793718,0.1320637645
+E07000171,Bassetlaw,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19779,28609.5994832041,24311,-0.2996236002,-0.7057936093
+E07000119,Fylde,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,32365,28609.5994832041,24311,0.1274213178,1.2542942916
+E08000023,South Tyneside,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23379,28609.5994832041,24311,-0.1774750458,-0.1451455525
+E06000056,Central Bedfordshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21499,28609.5994832041,24311,-0.2412637353,-0.4379284266
+E07000172,Broxtowe,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,18745,28609.5994832041,24311,-0.3347073794,-0.8668241901
+E07000120,Hyndburn,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19007,28609.5994832041,24311,-0.325817679,-0.8260214704
+E08000024,Sunderland,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,25431,28609.5994832041,24311,-0.1078503699,0.1744238399
+E06000057,Northumberland,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,16005,28609.5994832041,24311,-0.4276760013,-1.2935396556
+E07000173,Gedling,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,18745,28609.5994832041,24311,-0.3347073794,-0.8668241901
+E07000121,Lancaster,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17845,28609.5994832041,24311,-0.3652445179,-1.0069862043
+E08000025,Birmingham,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24345,28609.5994832041,24311,-0.1446985171,0.0052950094
+E06000058,"Bournemouth, Christchurch and Poole",GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,26932,28609.5994832041,24311,-0.0569212088,0.4081829325
+E07000174,Mansfield,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19779,28609.5994832041,24311,-0.2996236002,-0.7057936093
+E07000122,Pendle,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19007,28609.5994832041,24311,-0.325817679,-0.8260214704
+E08000026,Coventry,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,26671,28609.5994832041,24311,-0.065776979,0.3675359484
+E07000175,Newark and Sherwood,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19779,28609.5994832041,24311,-0.2996236002,-0.7057936093
+E07000123,Preston,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,32365,28609.5994832041,24311,0.1274213178,1.2542942916
+E08000027,Dudley,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17120,28609.5994832041,24311,-0.3898438796,-1.1198944935
+E07000176,Rushcliffe,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,18745,28609.5994832041,24311,-0.3347073794,-0.8668241901
+E07000124,Ribble Valley,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,32365,28609.5994832041,24311,0.1274213178,1.2542942916
+E08000028,Sandwell,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20515,28609.5994832041,24311,-0.2746510068,-0.5911722288
+E07000177,Cherwell,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,32961,28609.5994832041,24311,0.1476436895,1.3471126921
+E07000125,Rossendale,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19007,28609.5994832041,24311,-0.325817679,-0.8260214704
+E07000178,Oxford,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,32961,28609.5994832041,24311,0.1476436895,1.3471126921
+E07000126,South Ribble,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,32365,28609.5994832041,24311,0.1274213178,1.2542942916
+E07000179,South Oxfordshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,32961,28609.5994832041,24311,0.1476436895,1.3471126921
+E07000127,West Lancashire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20269,28609.5994832041,24311,-0.2829978247,-0.6294831794
+E07000180,Vale of White Horse,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,32961,28609.5994832041,24311,0.1476436895,1.3471126921
+E07000128,Wyre,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17845,28609.5994832041,24311,-0.3652445179,-1.0069862043
+E07000181,West Oxfordshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,32961,28609.5994832041,24311,0.1476436895,1.3471126921
+E07000129,Blaby,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24848,28609.5994832041,24311,-0.1276316497,0.0836300018
+E07000187,Mendip,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21608,28609.5994832041,24311,-0.2375653485,-0.4209532493
+E07000130,Charnwood,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24848,28609.5994832041,24311,-0.1276316497,0.0836300018
+E07000188,Sedgemoor,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21608,28609.5994832041,24311,-0.2375653485,-0.4209532493
+E07000131,Harborough,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24848,28609.5994832041,24311,-0.1276316497,0.0836300018
+E07000189,South Somerset,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21608,28609.5994832041,24311,-0.2375653485,-0.4209532493
+E07000132,Hinckley and Bosworth,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24848,28609.5994832041,24311,-0.1276316497,0.0836300018
+E07000192,Cannock Chase,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21483,28609.5994832041,24311,-0.2418066178,-0.4404201958
+E07000133,Melton,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24848,28609.5994832041,24311,-0.1276316497,0.0836300018
+E07000193,East Staffordshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21483,28609.5994832041,24311,-0.2418066178,-0.4404201958
+E07000134,North West Leicestershire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24848,28609.5994832041,24311,-0.1276316497,0.0836300018
+E07000194,Lichfield,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21483,28609.5994832041,24311,-0.2418066178,-0.4404201958
+E07000195,Newcastle-under-Lyme,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21483,28609.5994832041,24311,-0.2418066178,-0.4404201958
+E07000196,South Staffordshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21483,28609.5994832041,24311,-0.2418066178,-0.4404201958
+E07000197,Stafford,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21483,28609.5994832041,24311,-0.2418066178,-0.4404201958
+E07000198,Staffordshire Moorlands,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21483,28609.5994832041,24311,-0.2418066178,-0.4404201958
+E07000199,Tamworth,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21483,28609.5994832041,24311,-0.2418066178,-0.4404201958
+E07000200,Babergh,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,25397,28609.5994832041,24311,-0.1090039951,0.1691288305
+E07000202,Ipswich,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,25397,28609.5994832041,24311,-0.1090039951,0.1691288305
+E07000203,Mid Suffolk,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,25397,28609.5994832041,24311,-0.1090039951,0.1691288305
+E07000207,Elmbridge,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,39856,28609.5994832041,24311,0.3815921012,2.4209094565
+E07000208,Epsom and Ewell,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,33822,28609.5994832041,24311,0.1768575521,1.481201019
+E07000209,Guildford,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,39856,28609.5994832041,24311,0.3815921012,2.4209094565
+E07000210,Mole Valley,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,33822,28609.5994832041,24311,0.1768575521,1.481201019
+E07000135,Oadby and Wigston,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24848,28609.5994832041,24311,-0.1276316497,0.0836300018
+E07000211,Reigate and Banstead,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,33822,28609.5994832041,24311,0.1768575521,1.481201019
+E07000136,Boston,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20407,28609.5994832041,24311,-0.2783154635,-0.6079916705
+E07000212,Runnymede,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,39856,28609.5994832041,24311,0.3815921012,2.4209094565
+E07000137,East Lindsey,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20407,28609.5994832041,24311,-0.2783154635,-0.6079916705
+E07000213,Spelthorne,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,39856,28609.5994832041,24311,0.3815921012,2.4209094565
+E07000138,Lincoln,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20407,28609.5994832041,24311,-0.2783154635,-0.6079916705
+E07000214,Surrey Heath,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,39856,28609.5994832041,24311,0.3815921012,2.4209094565
+E07000139,North Kesteven,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20407,28609.5994832041,24311,-0.2783154635,-0.6079916705
+E07000140,South Holland,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20407,28609.5994832041,24311,-0.2783154635,-0.6079916705
+E07000141,South Kesteven,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20407,28609.5994832041,24311,-0.2783154635,-0.6079916705
+E07000142,West Lindsey,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20407,28609.5994832041,24311,-0.2783154635,-0.6079916705
+E08000029,Solihull,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,47786,28609.5994832041,24311,0.6506582222,3.6558925372
+E08000030,Walsall,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,16900,28609.5994832041,24311,-0.3973085134,-1.1541563192
+E08000031,Wolverhampton,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19797,28609.5994832041,24311,-0.2990128574,-0.702990369
+E08000032,Bradford,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,18464,28609.5994832041,24311,-0.3442417526,-0.9105858856
+E08000033,Calderdale,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19181,28609.5994832041,24311,-0.3199138322,-0.798923481
+E08000034,Kirklees,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19181,28609.5994832041,24311,-0.3199138322,-0.798923481
+E08000035,Leeds,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,34510,28609.5994832041,24311,0.200201498,1.5883470921
+E08000036,Wakefield,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23198,28609.5994832041,24311,-0.1836164037,-0.1733336909
+E08000037,Gateshead,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23379,28609.5994832041,24311,-0.1774750458,-0.1451455525
+E09000001,City of London,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,374290,28609.5994832041,24311,11.7289892155,54.5041795222
+E09000002,Barking and Dagenham,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20295,28609.5994832041,24311,-0.2821156407,-0.6254340545
+E09000003,Barnet,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23499,28609.5994832041,24311,-0.1734034274,-0.1264572839
+E09000004,Bexley,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23452,28609.5994832041,24311,-0.1749981446,-0.1337768558
+E09000005,Brent,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,27588,28609.5994832041,24311,-0.0346630278,0.5103454673
+E09000006,Bromley,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24683,28609.5994832041,24311,-0.1332301251,0.0579336325
+E09000007,Camden,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,374290,28609.5994832041,24311,11.7289892155,54.5041795222
+E09000008,Croydon,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,25178,28609.5994832041,24311,-0.1164346988,0.1350227404
+E09000009,Ealing,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,27971,28609.5994832041,24311,-0.0216677788,0.5699921911
+E09000010,Enfield,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24442,28609.5994832041,24311,-0.1414072922,0.0204013598
+E09000011,Greenwich,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23452,28609.5994832041,24311,-0.1749981446,-0.1337768558
+E09000012,Hackney,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24819,28609.5994832041,24311,-0.1286156241,0.0791136702
+E09000013,Hammersmith and Fulham,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,64189,28609.5994832041,24311,1.2072145379,6.2104231139
+E09000014,Haringey,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,47122,28609.5994832041,24311,0.6281286,3.5524841179
+E09000015,Harrow,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,37486,28609.5994832041,24311,0.3011776363,2.0518161524
+E09000016,Havering,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20295,28609.5994832041,24311,-0.2821156407,-0.6254340545
+E09000017,Hillingdon,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,37486,28609.5994832041,24311,0.3011776363,2.0518161524
+E09000018,Hounslow,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,54886,28609.5994832041,24311,0.8915623154,4.7616150937
+E09000019,Islington,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,47122,28609.5994832041,24311,0.6281286,3.5524841179
+E09000020,Kensington and Chelsea,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,64189,28609.5994832041,24311,1.2072145379,6.2104231139
+E09000021,Kingston upon Thames,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,26371,28609.5994832041,24311,-0.0759560252,0.320815277
+E09000022,Lambeth,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,40293,28609.5994832041,24311,0.3964195785,2.4889659012
+E09000023,Lewisham,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,40974,28609.5994832041,24311,0.4195260133,2.5950218253
+E09000024,Merton,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,26371,28609.5994832041,24311,-0.0759560252,0.320815277
+E09000025,Newham,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24819,28609.5994832041,24311,-0.1286156241,0.0791136702
+E09000026,Redbridge,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,16659,28609.5994832041,24311,-0.4054856806,-1.1916885919
+E09000027,Richmond upon Thames,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,54886,28609.5994832041,24311,0.8915623154,4.7616150937
+E09000028,Southwark,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,40974,28609.5994832041,24311,0.4195260133,2.5950218253
+E09000029,Sutton,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,26371,28609.5994832041,24311,-0.0759560252,0.320815277
+E09000030,Tower Hamlets,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,106209,28609.5994832041,24311,2.6329596079,12.7544318217
+E09000031,Waltham Forest,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,16659,28609.5994832041,24311,-0.4054856806,-1.1916885919
+E09000032,Wandsworth,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24052,28609.5994832041,24311,-0.1546400522,-0.040335513
+E09000033,Westminster,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,277041,28609.5994832041,24311,8.4293156717,39.3590509449
+N09000001,Antrim and Newtownabbey,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22593,28609.5994832041,24311,-0.2041441469,-0.2675537116
+N09000002,"Armagh City, Banbridge and Craigavon",GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,18465,28609.5994832041,24311,-0.3442078225,-0.9104301501
+N09000003,Belfast,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,38714,28609.5994832041,24311,0.3428438654,2.243059434
+N09000004,Causeway Coast and Glens,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,15170,28609.5994832041,24311,-0.4560076798,-1.4235788576
+N09000005,Derry City and Strabane,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19643,28609.5994832041,24311,-0.3042381011,-0.726973647
+N09000006,Fermanagh and Omagh,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19352,28609.5994832041,24311,-0.3141117759,-0.7722926983
+N09000007,Lisburn and Castlereagh,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21746,28609.5994832041,24311,-0.2328829873,-0.3994617405
+N09000008,Mid and East Antrim,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17070,28609.5994832041,24311,-0.3915403873,-1.1276812721
+N09000009,Mid Ulster,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23169,28609.5994832041,24311,-0.1846003782,-0.1778500225
+N09000010,"Newry, Mourne and Down",GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17485,28609.5994832041,24311,-0.3774593734,-1.06305101
+N09000011,Ards and North Down,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,12900,28609.5994832041,24311,-0.5330291293,-1.7770986046
+S12000005,Clackmannanshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19979,28609.5994832041,24311,-0.2928375694,-0.674646495
+S12000006,Dumfries and Galloway,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24252,28609.5994832041,24311,-0.1478540214,-0.0091883987
+E06000059,Dorset,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20996,28609.5994832041,24311,-0.2583306028,-0.516263419
+E07000004,Aylesbury Vale,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,NA,28609.5994832041,24311,NA,NA
+E07000005,Chiltern,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,NA,28609.5994832041,24311,NA,NA
+E07000006,South Bucks,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,NA,28609.5994832041,24311,NA,NA
+E07000007,Wycombe,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,NA,28609.5994832041,24311,NA,NA
+E07000008,Cambridge,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,31084,28609.5994832041,24311,0.0839567905,1.0547970247
+E07000009,East Cambridgeshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,31084,28609.5994832041,24311,0.0839567905,1.0547970247
+E07000010,Fenland,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,31084,28609.5994832041,24311,0.0839567905,1.0547970247
+E07000011,Huntingdonshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,31084,28609.5994832041,24311,0.0839567905,1.0547970247
+E07000012,South Cambridgeshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,31084,28609.5994832041,24311,0.0839567905,1.0547970247
+E07000026,Allerdale,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22226,28609.5994832041,24311,-0.2165965134,-0.3247086662
+E07000027,Barrow-in-Furness,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22226,28609.5994832041,24311,-0.2165965134,-0.3247086662
+E07000028,Carlisle,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,26307,28609.5994832041,24311,-0.078127555,0.3108482004
+E07000029,Copeland,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22226,28609.5994832041,24311,-0.2165965134,-0.3247086662
+E07000030,Eden,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,26307,28609.5994832041,24311,-0.078127555,0.3108482004
+E07000031,South Lakeland,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,26307,28609.5994832041,24311,-0.078127555,0.3108482004
+E07000032,Amber Valley,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20372,28609.5994832041,24311,-0.2795030188,-0.6134424155
+E07000033,Bolsover,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20915,28609.5994832041,24311,-0.2610789452,-0.5288780003
+E07000034,Chesterfield,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20915,28609.5994832041,24311,-0.2610789452,-0.5288780003
+E07000035,Derbyshire Dales,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20372,28609.5994832041,24311,-0.2795030188,-0.6134424155
+E07000036,Erewash,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20372,28609.5994832041,24311,-0.2795030188,-0.6134424155
+E07000037,High Peak,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20372,28609.5994832041,24311,-0.2795030188,-0.6134424155
+E07000038,North East Derbyshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20915,28609.5994832041,24311,-0.2610789452,-0.5288780003
+E07000039,South Derbyshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20372,28609.5994832041,24311,-0.2795030188,-0.6134424155
+E07000040,East Devon,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22821,28609.5994832041,24311,-0.1964080718,-0.2320460013
+E07000041,Exeter,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22821,28609.5994832041,24311,-0.1964080718,-0.2320460013
+E07000042,Mid Devon,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22821,28609.5994832041,24311,-0.1964080718,-0.2320460013
+E07000043,North Devon,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22821,28609.5994832041,24311,-0.1964080718,-0.2320460013
+E07000044,South Hams,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22821,28609.5994832041,24311,-0.1964080718,-0.2320460013
+E07000045,Teignbridge,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22821,28609.5994832041,24311,-0.1964080718,-0.2320460013
+E07000046,Torridge,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22821,28609.5994832041,24311,-0.1964080718,-0.2320460013
+E07000047,West Devon,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22821,28609.5994832041,24311,-0.1964080718,-0.2320460013
+E07000061,Eastbourne,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17077,28609.5994832041,24311,-0.3913028762,-1.1265911231
+E07000062,Hastings,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17077,28609.5994832041,24311,-0.3913028762,-1.1265911231
+E07000063,Lewes,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17077,28609.5994832041,24311,-0.3913028762,-1.1265911231
+E07000064,Rother,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17077,28609.5994832041,24311,-0.3913028762,-1.1265911231
+E07000065,Wealden,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17077,28609.5994832041,24311,-0.3913028762,-1.1265911231
+E07000066,Basildon,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22633,28609.5994832041,24311,-0.2027869407,-0.2613242887
+E07000067,Braintree,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20122,28609.5994832041,24311,-0.2879855573,-0.6523763083
+E07000068,Brentwood,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,30448,28609.5994832041,24311,0.0623772126,0.9557492013
+E07000069,Castle Point,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22633,28609.5994832041,24311,-0.2027869407,-0.2613242887
+E07000070,Chelmsford,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,30448,28609.5994832041,24311,0.0623772126,0.9557492013
+E07000071,Colchester,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20122,28609.5994832041,24311,-0.2879855573,-0.6523763083
+E07000072,Epping Forest,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,28069,28609.5994832041,24311,-0.0183426237,0.5852542771
+E07000073,Harlow,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,28069,28609.5994832041,24311,-0.0183426237,0.5852542771
+E07000074,Maldon,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,30448,28609.5994832041,24311,0.0623772126,0.9557492013
+E07000075,Rochford,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22633,28609.5994832041,24311,-0.2027869407,-0.2613242887
+E07000076,Tendring,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20122,28609.5994832041,24311,-0.2879855573,-0.6523763083
+E07000077,Uttlesford,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,28069,28609.5994832041,24311,-0.0183426237,0.5852542771
+E07000078,Cheltenham,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,28642,28609.5994832041,24311,0.0010993545,0.6744907595
+E07000079,Cotswold,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,28642,28609.5994832041,24311,0.0010993545,0.6744907595
+E07000080,Forest of Dean,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,28642,28609.5994832041,24311,0.0010993545,0.6744907595
+E07000081,Gloucester,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,28642,28609.5994832041,24311,0.0010993545,0.6744907595
+S12000008,East Ayrshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,16122,28609.5994832041,24311,-0.4237061732,-1.2753185937
+E07000082,Stroud,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,28642,28609.5994832041,24311,0.0010993545,0.6744907595
+E07000083,Tewkesbury,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,28642,28609.5994832041,24311,0.0010993545,0.6744907595
+S12000010,East Lothian,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17625,28609.5994832041,24311,-0.3727091518,-1.04124803
+S12000011,East Renfrewshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19449,28609.5994832041,24311,-0.310820551,-0.7571863479
+S12000013,Na h-Eileanan Siar,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21158,28609.5994832041,24311,-0.2528339178,-0.4910342564
+S12000014,Falkirk,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24947,28609.5994832041,24311,-0.1242725644,0.0990478234
+S12000017,Highland,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22325,28609.5994832041,24311,-0.2132374281,-0.3092908447
+S12000017,Highland,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22325,28609.5994832041,24311,-0.2132374281,-0.3092908447
+S12000017,Highland,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,27447,28609.5994832041,24311,-0.0394471795,0.4883867517
+S12000017,Highland,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,27447,28609.5994832041,24311,-0.0394471795,0.4883867517
+S12000017,Highland,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24994,28609.5994832041,24311,-0.1226778472,0.1063673952
+S12000017,Highland,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24994,28609.5994832041,24311,-0.1226778472,0.1063673952
+S12000018,Inverclyde,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19449,28609.5994832041,24311,-0.310820551,-0.7571863479
+S12000019,Midlothian,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17625,28609.5994832041,24311,-0.3727091518,-1.04124803
+S12000020,Moray,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,27447,28609.5994832041,24311,-0.0394471795,0.4883867517
+S12000020,Moray,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,27447,28609.5994832041,24311,-0.0394471795,0.4883867517
+S12000021,North Ayrshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,16122,28609.5994832041,24311,-0.4237061732,-1.2753185937
+S12000021,North Ayrshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24994,28609.5994832041,24311,-0.1226778472,0.1063673952
+S12000023,Orkney Islands,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,25139,28609.5994832041,24311,-0.1177579748,0.1289490531
+S12000026,Scottish Borders,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,20844,28609.5994832041,24311,-0.2634879862,-0.5399352258
+S12000027,Shetland Islands,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,32618,28609.5994832041,24311,0.1360056467,1.2936953911
+S12000028,South Ayrshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22043,28609.5994832041,24311,-0.2228057316,-0.3532082758
+S12000029,South Lanarkshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21358,28609.5994832041,24311,-0.246047887,-0.4598871422
+S12000030,Stirling,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,28302,28609.5994832041,24311,-0.0104368978,0.6215406652
+S12000033,Aberdeen City,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,35203,28609.5994832041,24311,0.2237150948,1.696271843
+S12000034,Aberdeenshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,35203,28609.5994832041,24311,0.2237150948,1.696271843
+S12000035,Argyll and Bute,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,16860,28609.5994832041,24311,-0.3986657196,-1.1603857421
+S12000035,Argyll and Bute,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24994,28609.5994832041,24311,-0.1226778472,0.1063673952
+S12000035,Argyll and Bute,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24994,28609.5994832041,24311,-0.1226778472,0.1063673952
+S12000036,City of Edinburgh,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,46027,28609.5994832041,24311,0.5909750814,3.3819536672
+S12000038,Renfrewshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19449,28609.5994832041,24311,-0.310820551,-0.7571863479
+S12000039,West Dunbartonshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,16860,28609.5994832041,24311,-0.3986657196,-1.1603857421
+S12000040,West Lothian,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,26917,28609.5994832041,24311,-0.0574301611,0.4058468989
+S12000041,Angus,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21338,28609.5994832041,24311,-0.2467264901,-0.4630018536
+S12000042,Dundee City,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,21338,28609.5994832041,24311,-0.2467264901,-0.4630018536
+S12000045,East Dunbartonshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,16860,28609.5994832041,24311,-0.3986657196,-1.1603857421
+S12000047,Fife,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19979,28609.5994832041,24311,-0.2928375694,-0.674646495
+S12000048,Perth and Kinross,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,28302,28609.5994832041,24311,-0.0104368978,0.6215406652
+S12000049,Glasgow City,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,35032,28609.5994832041,24311,0.2179130384,1.6696410603
+S12000050,North Lanarkshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,23699,28609.5994832041,24311,-0.1666173966,-0.0953101697
+W06000001,Isle of Anglesey,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,16131,28609.5994832041,24311,-0.4234008019,-1.2739169736
+W06000002,Gwynedd,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19720,28609.5994832041,24311,-0.3016254792,-0.714982008
+W06000003,Conwy,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17658,28609.5994832041,24311,-0.3715894567,-1.0361087561
+W06000004,Denbighshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17658,28609.5994832041,24311,-0.3715894567,-1.0361087561
+W06000005,Flintshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,27593,28609.5994832041,24311,-0.034493377,0.5111241451
+W06000006,Wrexham,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,27593,28609.5994832041,24311,-0.034493377,0.5111241451
+W06000008,Ceredigion,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,18574,28609.5994832041,24311,-0.3405094357,-0.8934549728
+W06000009,Pembrokeshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,18574,28609.5994832041,24311,-0.3405094357,-0.8934549728
+W06000010,Carmarthenshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,18574,28609.5994832041,24311,-0.3405094357,-0.8934549728
+W06000011,Swansea,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,22939,28609.5994832041,24311,-0.1924043136,-0.2136692039
+W06000012,Neath Port Talbot,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19836,28609.5994832041,24311,-0.2976895814,-0.6969166817
+W06000013,Bridgend,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,19836,28609.5994832041,24311,-0.2976895814,-0.6969166817
+W06000014,Vale of Glamorgan,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,27629,28609.5994832041,24311,-0.0332718915,0.5167306257
+W06000015,Cardiff,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,27629,28609.5994832041,24311,-0.0332718915,0.5167306257
+W06000016,Rhondda Cynon Taf,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17439,28609.5994832041,24311,-0.3790201605,-1.0702148463
+W06000018,Caerphilly,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,16180,28609.5994832041,24311,-0.4217382243,-1.2662859306
+W06000019,Blaenau Gwent,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,16180,28609.5994832041,24311,-0.4217382243,-1.2662859306
+W06000020,Torfaen,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,16180,28609.5994832041,24311,-0.4217382243,-1.2662859306
+W06000021,Monmouthshire,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24815,28609.5994832041,24311,-0.1287513447,0.078490728
+W06000022,Newport,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,24815,28609.5994832041,24311,-0.1287513447,0.078490728
+W06000023,Powys,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17098,28609.5994832041,24311,-0.390590343,-1.1233206761
+W06000024,Merthyr Tydfil,GVA per capita,Gross Value Added per head,Boosting Living Standards,2019,Per capita,Per capita,17439,28609.5994832041,24311,-0.3790201605,-1.0702148463
 E06000001,Hartlepool,Gross median weekly pay,Median weekly pay,Boosting Living Standards,2020,Pounds,£,454.4,460.020661157,441.8,-0.067980722,0.2278440635
 E07000215,Tandridge,Gross median weekly pay,Median weekly pay,Boosting Living Standards,2020,Pounds,£,483,460.020661157,441.8,0.2779303005,0.745013922
 E07000084,Basingstoke and Deane,Gross median weekly pay,Median weekly pay,Boosting Living Standards,2020,Pounds,£,557.7,460.020661157,441.8,1.1814111879,2.0958037272
@@ -8796,7 +8796,7 @@ W06000022,Newport,"Working age adults Not in Education, Employment or Training",
 W06000023,Powys,"Working age adults Not in Education, Employment or Training","Not in Education, Employment, or Training",Spreading opportunity and improving public services,2020,Percentage,%,NA,-4.976,-4.8,NA,NA
 W06000024,Merthyr Tydfil,"Working age adults Not in Education, Employment or Training","Not in Education, Employment, or Training",Spreading opportunity and improving public services,2020,Percentage,%,NA,-4.976,-4.8,NA,NA
 E06000009,Blackpool,Access to local amenities,Access to local amenities,Restoring pride in place,2019,Average score,,45,-19.6309148265,-18,-3.1702095933,-3.0352084176
-E08000011,Knowsley,Access to local amenities,,Restoring pride in place,2019,Average score,,43,-19.6309148265,-18,-2.9202825998,-2.8103781645
+E08000011,Knowsley,Access to local amenities,Access to local amenities,Restoring pride in place,2019,Average score,,43,-19.6309148265,-18,-2.9202825998,-2.8103781645
 E08000012,Liverpool,Access to local amenities,Access to local amenities,Restoring pride in place,2019,Average score,,42,-19.6309148265,-18,-2.795319103,-2.6979630379
 E06000010,"Kingston upon Hull, City of",Access to local amenities,Access to local amenities,Restoring pride in place,2019,Average score,,41,-19.6309148265,-18,-2.6703556062,-2.5855479113
 E06000002,Middlesbrough,Access to local amenities,Access to local amenities,Restoring pride in place,2019,Average score,,40,-19.6309148265,-18,-2.5453921094,-2.4731327847
