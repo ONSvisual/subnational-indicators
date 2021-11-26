@@ -599,17 +599,18 @@ td {
 
 
     if(svgwidth < dvc.optional.mobileBreakpoint) {
-  		  margin = {top: 40, right: 12, bottom: 20, left: 20};
-        heightper = dvc.essential.heightperstrip;
+      var size = "sm";
     } else {
-        margin = {top: 40, right: 12, bottom: 20, left: 300};
-        heightper = dvc.essential.heightperstrip/2;
+      var size = "lg";
     }
+
+    margin = dvc.optional.margin[size];
+    heightper = dvc.essential.heightperstrip[size];
 
   		width = svgwidth - margin.left - margin.right;
 
-      spaceForLabels = 50;
-      runningTotalOfCategories = 0;
+      spaceForLabels = 60;
+      currGap = 0;
 
 
       // Work out how many categories there are, and how many variables within each
@@ -681,13 +682,8 @@ td {
 
     /* add a bit of spacing to allow for the hierarchy labelling */
     if(breakingPoints.indexOf(j) != -1) {
-      runningTotalOfCategories++;
-
-      currGap = spaceForLabels*runningTotalOfCategories;
+      currGap += spaceForLabels;
     }
-
-
-
 
 
     	var g = svg.append("g")
@@ -701,26 +697,37 @@ td {
         g.lower()
       }
 
+      /* add hierarchy labelling */
+      if(breakingPoints.indexOf(j) != -1) {
+        var hierarchyLabel = g.append("text").attr("class","hierarchyLabel").text(categoryCount[breakingPoints.indexOf(j)].key).attr("y",-10).attr("x",-margin.left).call(wrap, svgwidth);
+        var hierarchyLabelLines = hierarchyLabel.selectAll("tspan").size();
+        // add extra gap if hierarchy labels go onto multiple lines
+        if (hierarchyLabelLines > 1) {
+          var extraGap = 20*(hierarchyLabelLines-1);
+          currGap += extraGap;
+          g.attr("transform", "translate(" + margin.left + "," + (currGap + margin.top + (separate*j)) + ")");
+          hierarchyLabel.attr("y", hierarchyLabel.attr("y") - extraGap);
+        };
+      }
+
+      g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)+5).attr("x",-margin.left)
+
+      var cell = g.append("g").attr("class", "cell-group");
 
   	  if(svgwidth < dvc.optional.mobileBreakpoint) {
+        // set label y on mobile
+        g.select(".label").attr("y", 20);
+
   		  numberticks = dvc.optional.x_num_ticks_sm_md[0];
 
-        if(breakingPoints.indexOf(j) != -1) {
-          g.append("text").attr("class","hierarchyLabel").text(categoryCount[breakingPoints.indexOf(j)].key).attr("y",-10).attr("x",-margin.left)
-        }
-
-        g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)+5).attr("x",-margin.left)
-
-        var cell = g.append("g");
-
         cell.append("rect")
-        .attr("x",x(x.domain()[0]))
-        .attr("width",x(x.domain()[1]) - x(x.domain()[0]))
-        .attr("y",10 + (heightper/2))
-        .attr("height",(heightper/2)-20)
-        .attr("rx",(heightper/2))
-        .attr("fill","#f5f5f6")
-        .attr("opacity",0.5)
+          .attr("x",x(x.domain()[0]))
+          .attr("width",x(x.domain()[1]) - x(x.domain()[0]))
+          .attr("y",23)
+          .attr("height",heightper/2)
+          .attr("rx",(heightper/2))
+          .attr("fill","#f5f5f6")
+          .attr("opacity",0.5)
 
         cell.selectAll(".circles")
           .data(groupeddata[j])
@@ -729,7 +736,7 @@ td {
           .attr("class", "cell")
           .attr("r", dvc.essential.dotradius)
           .attr("cx", function(d) {return x(d.value); })
-          .attr("cy", function(d) { return (heightper/2) + Math.random()*(heightper/4) + heightper/8; })
+          .attr("cy", function(d) { return 23 + 5 + Math.random()*(heightper/2 -10) ; })
           .attr("class", function(d,i) { return "cell " + "cellgroup"+d.unique.replace(/[, ]+/g, "").trim()})
           .attr("fill", dvc.essential.colour_palette[0])
           .attr("opacity",0.5)
@@ -756,25 +763,6 @@ td {
 
   	  } else {
   		  numberticks = dvc.optional.x_num_ticks_sm_md[1];
-
-        /* add hierarchy labelling */
-        if(breakingPoints.indexOf(j) != -1) {
-          g.append("text").attr("class","hierarchyLabel").text(categoryCount[breakingPoints.indexOf(j)].key).attr("y",-10).attr("x",-margin.left)
-        }
-
-        g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)+5).attr("x",-margin.left)
-
-
-        //g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)-5).attr("x",-margin.left)
-        //textValues = g.append("text").attr("y",(heightper/2)+13).attr("x",-margin.left);
-        // textValues.append("tspan").attr("class","labeltspan labelfirst " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
-        // textValues.append("tspan").attr("class","labeltspan label2nd " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
-        // textValues.append("tspan").attr("class","labeltspan label3rd " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
-        // textValues.append("tspan").attr("class","labeltspan label4th " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
-        // textValues.append("tspan").attr("class","labeltspan label5th " + groups[j].replace(/[|&;$%@"<>()+, \d]/g, "")).text("");
-
-
-        var cell = g.append("g");
 
         cell.append("rect")
         .attr("x",x(x.domain()[0]))
@@ -869,6 +857,11 @@ td {
             //d3.select(".axis--x-bottom");
           }
         }//end j loop
+
+        d3.selectAll(".hierarchyLabel").each(function(d){
+          var bbox = this.getBBox()
+          d3.select(this.parentNode).insert('rect',".hierarchyLabel").attr('x',bbox.x).attr('y',bbox.y).attr('width',bbox.width).attr('height',bbox.height).attr('fill','white').attr('opacity',0.8)
+        })
 
       //  annotationCreation();
 
@@ -1177,6 +1170,28 @@ function clearPlotValues() {
 
 }
 
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        x = text.attr("x"),
+        tspan = text.text(null).append("tspan").attr("x", x);
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", x).attr("dy", lineHeight + "em").text(word);
+      }
+    }
+  });
+}
 
 /*** Map Code ***/
 
@@ -1257,6 +1272,8 @@ function makeMap () {
 			}, 'place_city');
 
 		}
+
+
 
 /*** End Map Code ***/
 

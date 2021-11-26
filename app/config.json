@@ -5,7 +5,10 @@
             "sourceText":["Office for National Statistics"],
             "xAxisLabel":"Standard deviations from median",
             "xAxisScale":[-8,8],
-            "heightperstrip":100,
+            "heightperstrip": {
+              "sm": 80,
+              "lg": 50
+            },
             "dotradius":5,
             "threshold":1,
             "colour_palette_icon": ["#0a6060", "#e2d377", "#d13135", "#A8BD3A", "27A0CC"],
@@ -19,6 +22,20 @@
             "outlierLimits" : [-7.5,7.5]
     },
     "optional" : {
+            "margin": {
+              "sm": {
+                "top": 40,
+                "right": 12,
+                "bottom": 20,
+                "left": 20
+              },
+              "lg": {
+                "top": 40,
+                "right": 12,
+                "bottom": 20,
+                "left": 300
+              }
+            },
             "mobileBreakpoint" : 610,
             "x_num_ticks_sm_md" : [6,10]
     }
