@@ -392,7 +392,7 @@ a {
 /* table styling */
 
 #postable th {
-  background-color: #1a9f9e;
+  background-color: #0F8577;
   color: #fff;
 }
 
@@ -991,21 +991,33 @@ td {
 
         					}
         					else {
-
         						clicked = false;
 
                     d3.selectAll(".cell").classed("notselected",false)
         						d3.selectAll(".cell").classed("cellspermselected", false);
+                    d3.selectAll(".cellspermselected2").attr('fill','#aabfcd')
+                    d3.selectAll(".cell").classed("cellspermselected2", false);
         						d3.selectAll(".cell").attr("pointer-events","all");
+
                     resetZoom();
                     clearPlotValues("");
                     clearLegend();
                     clearTable();
+                    clearDataTable();
+
+                    // clear second chosen dropdown
+                    $('#dropselect2').val('').trigger('chosen:updated')
+                    listnames=[];//clear stored names in the second dropdown
                     // hide comparison
                     d3.select("#detaildiv").style("display","none")
 
+
+
         					}
         			});
+
+              d3.select("input.chosen-search-input").attr('id','choseninput')
+              d3.select("div.chosen-search").append('label').attr('for','choseninput').attr('class','visuallyhidden').text("Type to choose a local authority.")
             } //end selectlist
 
 
@@ -1052,9 +1064,9 @@ td {
 
                     //selectCellsforcomparison areas
                     d3.selectAll(".cell").classed("notselected",true)
-                    console.log(listcodes)
+
                     listcodes.forEach(function(d,i) {
-                        d3.selectAll(".cellgroup" + d.replace(/[, ]+/g, "").trim()).attr("fill",dvc.essential.colour_palette[i+2]).classed("cellspermselected2", true).raise();
+                        d3.selectAll(".cellgroup" + d.replace(/[, ]+/g, "").trim()).attr("fill",dvc.essential.colour_palette[i+2]).classed("cellspermselected2", true).each(function(d){d3.select(this).raise()});
                     });
                     createLegend();
                     createDataTable();
@@ -1344,7 +1356,7 @@ postable = d3.select("#postable").append("table").attr("width","98%");
 
 posheadertable = postable.append('thead').append("tr");
 
-posheadertable.append("th").attr("width","70%").attr("class","textCol").text("Postive indicators");
+posheadertable.append("th").attr("width","70%").attr("class","textCol").text("Positive indicators");
 posheadertable.append("th").attr("width","30%").attr("class","numberCol").text("Value");
 
 negtable = d3.select("#negtable").append("table").attr("width","98%");
@@ -1456,11 +1468,15 @@ function clearTable() {
 
 }
 
+function clearDataTable(){
+  d3.select("#dataHTMLTable").select("table").remove();
+}
+
 
 function createDataTable () {
 
 
-    d3.select("#dataHTMLTable").select("table").remove();
+clearDataTable();
 
 
 if(typeof dropname !== 'undefined') {
