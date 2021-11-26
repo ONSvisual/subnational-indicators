@@ -858,6 +858,11 @@ td {
           }
         }//end j loop
 
+        d3.selectAll(".hierarchyLabel").each(function(d){
+          var bbox = this.getBBox()
+          d3.select(this.parentNode).insert('rect',".hierarchyLabel").attr('x',bbox.x).attr('y',bbox.y).attr('width',bbox.width).attr('height',bbox.height).attr('fill','white').attr('opacity',0.8)
+        })
+
       //  annotationCreation();
 
         function annotationCreation(){
