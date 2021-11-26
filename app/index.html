@@ -17,9 +17,22 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-h2, .areaHighlight {
+h2.areaHighlight {
   color: #206095;
   margin-bottom:-10px;
+  padding:0;
+}
+
+h2{
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 40px;
+  margin: 32px 0 32px 0;
+  padding: 24px 0 0 0;
+}
+
+h3 {
+  font-size: 18px;
 }
 
 .indicatorValues {
@@ -29,6 +42,10 @@ h2, .areaHighlight {
 
 .bar-label {
   margin-bottom:0px;
+}
+
+#detaildiv{
+  display:none;
 }
 
 #dropdown {
@@ -101,7 +118,7 @@ h2, .areaHighlight {
 }
 
 .hierarchyLabel {
-  font-size: 20px;
+  font-size: 18px;
   font-weight:bold;
   fill: #000;
 }
@@ -519,7 +536,7 @@ td {
   <div class="row">
     <div class="col-sm-8">
       <div id="dropdown">
-        <h2>Select an area</h2>
+        <h2 class="areaHighlight">Select an area</h2>
         <p>Choose from local authorities within the UK</p>
       </div>
     </div>
@@ -537,7 +554,7 @@ td {
 
 
   <div class="row">
-    <h3 id="standoutLabel">Stand out measures</h3>
+    <h2 id="standoutLabel">Stand out measures</h2>
     <div class="col-sm-6 col-xs-12" id="negtable">
     </div>
     <div class="col-sm-6 col-xs-12" id="postable">
@@ -546,11 +563,13 @@ td {
   </div>
 
   <div class="row">
-    <h3 id="measuresLabel">Explore all measures</h3>
-    <details id="indic_Pop" class="detailsvar" role="group" style="padding: 0px 0px 30px 10px; min-height: 20px; width: 100%">
-      <summary id="summary0" style="font-weight: bold; font-size: 16px; color: rgb(32, 96, 149);">Select areas to compare</summary>
-      <div id="multidrop"></div>
-    </details>
+    <h2 id="measuresLabel">Explore all measures</h2>
+    <div id="detaildiv">
+      <details id="indic_Pop" class="detailsvar" role="group" style="padding: 0px 0px 30px 10px; min-height: 20px; width: 100%">
+        <summary id="summary0" style="font-weight: bold; font-size: 16px; color: rgb(32, 96, 149);">Select areas to compare</summary>
+        <div id="multidrop"></div>
+      </details>
+    </div>
     <div id="legend"></div>
     <div id="plot">
       <div id="tooltip" display="none" style="position: absolute; display: none;"></div>
@@ -559,7 +578,7 @@ td {
   </div>
   <div class="row">
     <div id="dataTable">
-      <h3 id="measuresLabel">Data table for selected areas</h3>
+      <h2 id="measuresLabel">Data table for selected areas</h2>
         <div id="dataHTMLTable"></div>
     </div>
   </div>
@@ -930,8 +949,10 @@ td {
 
         					if($('#dropselect').val() != "") {
 
+                      // unhide comparison
+                      d3.select("#detaildiv").style("display","block")
 
-        					//if(typeof params != 'undefined') {
+
                       clicked = true;
         							d3.selectAll(".cell").classed("cellspermselected", false);
         							d3.selectAll(".cell").attr("pointer-events","all")
@@ -980,6 +1001,8 @@ td {
                     clearPlotValues("");
                     clearLegend();
                     clearTable();
+                    // hide comparison
+                    d3.select("#detaildiv").style("display","none")
 
         					}
         			});
