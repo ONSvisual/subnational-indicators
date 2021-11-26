@@ -1022,7 +1022,7 @@ td {
   			listcodes = [];
         oldlistname = [];
 
-  			$('#dropselect2').chosen({width: "98%", max_selected_options: 3, placeholder_text_multiple:"Choose upto 3 areas"}).on('change',function(evt,params){
+  			$('#dropselect2').chosen({width: "98%", max_selected_options: 3, placeholder_text_multiple:"Choose up to 3 areas"}).on('change',function(evt,params){
 
   								if(typeof params.selected != 'undefined') {
 
@@ -1036,13 +1036,13 @@ td {
 
                     //selectCellsforcomparison areas
                     d3.selectAll(".cell").classed("notselected",true)
-
+                    console.log(listcodes)
                     listcodes.forEach(function(d,i) {
                         d3.selectAll(".cellgroup" + d.replace(/[, ]+/g, "").trim()).attr("fill",dvc.essential.colour_palette[i+2]).classed("cellspermselected2", true).raise();
                     });
                     createLegend();
                     createDataTable();
-
+                    addCloseButtonDesc()
 
                   //  console.log(listcodes)
 
@@ -1071,7 +1071,7 @@ td {
 
       function addCloseButtonDesc() {
           d3.selectAll(".search-choice-close").selectAll("span").remove();
-          d3.selectAll(".search-choice-close").append("span").attr("class","visuallyhidden").text(function(d,i) {return "remove " + babynames[listcodes[i].substr(5)]})
+          d3.selectAll(".search-choice-close").append("span").attr("class","visuallyhidden").text(function(d,i) {return "Remove " + listnames[i] + " from the comparison."})
       }
 
       function changetext(value,id) {
