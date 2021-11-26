@@ -1,437 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Sub-national indicators</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Interactive tool that shows how a number of indicators compare across an area.">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,bold" rel="stylesheet">
   <link href="https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.css" rel="stylesheet" />
-  <link href="./css/style-chosen.css" rel="stylesheet"/>
+  <link href="./css/style-chosen.css" rel="stylesheet" />
 
-<style>
+  <style>
+    body {
+      max-width: 940px;
+      margin: 0px auto;
+      font-family: 'Open Sans', sans-serif;
+    }
 
-body {
-	max-width: 940px;
-	margin:0px auto;
-	font-family: 'Open Sans', sans-serif;
-}
+    h2.areaHighlight {
+      color: #206095;
+      margin-bottom: -10px;
+      padding: 0;
+    }
 
-h2.areaHighlight {
-  color: #206095;
-  margin-bottom:-10px;
-  padding:0;
-}
+    h2 {
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 40px;
+      margin: 32px 0 32px 0;
+      padding: 24px 0 0 0;
+    }
 
-h2{
-  font-size: 30px;
-  font-weight: bold;
-  line-height: 40px;
-  margin: 32px 0 32px 0;
-  padding: 24px 0 0 0;
-}
+    h3 {
+      font-size: 18px;
+    }
 
-h3 {
-  font-size: 18px;
-}
+    .indicatorValues {
+      font-weight: bold;
+      font-size: 19px;
+    }
 
-.indicatorValues {
-  font-weight: bold;
-  font-size:19px;
-}
+    .bar-label {
+      margin-bottom: 0px;
+    }
 
-.bar-label {
-  margin-bottom:0px;
-}
+    #detaildiv {
+      display: none;
+    }
 
-#detaildiv{
-  display:none;
-}
-
-#dropdown {
-  position: relative;
-  height: 170px;
-  max-width: 700px;
-  background-color: #dee7ef;
-  /* width: 100%; */
-  /* margin-top: 25px; */
-  padding-top: 5px;
-  padding-bottom: 30px;
-  padding-left:15px;
-  padding-right: 15px;
-}
-
+    #dropdown {
+      position: relative;
+      height: 170px;
+      max-width: 700px;
+      background-color: #dee7ef;
+      /* width: 100%; */
+      /* margin-top: 25px; */
+      padding-top: 5px;
+      padding-bottom: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
 
 
 
-.search-choice:nth-child(1)  {
-    background-color: #27A0CC !important;
-    border: 2px solid #27A0CC !important;
-    color: #fff !important;
-}
 
-.search-choice:nth-child(2) {
-    background-color:  #871A5B !important;
-    border: 2px solid #871A5B !important;
-    color: #fff !important;
-}
+    .search-choice:nth-child(1) {
+      background-color: #27A0CC !important;
+      border: 2px solid #27A0CC !important;
+      color: #fff !important;
+    }
 
-.search-choice:nth-child(3)  {
-    background-color:  #A8BD3A !important;
-    border: 2px solid #A8BD3A !important;
-    color: #000 !important;
-}
+    .search-choice:nth-child(2) {
+      background-color: #871A5B !important;
+      border: 2px solid #871A5B !important;
+      color: #fff !important;
+    }
 
-.search-choice:nth-child(4)  {
-    background-color:  #F66068 !important;
-    border: 2px solid #F66068 !important;
-}
+    .search-choice:nth-child(3) {
+      background-color: #A8BD3A !important;
+      border: 2px solid #A8BD3A !important;
+      color: #000 !important;
+    }
 
-
-.search-choice:nth-child(1) button {
-  background: url('./assets/img/x_close_slate.svg') no-repeat right 0 top 50%;
-
-}
-
-.search-choice:nth-child(2) button {
-  background: url('./assets/img/x_close_slate.svg') no-repeat right 0 top 50%;
-
-}
+    .search-choice:nth-child(4) {
+      background-color: #F66068 !important;
+      border: 2px solid #F66068 !important;
+    }
 
 
-.search-choice-close:focus {
-    outline: orange 3px solid;
-    box-shadow: 0 0 0 6px black;
-}
+    .search-choice:nth-child(1) button {
+      background: url('./assets/img/x_close_slate.svg') no-repeat right 0 top 50%;
+
+    }
+
+    .search-choice:nth-child(2) button {
+      background: url('./assets/img/x_close_slate.svg') no-repeat right 0 top 50%;
+
+    }
 
 
-#info {
-	height:25px;
-	width:100%;
-	font-size:16px;
-  margin:16px 0px;
-}
+    .search-choice-close:focus {
+      outline: orange 3px solid;
+      box-shadow: 0 0 0 6px black;
+    }
 
-#label {
-	font-weight:bold;
 
-}
+    #info {
+      height: 25px;
+      width: 100%;
+      font-size: 16px;
+      margin: 16px 0px;
+    }
 
-.hierarchyLabel {
-  font-size: 18px;
-  font-weight:bold;
-  fill: #000;
-}
+    #label {
+      font-weight: bold;
 
-#plot {
-  /* height:600px;
+    }
+
+    .hierarchyLabel {
+      font-size: 18px;
+      font-weight: bold;
+      fill: #000;
+    }
+
+    #plot {
+      /* height:600px;
   overflow: scroll; */
-}
+    }
 
-.axis path,
-.axis line {
-  fill: none;
-  stroke: rgb(102,102,102);
-  shape-rendering: crispEdges;
-}
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: rgb(102, 102, 102);
+      shape-rendering: crispEdges;
+    }
 
-.domain {
-	display:none;
-}
+    .domain {
+      display: none;
+    }
 
-.axis text, #xaxislabel {
-  font-family: 'Open Sans', sans-serif;
-  fill: rgb(102,102,102);
-  font-size:14px;
-}
+    .axis text,
+    #xaxislabel {
+      font-family: 'Open Sans', sans-serif;
+      fill: rgb(102, 102, 102);
+      font-size: 14px;
+    }
 
-.labeltspan {
-  font-weight:bold;
-  font-size:14px;
+    .labeltspan {
+      font-weight: bold;
+      font-size: 14px;
 
-}
-
-
-.cell circle {
-  fill: none;
-  pointer-events: all;
-  stroke-width: 2px;
-  stroke: rgba(255,255,255,0)
-}
-
-.notselected {
-  opacity:0.6;
-}
-
-.cellspermselected {
-  opacity:1;
-  stroke-width: 2px;
-  stroke: #fff;
-  r:7;
-  pointer-events: none;
-  fill: #206095;
-}
-
-.cellspermselected2 {
-  opacity:1;
-  stroke-width: 2px;
-  stroke: #fff;
-  r:7;
-  pointer-events: none;
-}
+    }
 
 
-.cellsselected {
-  opacity:1;
-  stroke-width: 2px;
-  stroke: #000;
-  /* pointer-events: none; */
-  /* fill: #206095; */
-  fill:rgba(255,255,255,0);
-}
+    .cell circle {
+      fill: none;
+      pointer-events: all;
+      stroke-width: 2px;
+      stroke: rgba(255, 255, 255, 0)
+    }
 
-#source{
-	font-size: 16px;
-	font-weight: 700;
-	color: #323132;
-}
+    .notselected {
+      opacity: 0.6;
+    }
 
-.key /* required */
-{
-	display: inline-block;
-	margin: 0 0 1em 0;
-	padding: 0;
-	line-height: 15px;
-}
+    .cellspermselected {
+      opacity: 1;
+      stroke-width: 2px;
+      stroke: #fff;
+      r: 7;
+      pointer-events: none;
+      fill: #206095;
+    }
 
-.label {
-	white-space: nowrap;
-	font-size: 14px;
-	color: #333;
-	font-weight: 600;
-	font-family: "Open Sans", Helvetica, sans-serif;
-}
-
-.key li/* required */
-{
-	display: inline-block;
-	margin: 0 18px 0 0;
-	padding: 0;
-	line-height: 15px;
-}
-
-.key b /* required */
-{
-	display: inline-block;
-	width: 35px;
-	height: 15px;
-	margin-right: 6px;
-	float: left;
-	background-color: transparent;
-	margin-top:8px;
-	border-radius:15px;
-}
-
-.legendBlocks{ /* new for Cluster chart */
-	width: 15px !important;
-	margin-top:0px !important;
-}
-
-.key label/* required */
-{
-	white-space: nowrap;
-	font-size: 16px;
-	color: #333;
-	font-weight: normal;
-}
-
-.btn-group {
-    padding: 10px;
-}
-
-.btn-group, .btn-group-vertical {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.btn {
-    position: relative;
-    padding: 10px 15px;
-    margin: 0 0 20px;
-    line-height: normal;
-    color: #fff;
-    /* font-size: 1.3em !important; */
-    border-radius: 0px;
-    display: inline-block;
-    text-rendering: optimizeLegibility;
-    transition: background-color .2s ease-in, color .2s ease-in;
-}
-
-.btn:focus {
-    outline: none;
-    box-shadow: 0 0 0pt 3pt orange;
-}
-
-.btn--select {
-    margin-left: 0px !important;
-}
-.btn--select {
-    color: #206095 !important;
-    border: 2px solid #206095 !important;
-    margin-right: 15px !important;
-    margin-bottom: 15px !important;
-    transition: all ease .2s;
-    border-radius: 30px !important;
-}
-
-.btn:active, .btn.active {
-    background-color: #206095;
-    color: white !important;
-    -webkit-box-shadow: none;
-    box-shadow: 0 0 0pt 3pt orange;
-}
-
-.btn-group > .btn:focus {
-    outline: none;
-    box-shadow: 0 0 0pt 3pt orange;
-}
-
-[data-toggle=buttons]>.btn input[type=radio], [data-toggle=buttons]>.btn-group>.btn input[type=radio] {
-    position: absolute;
-    clip: rect(0,0,0,0);
-    pointer-events: none;
-}
-input[type=checkbox], input[type=radio] {
-    -webkit-appearance: none;
-}
-.btn-group input {
-    height: 0px;
-    width: 0px;
-    position: absolute;
-    left: -100px;
-}
-input[type=checkbox], input[type=radio] {
-    margin: 4px 0 0;
-    margin-top: 1px\9;
-    line-height: normal;
-}
-input[type=checkbox], input[type=radio] {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0;
-}
-input {
-    border: none;
-    border-radius: 0;
-    border-bottom: solid 1px #ddd;
-    font-size: 18px;
-    line-height: 32px;
-    margin: 16px 0;
-    padding: 6px 0 0 0;
-}
-input, select {
-    font-family: "Open Sans",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-}
+    .cellspermselected2 {
+      opacity: 1;
+      stroke-width: 2px;
+      stroke: #fff;
+      r: 7;
+      pointer-events: none;
+    }
 
 
-h6 {
-font-size: 16px;
-margin: 16px 0 8px 0;
-font-weight: 700;
-color:#323132;
-}
-.btn--primary {
-background-color: #0F8243;
-color: #fff;
-}
-.btn {
-font-family: "Open Sans",Helvetica,Arial,sans-serif;
-font-weight: 400;
-font-size: 14px;
-display: inline-block;
-width: auto;
-cursor: pointer;
-padding: 6px 16px 10px 16px;
-border: 0 none;
-text-align: center;
--webkit-appearance: none;
-transition: background-color 0.25s ease-out;
-line-height: 24px;
-}
-.btn--primary:hover, .btn--primary:focus {
-background-color: #0b5d30;
-}
-a {
-    text-decoration: underline;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 32px;
-}
-/* Map */
+    .cellsselected {
+      opacity: 1;
+      stroke-width: 2px;
+      stroke: #000;
+      /* pointer-events: none; */
+      /* fill: #206095; */
+      fill: rgba(255, 255, 255, 0);
+    }
 
-@media (min-width: 600px) {
-  #map {
-    height: 200px;
-    width: 100%;
-    max-width: 800px;
-    border: 2px solid #dee7ef;
-  }
-}
+    #source {
+      font-size: 16px;
+      font-weight: 700;
+      color: #323132;
+    }
 
-/* mobile CSS */
-@media (max-width: 599px) {
-  #map {
-    display:none;
-  }
-}
+    .key
+
+    /* required */
+      {
+      display: inline-block;
+      margin: 0 0 1em 0;
+      padding: 0;
+      line-height: 15px;
+    }
+
+    .label {
+      white-space: nowrap;
+      font-size: 14px;
+      color: #333;
+      font-weight: 600;
+      font-family: "Open Sans", Helvetica, sans-serif;
+    }
+
+    .key li
+
+    /* required */
+      {
+      display: inline-block;
+      margin: 0 18px 0 0;
+      padding: 0;
+      line-height: 15px;
+    }
+
+    .key b
+
+    /* required */
+      {
+      display: inline-block;
+      width: 35px;
+      height: 15px;
+      margin-right: 6px;
+      float: left;
+      background-color: transparent;
+      margin-top: 8px;
+      border-radius: 15px;
+    }
+
+    .legendBlocks {
+      /* new for Cluster chart */
+      width: 15px !important;
+      margin-top: 0px !important;
+    }
+
+    .key label
+
+    /* required */
+      {
+      white-space: nowrap;
+      font-size: 16px;
+      color: #333;
+      font-weight: normal;
+    }
+
+    .btn-group {
+      padding: 10px;
+    }
+
+    .btn-group,
+    .btn-group-vertical {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .btn {
+      position: relative;
+      padding: 10px 15px;
+      margin: 0 0 20px;
+      line-height: normal;
+      color: #fff;
+      /* font-size: 1.3em !important; */
+      border-radius: 0px;
+      display: inline-block;
+      text-rendering: optimizeLegibility;
+      transition: background-color .2s ease-in, color .2s ease-in;
+    }
+
+    .btn:focus {
+      outline: none;
+      box-shadow: 0 0 0pt 3pt orange;
+    }
+
+    .btn--select {
+      margin-left: 0px !important;
+    }
+
+    .btn--select {
+      color: #206095 !important;
+      border: 2px solid #206095 !important;
+      margin-right: 15px !important;
+      margin-bottom: 15px !important;
+      transition: all ease .2s;
+      border-radius: 30px !important;
+    }
+
+    .btn:active,
+    .btn.active {
+      background-color: #206095;
+      color: white !important;
+      -webkit-box-shadow: none;
+      box-shadow: 0 0 0pt 3pt orange;
+    }
+
+    .btn-group>.btn:focus {
+      outline: none;
+      box-shadow: 0 0 0pt 3pt orange;
+    }
+
+    [data-toggle=buttons]>.btn input[type=radio],
+    [data-toggle=buttons]>.btn-group>.btn input[type=radio] {
+      position: absolute;
+      clip: rect(0, 0, 0, 0);
+      pointer-events: none;
+    }
+
+    input[type=checkbox],
+    input[type=radio] {
+      -webkit-appearance: none;
+    }
+
+    .btn-group input {
+      height: 0px;
+      width: 0px;
+      position: absolute;
+      left: -100px;
+    }
+
+    input[type=checkbox],
+    input[type=radio] {
+      margin: 4px 0 0;
+      margin-top: 1px\9;
+      line-height: normal;
+    }
+
+    input[type=checkbox],
+    input[type=radio] {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 0;
+    }
+
+    input {
+      border: none;
+      border-radius: 0;
+      border-bottom: solid 1px #ddd;
+      font-size: 18px;
+      line-height: 32px;
+      margin: 16px 0;
+      padding: 6px 0 0 0;
+    }
+
+    input,
+    select {
+      font-family: "Open Sans", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+    }
 
 
-/* table styling */
+    h6 {
+      font-size: 16px;
+      margin: 16px 0 8px 0;
+      font-weight: 700;
+      color: #323132;
+    }
 
-#postable th {
-  background-color: #0F8577;
-  color: #fff;
-}
+    .btn--primary {
+      background-color: #0F8243;
+      color: #fff;
+    }
+
+    .btn {
+      font-family: "Open Sans", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      display: inline-block;
+      width: auto;
+      cursor: pointer;
+      padding: 6px 16px 10px 16px;
+      border: 0 none;
+      text-align: center;
+      -webkit-appearance: none;
+      transition: background-color 0.25s ease-out;
+      line-height: 24px;
+    }
+
+    .btn--primary:hover,
+    .btn--primary:focus {
+      background-color: #0b5d30;
+    }
+
+    a {
+      text-decoration: underline;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 32px;
+    }
+
+    /* Map */
+
+    @media (min-width: 600px) {
+      #map {
+        height: 200px;
+        width: 100%;
+        max-width: 800px;
+        border: 2px solid #dee7ef;
+      }
+    }
+
+    /* mobile CSS */
+    @media (max-width: 599px) {
+      #map {
+        display: none;
+      }
+    }
 
 
-#negtable th {
-  background-color: #043b56;
-  color: #fff;
-}
+    /* table styling */
 
-th {
-  height:45px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
+    #postable th {
+      background-color: #0F8577;
+      color: #fff;
+    }
 
-tr {
-  height:40px;
-  background-color:#f5f5f6;
-}
 
-td {
+    #negtable th {
+      background-color: #043b56;
+      color: #fff;
+    }
 
-  padding-left: 10px;
-  padding-right: 10px;
-}
+    th {
+      height: 45px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
 
-.suffix {
-  width:10px;
-  display:inline-block;
-}
+    tr {
+      height: 40px;
+      background-color: #f5f5f6;
+    }
 
-.numberCol {
-  text-align: right;
-}
+    td {
 
-.textCol {
-  text-align: left;
-}
-/* Bootstrap Grid */
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .suffix {
+      width: 10px;
+      display: inline-block;
+    }
+
+    .numberCol {
+      text-align: right;
+    }
+
+    .textCol {
+      text-align: left;
+    }
+
+    /* Bootstrap Grid */
 
     .row:before,
     .row:after {
@@ -446,7 +477,7 @@ td {
     .row {
       margin-right: 0px;
       margin-left: 0px;
-      margin-bottom:30px;
+      margin-bottom: 30px;
     }
 
     .col-sm-2,
@@ -524,11 +555,7 @@ td {
       border-radius: 5px;
       padding: 5px;
     }
-
-
-
-
-</style>
+  </style>
 </head>
 
 <body>
@@ -545,7 +572,7 @@ td {
       </div>
     </div>
   </div>
-<!--
+  <!--
   <div class="row">
     <div class="col-sm-12 col-xs-12" id="iconArray">
       <h3 id="measuresLabel">Distribution of measures</h3>
@@ -573,13 +600,13 @@ td {
     <div id="legend"></div>
     <div id="plot">
       <div id="tooltip" display="none" style="position: absolute; display: none;"></div>
-    	<svg width="100%"></svg>
+      <svg width="100%"></svg>
     </div>
   </div>
   <div class="row">
     <div id="dataTable">
       <h2 id="measuresLabel">Data table for selected areas</h2>
-        <div id="dataHTMLTable"></div>
+      <div id="dataHTMLTable"></div>
     </div>
   </div>
   <!-- <h6 class="">Download this chart</h6>
@@ -601,32 +628,32 @@ td {
   <!-- <script src="../lib/jitter.js"></script> -->
 
   <script>
+    var pymChild = null;
 
-  var pymChild = null;
-  function drawGraphic() {
+    function drawGraphic() {
 
-    makeMap();
+      makeMap();
 
-    //clear the svg first
-    d3.select('svg').selectAll("*").remove()
+      //clear the svg first
+      d3.select('svg').selectAll("*").remove()
 
-    clicked = false;
+      clicked = false;
 
-  	var svg = d3.select("svg");
+      var svg = d3.select("svg");
 
-    svgwidth =  parseInt(svg.style("width"));
+      svgwidth = parseInt(svg.style("width"));
 
 
-    if(svgwidth < dvc.optional.mobileBreakpoint) {
-      var size = "sm";
-    } else {
-      var size = "lg";
-    }
+      if (svgwidth < dvc.optional.mobileBreakpoint) {
+        var size = "sm";
+      } else {
+        var size = "lg";
+      }
 
-    margin = dvc.optional.margin[size];
-    heightper = dvc.essential.heightperstrip[size];
+      margin = dvc.optional.margin[size];
+      heightper = dvc.essential.heightperstrip[size];
 
-  		width = svgwidth - margin.left - margin.right;
+      width = svgwidth - margin.left - margin.right;
 
       spaceForLabels = 60;
       currGap = 0;
@@ -635,475 +662,566 @@ td {
       // Work out how many categories there are, and how many variables within each
 
       categoryCount = d3.nest()
-        .key(function(d) { return d.Category; })
-        .key(function(d) { return d.id; })
+        .key(function(d) {
+          return d.Category;
+        })
+        .key(function(d) {
+          return d.id;
+        })
         .rollup(function(ids) {
-            return ids.length;
+          return ids.length;
         })
         .entries(graphic_data);
 
 
       breakingPoints = []
 
-      for(var m = 0; m < categoryCount.length; m++) {
-        if(m==0) {
+      for (var m = 0; m < categoryCount.length; m++) {
+        if (m == 0) {
           breakingPoints.push(0);
           breakingPoints.push(+categoryCount[m].values.length);
         }
 
-        if(m>0) {
+        if (m > 0) {
           breakingPoints.push(+categoryCount[m].values.length + breakingPoints[m]);
         }
 
-       }
+      }
 
 
       //get unique groups/variables
-    	var groups = graphic_data.map(function(obj) { return obj.id; });
-      groups = groups.filter(function(v,i) { return groups.indexOf(v) == i; });
+      var groups = graphic_data.map(function(obj) {
+        return obj.id;
+      });
+      groups = groups.filter(function(v, i) {
+        return groups.indexOf(v) == i;
+      });
 
 
 
 
-  		height = (heightper*groups.length) + (spaceForLabels*(breakingPoints.length-1)) + margin.top + margin.bottom;
+      height = (heightper * groups.length) + (spaceForLabels * (breakingPoints.length - 1)) + margin.top + margin.bottom;
 
-      svg.attr("height",height + "px")
+      svg.attr("height", height + "px")
 
-  	var formatValue = d3.format(",.1f");
+      var formatValue = d3.format(",.1f");
 
-  	var x = d3.scaleLinear()
-  		.rangeRound([0, width]);
+      var x = d3.scaleLinear()
+        .rangeRound([0, width]);
 
-  	if(dvc.essential.xAxisScale == "auto") {
-  	  x.domain(d3.extent(graphic_data, function(d) { return +d.value; }));
-  	} else {
-  	  x.domain(dvc.essential.xAxisScale);
-  	}
+      if (dvc.essential.xAxisScale == "auto") {
+        x.domain(d3.extent(graphic_data, function(d) {
+          return +d.value;
+        }));
+      } else {
+        x.domain(dvc.essential.xAxisScale);
+      }
 
-    groupeddata = {}
+      groupeddata = {}
 
-    separate = heightper;
+      separate = heightper;
 
-    runningtotal = 0;
-
-
-
-    for(var j = 0; j < groups.length; j++) {
-
-    groupeddata[j] =  graphic_data.filter(function(v,i) { return v.id == groups[j]; });
+      runningtotal = 0;
 
 
 
-    if(j>0) {
-      runningtotal = runningtotal + groupeddata[j-1].length;
-    }
+      for (var j = 0; j < groups.length; j++) {
+
+        groupeddata[j] = graphic_data.filter(function(v, i) {
+          return v.id == groups[j];
+        });
 
 
-    /* add a bit of spacing to allow for the hierarchy labelling */
-    if(breakingPoints.indexOf(j) != -1) {
-      currGap += spaceForLabels;
-    }
+
+        if (j > 0) {
+          runningtotal = runningtotal + groupeddata[j - 1].length;
+        }
 
 
-    	var g = svg.append("g")
-    		.attr("transform", "translate(" + margin.left + "," + (currGap + margin.top + (separate*j)) + ")")
+        /* add a bit of spacing to allow for the hierarchy labelling */
+        if (breakingPoints.indexOf(j) != -1) {
+          currGap += spaceForLabels;
+        }
+
+
+        var g = svg.append("g")
+          .attr("transform", "translate(" + margin.left + "," + (currGap + margin.top + (separate * j)) + ")")
         // .on("mouseout",function(){
         //   d3.selectAll(".cellsselected").classed("cellsselected",false);
         // });
 
-      if(j == groups.length-1) {
+        if (j == groups.length - 1) {
 
-        g.lower()
-      }
+          g.lower()
+        }
 
-      /* add hierarchy labelling */
-      if(breakingPoints.indexOf(j) != -1) {
-        var hierarchyLabel = g.append("text").attr("class","hierarchyLabel").text(categoryCount[breakingPoints.indexOf(j)].key).attr("y",-10).attr("x",-margin.left).call(wrap, svgwidth);
-        var hierarchyLabelLines = hierarchyLabel.selectAll("tspan").size();
-        // add extra gap if hierarchy labels go onto multiple lines
-        if (hierarchyLabelLines > 1) {
-          var extraGap = 20*(hierarchyLabelLines-1);
-          currGap += extraGap;
-          g.attr("transform", "translate(" + margin.left + "," + (currGap + margin.top + (separate*j)) + ")");
-          hierarchyLabel.attr("y", hierarchyLabel.attr("y") - extraGap);
-        };
-      }
+        /* add hierarchy labelling */
+        if (breakingPoints.indexOf(j) != -1) {
+          var hierarchyLabel = g.append("text").attr("class", "hierarchyLabel").text(categoryCount[breakingPoints.indexOf(j)].key).attr("y", -10).attr("x", -margin.left).call(wrap, svgwidth);
+          var hierarchyLabelLines = hierarchyLabel.selectAll("tspan").size();
+          // add extra gap if hierarchy labels go onto multiple lines
+          if (hierarchyLabelLines > 1) {
+            var extraGap = 20 * (hierarchyLabelLines - 1);
+            currGap += extraGap;
+            g.attr("transform", "translate(" + margin.left + "," + (currGap + margin.top + (separate * j)) + ")");
+            hierarchyLabel.attr("y", hierarchyLabel.attr("y") - extraGap);
+          };
+        }
 
-      g.append("text").attr("class","label").text(groups[j]).attr("y",(heightper/2)+5).attr("x",-margin.left)
+        g.append("text").attr("class", "label").text(groups[j]).attr("y", (heightper / 2) + 5).attr("x", -margin.left)
 
-      var cell = g.append("g").attr("class", "cell-group");
+        var cell = g.append("g").attr("class", "cell-group");
 
-  	  if(svgwidth < dvc.optional.mobileBreakpoint) {
-        // set label y on mobile
-        g.select(".label").attr("y", 20);
+        if (svgwidth < dvc.optional.mobileBreakpoint) {
+          // set label y on mobile
+          g.select(".label").attr("y", 20);
 
-  		  numberticks = dvc.optional.x_num_ticks_sm_md[0];
+          numberticks = dvc.optional.x_num_ticks_sm_md[0];
 
-        cell.append("rect")
-          .attr("x",x(x.domain()[0]))
-          .attr("width",x(x.domain()[1]) - x(x.domain()[0]))
-          .attr("y",23)
-          .attr("height",heightper/2)
-          .attr("rx",(heightper/2))
-          .attr("fill","#f5f5f6")
-          .attr("opacity",0.5)
+          cell.append("rect")
+            .attr("x", x(x.domain()[0]))
+            .attr("width", x(x.domain()[1]) - x(x.domain()[0]))
+            .attr("y", 23)
+            .attr("height", heightper / 2)
+            .attr("rx", (heightper / 2))
+            .attr("fill", "#f5f5f6")
+            .attr("opacity", 0.5)
 
-        cell.selectAll(".circles")
-          .data(groupeddata[j])
-          .enter()
-          .append("circle")
-          .attr("class", "cell")
-          .attr("r", dvc.essential.dotradius)
-          .attr("cx", function(d) {return x(d.value); })
-          .attr("cy", function(d) { return 23 + 5 + Math.random()*(heightper/2 -10) ; })
-          .attr("class", function(d,i) { return "cell " + "cellgroup"+d.unique.replace(/[, ]+/g, "").trim()})
-          .attr("fill", dvc.essential.colour_palette[0])
-          .attr("opacity",0.5)
-          .attr("pointer-events","all")
-          .on("mouseout", function(d,i) {
-            d3.selectAll(".cellsselected").classed("cellsselected",false).attr("pointer-events","all")
-            hideTooltip();
+          cell.selectAll(".circles")
+            .data(groupeddata[j])
+            .enter()
+            .append("circle")
+            .attr("class", "cell")
+            .attr("r", dvc.essential.dotradius)
+            .attr("cx", function(d) {
+              return x(d.value);
+            })
+            .attr("cy", function(d) {
+              return 23 + 5 + Math.random() * (heightper / 2 - 10);
+            })
+            .attr("class", function(d, i) {
+              return "cell " + "cellgroup" + d.unique.replace(/[, ]+/g, "").trim()
+            })
+            .attr("fill", dvc.essential.colour_palette[0])
+            .attr("opacity", 0.5)
+            .attr("pointer-events", "all")
+            .on("mouseout", function(d, i) {
+              d3.selectAll(".cellsselected").classed("cellsselected", false).attr("pointer-events", "all")
+              hideTooltip();
 
-            //d3.selectAll("." + pathgroup).classed("cellsselected",true);
-          })
-          .on("mouseover", function(d,i) {
-            pathidstr = d3.select(this).attr("class");
-            pathgroup = pathidstr.split(" ")[1];
-            //console.log(pathgroup);
-            //d3.selectAll(".cell").classed("cellsselected",false);showTooltip(evt, 'This is blue')
-
-
-            d3.selectAll("." + pathgroup).classed("cellsselected",true);
-          })
-
-            d3.select("#info").html("");
-            $("#dropselect").val("").trigger("chosen:updated");
-
-
-  	  } else {
-  		  numberticks = dvc.optional.x_num_ticks_sm_md[1];
-
-        cell.append("rect")
-        .attr("x",x(x.domain()[0]))
-        .attr("width",x(x.domain()[1]) - x(x.domain()[0]))
-        .attr("y",10)
-        .attr("rx",(heightper/4))
-        .attr("height",heightper-20)
-        .attr("fill","#f5f5f6")
-        .attr("opacity",0.5)
-        .attr("pointer-events","none")
-
-        cell.selectAll(".circles")
-          .data(groupeddata[j])
-          .enter()
-          .append("circle")
-          .attr("class", "cell")
-          .attr("r", dvc.essential.dotradius)
-          .attr("cx", function(d) {return x(d.value); })
-          .attr("cy", function(d) { return Math.random()*(heightper/2) + heightper/4; })
-          .attr("class", function(d,i) { return "cell " + "cellgroup"+d.unique.replace(/[, ]+/g, "").trim()})
-          .attr("fill", dvc.essential.colour_palette[0])
-          .attr("opacity",0.5)
-          .attr("pointer-events","all")
-          .on("mouseout", function(d,i) {
-            d3.selectAll(".cellsselected").classed("cellsselected",false)//.lower();
-            hideTooltip();
-          })
-          .on("mouseover", function(d,i) {
-            // console.log(d)
-            // pathidstr = d3.select(this);
-            // pathidstring = pathidstr.attr("class");
-            pathgroup = "cellgroup" + d.unique;
-
-            //console.log(pathgroup);
-            //d3.selectAll(".cell").classed("cellsselected",false);
-
-            d3.selectAll("." + pathgroup).classed("cellsselected",true).each(function(){d3.select(this).raise()})
-
-            showTooltip(d3.event.pageX,d3.event.pageY, d.group)
-
-          })
+              //d3.selectAll("." + pathgroup).classed("cellsselected",true);
+            })
+            .on("mouseover", function(d, i) {
+              pathidstr = d3.select(this).attr("class");
+              pathgroup = pathidstr.split(" ")[1];
+              //console.log(pathgroup);
+              //d3.selectAll(".cell").classed("cellsselected",false);showTooltip(evt, 'This is blue')
 
 
-            d3.select("#info").html("");
-            $("#dropselect").val("").trigger("chosen:updated");
+              d3.selectAll("." + pathgroup).classed("cellsselected", true);
+            })
 
-  	  }
+          d3.select("#info").html("");
+          $("#dropselect").val("").trigger("chosen:updated");
 
 
-        if(j==0) {
-            g.append("g")
-              .attr("class", "axis axis--x")
-              .attr("transform", "translate(0," + -currGap + ")")
-              .call(d3.axisTop(x)
-                      //.ticks(numberticks, ".0s")
-                      .tickValues(dvc.essential.tickValuesForLabels)
-                      .tickFormat(function(d,i){return dvc.essential.tickValueLabels[i]})
-                      .tickSize(0));
-          }
+        } else {
+          numberticks = dvc.optional.x_num_ticks_sm_md[1];
 
-          if(j==groups.length-1){
-            g.append("g")
-          	  .attr("class", "axis axis--x axis--x-bottom")
-              .lower()
-          	  .attr("transform", "translate(0," + (-heightper*(groups.length-1) - (spaceForLabels*(breakingPoints.length-1))) + ")")
-          	  .call(d3.axisBottom(x)
-                      .tickValues(dvc.essential.tickBands)
-                      .tickFormat(d3.format(".1f"))
-                      .tickSize(height-heightper)
+          cell.append("rect")
+            .attr("x", x(x.domain()[0]))
+            .attr("width", x(x.domain()[1]) - x(x.domain()[0]))
+            .attr("y", 10)
+            .attr("rx", (heightper / 4))
+            .attr("height", heightper - 20)
+            .attr("fill", "#f5f5f6")
+            .attr("opacity", 0.5)
+            .attr("pointer-events", "none")
 
-              );
+          cell.selectAll(".circles")
+            .data(groupeddata[j])
+            .enter()
+            .append("circle")
+            .attr("class", "cell")
+            .attr("r", dvc.essential.dotradius)
+            .attr("cx", function(d) {
+              return x(d.value);
+            })
+            .attr("cy", function(d) {
+              return Math.random() * (heightper / 2) + heightper / 4;
+            })
+            .attr("class", function(d, i) {
+              return "cell " + "cellgroup" + d.unique.replace(/[, ]+/g, "").trim()
+            })
+            .attr("fill", dvc.essential.colour_palette[0])
+            .attr("opacity", 0.5)
+            .attr("pointer-events", "all")
+            .on("mouseout", function(d, i) {
+              d3.selectAll(".cellsselected").classed("cellsselected", false) //.lower();
+              hideTooltip();
+            })
+            .on("mouseover", function(d, i) {
+              // console.log(d)
+              // pathidstr = d3.select(this);
+              // pathidstring = pathidstr.attr("class");
+              pathgroup = "cellgroup" + d.unique;
 
-            g.append("rect")
-              .attr("x",x(dvc.essential.tickBands[1]))
-              .attr("y",(-heightper*(groups.length-1) - (spaceForLabels*(breakingPoints.length-1))))
-              .attr("width",x(dvc.essential.tickBands[3]) - x(dvc.essential.tickBands[1]))
-              .attr("height",(heightper * groups.length) + (spaceForLabels*(breakingPoints.length-1)))
-              .attr("fill","#ddd")
-              .attr("opacity",0.2)
-              .lower()
+              //console.log(pathgroup);
+              //d3.selectAll(".cell").classed("cellsselected",false);
 
-          svg.attr("height",parseInt(svg.attr("height"))+20+"px")
+              d3.selectAll("." + pathgroup).classed("cellsselected", true).each(function() {
+                d3.select(this).raise()
+              })
+
+              showTooltip(d3.event.pageX, d3.event.pageY, d.group)
+
+            })
+
+
+          d3.select("#info").html("");
+          $("#dropselect").val("").trigger("chosen:updated");
+
+        }
+
+
+        if (j == 0) {
+          g.append("g")
+            .attr("class", "axis axis--x")
+            .attr("transform", "translate(0," + -currGap + ")")
+            .call(d3.axisTop(x)
+              //.ticks(numberticks, ".0s")
+              .tickValues(dvc.essential.tickValuesForLabels)
+              .tickFormat(function(d, i) {
+                return dvc.essential.tickValueLabels[i]
+              })
+              .tickSize(0));
+        }
+
+        if (j == groups.length - 1) {
+          g.append("g")
+            .attr("class", "axis axis--x axis--x-bottom")
+            .lower()
+            .attr("transform", "translate(0," + (-heightper * (groups.length - 1) - (spaceForLabels * (breakingPoints.length - 1))) + ")")
+            .call(d3.axisBottom(x)
+              .tickValues(dvc.essential.tickBands)
+              .tickFormat(d3.format(".1f"))
+              .tickSize(height - heightper)
+
+            );
+
+          g.append("rect")
+            .attr("x", x(dvc.essential.tickBands[1]))
+            .attr("y", (-heightper * (groups.length - 1) - (spaceForLabels * (breakingPoints.length - 1))))
+            .attr("width", x(dvc.essential.tickBands[3]) - x(dvc.essential.tickBands[1]))
+            .attr("height", (heightper * groups.length) + (spaceForLabels * (breakingPoints.length - 1)))
+            .attr("fill", "#ddd")
+            .attr("opacity", 0.2)
+            .lower()
+
+          svg.attr("height", parseInt(svg.attr("height")) + 20 + "px")
           g.selectAll(".axis--x line").attr("stroke", "#ddd").attr("stroke-dasharray", "2,2");
 
           g.select(".axis--x-bottom")
-              .selectAll("line")
-              .attr("class",function(d,i) {if(i==2){return "centreLine"}})
-              .style("stroke", function(d,i) {if(i==2){return "orange"} else {return "#ddd"}})
-              .style("stroke-width", function(d,i) {if(i==2){return "2px"} else {return "1px"}})
-              .attr("stroke-dasharray", function(d,i) {if(i==2){return "none"} else {return "stroke-dasharray", "2,2"}})
+            .selectAll("line")
+            .attr("class", function(d, i) {
+              if (i == 2) {
+                return "centreLine"
+              }
+            })
+            .style("stroke", function(d, i) {
+              if (i == 2) {
+                return "orange"
+              } else {
+                return "#ddd"
+              }
+            })
+            .style("stroke-width", function(d, i) {
+              if (i == 2) {
+                return "2px"
+              } else {
+                return "1px"
+              }
+            })
+            .attr("stroke-dasharray", function(d, i) {
+              if (i == 2) {
+                return "none"
+              } else {
+                return "stroke-dasharray", "2,2"
+              }
+            })
 
-            //d3.select(".axis--x-bottom");
-          }
-        }//end j loop
+          //d3.select(".axis--x-bottom");
+        }
+      } //end j loop
 
-        d3.selectAll(".hierarchyLabel").each(function(d){
-          var bbox = this.getBBox()
-          d3.select(this.parentNode).insert('rect',".hierarchyLabel").attr('x',bbox.x).attr('y',bbox.y).attr('width',bbox.width).attr('height',bbox.height).attr('fill','white').attr('opacity',0.8)
-        })
+      d3.selectAll(".hierarchyLabel").each(function(d) {
+        var bbox = this.getBBox()
+        d3.select(this.parentNode).insert('rect', ".hierarchyLabel").attr('x', bbox.x).attr('y', bbox.y).attr('width', bbox.width).attr('height', bbox.height).attr('fill', 'white').attr('opacity', 0.8)
+      })
 
       //  annotationCreation();
 
-        function annotationCreation(){
-            //create line breaks for annotation
-            var insertLinebreaks = function () {
+      function annotationCreation() {
+        //create line breaks for annotation
+        var insertLinebreaks = function() {
 
-            var el1 = this.firstChild;
-            var el = el1.data;
+          var el1 = this.firstChild;
+          var el = el1.data;
 
-            var words = el.split('  ');
-
-
-            d3.select(this).text('');
-
-            xpos = d3.select(this).attr("x");
+          var words = el.split('  ');
 
 
-              for (var i = 0; i < words.length; i++) {
-                var tspan = d3.select(this).append('tspan').text(words[i]);
-                if (i > 0) {
-                  tspan.attr('x', xpos).attr('dy', '13');
-                  }
+          d3.select(this).text('');
+
+          xpos = d3.select(this).attr("x");
+
+
+          for (var i = 0; i < words.length; i++) {
+            var tspan = d3.select(this).append('tspan').text(words[i]);
+            if (i > 0) {
+              tspan.attr('x', xpos).attr('dy', '13');
+            }
+          }
+
+          if (words.length > 1) {
+            d3.select(this).attr("transform", "translate(0," + ((words.length - 1) * (-13 / 2)) + ")")
+          }
+
+        };
+
+        d3.selectAll(".label").each(insertLinebreaks);
+
+      } //end of annotationCreation
+
+      selectlist(graphic_data);
+      multiselect(graphic_data);
+
+      function selectlist(datacsv) {
+
+        var dropnames = datacsv.map(function(d, i) {
+          return d.group
+        }).filter(function(item, pos, val) {
+          return val.indexOf(item) == pos
+        })
+        var dropcodes = datacsv.map(function(d, i) {
+          return d.unique
+        }).filter(function(item, pos, val) {
+          return val.indexOf(item) == pos
+        })
+
+        var menuarea = d3.zip(dropnames, dropcodes).sort(function(a, b) {
+          return d3.ascending(a[0], b[0]);
+        });
+
+        //clear dropdown
+        d3.select("#sel").selectAll("*").remove()
+
+        // Build option menu for occupations
+        var optns = d3.select("#dropdown").append("div").attr("id", "sel").append("select")
+          .attr("id", "dropselect")
+          .attr("style", "width:300px")
+          .attr("class", "chosen-select");
+
+        optns.append("option")
+        // .attr("value","first")
+        // .text("");
+        optns.selectAll("p").data(menuarea).enter().append("option")
+          //.attr("id", function(d){return d[0].replace(/[, ]+/g, "").trim()})
+          .attr("value", function(d) {
+            return d[1]
+          })
+          .text(function(d) {
+            return d[0]
+          });
+
+        myId = null;
+
+        $('#dropselect').chosen({
+          width: "90%",
+          allow_single_deselect: true,
+          placeholder_text_single: "Choose a local authority"
+        }).on('change', function(evt, params) {
+
+          if ($('#dropselect').val() != "") {
+
+            // unhide comparison
+            d3.select("#detaildiv").style("display", "block")
+
+
+            clicked = true;
+            d3.selectAll(".cell").classed("cellspermselected", false);
+            d3.selectAll(".cell").attr("pointer-events", "all")
+
+            dropcode = $('#dropselect').val();
+            dropname = $('#dropselect option:selected').text();
+            dropcodeid = +dropcode.substr(2);
+
+            zoomToArea(dropcode);
+            updateTable(dropcode, dropname);
+            updatePlotValues(dropcode, dropname);
+            createLegend();
+            createDataTable();
+            //createiconArray(dropcode, dropname);
+
+            d3.selectAll(".cell").classed("notselected", true)
+            d3.selectAll(".cellgroup" + dropcode.replace(/[, ]+/g, "").trim()).classed("cellspermselected", true).attr("pointer-events", "all").each(function() {
+              d3.select(this).raise()
+            });
+
+            //datafilter = datacsv.filter(function(d,i) {return "id" + i == dropcode})
+            // changetext(datafilter[0].value,datafilter[0].unique )
+
+            d3.select('abbr').on('keypress', function(evt) {
+              if (d3.event.keyCode == 13 || d3.event.keyCode == 32) {
+                d3.event.preventDefault()
+
+                clicked = false;
+
+                d3.select(".cell" + dropcodeid).classed("cellspermselected", false)
+                d3.selectAll(".cell").attr("pointer-events", "all")
+
+                d3.select("#info").html("");
+
+                $("#dropselect").val(null).trigger('chosen:updated');
               }
+            })
 
-              if(words.length > 1) {
-                  d3.select(this).attr("transform","translate(0,"+ ((words.length-1) * (-13/2)) + ")")
-              }
+          } else {
+            clicked = false;
 
-            };
+            d3.selectAll(".cell").classed("notselected", false)
+            d3.selectAll(".cell").classed("cellspermselected", false);
+            d3.selectAll(".cellspermselected2").attr('fill', '#aabfcd')
+            d3.selectAll(".cell").classed("cellspermselected2", false);
+            d3.selectAll(".cell").attr("pointer-events", "all");
 
-              d3.selectAll(".label").each(insertLinebreaks);
+            resetZoom();
+            clearPlotValues("");
+            clearLegend();
+            clearTable();
+            clearDataTable();
 
-        }//end of annotationCreation
-
-        selectlist(graphic_data);
-        multiselect(graphic_data);
-
-        function selectlist(datacsv) {
-
-        			var dropnames = datacsv.map(function(d,i){return d.group}).filter(function(item,pos,val){return val.indexOf(item)==pos})
-        			var dropcodes =  datacsv.map(function(d,i){return d.unique}).filter(function(item,pos,val){return val.indexOf(item)==pos})
-
-        			var menuarea = d3.zip(dropnames,dropcodes).sort(function(a, b){ return d3.ascending(a[0], b[0]); });
-
-              //clear dropdown
-              d3.select("#sel").selectAll("*").remove()
-
-        			// Build option menu for occupations
-        			var optns = d3.select("#dropdown").append("div").attr("id","sel").append("select")
-        				.attr("id","dropselect")
-        				.attr("style","width:300px")
-        				.attr("class","chosen-select");
-
-        			optns.append("option")
-        				// .attr("value","first")
-        				// .text("");
-        			optns.selectAll("p").data(menuarea).enter().append("option")
-        				//.attr("id", function(d){return d[0].replace(/[, ]+/g, "").trim()})
-        				.attr("value",function(d){return d[1]})
-        				.text(function(d){ return d[0]});
-
-        			myId=null;
-
-        			$('#dropselect').chosen({width: "90%", allow_single_deselect:true,placeholder_text_single:"Choose a local authority"}).on('change',function(evt,params){
-
-        					if($('#dropselect').val() != "") {
-
-                      // unhide comparison
-                      d3.select("#detaildiv").style("display","block")
-
-
-                      clicked = true;
-        							d3.selectAll(".cell").classed("cellspermselected", false);
-        							d3.selectAll(".cell").attr("pointer-events","all")
-
-        							dropcode = $('#dropselect').val();
-                      dropname = $('#dropselect option:selected').text();
-                      dropcodeid = +dropcode.substr(2);
-
-                      zoomToArea(dropcode);
-                      updateTable(dropcode, dropname);
-                      updatePlotValues (dropcode, dropname);
-                      createLegend();
-                      createDataTable();
-                      //createiconArray(dropcode, dropname);
-
-                      d3.selectAll(".cell").classed("notselected",true)
-        							d3.selectAll(".cellgroup" + dropcode.replace(/[, ]+/g, "").trim()).classed("cellspermselected", true).attr("pointer-events","all").each(function(){d3.select(this).raise()});
-
-                      //datafilter = datacsv.filter(function(d,i) {return "id" + i == dropcode})
-        							// changetext(datafilter[0].value,datafilter[0].unique )
-
-                      d3.select('abbr').on('keypress',function(evt){
-                        if(d3.event.keyCode==13 || d3.event.keyCode==32){
-                          d3.event.preventDefault()
-
-                          clicked = false;
-
-                          d3.select(".cell" + dropcodeid).classed("cellspermselected",false)
-                          d3.selectAll(".cell").attr("pointer-events","all")
-
-                          d3.select("#info").html("");
-
-                          $("#dropselect").val(null).trigger('chosen:updated');
-                        }
-                      })
-
-        					}
-        					else {
-        						clicked = false;
-
-                    d3.selectAll(".cell").classed("notselected",false)
-        						d3.selectAll(".cell").classed("cellspermselected", false);
-                    d3.selectAll(".cellspermselected2").attr('fill','#aabfcd')
-                    d3.selectAll(".cell").classed("cellspermselected2", false);
-        						d3.selectAll(".cell").attr("pointer-events","all");
-
-                    resetZoom();
-                    clearPlotValues("");
-                    clearLegend();
-                    clearTable();
-                    clearDataTable();
-
-                    // clear second chosen dropdown
-                    $('#dropselect2').val('').trigger('chosen:updated')
-                    listnames=[];//clear stored names in the second dropdown
-                    // hide comparison
-                    d3.select("#detaildiv").style("display","none")
+            // clear second chosen dropdown
+            $('#dropselect2').val('').trigger('chosen:updated')
+            listnames = []; //clear stored names in the second dropdown
+            // hide comparison
+            d3.select("#detaildiv").style("display", "none")
 
 
 
-        					}
-        			});
+          }
+        });
 
-              d3.select("input.chosen-search-input").attr('id','choseninput')
-              d3.select("div.chosen-search").append('label').attr('for','choseninput').attr('class','visuallyhidden').text("Type to choose a local authority.")
-            } //end selectlist
+        d3.select("input.chosen-search-input").attr('id', 'choseninput')
+        d3.select("div.chosen-search").append('label').attr('for', 'choseninput').attr('class', 'visuallyhidden').text("Type to choose a local authority.")
+      } //end selectlist
 
 
       function multiselect(datacsv) {
 
-        var dropnames = datacsv.map(function(d,i){return d.group}).filter(function(item,pos,val){return val.indexOf(item)==pos})
-        var dropcodes =  datacsv.map(function(d,i){return d.unique}).filter(function(item,pos,val){return val.indexOf(item)==pos})
+        var dropnames = datacsv.map(function(d, i) {
+          return d.group
+        }).filter(function(item, pos, val) {
+          return val.indexOf(item) == pos
+        })
+        var dropcodes = datacsv.map(function(d, i) {
+          return d.unique
+        }).filter(function(item, pos, val) {
+          return val.indexOf(item) == pos
+        })
 
-        var menuarea = d3.zip(dropnames,dropcodes).sort(function(a, b){ return d3.ascending(a[0], b[0]); });
+        var menuarea = d3.zip(dropnames, dropcodes).sort(function(a, b) {
+          return d3.ascending(a[0], b[0]);
+        });
 
         //clear dropdown
         d3.select("#selmulti").selectAll("*").remove()
 
         // Build option menu for occupations
-        var optns = d3.select("#multidrop").append("div").attr("id","selmulti").append("select")
-          .attr("id","dropselect2")
-          .attr("width","width:100%")
-          .attr("multiple",true)
-          .attr("class","chosen-select");
+        var optns = d3.select("#multidrop").append("div").attr("id", "selmulti").append("select")
+          .attr("id", "dropselect2")
+          .attr("width", "width:100%")
+          .attr("multiple", true)
+          .attr("class", "chosen-select");
 
         optns.append("option")
 
         optns.selectAll("p").data(menuarea).enter().append("option")
-          .attr("value",function(d){return d[1]})
-          .text(function(d){ return d[0]});
+          .attr("value", function(d) {
+            return d[1]
+          })
+          .text(function(d) {
+            return d[0]
+          });
 
-  			myId=null;
+        myId = null;
 
         listnames = [];
-  			listcodes = [];
+        listcodes = [];
         oldlistname = [];
 
-  			$('#dropselect2').chosen({width: "98%", max_selected_options: 3, placeholder_text_multiple:"Choose up to 3 areas"}).on('change',function(evt,params){
+        $('#dropselect2').chosen({
+          width: "98%",
+          max_selected_options: 3,
+          placeholder_text_multiple: "Choose up to 3 areas"
+        }).on('change', function(evt, params) {
 
-  								if(typeof params.selected != 'undefined') {
+          if (typeof params.selected != 'undefined') {
 
-                    listcodes.push(params.selected);
+            listcodes.push(params.selected);
 
-                    listnames.push(dropnames[dropcodes.indexOf(params.selected)])
-
-
-                    //need some better code to build select list of names in selected order
-                    //console.log($("#dropselect2 :selected").map(function (i, element) { return jQuery(element).text(); }).get())
-
-                    //selectCellsforcomparison areas
-                    d3.selectAll(".cell").classed("notselected",true)
-
-                    listcodes.forEach(function(d,i) {
-                        d3.selectAll(".cellgroup" + d.replace(/[, ]+/g, "").trim()).attr("fill",dvc.essential.colour_palette[i+2]).classed("cellspermselected2", true).each(function(d){d3.select(this).raise()});
-                    });
-                    createLegend();
-                    createDataTable();
-                    addCloseButtonDesc()
-
-                  //  console.log(listcodes)
-
-  								} else {
-
-                    var indexdesel = listcodes.indexOf(params.deselected);
-
-                    listcodes.splice(indexdesel,1);
-                    listnames.splice(indexdesel,1);
-
-                    d3.selectAll(".cellspermselected2").classed("cellspermselected2",false).attr("fill",dvc.essential.colour_palette[0])
-                    listcodes.forEach(function(d,i) {
-                        d3.selectAll(".cellgroup" + d.replace(/[, ]+/g, "").trim()).attr("fill",dvc.essential.colour_palette[i+2]).classed("cellspermselected2", true).raise();
-                    });
-                    createLegend();
-                    createDataTable();
-
-                  //  console.log(listcodes);
+            listnames.push(dropnames[dropcodes.indexOf(params.selected)])
 
 
-                  }
+            //need some better code to build select list of names in selected order
+            //console.log($("#dropselect2 :selected").map(function (i, element) { return jQuery(element).text(); }).get())
 
-  			});
+            //selectCellsforcomparison areas
+            d3.selectAll(".cell").classed("notselected", true)
+
+            listcodes.forEach(function(d, i) {
+              d3.selectAll(".cellgroup" + d.replace(/[, ]+/g, "").trim()).attr("fill", dvc.essential.colour_palette[i + 2]).classed("cellspermselected2", true).each(function(d) {
+                d3.select(this).raise()
+              });
+            });
+            createLegend();
+            createDataTable();
+            addCloseButtonDesc()
+
+            //  console.log(listcodes)
+
+          } else {
+
+            var indexdesel = listcodes.indexOf(params.deselected);
+
+            listcodes.splice(indexdesel, 1);
+            listnames.splice(indexdesel, 1);
+
+            d3.selectAll(".cellspermselected2").classed("cellspermselected2", false).attr("fill", dvc.essential.colour_palette[0])
+            listcodes.forEach(function(d, i) {
+              d3.selectAll(".cellgroup" + d.replace(/[, ]+/g, "").trim()).attr("fill", dvc.essential.colour_palette[i + 2]).classed("cellspermselected2", true).raise();
+            });
+            createLegend();
+            createDataTable();
+
+            //  console.log(listcodes);
+
+
+          }
+
+        });
 
       };
 
       function addCloseButtonDesc() {
-          d3.selectAll(".search-choice-close").selectAll("span").remove();
-          d3.selectAll(".search-choice-close").append("span").attr("class","visuallyhidden").text(function(d,i) {return "Remove " + listnames[i] + " from the comparison."})
+        d3.selectAll(".search-choice-close").selectAll("span").remove();
+        d3.selectAll(".search-choice-close").append("span").attr("class", "visuallyhidden").text(function(d, i) {
+          return "Remove " + listnames[i] + " from the comparison."
+        })
       }
 
-      function changetext(value,id) {
-          d3.select("#info").html("<span id='label'>1-year survival estimate: " + formatValue(value) + "%</span>");
+      function changetext(value, id) {
+        d3.select("#info").html("<span id='label'>1-year survival estimate: " + formatValue(value) + "%</span>");
       }
 
       function showTooltip(left, top, text) {
@@ -1112,7 +1230,7 @@ td {
         tooltip.innerHTML = text;
         tooltip.style.display = "block";
 
-        if(d3.event.pageX < svgwidth/2) {
+        if (d3.event.pageX < svgwidth / 2) {
           tooltip.style.left = +left + 10 + 'px';
           tooltip.style.top = +top + 10 + 'px';
         } else {
@@ -1129,10 +1247,12 @@ td {
 
       function createLegend() {
 
-        if(typeof dropname !== 'undefined') {
-            areaname = d3.merge([[dropname],listnames])
+        if (typeof dropname !== 'undefined') {
+          areaname = d3.merge([
+            [dropname], listnames
+          ])
         } else {
-            areaname = listnames;
+          areaname = listnames;
         }
 
 
@@ -1145,11 +1265,15 @@ td {
           .data(areaname)
           .enter()
           .append('li')
-          .attr('class', function(d, i) { return 'key-item key-' + i})
+          .attr('class', function(d, i) {
+            return 'key-item key-' + i
+          })
 
         legend.append('b').attr("class", "legendBlocks")
-          .style("background-color", function(d , i) { return dvc.essential.colour_palette[i+1]; });
-        legend.append('label').text(function(d,i) {
+          .style("background-color", function(d, i) {
+            return dvc.essential.colour_palette[i + 1];
+          });
+        legend.append('label').text(function(d, i) {
           var value = parseFloat(d).toFixed(1);
           return d;
         });
@@ -1168,597 +1292,481 @@ td {
 
 
 
-  	//add xaxislabel
-  	  svg.append("g")
-  	  .attr("transform", "translate(" + (svgwidth - margin.right) +"," + (height+20) + ")")
-  		.append("text")
-  		.attr("id","xaxislabel")
-  		.attr("text-anchor", "end")
-  		.text(dvc.essential.xAxisLabel)
+      //add xaxislabel
+      svg.append("g")
+        .attr("transform", "translate(" + (svgwidth - margin.right) + "," + (height + 20) + ")")
+        .append("text")
+        .attr("id", "xaxislabel")
+        .attr("text-anchor", "end")
+        .text(dvc.essential.xAxisLabel)
 
 
-  	//add source
-  	  //d3.select("#source").text("Source: " + dvc.essential.sourceText);
+      //add source
+      //d3.select("#source").text("Source: " + dvc.essential.sourceText);
 
-  	if (pymChild) {
-  		pymChild.sendHeight();
-  	}
-
-
-function updatePlotValues (code, name) {
-
-  areaIndicators = graphic_data.filter(function(d) {
-        if(d['unique'] == code) {
-          return d;
-        }
-      });
-
-  areaIndicators.forEach(function(d){
-    d3.select("." + d.id.replace(/[|&;$%@"<>()+, \d]/g, "")).attr("fill",dvc.essential.colour_palette[1]).text(d.real)
-
-
-  })
-}
-
-function clearPlotValues() {
-  d3.selectAll(".labeltspan").text("")
-
-}
-
-function wrap(text, width) {
-  text.each(function() {
-    var text = d3.select(this),
-        words = text.text().split(/\s+/).reverse(),
-        word,
-        line = [],
-        lineNumber = 0,
-        lineHeight = 1.1, // ems
-        x = text.attr("x"),
-        tspan = text.text(null).append("tspan").attr("x", x);
-    while (word = words.pop()) {
-      line.push(word);
-      tspan.text(line.join(" "));
-      if (tspan.node().getComputedTextLength() > width) {
-        line.pop();
-        tspan.text(line.join(" "));
-        line = [word];
-        tspan = text.append("tspan").attr("x", x).attr("dy", lineHeight + "em").text(word);
+      if (pymChild) {
+        pymChild.sendHeight();
       }
-    }
-  });
-}
 
-/*** Map Code ***/
 
-function makeMap () {
+      function updatePlotValues(code, name) {
 
-  //Load data and config file
-	d3.queue()
-		.defer(d3.json, "data/geog.json")
-		.await(ready);
-
-	function ready (error, geog){
-
-		//set up basemap
-		map = new maplibregl.Map({
-		  container: 'map', // container id
-		  style: 'data/style.json', //stylesheet location //includes key for API
-		  center: [-2.5, 54], // starting position
-		  minZoom: 1,//
-		  zoom: 2.5, // starting zoom
-		  maxZoom: 13, //
-		  attributionControl: false //
-		});
-		//add fullscreen option
-		//map.addControl(new maplibregl.FullscreenControl());
-
-		// Add zoom and rotation controls to the map.
-		//map.addControl(new maplibregl.NavigationControl());
-
-		// Disable map rotation using right click + drag
-		map.dragRotate.disable();
-    map.scrollZoom.disable();
-    map.dragPan.disable();
-    map.keyboard.disable();
-    map.doubleClickZoom.disable();
-
-		// Disable map rotation using touch rotation gesture
-		map.touchZoomRotate.disableRotation();
-
-		//add compact attribution
-		map.addControl(new maplibregl.AttributionControl({
-			compact: true
-		}));
-
-		//convert topojson to geojson
-		for(key in geog.objects){
-			areas = topojson.feature(geog, geog.objects[key])
-		}
-
-		//Work out extend of loaded geography file so we can set map to fit total extent
-		bounds = turf.bbox(areas);
-
-		//set map to total extent
-		setTimeout(function(){
-			map.fitBounds([[bounds[0],bounds[1]], [bounds[2], bounds[3]]])
-		},1000);
-
-		map.on('load', defineLayers);
-
-		function defineLayers() {
-
-			map.addSource('area', { 'type': 'geojson', 'data': areas });
-
-			//Get current year for copyright
-			today = new Date();
-			copyYear = today.getFullYear();
-			map.style.sourceCaches['area']._source.attribution = "Contains OS data &copy; Crown copyright and database right " + copyYear;
-
-			map.addLayer({
-				"id": "state-fills-hover",
-				"type": "line",
-				"source": "area",
-				"layout": {},
-				"paint": {
-					"line-color": "#206095",
-					"line-width": 3
-				},
-				"filter": ["==", "AREACD", ""]
-			}, 'place_city');
-
-		}
-
-
-
-/*** End Map Code ***/
-
-/*** Table Code ***/
-
-
-
-
-pymChild.sendHeight();
-
-
-}//end ready
-
-
-}
-
-
-function zoomToArea(code) {
-
-  specificpolygon = areas.features.filter(function(d) {return d.properties.AREACD == code})
-  map.setFilter("state-fills-hover", ["==", "AREACD", code]);
-
-  specific = turf.bbox(specificpolygon[0].geometry);
-
-  map.fitBounds([[specific[0],specific[1]], [specific[2], specific[3]]], {
-      padding: {top: 30, bottom:30, left: 30, right: 30}, animate: false
-  });
-
-}
-
-function resetZoom() {
-  map.setFilter("state-fills-hover", ["==", "AREACD", ""]);
-  map.fitBounds([[bounds[0], bounds[1]], [bounds[2], bounds[3]]]);
-
-}
-
-makeTable();
-//createDataTable();
-
-function makeTable () {
-
-/* Build basic table skeleton */
-
-postable = d3.select("#postable").append("table").attr("width","98%");
-
-posheadertable = postable.append('thead').append("tr");
-
-posheadertable.append("th").attr("width","70%").attr("class","textCol").text("Positive indicators");
-posheadertable.append("th").attr("width","30%").attr("class","numberCol").text("Value");
-
-negtable = d3.select("#negtable").append("table").attr("width","98%");
-
-negheadertable = negtable.append('thead').append("tr");
-
-negheadertable.append("th").attr("width","70%").attr("class","textCol").text("Negative indicators");
-negheadertable.append("th").attr("width","30%").attr("class","numberCol").text("Value");
-
-formatTableNum = d3.format(".1f");
-
-
-}
-
-
-function updateTable (code, name) {
-
-//d3.select("#standoutLabel").html("Stand out measures for <span class='areaHighlight'>" + name + "</span>");
-
-/* Delete existing rows */
-
-d3.selectAll(".tablelines").remove();
-
-
-areaIndicators = graphic_data.filter(function(d) {
-    return d['unique'] == code
-});
-
-
-/* First filter the data for the area selected */
-PosFilteredData = areaIndicators.filter(function(d) {
-  return d['value'] > dvc.essential.threshold
-});
-
-if(PosFilteredData.length == 0) {
-  tablebody = postable.append('tbody')
-  tablelines = tablebody.append("tr").attr("class","tablelines");
-
-  tablelines.append("td").text("No stand out indicators");
-  tablelines.append("td").attr("class","numberCol").text("");
-
-}
-
-PosFilteredData.forEach(function(d){
-  tablebody = postable.append('tbody')
-  tablelines = tablebody.append("tr").attr("class","tablelines");
-
-  tablelines.append("td").text(d.id);
-  tablelines.append("td").attr("class","numberCol").html(prefixer(d)+formatTableNum(d.real)+"<span class='suffix'>"+suffixer(d)+"</span>");
-
-
-})
-
-
-NegFilteredData = areaIndicators.filter(function(d) {
-  return d['value'] < (dvc.essential.threshold*-1)
-});
-
-if(NegFilteredData.length == 0) {
-  tablebody = negtable.append('tbody')
-  tablelines = tablebody.append("tr").attr("class","tablelines");
-
-  tablelines.append("td").text("No stand out indicators");
-  tablelines.append("td").attr("class","numberCol").text("");
-
-}
-
-NegFilteredData.forEach(function(d){
-  tablebody = negtable.append('tbody')
-  tablelines = tablebody.append("tr").attr("class","tablelines");
-
-  tablelines.append("td").text(d.id);
-  tablelines.append("td").attr("class","numberCol").html(prefixer(d)+formatTableNum(d.real)+"<span class='suffix'>"+suffixer(d)+"</span>");
-
-
-})
-
-
-//Out of the xx indicators for Fareham, xx were classified as positive, xx as negative and xx as neutral
-
-if(PosFilteredData.length == 0) {
-  waswerenone = "were";
-} else if(PosFilteredData.length ==1) {
-  waswerenone = "was";
-} else {
-  waswerenone = "were";
-}
-
-d3.select("#standoutLabel").html("Out of the " + areaIndicators.length + " measures available for <span class='areaHighlight'>" + name + "</span>, " + PosFilteredData.length + " " + waswerenone + " classified as positive, " + NegFilteredData.length + " as negative and " + (areaIndicators.length - (PosFilteredData.length + NegFilteredData.length))  + " as neutral");
-
-
-}
-
-function prefixer(d){
-  if(d.Measure=="Pounds"){return "£"}else{return"&nbsp;"}
-}
-
-function suffixer(d){
-  if(d.Measure=="Metres"){return "m"}
-  else if(d.Measure=="Percentage"){return "%"}
-  else{return "&nbsp;"}
-}
-
-function clearTable() {
-
-  d3.selectAll(".tablelines").remove();
-
-  d3.select("#standoutLabel").html("Stand out measures");
-
-}
-
-function clearDataTable(){
-  d3.select("#dataHTMLTable").select("table").remove();
-}
-
-
-function createDataTable () {
-
-
-clearDataTable();
-
-
-if(typeof dropname !== 'undefined') {
-  areanames = d3.merge([[dropname],listnames])//.sort(function(a, b) {return d3.descending(a[0], b[0]); })
-
-  areacodes = d3.merge([[dropcode],listcodes])
-
-  areanamessorted = d3.merge([[dropname],listnames]).sort(function(a, b) {return d3.ascending(a, b); })
-
-} else {
-  areanames = d3.merge([listnames])//.sort(function(a, b) {return d3.descending(a[0], b[0]); })
-
-  areacodes = d3.merge([listcodes])
-
-  areanamessorted = d3.merge([listnames]).sort(function(a, b) {return d3.ascending(a, b); })
-}
-
-
-  //filter for of
-  areaIndicators = graphic_data_full.filter(function(d) {
-      if(areacodes.includes(d['unique'])) {
-        return d;
-      }
-  });
-
-
-  //add all the columns we need
-
-  tabletable = d3.select("#dataHTMLTable").append("table").attr("width","98%");
-
-  headerRow = tabletable.append('thead').append('tr')
-  headerRow.append("th").attr("width","70%").attr("class","textCol").text("Indicator");
-  headerRow.append("th").attr("width","70%").attr("class","textCol").text("Period");
-  headerRow.append("th").attr("width","70%").attr("class","textCol").text("Unit");
-
-  //add column for each area
-
-  areanamessorted.forEach(function(d,i) {
-    headerRow.append("th").attr("width","30%").attr("class","numberCol").text(d);
-  })
-
-
-  tablebody = tabletable.append('tbody')
-
-
-areaIndicators.sort(function(a, b) {return d3.ascending(a.group, b.group); }).forEach(function(d,i) {
-
-
-   if(areanamessorted.indexOf(d.group) == 0) {
-
-     tablelines = tablebody.append("tr").attr("class","tablelines").attr("id","tablelines" + d.id.replace(/[, ]+/g, "").trim());
-
-     tablelines.append("td").text(d.id);
-     tablelines.append("td").text(d.Period);
-     tablelines.append("td").text(d.Measure);
-     tablelines.append("td").attr("class","numberCol").text(d.real);
-
-  } else if(areanamessorted.indexOf(d.group) == 1) {
-
-    tabletable.select("#tablelines" + d.id.replace(/[, ]+/g, "").trim()).append("td").attr("class","numberCol").text(d.real);
-  } else if(areanamessorted.indexOf(d.group) == 2) {
-    tabletable.select("#tablelines" + d.id.replace(/[, ]+/g, "").trim()).append("td").attr("class","numberCol").text(d.real);
-  } else if(areanamessorted.indexOf(d.group) == 3) {
-    tabletable.select("#tablelines" + d.id.replace(/[, ]+/g, "").trim()).append("td").attr("class","numberCol").text(d.real);
-  }
-
-});
-
-
-}
-
-
-/*** END OF Table Code ***/
-
-// /*** Icon Array Bar Code ***/
-//
-// function createiconArray (code, dropname) {
-//
-//   areaIndicators = graphic_data.filter(function(d) {
-//     if(d['unique'] == code) {
-//       return d;
-//     }
-//   });
-//
-//   console.log(areaIndicators);
-//
-//
-//
-//   middleIndicators = areaIndicators.filter(function(d) {
-//     if(d['value'] >= (dvc.essential.threshold*-1) && d['value'] <= (dvc.essential.threshold)) {
-//       return d;
-//     }
-//   });
-//
-//   middleIndicatorsObj = {"group": "Neutral" , "value": middleIndicators.length};
-//
-//   console.log(middleIndicatorsObj);
-//
-//   positiveIndicators = areaIndicators.filter(function(d) {
-//     if(d['value'] > (dvc.essential.threshold)) {
-//       return d;
-//     }
-//   });
-//
-//   postiveIndicatorsObj = {"group": "Positive" , "value": positiveIndicators.length};
-//
-//   negativeIndicators = areaIndicators.filter(function(d) {
-//     if(d['value'] < (dvc.essential.threshold*-1)) {
-//       return d;
-//     }
-//   });
-//
-//   negativeIndicatorsObj = {"group": "Negative" , "value": negativeIndicators.length};
-//
-//   // d3.select("#iconArray").selectAll(".dummytext").remove();
-//   //
-//   // d3.select("#iconArray").append("div").attr("class","dummytext").text(positiveIndicators.length + " Positive indicators");
-//   // d3.select("#iconArray").append("div").attr("class","dummytext").text((areaIndicators.length - positiveIndicators.length - negativeIndicators.length) + " Middling indicators ");
-//   // d3.select("#iconArray").append("div").attr("class","dummytext").text(negativeIndicators.length + " Negative indicators ");
-//   //
-// console.log(positiveIndicators);
-// console.log(negativeIndicators);
-// console.log(middleIndicators)
-//
-// //  postiveIndicatorsObj.concat(middleIndicatorsObj,negativeIndicatorsObj)
-//
-// dataIcon = [];
-//
-// dataIcon.push(postiveIndicatorsObj,middleIndicatorsObj,negativeIndicatorsObj)
-//   console.log(dataIcon)
-//
-//
-//   sumMeasures = areaIndicators.length;
-//
-//   drawIconArray (dataIcon, dropname, sumMeasures);
-//
-//
-// }
-//
-//
-// function drawIconArray (graphic_data, code, sumMeasures) {
-//
-//   /*update Label*/
-//
-//   d3.select("#measuresLabel").html("Distribution of " + sumMeasures + " measures for <span class='areaHighlight'>" + code + "</span>");
-//
-//
-//   var graphic = d3.select('#iconArray');
-//
-//   graphic.selectAll(".col-sm-3").remove()
-//
-//   chart_width=parseInt(graphic.style('width'));
-//
-//   if(chart_width <= dvc.optional.mobileBreakpoint) {
-//     dotRadius = dvc.essential.dotRadius[1];
-//   } else {
-//     dotRadius = dvc.essential.dotRadius[0];
-//   }
-//
-//         dotmargin={top:dotRadius*2,
-//                   right:dotRadius*2,
-//                   bottom:dotRadius*2,
-//                   left:dotRadius}
-//
-//         var x = d3.scaleLinear()
-//   				.range([0, (2*dvc.essential.gridWidth+2)*dotRadius])
-//   				.domain([0, dvc.essential.gridWidth]);
-//
-//         var y = d3.scaleLinear()
-//             .range([0,dvc.essential.gridHeight*dotRadius+dotmargin.top])
-//             .domain([0,dvc.essential.gridHeight])
-//
-//         var colour = d3.scaleOrdinal()
-//                       .domain(graphic_data.map(function(d){return d.group}))
-//                       .range(dvc.essential.colour_palette_icon)
-//
-//         var layout= d3_iconarray.layout()
-//           .width(dvc.essential.gridWidth)
-//           .height(dvc.essential.gridHeight)
-//           .widthFirst(dvc.essential.widthFirst)
-//
-//
-//         //create layouts for each group
-//         layouts={}
-//         for(i=0;i<graphic_data.length;i++){
-//           layouts[graphic_data[i].group]=layout(d3.range(0,graphic_data[i].value,1))
-//         }
-//
-//         graphic.selectAll('icons')
-//         .data(graphic_data)
-//       	.enter()
-//       	.append('div')
-//         .attr('class','col-sm-3 col-xs-4')
-//       	.call(arrayBars);
-//
-//
-//
-//         function arrayBars(parent){
-//         		parent.append('p')
-//         			.attr('class','bar-label')
-//         			.html(function(d){
-//         				return d.group + "<br><span class='indicatorValues'>" +  d.value + "<span>";
-//         			});
-//
-//         		parent.append('svg')
-//         			.attr('width', ((2*dvc.essential.gridWidth+2)*dotRadius)+dotmargin.left+dotmargin.right)
-//               .attr('height', 2*(dvc.essential.gridHeight*dotRadius+dotmargin.top+dotmargin.bottom))
-//         		.append('g')
-//         			.attr('transform','translate('+dotmargin.left+','+dotmargin.top+')')
-//         			.attr('class',function(d){return d.group})
-//         		.selectAll('circle')
-//         			.data(function(d){
-//                 var thislayout = layout( d3.range(0, d.value, 1) );
-//                 thislayout.forEach(function(e){
-//                   e["group"]=d.group
-//                 })
-//                 return thislayout })
-//         		.enter()
-//         			.append('circle')
-//         				.attr('cx',function(d){ return x(d.position.x); })
-//         				.attr('cy',function(d){ return 2*y(d.position.y); })
-//         				.attr('r', dotRadius)
-//                 .attr('fill',function(d,i){return colour(d.group)})
-//         }
-//
-//         d3.selectAll('svg')
-//         .selectAll('circles')
-//         .attr('fill',function(d,i){return dvc.essential.colour_palette_icon[i]})
-//
-// }
-
-  }
-
-
-  if (Modernizr.svg) {
-  	//load config
-  	d3.json("config.json", function(error, config) {
-  	dvc=config
-  		//load chart data
-  		d3.csv(dvc.essential.graphic_data_url, function(error, data) {
-
-        graphic_data_full = data;
-
-  			graphic_data = data.filter(function(d,i) {
-
-          if (+d.value > dvc.essential.outlierLimits[1])
-            {d.value = (+dvc.essential.outlierLimits[1] + 0.2).toString();
-              return d;
-            }
-          else if (+d.value < dvc.essential.outlierLimits[0])
-            {d.value = (+dvc.essential.outlierLimits[0] - 0.2).toString();
-              return d;
-            }
-          else if (+d.value <= dvc.essential.outlierLimits[1] && +d.value >= dvc.essential.outlierLimits[0] && d.value != "NA")
-          {
+        areaIndicators = graphic_data.filter(function(d) {
+          if (d['unique'] == code) {
             return d;
           }
         });
 
-        //strip out null values
+        areaIndicators.forEach(function(d) {
+          d3.select("." + d.id.replace(/[|&;$%@"<>()+, \d]/g, "")).attr("fill", dvc.essential.colour_palette[1]).text(d.real)
 
 
-          pymChild = new pym.Child({ renderCallback: drawGraphic});
-  			//use pym to create iframed chart dependent on specified variables
+        })
+      }
 
-  		});
-  	})
-  } else {
-  	 //use pym to create iframe containing fallback image (which is set as default)
-  	pymChild = new pym.Child();
-  	if (pymChild) {
-  		pymChild.sendHeight();
-  	}
-  }
+      function clearPlotValues() {
+        d3.selectAll(".labeltspan").text("")
+
+      }
+
+      function wrap(text, width) {
+        text.each(function() {
+          var text = d3.select(this),
+            words = text.text().split(/\s+/).reverse(),
+            word,
+            line = [],
+            lineNumber = 0,
+            lineHeight = 1.1, // ems
+            x = text.attr("x"),
+            tspan = text.text(null).append("tspan").attr("x", x);
+          while (word = words.pop()) {
+            line.push(word);
+            tspan.text(line.join(" "));
+            if (tspan.node().getComputedTextLength() > width) {
+              line.pop();
+              tspan.text(line.join(" "));
+              line = [word];
+              tspan = text.append("tspan").attr("x", x).attr("dy", lineHeight + "em").text(word);
+            }
+          }
+        });
+      }
+
+      /*** Map Code ***/
+
+      function makeMap() {
+
+        //Load data and config file
+        d3.queue()
+          .defer(d3.json, "data/geog.json")
+          .await(ready);
+
+        function ready(error, geog) {
+
+          //set up basemap
+          map = new maplibregl.Map({
+            container: 'map', // container id
+            style: 'data/style.json', //stylesheet location //includes key for API
+            center: [-2.5, 54], // starting position
+            minZoom: 1, //
+            zoom: 2.5, // starting zoom
+            maxZoom: 13, //
+            attributionControl: false //
+          });
+          //add fullscreen option
+          //map.addControl(new maplibregl.FullscreenControl());
+
+          // Add zoom and rotation controls to the map.
+          //map.addControl(new maplibregl.NavigationControl());
+
+          // Disable map rotation using right click + drag
+          map.dragRotate.disable();
+          map.scrollZoom.disable();
+          map.dragPan.disable();
+          map.keyboard.disable();
+          map.doubleClickZoom.disable();
+
+          // Disable map rotation using touch rotation gesture
+          map.touchZoomRotate.disableRotation();
+
+          //add compact attribution
+          map.addControl(new maplibregl.AttributionControl({
+            compact: true
+          }));
+
+          //convert topojson to geojson
+          for (key in geog.objects) {
+            areas = topojson.feature(geog, geog.objects[key])
+          }
+
+          //Work out extend of loaded geography file so we can set map to fit total extent
+          bounds = turf.bbox(areas);
+
+          //set map to total extent
+          setTimeout(function() {
+            map.fitBounds([
+              [bounds[0], bounds[1]],
+              [bounds[2], bounds[3]]
+            ])
+          }, 1000);
+
+          map.on('load', defineLayers);
+
+          function defineLayers() {
+
+            map.addSource('area', {
+              'type': 'geojson',
+              'data': areas
+            });
+
+            //Get current year for copyright
+            today = new Date();
+            copyYear = today.getFullYear();
+            map.style.sourceCaches['area']._source.attribution = "Contains OS data &copy; Crown copyright and database right " + copyYear;
+
+            map.addLayer({
+              "id": "state-fills-hover",
+              "type": "line",
+              "source": "area",
+              "layout": {},
+              "paint": {
+                "line-color": "#206095",
+                "line-width": 3
+              },
+              "filter": ["==", "AREACD", ""]
+            }, 'place_city');
+
+          }
 
 
-  function type(d) {
-    if (!d.value) return;
-    d.value = +d.value;
-    return d;
-  }
 
+          /*** End Map Code ***/
+
+          /*** Table Code ***/
+
+
+
+
+          pymChild.sendHeight();
+
+
+        } //end ready
+
+
+      }
+
+
+      function zoomToArea(code) {
+
+        specificpolygon = areas.features.filter(function(d) {
+          return d.properties.AREACD == code
+        })
+        map.setFilter("state-fills-hover", ["==", "AREACD", code]);
+
+        specific = turf.bbox(specificpolygon[0].geometry);
+
+        map.fitBounds([
+          [specific[0], specific[1]],
+          [specific[2], specific[3]]
+        ], {
+          padding: {
+            top: 30,
+            bottom: 30,
+            left: 30,
+            right: 30
+          },
+          animate: false
+        });
+
+      }
+
+      function resetZoom() {
+        map.setFilter("state-fills-hover", ["==", "AREACD", ""]);
+        map.fitBounds([
+          [bounds[0], bounds[1]],
+          [bounds[2], bounds[3]]
+        ]);
+
+      }
+
+      makeTable();
+      //createDataTable();
+
+      function makeTable() {
+
+        /* Build basic table skeleton */
+
+        postable = d3.select("#postable").append("table").attr("width", "98%");
+
+        posheadertable = postable.append('thead').append("tr");
+
+        posheadertable.append("th").attr("width", "70%").attr("class", "textCol").text("Positive indicators");
+        posheadertable.append("th").attr("width", "30%").attr("class", "numberCol").text("Value");
+
+        negtable = d3.select("#negtable").append("table").attr("width", "98%");
+
+        negheadertable = negtable.append('thead').append("tr");
+
+        negheadertable.append("th").attr("width", "70%").attr("class", "textCol").text("Negative indicators");
+        negheadertable.append("th").attr("width", "30%").attr("class", "numberCol").text("Value");
+
+        formatTableNum = d3.format(".1f");
+
+
+      }
+
+
+      function updateTable(code, name) {
+
+        //d3.select("#standoutLabel").html("Stand out measures for <span class='areaHighlight'>" + name + "</span>");
+
+        /* Delete existing rows */
+
+        d3.selectAll(".tablelines").remove();
+
+
+        areaIndicators = graphic_data.filter(function(d) {
+          return d['unique'] == code
+        });
+
+
+        /* First filter the data for the area selected */
+        PosFilteredData = areaIndicators.filter(function(d) {
+          return d['value'] > dvc.essential.threshold
+        });
+
+        if (PosFilteredData.length == 0) {
+          tablebody = postable.append('tbody')
+          tablelines = tablebody.append("tr").attr("class", "tablelines");
+
+          tablelines.append("td").text("No stand out indicators");
+          tablelines.append("td").attr("class", "numberCol").text("");
+
+        }
+
+        PosFilteredData.forEach(function(d) {
+          tablebody = postable.append('tbody')
+          tablelines = tablebody.append("tr").attr("class", "tablelines");
+
+          tablelines.append("td").text(d.id);
+          tablelines.append("td").attr("class", "numberCol").html(prefixer(d) + formatTableNum(d.real) + "<span class='suffix'>" + suffixer(d) + "</span>");
+
+
+        })
+
+
+        NegFilteredData = areaIndicators.filter(function(d) {
+          return d['value'] < (dvc.essential.threshold * -1)
+        });
+
+        if (NegFilteredData.length == 0) {
+          tablebody = negtable.append('tbody')
+          tablelines = tablebody.append("tr").attr("class", "tablelines");
+
+          tablelines.append("td").text("No stand out indicators");
+          tablelines.append("td").attr("class", "numberCol").text("");
+
+        }
+
+        NegFilteredData.forEach(function(d) {
+          tablebody = negtable.append('tbody')
+          tablelines = tablebody.append("tr").attr("class", "tablelines");
+
+          tablelines.append("td").text(d.id);
+          tablelines.append("td").attr("class", "numberCol").html(prefixer(d) + formatTableNum(d.real) + "<span class='suffix'>" + suffixer(d) + "</span>");
+
+
+        })
+
+
+        //Out of the xx indicators for Fareham, xx were classified as positive, xx as negative and xx as neutral
+
+        if (PosFilteredData.length == 0) {
+          waswerenone = "were";
+        } else if (PosFilteredData.length == 1) {
+          waswerenone = "was";
+        } else {
+          waswerenone = "were";
+        }
+
+        d3.select("#standoutLabel").html("Out of the " + areaIndicators.length + " measures available for <span class='areaHighlight'>" + name + "</span>, " + PosFilteredData.length + " " + waswerenone + " classified as positive, " + NegFilteredData
+          .length + " as negative and " + (areaIndicators.length - (PosFilteredData.length + NegFilteredData.length)) + " as neutral");
+
+
+      }
+
+      function prefixer(d) {
+        if (d.Measure == "Pounds") {
+          return "£"
+        } else {
+          return "&nbsp;"
+        }
+      }
+
+      function suffixer(d) {
+        if (d.Measure == "Metres") {
+          return "m"
+        } else if (d.Measure == "Percentage") {
+          return "%"
+        } else {
+          return "&nbsp;"
+        }
+      }
+
+      function clearTable() {
+
+        d3.selectAll(".tablelines").remove();
+
+        d3.select("#standoutLabel").html("Stand out measures");
+
+      }
+
+      function clearDataTable() {
+        d3.select("#dataHTMLTable").select("table").remove();
+      }
+
+
+      function createDataTable() {
+
+
+        clearDataTable();
+
+
+        if (typeof dropname !== 'undefined') {
+          areanames = d3.merge([
+            [dropname], listnames
+          ]) //.sort(function(a, b) {return d3.descending(a[0], b[0]); })
+
+          areacodes = d3.merge([
+            [dropcode], listcodes
+          ])
+
+          areanamessorted = d3.merge([
+            [dropname], listnames
+          ]).sort(function(a, b) {
+            return d3.ascending(a, b);
+          })
+
+        } else {
+          areanames = d3.merge([listnames]) //.sort(function(a, b) {return d3.descending(a[0], b[0]); })
+
+          areacodes = d3.merge([listcodes])
+
+          areanamessorted = d3.merge([listnames]).sort(function(a, b) {
+            return d3.ascending(a, b);
+          })
+        }
+
+
+        //filter for of
+        areaIndicators = graphic_data_full.filter(function(d) {
+          if (areacodes.includes(d['unique'])) {
+            return d;
+          }
+        });
+
+
+        //add all the columns we need
+
+        tabletable = d3.select("#dataHTMLTable").append("table").attr("width", "98%");
+
+        headerRow = tabletable.append('thead').append('tr')
+        headerRow.append("th").attr("width", "70%").attr("class", "textCol").text("Indicator");
+        headerRow.append("th").attr("width", "70%").attr("class", "textCol").text("Period");
+        headerRow.append("th").attr("width", "70%").attr("class", "textCol").text("Unit");
+
+        //add column for each area
+
+        areanamessorted.forEach(function(d, i) {
+          headerRow.append("th").attr("width", "30%").attr("class", "numberCol").text(d);
+        })
+
+
+        tablebody = tabletable.append('tbody')
+
+
+        areaIndicators.sort(function(a, b) {
+          return d3.ascending(a.group, b.group);
+        }).forEach(function(d, i) {
+
+
+          if (areanamessorted.indexOf(d.group) == 0) {
+
+            tablelines = tablebody.append("tr").attr("class", "tablelines").attr("id", "tablelines" + d.id.replace(/[, ]+/g, "").trim());
+
+            tablelines.append("td").text(d.id);
+            tablelines.append("td").text(d.Period);
+            tablelines.append("td").text(d.Measure);
+            tablelines.append("td").attr("class", "numberCol").text(d.real);
+
+          } else if (areanamessorted.indexOf(d.group) == 1) {
+
+            tabletable.select("#tablelines" + d.id.replace(/[, ]+/g, "").trim()).append("td").attr("class", "numberCol").text(d.real);
+          } else if (areanamessorted.indexOf(d.group) == 2) {
+            tabletable.select("#tablelines" + d.id.replace(/[, ]+/g, "").trim()).append("td").attr("class", "numberCol").text(d.real);
+          } else if (areanamessorted.indexOf(d.group) == 3) {
+            tabletable.select("#tablelines" + d.id.replace(/[, ]+/g, "").trim()).append("td").attr("class", "numberCol").text(d.real);
+          }
+
+        });
+
+
+      }
+
+
+      /*** END OF Table Code ***/
+
+
+    }
+
+
+    if (Modernizr.svg) {
+      //load config
+      d3.json("config.json", function(error, config) {
+        dvc = config
+        //load chart data
+        d3.csv(dvc.essential.graphic_data_url, function(error, data) {
+
+          graphic_data_full = data;
+
+          graphic_data = data.filter(function(d, i) {
+
+            if (+d.value > dvc.essential.outlierLimits[1]) {
+              d.value = (+dvc.essential.outlierLimits[1] + 0.2).toString();
+              return d;
+            } else if (+d.value < dvc.essential.outlierLimits[0]) {
+              d.value = (+dvc.essential.outlierLimits[0] - 0.2).toString();
+              return d;
+            } else if (+d.value <= dvc.essential.outlierLimits[1] && +d.value >= dvc.essential.outlierLimits[0] && d.value != "NA") {
+              return d;
+            }
+          });
+
+          //strip out null values
+
+
+          pymChild = new pym.Child({
+            renderCallback: drawGraphic
+          });
+          //use pym to create iframed chart dependent on specified variables
+
+        });
+      })
+    } else {
+      //use pym to create iframe containing fallback image (which is set as default)
+      pymChild = new pym.Child();
+      if (pymChild) {
+        pymChild.sendHeight();
+      }
+    }
+
+
+    function type(d) {
+      if (!d.value) return;
+      d.value = +d.value;
+      return d;
+    }
   </script>
 </body>
+
 </html>
