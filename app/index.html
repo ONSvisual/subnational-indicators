@@ -1705,11 +1705,29 @@
             }})
           } else if (areanamessorted.indexOf(d.group) == 1) {
 
-            tabletable.select("#tablelines" + d.id.replace(/[, ]+/g, "").trim()).append("td").attr("class", "numberCol").text(d.real);
+            tabletable.select("#tablelines" + d.id.replace(/[, ]+/g, "").trim()).append("td").attr("class", "numberCol").text(function(){
+            if(d.real=="NA"){return "Unavailable"}
+            else if(Number.isInteger(+d.real)){
+              return d.real
+            }else{
+              return d3.format(",.1f")(d.real);
+            }});
           } else if (areanamessorted.indexOf(d.group) == 2) {
-            tabletable.select("#tablelines" + d.id.replace(/[, ]+/g, "").trim()).append("td").attr("class", "numberCol").text(d.real);
+            tabletable.select("#tablelines" + d.id.replace(/[, ]+/g, "").trim()).append("td").attr("class", "numberCol").text(function(){
+            if(d.real=="NA"){return "Unavailable"}
+            else if(Number.isInteger(+d.real)){
+              return d.real
+            }else{
+              return d3.format(",.1f")(d.real);
+            }});
           } else if (areanamessorted.indexOf(d.group) == 3) {
-            tabletable.select("#tablelines" + d.id.replace(/[, ]+/g, "").trim()).append("td").attr("class", "numberCol").text(d.real);
+            tabletable.select("#tablelines" + d.id.replace(/[, ]+/g, "").trim()).append("td").attr("class", "numberCol").text(function(){
+            if(d.real=="NA"){return "Unavailable"}
+            else if(Number.isInteger(+d.real)){
+              return d.real
+            }else{
+              return d3.format(",.1f")(d.real);
+            }});
           }
 
         });
