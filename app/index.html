@@ -1589,8 +1589,8 @@
           waswerenone = "were";
         }
 
-        d3.select("#standoutLabel").html("Out of the " + areaIndicators.length + " measures available for <span class='areaHighlight'>" + name + "</span>, " + PosFilteredData.length + " " + waswerenone + " classified as positive, " + NegFilteredData
-          .length + " as negative and " + (areaIndicators.length - (PosFilteredData.length + NegFilteredData.length)) + " as neutral");
+        d3.select("#standoutLabel").html("Out of the " + areaIndicators.length + " measures available for <span style='color:#206095' class='areaHighlight'>" + name + "</span>, " + PosFilteredData.length + " " + waswerenone + " classified as <span style='color:#0F8577'>positive</span>, " + NegFilteredData
+          .length + " as <span style='color:#043b56'>negative</span> and " + (areaIndicators.length - (PosFilteredData.length + NegFilteredData.length)) + " as neutral");
 
 
       }
