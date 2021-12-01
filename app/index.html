@@ -169,7 +169,7 @@
       stroke-width: 2px;
       stroke: #fff;
       r: 7;
-      pointer-events: none;
+      /* pointer-events: none; */
       fill: #206095;
     }
 
@@ -178,7 +178,7 @@
       stroke-width: 2px;
       stroke: #fff;
       r: 7;
-      pointer-events: none;
+      /* pointer-events: none; */
     }
 
 
@@ -872,6 +872,14 @@
               d3.selectAll("." + pathgroup).classed("cellsselected", true).each(function() {
                 d3.select(this).raise()
               })
+
+              d3.selectAll(".cellspermselected2").each(function() {
+                d3.select(this).raise()
+              })// raise selected dots anyway
+
+              d3.selectAll(".cellspermselected").each(function() {
+                d3.select(this).raise()
+              })// raise selected dots
 
               showTooltip(d3.event.pageX, d3.event.pageY, d.group)
 
