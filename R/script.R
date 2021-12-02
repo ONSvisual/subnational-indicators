@@ -1,9 +1,9 @@
 library(tidyverse) ; library(sf) ; library(readxl)
 
-# Local Authority names (2021)
+# Local Authority districts (2021)
 # Source: ONS Open Geography Portal
-# URL: https://geoportal.statistics.gov.uk/datasets/local-authority-districts-april-2021-names-and-codes-in-the-united-kingdom/explore
-ltla <- read_csv("geospatial/Local_Authority_Districts_(April_2021)_Names_and_Codes_in_the_United_Kingdom.csv") %>% 
+# URL: https://geoportal.statistics.gov.uk/datasets/local-authority-districts-may-2021-uk-buc
+lad <- read_csv("geospatial/Local_Authority_Districts_(May_2021)_UK_BUC.csv") %>% 
   select(AREACD = LAD21CD, AREANM = LAD21NM)
 
 # Metrics
@@ -16,7 +16,7 @@ sheets <- path %>%
   set_names() %>% 
   .[.!= "Metadata"] 
 
-raw <- left_join(ltla,
+raw <- left_join(lad,
                  map_df(sheets, ~mutate(read_excel(path, sheet = .x, col_types = c("text", "numeric"), skip = 1), Worksheet = .x)),
                  by = "AREACD")
 
