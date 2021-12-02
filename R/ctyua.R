@@ -48,10 +48,4 @@ df <- map_df(pull(distinct(raw, Worksheet)), ~raw %>%
   select(-Worksheet)
 
 # Write results
-write_csv(rename(df, 
-                 unique = AREACD,
-                 group = AREANM,
-                 id = Shortened,
-                 unit = Unit,
-                 real = Value,
-                 value = MAD), "ctyua.csv")
+write_csv(select(df, -c(Shortened, MAD)), "ctyua.csv")
