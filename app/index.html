@@ -15,6 +15,7 @@
       max-width: 940px;
       margin: 0px auto;
       font-family: 'Open Sans', sans-serif;
+      color: #323132;
     }
 
     h2.areaHighlight {
@@ -35,6 +36,22 @@
       font-size: 18px;
     }
 
+    p{
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 32px;
+      /*margin: 0 0 24px 0;
+      padding: 0; */
+    }
+
+    #unavailableMeasures p{
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 32px;
+      margin: 0 0 24px 0;
+      padding: 0;
+    }
+
     .indicatorValues {
       font-weight: bold;
       font-size: 19px;
@@ -50,7 +67,7 @@
 
     #dropdown {
       position: relative;
-      height: 170px;
+      /* height:170px; */
       max-width: 700px;
       background-color: #dee7ef;
       /* width: 100%; */
@@ -404,7 +421,7 @@
 
     @media (min-width: 600px) {
       #map {
-        height: 200px;
+        height: 206px;
         width: 100%;
         max-width: 800px;
         border: 2px solid #dee7ef;
@@ -477,7 +494,7 @@
     .row {
       margin-right: 0px;
       margin-left: 0px;
-      margin-bottom: 30px;
+      /* margin-bottom: 30px; */
     }
 
     .col-sm-2,
@@ -586,7 +603,7 @@
     </div>
     <div class="col-sm-6 col-xs-12" id="postable">
     </div>
-
+    <div class="col-xs-12" style="display:block;"><p style="margin-top:24px;" id="unavailableMeasures"><p></div>
   </div>
 
   <div class="row">
@@ -903,6 +920,14 @@
                 return dvc.essential.tickValueLabels[i]
               })
               .tickSize(0));
+
+              if(svgwidth < dvc.optional.mobileBreakpoint){//if mobile
+                d3.selectAll(".axis--x .tick text").each(function(d,i){//select all top ticks
+                  if(i==1){//just the middle one
+                    d3.select(this).attr('dy',-20)//move it up a bit
+                  }
+                })
+              }
         }
 
         if (j == groups.length - 1) {
@@ -914,8 +939,15 @@
               .tickValues(dvc.essential.tickBands)
               .tickFormat(d3.format(".1f"))
               .tickSize(height - heightper)
-
             );
+
+          d3.selectAll(".axis--x-bottom .tick text").each(function(d,i){
+            if(i==1){
+              d3.select(this).attr('dx',-10)
+            } else if(i==3){
+              d3.select(this).attr('dx',10)
+            }
+          })
 
           g.append("rect")
             .attr("x", x(dvc.essential.tickBands[1]))
@@ -1503,7 +1535,8 @@
       //createDataTable();
 
       function makeTable() {
-
+        d3.select("#postable").selectAll("*").remove()
+        d3.select("#negtable").selectAll("*").remove()
         /* Build basic table skeleton */
 
         postable = d3.select("#postable").append("table").attr("width", "98%");
@@ -1511,16 +1544,16 @@
         posheadertable = postable.append('thead').append("tr");
 
         posheadertable.append("th").attr("width", "70%").attr("class", "textCol").text("Positive indicators");
-        posheadertable.append("th").attr("width", "30%").attr("class", "numberCol").text("Value");
+        // posheadertable.append("th").attr("width", "30%").attr("class", "numberCol").text("Value");
 
         negtable = d3.select("#negtable").append("table").attr("width", "98%");
 
         negheadertable = negtable.append('thead').append("tr");
 
         negheadertable.append("th").attr("width", "70%").attr("class", "textCol").text("Negative indicators");
-        negheadertable.append("th").attr("width", "30%").attr("class", "numberCol").text("Value");
+        // negheadertable.append("th").attr("width", "30%").attr("class", "numberCol").text("Value");
 
-        formatTableNum = d3.format(".1f");
+        // formatTableNum = d3.format(".1f");
 
 
       }
@@ -1539,6 +1572,12 @@
           return d['unique'] == code
         });
 
+        uniqueIndicators = graphic_data.map(function(d){
+          return d.Indicator
+        }).filter(function(d,i,a){
+          return a.indexOf(d)==i;
+        })
+
 
         /* First filter the data for the area selected */
         PosFilteredData = areaIndicators.filter(function(d) {
@@ -1550,7 +1589,7 @@
           tablelines = tablebody.append("tr").attr("class", "tablelines");
 
           tablelines.append("td").text("No stand out indicators");
-          tablelines.append("td").attr("class", "numberCol").text("");
+          // tablelines.append("td").attr("class", "numberCol").text("");
 
         }
 
@@ -1559,7 +1598,7 @@
           tablelines = tablebody.append("tr").attr("class", "tablelines");
 
           tablelines.append("td").text(d.id);
-          tablelines.append("td").attr("class", "numberCol").html(prefixer(d) + formatTableNum(d.real) + "<span class='suffix'>" + suffixer(d) + "</span>");
+          // tablelines.append("td").attr("class", "numberCol").html(prefixer(d) + formatTableNum(d.real) + "<span class='suffix'>" + suffixer(d) + "</span>");
 
 
         })
@@ -1574,7 +1613,7 @@
           tablelines = tablebody.append("tr").attr("class", "tablelines");
 
           tablelines.append("td").text("No stand out indicators");
-          tablelines.append("td").attr("class", "numberCol").text("");
+          // tablelines.append("td").attr("class", "numberCol").text("");
 
         }
 
@@ -1583,7 +1622,7 @@
           tablelines = tablebody.append("tr").attr("class", "tablelines");
 
           tablelines.append("td").text(d.id);
-          tablelines.append("td").attr("class", "numberCol").html(prefixer(d) + formatTableNum(d.real) + "<span class='suffix'>" + suffixer(d) + "</span>");
+          // tablelines.append("td").attr("class", "numberCol").html(prefixer(d) + formatTableNum(d.real) + "<span class='suffix'>" + suffixer(d) + "</span>");
 
 
         })
@@ -1599,9 +1638,12 @@
           waswerenone = "were";
         }
 
-        d3.select("#standoutLabel").html("Out of the " + areaIndicators.length + " measures available for <span style='color:#206095' class='areaHighlight'>" + name + "</span>, " + PosFilteredData.length + " " + waswerenone + " classified as <span style='color:#0F8577'>positive</span>, " + NegFilteredData
-          .length + " as <span style='color:#043b56'>negative</span> and " + (areaIndicators.length - (PosFilteredData.length + NegFilteredData.length)) + " as neutral");
+        d3.select("#standoutLabel").html("Out of the " + areaIndicators.length + " measures available for <span style='color:#206095' class='areaHighlight'>" + name + "</span>, " + PosFilteredData.length + " " + waswerenone + " classified as <span style='color:#0F8577'>positive</span> and " + NegFilteredData
+          .length + " as <span style='color:#043b56'>negative</span>.");
 
+        if(areaIndicators.length!=uniqueIndicators.length){
+          d3.select("#unavailableMeasures").html("There are "+(uniqueIndicators.length-areaIndicators.length)+" measures unavailable for "+name+".")
+        }
 
       }
 
