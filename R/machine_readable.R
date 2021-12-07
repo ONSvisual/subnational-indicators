@@ -1,4 +1,4 @@
-# District/Unitary and where missing, County/Unitary machine readable file #
+# District/Unitary (and County/Unitary) machine readable file #
 
 library(tidyverse) ; library(sf) ; library(readxl)
 
@@ -42,10 +42,12 @@ raw_geo <- left_join(raw, tiers, by = "AREACD") %>%
 
 # filter metrics with "District/Unitary" and remove "County/Unitary"
 a <- filter(raw_geo, Worksheet %in% pull(distinct(filter(raw_geo, AREANM == "Fareham")), Worksheet) &
-           Tier != "County/Unitary")
+           Tier != "County/Unitary") %>% 
+  mutate(Tier == "District/Unitary")
 
 # filter metrics with "County/Unitary"
-b <- filter(raw_geo, !Worksheet %in% pull(distinct(filter(raw_geo, AREANM == "Fareham")), Worksheet))
+b <- filter(raw_geo, !Worksheet %in% pull(distinct(filter(raw_geo, AREANM == "Fareham")), Worksheet)) %>% 
+  mutate(Tier == "County/Unitary")
 
 raw_geo_final <- bind_rows(a, b)
 
@@ -61,8 +63,8 @@ df <- map_df(pull(distinct(raw_geo, Worksheet)), ~raw_geo %>%
                 Unit = pull(filter(metadata, Worksheet == .x), Unit)) %>% 
            relocate(Value, .after = Unit)) %>% 
   mutate(Period = case_when(
-    Worksheet == "HouseAdditions" &str_detect(AREACD, "^N") ~ "2021",
-    Worksheet == "HouseAdditions" &str_detect(AREACD, "^W|^S") ~ "2020",
+    Worksheet == "HouseAdditions" & str_detect(AREACD, "^N") ~ "2021",
+    Worksheet == "HouseAdditions" & str_detect(AREACD, "^W|^S") ~ "2020",
     Worksheet == "HouseAdditions" & str_detect(AREACD, "^E") ~ "2019-20",
     TRUE ~ Period)) %>% 
   select(-Worksheet)
