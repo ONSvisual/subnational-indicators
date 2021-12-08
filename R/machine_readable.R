@@ -7,14 +7,14 @@ library(tidyverse) ; library(sf) ; library(readxl)
 # Local authority districts (2021)
 # Source: ONS Open Geography Portal
 # URL: https://geoportal.statistics.gov.uk/datasets/local-authority-districts-may-2021-uk-buc
-ltla <- read_csv("geospatial/Local_Authority_Districts_(May_2021)_UK_BUC.csv") %>% 
+ltla <- read_csv("geospatial/Local_Authority_Districts_2021.csv") %>% 
   select(AREACD = LAD21CD, AREANM = LAD21NM) %>% 
   mutate(Tier = "District/Unitary")
 
 # Counties (2021)
 # Source: ONS Open Geography Portal
 # URL: https://geoportal.statistics.gov.uk/datasets/counties-april-2021-names-and-codes-in-england
-counties <- read_csv("geospatial/Counties_(April_2021)_Names_and_Codes_in_England.csv") %>% 
+counties <- read_csv("geospatial/Counties_2021.csv") %>% 
   select(AREACD = CTY21CD, AREANM = CTY21NM) %>% 
   mutate(Tier = "County/Unitary")
 
