@@ -3,7 +3,7 @@ library(tidyverse) ; library(sf) ; library(readxl)
 # Local Authority districts (2021)
 # Source: ONS Open Geography Portal
 # URL: https://geoportal.statistics.gov.uk/datasets/local-authority-districts-may-2021-uk-buc
-lad <- read_csv("geospatial/Local_Authority_Districts_(May_2021)_UK_BUC.csv") %>% 
+lad <- read_csv("geospatial/Local_Authority_Districts_2021.csv") %>% 
   select(AREACD = LAD21CD, AREANM = LAD21NM)
 
 # Metrics
