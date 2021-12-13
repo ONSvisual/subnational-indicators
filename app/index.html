@@ -625,7 +625,7 @@
     </div>
   </div>
   <div class="row">
-    <div id="dataTable">
+    <div id="dataTable" style="display:none;">
       <h2 id="measuresLabel">Data table for selected areas</h2>
       <div id="dataHTMLTable"></div>
     </div>
@@ -1091,6 +1091,10 @@
             // unhide comparison
             d3.select("#detaildiv").style("display", "block")
 
+            // unhide comparison
+            d3.select("#dataTable").style("display", "block")
+
+
 
             clicked = true;
             d3.selectAll(".cell").classed("cellspermselected", false);
@@ -1130,6 +1134,10 @@
               }
             })
 
+            //resend height to pym
+            pymChild.sendHeight()
+
+
           } else {
             clicked = false;
 
@@ -1153,7 +1161,11 @@
             // hide comparison
             d3.select("#detaildiv").style("display", "none")
 
+            // hide comparison
+            d3.select("#dataTable").style("display", "none")
 
+            //resend height to pym
+            pymChild.sendHeight()
 
           }
         });
