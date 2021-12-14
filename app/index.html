@@ -586,6 +586,7 @@
       <div id="dropdown">
         <h2 class="areaHighlight">Select an area</h2>
         <p>Choose from local authorities within the UK</p>
+        <div id="sel"></div>
       </div>
     </div>
     <div class="col-sm-4">
@@ -593,12 +594,7 @@
       </div>
     </div>
   </div>
-  <!--
-  <div class="row">
-    <div class="col-sm-12 col-xs-12" id="iconArray">
-      <h3 id="measuresLabel">Distribution of measures</h3>
-    </div>
-  </div> -->
+
 
 
   <div class="row">
@@ -1061,16 +1057,14 @@
         d3.select("#sel").selectAll("*").remove()
 
         // Build option menu for occupations
-        var optns = d3.select("#dropdown").append("div").attr("id", "sel").append("select")
+        var optns = d3.select("#sel").append("select")
           .attr("id", "dropselect")
           .attr("style", "width:300px")
           .attr("class", "chosen-select");
 
         optns.append("option")
-        // .attr("value","first")
-        // .text("");
+
         optns.selectAll("p").data(menuarea).enter().append("option")
-          //.attr("id", function(d){return d[0].replace(/[, ]+/g, "").trim()})
           .attr("value", function(d) {
             return d[1]
           })
@@ -1193,7 +1187,7 @@
         });
 
         //clear dropdown
-        d3.select("#selmulti").selectAll("*").remove()
+        d3.select("#multidrop").selectAll("*").remove()
 
         // Build option menu for occupations
         var optns = d3.select("#multidrop").append("div").attr("id", "selmulti").append("select")
