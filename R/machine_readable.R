@@ -70,4 +70,4 @@ df <- map_df(pull(distinct(raw_geo, Worksheet)), ~raw_geo %>%
   select(-Worksheet)
 
 # Write data ---------------------------------
-write_csv(select(df, -Shortened), "machine_readable.csv")
+write_excel_csv(select(df, -Shortened), "machine_readable.csv")
