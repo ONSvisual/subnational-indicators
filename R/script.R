@@ -7,9 +7,9 @@ lad <- read_csv("geospatial/Local_Authority_Districts_2021.csv") %>%
   select(AREACD = LAD21CD, AREANM = LAD21NM)
 
 # Metrics
-metadata <- read_xlsx("MetricsData.xlsx", sheet = "Metadata")
+metadata <- read_xlsx("20211214_MetricsData.xlsx", sheet = "Metadata")
 
-path <- "MetricsData.xlsx"
+path <- "20211214_MetricsData.xlsx"
 
 sheets <- path %>% 
   excel_sheets() %>% 
@@ -41,14 +41,16 @@ df <- map_df(pull(distinct(raw, Worksheet)), ~raw %>%
                                   TRUE ~ Value)) %>% 
            relocate(Value, .after = Unit)) %>% 
   mutate(Period = case_when(
-    Worksheet == "HouseAdditions" &str_detect(AREACD, "^N") ~ "2021",
-    Worksheet == "HouseAdditions" &str_detect(AREACD, "^W|^S") ~ "2020",
+    Worksheet == "HouseAdditions" & str_detect(AREACD, "^N") ~ "2021",
+    Worksheet == "HouseAdditions" & str_detect(AREACD, "^W|^S") ~ "2020",
     Worksheet == "HouseAdditions" & str_detect(AREACD, "^E") ~ "2019-20",
     TRUE ~ Period)) %>% 
-  select(-Worksheet)
+  select(-Worksheet) %>% 
+  # exlude metrics that aren't normalised
+  filter(!Indicator %in% pull(filter(metadata, Jitter == "exclude"), Indicator))
 
 # Write results
-write_csv(rename(df, 
+write_excel_csv(rename(df, 
                  unique = AREACD,
                  group = AREANM,
                  id = Shortened,
