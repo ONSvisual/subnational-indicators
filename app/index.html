@@ -1576,7 +1576,7 @@
         /* Delete existing rows */
 
         d3.selectAll(".tablelines").remove();
-
+        d3.select("#unavailableMeasures").html("")
 
         areaIndicators = graphic_data.filter(function(d) {
           return d['unique'] == code
