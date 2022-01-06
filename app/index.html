@@ -1034,7 +1034,7 @@
       } //end of annotationCreation
 
       selectlist(graphic_data);
-      multiselect(graphic_data);
+
 
       function selectlist(datacsv) {
 
@@ -1088,7 +1088,7 @@
             // unhide comparison
             d3.select("#dataTable").style("display", "block")
 
-
+            multiselect(graphic_data);
 
             clicked = true;
             d3.selectAll(".cell").classed("cellspermselected", false);
@@ -1174,16 +1174,19 @@
         var dropnames = datacsv.map(function(d, i) {
           return d.group
         }).filter(function(item, pos, val) {
-          return val.indexOf(item) == pos
+          return val.indexOf(item) == pos //filter uniques
         })
+
         var dropcodes = datacsv.map(function(d, i) {
           return d.unique
         }).filter(function(item, pos, val) {
-          return val.indexOf(item) == pos
+          return val.indexOf(item) == pos //filter uniques
         })
 
         var menuarea = d3.zip(dropnames, dropcodes).sort(function(a, b) {
           return d3.ascending(a[0], b[0]);
+        }).filter(function(d){
+          return d[1]!=$("#dropselect").val()
         });
 
         //clear dropdown
