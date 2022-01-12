@@ -79,7 +79,6 @@ raw_geo_final <- bind_rows(a, b)
 
 # pull in metadata
 # cannot standardise across different tiers!!
-         filter(Worksheet == .x) %>% 
 df <- map_df(pull(distinct(raw_geo, Worksheet)), ~raw_geo %>%
          filter(Worksheet == .x) %>%
          mutate(Indicator = pull(filter(metadata, Worksheet == .x), Indicator),
