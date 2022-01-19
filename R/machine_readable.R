@@ -40,14 +40,21 @@ ltla <- bind_rows(ltla09,ltla11,ltla17,ltla18,ltla19,ltla20,ltla21) %>% distinct
 # Counties (2021)
 # Source: ONS Open Geography Portal
 # URL: https://geoportal.statistics.gov.uk/datasets/counties-april-2021-names-and-codes-in-england
-counties <- read_csv("geospatial/Counties_2021.csv") %>%
+counties21 <- read_csv("geospatial/Counties_2021.csv") %>%
   select(AREACD = CTY21CD, AREANM = CTY21NM) %>%
   mutate(Tier = "County/Unitary")
+
+counties20 <- read_csv("geospatial/Counties_(December_2020)_EN_BUC.csv") %>%
+  select(AREACD = CTY20CD, AREANM = CTY20CD) %>%
+  mutate(Tier = "County/Unitary")
+
+counties <- bind_rows(counties21,counties20) %>%
+  distinct(AREACD,.keep_all=TRUE)
 
 tiers <- bind_rows(ltla, counties)
 
 # Metrics
-path <- "MetricsData.xlsx"
+path <- "20211214_MetricsData.xlsx"
 
 metadata <- read_xlsx(path, sheet = "Metadata")
 
@@ -97,3 +104,5 @@ df <- map_df(pull(distinct(raw_geo, Worksheet)), ~raw_geo %>%
 
 # Write data ---------------------------------
 write_excel_csv(select(df, -c(Shortened)), "machine_readable.csv")
+
+                
