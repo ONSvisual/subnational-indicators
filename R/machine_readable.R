@@ -45,7 +45,7 @@ counties21 <- read_csv("geospatial/Counties_2021.csv") %>%
   mutate(Tier = "County/Unitary")
 
 counties20 <- read_csv("geospatial/Counties_(December_2020)_EN_BUC.csv") %>%
-  select(AREACD = CTY20CD, AREANM = CTY20CD) %>%
+  select(AREACD = CTY20CD, AREANM = CTY20NM) %>%
   mutate(Tier = "County/Unitary")
 
 counties <- bind_rows(counties21,counties20) %>%
