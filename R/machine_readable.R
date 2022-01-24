@@ -48,13 +48,17 @@ counties20 <- read_csv("geospatial/Counties_(December_2020)_EN_BUC.csv") %>%
   select(AREACD = CTY20CD, AREANM = CTY20NM) %>%
   mutate(Tier = "County/Unitary")
 
-counties <- bind_rows(counties21,counties20) %>%
+counties19 <- read.csv("geospatial/Counties_(December_2019)_Boundaries_EN_BUC.csv") %>%
+  select(AREACD = cty19cd, AREANM = cty19nm) %>%
+  mutate(Tier = "County/Unitary")
+
+counties <- bind_rows(counties21,counties20,counties19) %>%
   distinct(AREACD,.keep_all=TRUE)
 
 tiers <- bind_rows(ltla, counties)
 
 # Metrics
-path <- "20211214_MetricsData.xlsx"
+path <- "MetricsData.xlsx"
 
 metadata <- read_xlsx(path, sheet = "Metadata")
 
