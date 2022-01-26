@@ -785,7 +785,7 @@
           };
         }
 
-        g.append("text").attr("class", "label").text(groups[j]).attr("y", (heightper / 2) + 5).attr("x", -margin.left)
+        g.append("text").attr("class", "label").text(groups[j]).attr("y", (heightper / 2) + 5).attr("x", -margin.left).call(wrap,margin.left)
 
         var cell = g.append("g").attr("class", "cell-group");
 
@@ -1658,6 +1658,34 @@
           d3.select("#unavailableMeasures").html("There are "+(uniqueIndicators.length-areaIndicators.length)+" measures unavailable for "+name+".")
         }
 
+      }
+
+      function wrap(text, width) {
+        text.each(function() {
+          var text = d3.select(this),
+            words = text.text().split(/\s+/).reverse(),
+            word,
+            line = [],
+            lineNumber = 0,
+            lineHeight = 1.1, // ems
+            y = text.attr("y"),
+            x = text.attr("x"),
+            dy = parseFloat(text.attr("dy")),
+            tspan = text.text(null).append("tspan").attr('x',x);
+          while (word = words.pop()) {
+            line.push(word);
+            tspan.text(line.join(" "));
+            if (tspan.node().getComputedTextLength() > width) {
+              line.pop();
+              tspan.text(line.join(" "));
+              line = [word];
+              tspan = text.append("tspan").attr('x',x).attr("dy", lineHeight + "em").text(word);
+            }
+          }
+        });
+
+        var breaks = text.selectAll("tspan").size();
+        text.attr("y", function(){return +text.attr('y')+(-6 * (breaks-1))});
       }
 
       function prefixer(d) {
