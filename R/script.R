@@ -47,11 +47,13 @@ df <- map_df(pull(distinct(raw, Worksheet)), ~raw %>%
   # exlude metrics that aren't normalised
   filter(!Indicator %in% pull(filter(metadata, Jitter == "exclude"), Indicator))
 
+
+results<-rename(df, 
+                unique = AREACD,
+                group = AREANM,
+                id = Shortened,
+                unit = Unit,
+                real = Value,
+                value = MAD)
 # Write results
-write_excel_csv(rename(df, 
-                 unique = AREACD,
-                 group = AREANM,
-                 id = Shortened,
-                 unit = Unit,
-                 real = Value,
-                 value = MAD), "revised_data.csv")
+write_excel_csv(results, "revised_data.csv")
