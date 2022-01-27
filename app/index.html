@@ -709,12 +709,9 @@
       //get unique groups/variables
       var groups = graphic_data.map(function(obj) {
         return obj.id;
+      }).filter(function(v, i,a) {
+        return a.indexOf(v) == i;
       });
-      groups = groups.filter(function(v, i) {
-        return groups.indexOf(v) == i;
-      });
-
-
 
 
       height = (heightper * groups.length) + (spaceForLabels * (breakingPoints.length - 1)) + margin.top + margin.bottom;
@@ -835,9 +832,6 @@
             .on("mouseover", function(d, i) {
               pathidstr = d3.select(this).attr("class");
               pathgroup = pathidstr.split(" ")[1];
-              //console.log(pathgroup);
-              //d3.selectAll(".cell").classed("cellsselected",false);showTooltip(evt, 'This is blue')
-
 
               d3.selectAll("." + pathgroup).classed("cellsselected", true);
             })
@@ -882,13 +876,7 @@
               hideTooltip();
             })
             .on("mouseover", function(d, i) {
-              // console.log(d)
-              // pathidstr = d3.select(this);
-              // pathidstring = pathidstr.attr("class");
               pathgroup = "cellgroup" + d.unique;
-
-              //console.log(pathgroup);
-              //d3.selectAll(".cell").classed("cellsselected",false);
 
               d3.selectAll("." + pathgroup).classed("cellsselected", true).each(function() {
                 d3.select(this).raise()
@@ -1199,7 +1187,6 @@
 
 
             //need some better code to build select list of names in selected order
-            //console.log($("#dropselect2 :selected").map(function (i, element) { return jQuery(element).text(); }).get())
 
             //selectCellsforcomparison areas
             d3.selectAll(".cell").classed("notselected", true)
@@ -1213,7 +1200,6 @@
             createDataTable();
             addCloseButtonDesc()
 
-            //  console.log(listcodes)
 
           } else {
 
@@ -1228,8 +1214,6 @@
             });
             createLegend();
             createDataTable();
-
-            //  console.log(listcodes);
 
 
           }
@@ -1720,7 +1704,6 @@
           })
         }
 
-
         //filter for of
         areaIndicators = graphic_data_full.filter(function(d) {
           if (areacodes.includes(d['unique'])) {
@@ -1747,54 +1730,52 @@
 
         tablebody = tabletable.append('tbody')
 
-
-        areaIndicators.sort(function(a, b) {
-          return d3.ascending(a.group, b.group);
-        }).forEach(function(d, i) {
-
-
-          if (areanamessorted.indexOf(d.group) == 0) {
-
-            tablelines = tablebody.append("tr").attr("class", "tablelines").attr("id", "tablelines" + d.id.replace(/[,() ]+/g, "").trim());
-            tablelines.append("td").text(d.id);
-            tablelines.append("td").text(d.Period);
-            tablelines.append("td").text(d.Measure);
-            tablelines.append("td").attr("class", "numberCol").text(function(){
-            if(d.real=="NA"){return "Unavailable"}
-            else if(Number.isInteger(+d.real)){
-              return d.real
-            }else{
-              return d3.format(",.1f")(d.real);
-            }})
-          } else if (areanamessorted.indexOf(d.group) == 1) {
-            tabletable.select("#tablelines" + d.id.replace(/[,() ]+/g, "").trim()).append("td").attr("class", "numberCol").text(function(){
-            if(d.real=="NA"){return "Unavailable"}
-            else if(Number.isInteger(+d.real)){
-              return d.real
-            }else{
-              return d3.format(",.1f")(d.real);
-            }});
-          } else if (areanamessorted.indexOf(d.group) == 2) {
-            tabletable.select("#tablelines" + d.id.replace(/[,() ]+/g, "").trim()).append("td").attr("class", "numberCol").text(function(){
-            if(d.real=="NA"){return "Unavailable"}
-            else if(Number.isInteger(+d.real)){
-              return d.real
-            }else{
-              return d3.format(",.1f")(d.real);
-            }});
-          } else if (areanamessorted.indexOf(d.group) == 3) {
-            tabletable.select("#tablelines" + d.id.replace(/[,() ]+/g, "").trim()).append("td").attr("class", "numberCol").text(function(){
-            if(d.real=="NA"){return "Unavailable"}
-            else if(Number.isInteger(+d.real)){
-              return d.real
-            }else{
-              return d3.format(",.1f")(d.real);
-            }});
+        // https://stackoverflow.com/questions/18773778/create-array-of-unique-objects-by-property
+        var flags={}
+        uniqueIndicatorsForDataTable=areaIndicators.filter(function(d){
+          if(flags[d.Indicator]){
+            return false;
           }
+          flags[d.Indicator]=true;
+          return true;
+        })
 
+        //first populate the left hand columns with names, periods and units
+        uniqueIndicatorsForDataTable.forEach(function(d, i){
+          tablelines = tablebody.append("tr").attr("class", "tablelines").attr("id", "tablelines" + d.id.replace(/[,() ]+/g, "").trim());
+          tablelines.append("td").text(d.id);
+          tablelines.append("td").text(d.Period);
+          tablelines.append("td").text(d.Measure);
         });
 
+        // then loop through the areas
+        areacodes.forEach(function(d, i){
+          // filter the data for just this area
+          var tableDataForThisArea=areaIndicators.filter(function(e){return e.unique==d});
+          // loop through uniqueIndicators
+          uniqueIndicatorsForDataTable.forEach(function(f, i){
+            // work out the data for this area and this indicator
+            var thisdatacell=tableDataForThisArea.filter(function(g){
+              return g.Indicator==f.Indicator
+            })[0]
+            // new variable for the table cell
+            tablecell=tabletable.select("#tablelines" + f.id.replace(/[,() ]+/g, "").trim()).append("td").attr("class", "numberCol")
 
+            // if data exists
+            if(thisdatacell!==undefined){
+              tablecell.text(function(){
+              if(Number.isInteger(+thisdatacell.real)){
+                return thisdatacell.real
+              }else{
+                return d3.format(",.1f")(thisdatacell.real);
+              }});
+            // if data doesn't exist
+            }else{
+              tablecell.text("Unavailable")
+            }
+          });
+
+        });
       }
 
 
@@ -1850,6 +1831,8 @@
       d.value = +d.value;
       return d;
     }
+    // includes polyfill
+    Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{value:function(r,e){if(null==this)throw new TypeError('"this" is null or not defined');var t=Object(this),n=t.length>>>0;if(0===n)return!1;var i,o,a=0|e,u=Math.max(0<=a?a:n-Math.abs(a),0);for(;u<n;){if((i=t[u])===(o=r)||"number"==typeof i&&"number"==typeof o&&isNaN(i)&&isNaN(o))return!0;u++}return!1}});
   </script>
 </body>
 
