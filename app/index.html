@@ -1764,7 +1764,8 @@
             // if data exists
             if(thisdatacell!==undefined){
               tablecell.text(function(){
-              if(Number.isInteger(+thisdatacell.real)){
+              if(d.real=="NA"){return "Unavailable"}
+              else if(Number.isInteger(+thisdatacell.real)){
                 return thisdatacell.real
               }else{
                 return d3.format(",.1f")(thisdatacell.real);
