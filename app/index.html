@@ -1688,20 +1688,26 @@
             [dropcode], listcodes
           ])
 
-          areanamessorted = d3.merge([
-            [dropname], listnames
-          ]).sort(function(a, b) {
-            return d3.ascending(a, b);
+          areanamessorted=d3.zip(areanames,areacodes).sort(function(a, b) {
+            return d3.ascending(a[0], b[0]);
           })
+
+          // areanamessorted = d3.merge([
+          //   [dropname], listnames
+          // ]).sort(function(a, b) {
+          //   return d3.ascending(a, b);
+          // })
 
         } else {
-          areanames = d3.merge([listnames]) //.sort(function(a, b) {return d3.descending(a[0], b[0]); })
+          // I don't think code block fires
+          // areanames = d3.merge([listnames]) //.sort(function(a, b) {return d3.descending(a[0], b[0]); })
+          //
+          // areacodes = d3.merge([listcodes])
+          //
+          // areanamessorted = d3.merge([listnames]).sort(function(a, b) {
+          //   return d3.ascending(a, b);
+          // })
 
-          areacodes = d3.merge([listcodes])
-
-          areanamessorted = d3.merge([listnames]).sort(function(a, b) {
-            return d3.ascending(a, b);
-          })
         }
 
         //filter for of
@@ -1724,9 +1730,8 @@
         //add column for each area
 
         areanamessorted.forEach(function(d, i) {
-          headerRow.append("th").attr("width", "30%").attr("class", "numberCol").text(d);
+          headerRow.append("th").attr("width", "30%").attr("class", "numberCol").text(d[0]);
         })
-
 
         tablebody = tabletable.append('tbody')
 
@@ -1749,9 +1754,9 @@
         });
 
         // then loop through the areas
-        areacodes.forEach(function(d, i){
+        areanamessorted.forEach(function(d, i){
           // filter the data for just this area
-          var tableDataForThisArea=areaIndicators.filter(function(e){return e.unique==d});
+          var tableDataForThisArea=areaIndicators.filter(function(e){return e.unique==d[1]});
           // loop through uniqueIndicators
           uniqueIndicatorsForDataTable.forEach(function(f, i){
             // work out the data for this area and this indicator
