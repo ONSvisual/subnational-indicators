@@ -1063,6 +1063,7 @@
             zoomToArea(dropcode);
             updateTable(dropcode, dropname);
             updatePlotValues(dropcode, dropname);
+            clearLegend()
             createLegend();
             createDataTable();
             //createiconArray(dropcode, dropname);
@@ -1104,7 +1105,7 @@
             d3.selectAll(".cell").attr("pointer-events", "all");
 
             resetZoom();
-            clearPlotValues("");
+            clearPlotValues();
             clearLegend();
             clearTable();
             clearDataTable();
@@ -1776,7 +1777,6 @@
               else if(Number.isInteger(+thisdatacell.real)){
                 return thisdatacell.real
               }else{
-                // console.log(thisdatacell.id,d3.format(",.1f")(thisdatacell.real),(thisdatacell.real),Math.round(thisdatacell.real * 10) / 10)
                 return d3.format(",.1f")((Math.round(thisdatacell.real * 10) / 10));
               }});
             // if data doesn't exist
