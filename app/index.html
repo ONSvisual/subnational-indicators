@@ -1054,6 +1054,8 @@
 
             clicked = true;
             d3.selectAll(".cell").classed("cellspermselected", false);
+            d3.selectAll(".cellspermselected2").attr('fill', '#aabfcd');
+            d3.selectAll(".cell").classed("cellspermselected2", false);
             d3.selectAll(".cell").attr("pointer-events", "all")
 
             dropcode = $('#dropselect').val();
@@ -1340,7 +1342,6 @@
 
       function clearPlotValues() {
         d3.selectAll(".labeltspan").text("")
-
       }
 
       function wrap(text, width) {
