@@ -107,6 +107,6 @@ df <- map_df(pull(distinct(raw_geo, Worksheet)), ~raw_geo %>%
   select(-Worksheet)
 
 # Write data ---------------------------------
-write_excel_csv(select(df, -c(Shortened)), "machine_readable.csv")
-
+cat("There may be some discrepancies between this data download and the accompanying dataset caused by rounding issues but these should be insignificant and are unlikely to affect any further analysis\n\n",file="a.csv")
+write_excel_csv(select(df, -c(Shortened)), "machine_readable.csv",append=TRUE,col_names=TRUE)
                 
