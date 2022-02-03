@@ -580,6 +580,11 @@
       border-radius: 5px;
       padding: 5px;
     }
+
+    div#dataHTMLtable{
+        overflow-x: scroll;
+        overflow-y: visible;
+    }
   </style>
 </head>
 
@@ -627,7 +632,8 @@
   <div class="row">
     <div id="dataTable" style="display:none;">
       <h2 id="measuresLabel">Data table for selected areas</h2>
-      <div id="dataHTMLTable"></div>
+      <div id="scrollInstructions" style="width:100%;text-align: center;"></div>
+      <div id="dataHTMLTable" style="overflow-y:scroll;"></div>
     </div>
   </div>
   <!-- <h6 class="">Download this chart</h6>
@@ -1726,6 +1732,7 @@
 
         //add all the columns we need
 
+        if(size=="sm"){d3.select("#scrollInstructions").text("← Scroll or drag to see more →")}
         tabletable = d3.select("#dataHTMLTable").append("table").attr("width", "98%");
 
         headerRow = tabletable.append('thead').append('tr')
