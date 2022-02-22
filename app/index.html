@@ -825,7 +825,7 @@
               return 23 + 5 + Math.random() * (heightper / 2 - 10);
             })
             .attr("class", function(d, i) {
-              return "cell " + "cellgroup" + d.unique.replace(/[,() ]+/g, "").trim()
+              return "cell " + "cellgroup" + d.unique.replace(/[,()/ ]+/g, "").trim()
             })
             .attr("fill", dvc.essential.colour_palette[0])
             .attr("opacity", 0.5)
@@ -873,7 +873,7 @@
               return Math.random() * (heightper / 2) + heightper / 4;
             })
             .attr("class", function(d, i) {
-              return "cell " + "cellgroup" + d.unique.replace(/[,() ]+/g, "").trim()
+              return "cell " + "cellgroup" + d.unique.replace(/[,()/ ]+/g, "").trim()
             })
             .attr("fill", dvc.essential.colour_palette[0])
             .attr("opacity", 0.5)
@@ -1074,7 +1074,7 @@
             //createiconArray(dropcode, dropname);
 
             d3.selectAll(".cell").classed("notselected", true)
-            d3.selectAll(".cellgroup" + dropcode.replace(/[,() ]+/g, "").trim()).classed("cellspermselected", true).attr("pointer-events", "all").each(function() {
+            d3.selectAll(".cellgroup" + dropcode.replace(/[,()/ ]+/g, "").trim()).classed("cellspermselected", true).attr("pointer-events", "all").each(function() {
               d3.select(this).raise()
             });
 
@@ -1202,7 +1202,7 @@
             d3.selectAll(".cell").classed("notselected", true)
 
             listcodes.forEach(function(d, i) {
-              d3.selectAll(".cellgroup" + d.replace(/[,() ]+/g, "").trim()).attr("fill", dvc.essential.colour_palette[i + 2]).classed("cellspermselected2", true).each(function(d) {
+              d3.selectAll(".cellgroup" + d.replace(/[,()/ ]+/g, "").trim()).attr("fill", dvc.essential.colour_palette[i + 2]).classed("cellspermselected2", true).each(function(d) {
                 d3.select(this).raise()
               });
             });
@@ -1220,7 +1220,7 @@
 
             d3.selectAll(".cellspermselected2").classed("cellspermselected2", false).attr("fill", dvc.essential.colour_palette[0])
             listcodes.forEach(function(d, i) {
-              d3.selectAll(".cellgroup" + d.replace(/[,() ]+/g, "").trim()).attr("fill", dvc.essential.colour_palette[i + 2]).classed("cellspermselected2", true).raise();
+              d3.selectAll(".cellgroup" + d.replace(/[,()/ ]+/g, "").trim()).attr("fill", dvc.essential.colour_palette[i + 2]).classed("cellspermselected2", true).raise();
             });
             createLegend();
             createDataTable();
@@ -1757,7 +1757,7 @@
 
         //first populate the left hand columns with names, periods and units
         uniqueIndicatorsForDataTable.forEach(function(d, i){
-          tablelines = tablebody.append("tr").attr("class", "tablelines").attr("id", "tablelines" + d.id.replace(/[,() ]+/g, "").trim());
+          tablelines = tablebody.append("tr").attr("class", "tablelines").attr("id", "tablelines" + d.id.replace(/[,()/ ]+/g, "").trim());
           tablelines.append("td").text(d.id);
           tablelines.append("td").text(d.Period);
           tablelines.append("td").text(d.Measure);
@@ -1774,7 +1774,7 @@
               return g.Indicator==f.Indicator
             })[0]
             // new variable for the table cell
-            tablecell=tabletable.select("#tablelines" + f.id.replace(/[,() ]+/g, "").trim()).append("td").attr("class", "numberCol")
+            tablecell=tabletable.select("#tablelines" + f.id.replace(/[,()/ ]+/g, "").trim()).append("td").attr("class", "numberCol")
             // if data exists
             if(thisdatacell!==undefined){
               tablecell.text(function(){
