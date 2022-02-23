@@ -1337,7 +1337,7 @@
         });
 
         areaIndicators.forEach(function(d) {
-          d3.select("." + d.id.replace(/[|&;$%@"<>()+, \d]/g, "")).attr("fill", dvc.essential.colour_palette[1]).text(d.real)
+          d3.select("." + d.id.replace(/[|&;$%@"<>()+, /\d]/g, "")).attr("fill", dvc.essential.colour_palette[1]).text(d.real)
 
 
         })
