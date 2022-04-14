@@ -68,7 +68,7 @@ sheets <- path %>%
   .[.!= "Metadata"]
 
 raw <- map_df(sheets, ~mutate(read_excel(path, sheet = .x,
-                                         col_types = c("text", "numeric"),
+                                         col_types = c("text", "numeric","text"),
                                          skip = 1), Worksheet = .x))
 
 # Clean data ---------------------------------

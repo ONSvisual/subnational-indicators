@@ -19,7 +19,7 @@ sheets <- path %>%
 negatives <- metadata%>%filter(Polarity=="Negative")%>%select(Worksheet)
 
 raw <- left_join(lad,
-                 map_df(sheets, ~mutate(read_excel(path, sheet = .x, col_types = c("text", "numeric"), skip = 1), Worksheet = .x)),
+                 map_df(sheets, ~mutate(read_excel(path, sheet = .x, col_types = c("text", "numeric","text"), skip = 1), Worksheet = .x)),
                  by = "AREACD")
 
 df <- map_df(pull(distinct(raw, Worksheet)), ~raw %>% 
