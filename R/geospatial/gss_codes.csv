@@ -1,0 +1,524 @@
+AREACD,AREANM,Geography
+N92000002,Northern Ireland,Country
+E92000001,England,Country
+S92000003,Scotland,Country
+W92000004,Wales,Country
+E12000001,North East,Region
+E12000002,North West,Region
+E12000003,Yorkshire and The Humber,Region
+E12000004,East Midlands,Region
+E12000005,West Midlands,Region
+E12000006,East of England,Region
+E12000007,London,Region
+E12000008,South East,Region
+E12000009,South West,Region
+E10000001,Bedfordshire,County
+E10000002,Buckinghamshire,County
+E10000003,Cambridgeshire,County
+E10000004,Cheshire,County
+E10000005,Cornwall and Isles of Scilly,County
+E10000006,Cumbria,County
+E10000007,Derbyshire,County
+E10000008,Devon,County
+E10000009,Dorset,County
+E10000010,Durham,County
+E10000011,East Sussex,County
+E10000012,Essex,County
+E10000013,Gloucestershire,County
+E10000014,Hampshire,County
+E10000015,Hertfordshire,County
+E10000016,Kent,County
+E10000017,Lancashire,County
+E10000018,Leicestershire,County
+E10000019,Lincolnshire,County
+E10000020,Norfolk,County
+E10000021,Northamptonshire,County
+E10000022,Northumberland,County
+E10000023,North Yorkshire,County
+E10000024,Nottinghamshire,County
+E10000025,Oxfordshire,County
+E10000026,Shropshire,County
+E10000027,Somerset,County
+E10000028,Staffordshire,County
+E10000029,Suffolk,County
+E10000030,Surrey,County
+E10000031,Warwickshire,County
+E10000032,West Sussex,County
+E10000033,Wiltshire,County
+E10000034,Worcestershire,County
+E11000001,Greater Manchester,Metropolitan County
+E11000002,Merseyside,Metropolitan County
+E11000003,South Yorkshire,Metropolitan County
+E11000004,Tyne and Wear,Metropolitan County
+E11000005,West Midlands,Metropolitan County
+E11000006,West Yorkshire,Metropolitan County
+E11000007,Tyne and Wear,Metropolitan County
+E06000001,Hartlepool,Unitary Authority
+E06000002,Middlesbrough,Unitary Authority
+E06000003,Redcar and Cleveland,Unitary Authority
+E06000004,Stockton-on-Tees,Unitary Authority
+E06000005,Darlington,Unitary Authority
+E06000006,Halton,Unitary Authority
+E06000007,Warrington,Unitary Authority
+E06000008,Blackburn with Darwen,Unitary Authority
+E06000009,Blackpool,Unitary Authority
+E06000010,"Kingston upon Hull, City of",Unitary Authority
+E06000011,East Riding of Yorkshire,Unitary Authority
+E06000012,North East Lincolnshire,Unitary Authority
+E06000013,North Lincolnshire,Unitary Authority
+E06000014,York,Unitary Authority
+E06000015,Derby,Unitary Authority
+E06000016,Leicester,Unitary Authority
+E06000017,Rutland,Unitary Authority
+E06000018,Nottingham,Unitary Authority
+E06000019,"Herefordshire, County of",Unitary Authority
+E06000020,Telford and Wrekin,Unitary Authority
+E06000021,Stoke-on-Trent,Unitary Authority
+E06000022,Bath and North East Somerset,Unitary Authority
+E06000023,"Bristol, City of",Unitary Authority
+E06000024,North Somerset,Unitary Authority
+E06000025,South Gloucestershire,Unitary Authority
+E06000026,Plymouth,Unitary Authority
+E06000027,Torbay,Unitary Authority
+E06000028,Bournemouth,Unitary Authority
+E06000029,Poole,Unitary Authority
+E06000030,Swindon,Unitary Authority
+E06000031,Peterborough,Unitary Authority
+E06000032,Luton,Unitary Authority
+E06000033,Southend-on-Sea,Unitary Authority
+E06000034,Thurrock,Unitary Authority
+E06000035,Medway,Unitary Authority
+E06000036,Bracknell Forest,Unitary Authority
+E06000037,West Berkshire,Unitary Authority
+E06000038,Reading,Unitary Authority
+E06000039,Slough,Unitary Authority
+E06000040,Windsor and Maidenhead,Unitary Authority
+E06000041,Wokingham,Unitary Authority
+E06000042,Milton Keynes,Unitary Authority
+E06000043,Brighton and Hove,Unitary Authority
+E06000044,Portsmouth,Unitary Authority
+E06000045,Southampton,Unitary Authority
+E06000046,Isle of Wight,Unitary Authority
+E06000047,County Durham,Unitary Authority
+E06000048,Northumberland,Unitary Authority
+E06000049,Cheshire East,Unitary Authority
+E06000050,Cheshire West and Chester,Unitary Authority
+E06000051,Shropshire,Unitary Authority
+E06000052,Cornwall,Unitary Authority
+E06000053,Isles of Scilly,Unitary Authority
+E06000054,Wiltshire,Unitary Authority
+E06000055,Bedford,Unitary Authority
+E06000056,Central Bedfordshire,Unitary Authority
+E06000057,Northumberland,Unitary Authority
+E06000058,"Bournemouth, Christchurch and Poole",Unitary Authority
+E06000059,Dorset,Unitary Authority
+E06000060,Buckinghamshire,Unitary Authority
+E06000061,North Northamptonshire,Unitary Authority
+E06000062,West Northamptonshire,Unitary Authority
+W06000001,Isle of Anglesey,Unitary Authority
+W06000002,Gwynedd,Unitary Authority
+W06000003,Conwy,Unitary Authority
+W06000004,Denbighshire,Unitary Authority
+W06000005,Flintshire,Unitary Authority
+W06000006,Wrexham,Unitary Authority
+W06000007,Powys,Unitary Authority
+W06000008,Ceredigion,Unitary Authority
+W06000009,Pembrokeshire,Unitary Authority
+W06000010,Carmarthenshire,Unitary Authority
+W06000011,Swansea,Unitary Authority
+W06000012,Neath Port Talbot,Unitary Authority
+W06000013,Bridgend,Unitary Authority
+W06000014,Vale of Glamorgan,Unitary Authority
+W06000014,The Vale of Glamorgan,Unitary Authority
+W06000015,Cardiff,Unitary Authority
+W06000016,Rhondda Cynon Taf,Unitary Authority
+W06000016,"Rhondda, Cynon, Taff",Unitary Authority
+W06000017,Merthyr Tydfil,Unitary Authority
+W06000018,Caerphilly,Unitary Authority
+W06000019,Blaenau Gwent,Unitary Authority
+W06000020,Torfaen,Unitary Authority
+W06000021,Monmouthshire,Unitary Authority
+W06000022,Newport,Unitary Authority
+W06000023,Powys,Unitary Authority
+W06000024,Merthyr Tydfil,Unitary Authority
+E08000001,Bolton,Metropolitan District
+E08000002,Bury,Metropolitan District
+E08000003,Manchester,Metropolitan District
+E08000004,Oldham,Metropolitan District
+E08000005,Rochdale,Metropolitan District
+E08000006,Salford,Metropolitan District
+E08000007,Stockport,Metropolitan District
+E08000008,Tameside,Metropolitan District
+E08000009,Trafford,Metropolitan District
+E08000010,Wigan,Metropolitan District
+E08000011,Knowsley,Metropolitan District
+E08000012,Liverpool,Metropolitan District
+E08000013,St. Helens,Metropolitan District
+E08000014,Sefton,Metropolitan District
+E08000015,Wirral,Metropolitan District
+E08000016,Barnsley,Metropolitan District
+E08000017,Doncaster,Metropolitan District
+E08000018,Rotherham,Metropolitan District
+E08000019,Sheffield,Metropolitan District
+E08000020,Gateshead,Metropolitan District
+E08000021,Newcastle upon Tyne,Metropolitan District
+E08000022,North Tyneside,Metropolitan District
+E08000023,South Tyneside,Metropolitan District
+E08000024,Sunderland,Metropolitan District
+E08000025,Birmingham,Metropolitan District
+E08000026,Coventry,Metropolitan District
+E08000027,Dudley,Metropolitan District
+E08000028,Sandwell,Metropolitan District
+E08000029,Solihull,Metropolitan District
+E08000030,Walsall,Metropolitan District
+E08000031,Wolverhampton,Metropolitan District
+E08000032,Bradford,Metropolitan District
+E08000033,Calderdale,Metropolitan District
+E08000034,Kirklees,Metropolitan District
+E08000035,Leeds,Metropolitan District
+E08000036,Wakefield,Metropolitan District
+E08000037,Gateshead,Metropolitan District
+E07000001,Mid Bedfordshire,Non-Metropolitan District
+E07000002,Bedford,Non-Metropolitan District
+E07000003,South Bedfordshire,Non-Metropolitan District
+E07000004,Aylesbury Vale,Non-Metropolitan District
+E07000005,Chiltern,Non-Metropolitan District
+E07000006,South Bucks,Non-Metropolitan District
+E07000007,Wycombe,Non-Metropolitan District
+E07000008,Cambridge,Non-Metropolitan District
+E07000009,East Cambridgeshire,Non-Metropolitan District
+E07000010,Fenland,Non-Metropolitan District
+E07000011,Huntingdonshire,Non-Metropolitan District
+E07000012,South Cambridgeshire,Non-Metropolitan District
+E07000013,Chester,Non-Metropolitan District
+E07000014,Congleton,Non-Metropolitan District
+E07000015,Crewe and Nantwich,Non-Metropolitan District
+E07000016,Ellesmere Port & Neston,Non-Metropolitan District
+E07000017,Macclesfield,Non-Metropolitan District
+E07000018,Vale Royal,Non-Metropolitan District
+E07000019,Caradon,Non-Metropolitan District
+E07000020,Carrick,Non-Metropolitan District
+E07000021,Kerrier,Non-Metropolitan District
+E07000022,North Cornwall,Non-Metropolitan District
+E07000023,Penwith,Non-Metropolitan District
+E07000024,Restormel,Non-Metropolitan District
+E07000025,Isles of Scilly,Non-Metropolitan District
+E07000026,Allerdale,Non-Metropolitan District
+E07000027,Barrow-in-Furness,Non-Metropolitan District
+E07000028,Carlisle,Non-Metropolitan District
+E07000029,Copeland,Non-Metropolitan District
+E07000030,Eden,Non-Metropolitan District
+E07000031,South Lakeland,Non-Metropolitan District
+E07000032,Amber Valley,Non-Metropolitan District
+E07000033,Bolsover,Non-Metropolitan District
+E07000034,Chesterfield,Non-Metropolitan District
+E07000035,Derbyshire Dales,Non-Metropolitan District
+E07000036,Erewash,Non-Metropolitan District
+E07000037,High Peak,Non-Metropolitan District
+E07000038,North East Derbyshire,Non-Metropolitan District
+E07000039,South Derbyshire,Non-Metropolitan District
+E07000040,East Devon,Non-Metropolitan District
+E07000041,Exeter,Non-Metropolitan District
+E07000042,Mid Devon,Non-Metropolitan District
+E07000043,North Devon,Non-Metropolitan District
+E07000044,South Hams,Non-Metropolitan District
+E07000045,Teignbridge,Non-Metropolitan District
+E07000046,Torridge,Non-Metropolitan District
+E07000047,West Devon,Non-Metropolitan District
+E07000048,Christchurch,Non-Metropolitan District
+E07000049,East Dorset,Non-Metropolitan District
+E07000050,North Dorset,Non-Metropolitan District
+E07000051,Purbeck,Non-Metropolitan District
+E07000052,West Dorset,Non-Metropolitan District
+E07000053,Weymouth and Portland,Non-Metropolitan District
+E07000054,Chester-le-Street,Non-Metropolitan District
+E07000055,Derwentside,Non-Metropolitan District
+E07000056,Durham,Non-Metropolitan District
+E07000057,Easington,Non-Metropolitan District
+E07000058,Sedgefield,Non-Metropolitan District
+E07000059,Teesdale,Non-Metropolitan District
+E07000060,Wear Valley,Non-Metropolitan District
+E07000061,Eastbourne,Non-Metropolitan District
+E07000062,Hastings,Non-Metropolitan District
+E07000063,Lewes,Non-Metropolitan District
+E07000064,Rother,Non-Metropolitan District
+E07000065,Wealden,Non-Metropolitan District
+E07000066,Basildon,Non-Metropolitan District
+E07000067,Braintree,Non-Metropolitan District
+E07000068,Brentwood,Non-Metropolitan District
+E07000069,Castle Point,Non-Metropolitan District
+E07000070,Chelmsford,Non-Metropolitan District
+E07000071,Colchester,Non-Metropolitan District
+E07000072,Epping Forest,Non-Metropolitan District
+E07000073,Harlow,Non-Metropolitan District
+E07000074,Maldon,Non-Metropolitan District
+E07000075,Rochford,Non-Metropolitan District
+E07000076,Tendring,Non-Metropolitan District
+E07000077,Uttlesford,Non-Metropolitan District
+E07000078,Cheltenham,Non-Metropolitan District
+E07000079,Cotswold,Non-Metropolitan District
+E07000080,Forest of Dean,Non-Metropolitan District
+E07000081,Gloucester,Non-Metropolitan District
+E07000082,Stroud,Non-Metropolitan District
+E07000083,Tewkesbury,Non-Metropolitan District
+E07000084,Basingstoke and Deane,Non-Metropolitan District
+E07000085,East Hampshire,Non-Metropolitan District
+E07000086,Eastleigh,Non-Metropolitan District
+E07000087,Fareham,Non-Metropolitan District
+E07000088,Gosport,Non-Metropolitan District
+E07000089,Hart,Non-Metropolitan District
+E07000090,Havant,Non-Metropolitan District
+E07000091,New Forest,Non-Metropolitan District
+E07000092,Rushmoor,Non-Metropolitan District
+E07000093,Test Valley,Non-Metropolitan District
+E07000094,Winchester,Non-Metropolitan District
+E07000095,Broxbourne,Non-Metropolitan District
+E07000096,Dacorum,Non-Metropolitan District
+E07000097,East Hertfordshire,Non-Metropolitan District
+E07000098,Hertsmere,Non-Metropolitan District
+E07000099,North Hertfordshire,Non-Metropolitan District
+E07000100,St Albans,Non-Metropolitan District
+E07000101,Stevenage,Non-Metropolitan District
+E07000102,Three Rivers,Non-Metropolitan District
+E07000103,Watford,Non-Metropolitan District
+E07000104,Welwyn Hatfield,Non-Metropolitan District
+E07000105,Ashford,Non-Metropolitan District
+E07000106,Canterbury,Non-Metropolitan District
+E07000107,Dartford,Non-Metropolitan District
+E07000108,Dover,Non-Metropolitan District
+E07000109,Gravesham,Non-Metropolitan District
+E07000110,Maidstone,Non-Metropolitan District
+E07000111,Sevenoaks,Non-Metropolitan District
+E07000112,Folkestone and Hythe,Non-Metropolitan District
+E07000112,Shepway,Non-Metropolitan District
+E07000113,Swale,Non-Metropolitan District
+E07000114,Thanet,Non-Metropolitan District
+E07000115,Tonbridge and Malling,Non-Metropolitan District
+E07000116,Tunbridge Wells,Non-Metropolitan District
+E07000117,Burnley,Non-Metropolitan District
+E07000118,Chorley,Non-Metropolitan District
+E07000119,Fylde,Non-Metropolitan District
+E07000120,Hyndburn,Non-Metropolitan District
+E07000121,Lancaster,Non-Metropolitan District
+E07000122,Pendle,Non-Metropolitan District
+E07000123,Preston,Non-Metropolitan District
+E07000124,Ribble Valley,Non-Metropolitan District
+E07000125,Rossendale,Non-Metropolitan District
+E07000126,South Ribble,Non-Metropolitan District
+E07000127,West Lancashire,Non-Metropolitan District
+E07000128,Wyre,Non-Metropolitan District
+E07000129,Blaby,Non-Metropolitan District
+E07000130,Charnwood,Non-Metropolitan District
+E07000131,Harborough,Non-Metropolitan District
+E07000132,Hinckley and Bosworth,Non-Metropolitan District
+E07000133,Melton,Non-Metropolitan District
+E07000134,North West Leicestershire,Non-Metropolitan District
+E07000135,Oadby and Wigston,Non-Metropolitan District
+E07000136,Boston,Non-Metropolitan District
+E07000137,East Lindsey,Non-Metropolitan District
+E07000138,Lincoln,Non-Metropolitan District
+E07000139,North Kesteven,Non-Metropolitan District
+E07000140,South Holland,Non-Metropolitan District
+E07000141,South Kesteven,Non-Metropolitan District
+E07000142,West Lindsey,Non-Metropolitan District
+E07000143,Breckland,Non-Metropolitan District
+E07000144,Broadland,Non-Metropolitan District
+E07000145,Great Yarmouth,Non-Metropolitan District
+E07000146,King's Lynn and West Norfolk,Non-Metropolitan District
+E07000147,North Norfolk,Non-Metropolitan District
+E07000148,Norwich,Non-Metropolitan District
+E07000149,South Norfolk,Non-Metropolitan District
+E07000150,Corby,Non-Metropolitan District
+E07000151,Daventry,Non-Metropolitan District
+E07000152,East Northamptonshire,Non-Metropolitan District
+E07000153,Kettering,Non-Metropolitan District
+E07000154,Northampton,Non-Metropolitan District
+E07000155,South Northamptonshire,Non-Metropolitan District
+E07000156,Wellingborough,Non-Metropolitan District
+E07000157,Alnwick,Non-Metropolitan District
+E07000158,Berwick-upon-Tweed,Non-Metropolitan District
+E07000159,Blyth Valley,Non-Metropolitan District
+E07000160,Castle Morpeth,Non-Metropolitan District
+E07000161,Tynedale,Non-Metropolitan District
+E07000162,Wansbeck,Non-Metropolitan District
+E07000163,Craven,Non-Metropolitan District
+E07000164,Hambleton,Non-Metropolitan District
+E07000165,Harrogate,Non-Metropolitan District
+E07000166,Richmondshire,Non-Metropolitan District
+E07000167,Ryedale,Non-Metropolitan District
+E07000168,Scarborough,Non-Metropolitan District
+E07000169,Selby,Non-Metropolitan District
+E07000170,Ashfield,Non-Metropolitan District
+E07000171,Bassetlaw,Non-Metropolitan District
+E07000172,Broxtowe,Non-Metropolitan District
+E07000173,Gedling,Non-Metropolitan District
+E07000174,Mansfield,Non-Metropolitan District
+E07000175,Newark and Sherwood,Non-Metropolitan District
+E07000176,Rushcliffe,Non-Metropolitan District
+E07000177,Cherwell,Non-Metropolitan District
+E07000178,Oxford,Non-Metropolitan District
+E07000179,South Oxfordshire,Non-Metropolitan District
+E07000180,Vale of White Horse,Non-Metropolitan District
+E07000181,West Oxfordshire,Non-Metropolitan District
+E07000182,Bridgnorth,Non-Metropolitan District
+E07000183,North Shropshire,Non-Metropolitan District
+E07000184,Oswestry,Non-Metropolitan District
+E07000185,Shrewsbury and Atcham,Non-Metropolitan District
+E07000186,South Shropshire,Non-Metropolitan District
+E07000187,Mendip,Non-Metropolitan District
+E07000188,Sedgemoor,Non-Metropolitan District
+E07000189,South Somerset,Non-Metropolitan District
+E07000190,Taunton Deane,Non-Metropolitan District
+E07000191,West Somerset,Non-Metropolitan District
+E07000192,Cannock Chase,Non-Metropolitan District
+E07000193,East Staffordshire,Non-Metropolitan District
+E07000194,Lichfield,Non-Metropolitan District
+E07000195,Newcastle-under-Lyme,Non-Metropolitan District
+E07000196,South Staffordshire,Non-Metropolitan District
+E07000197,Stafford,Non-Metropolitan District
+E07000198,Staffordshire Moorlands,Non-Metropolitan District
+E07000199,Tamworth,Non-Metropolitan District
+E07000200,Babergh,Non-Metropolitan District
+E07000201,Forest Heath,Non-Metropolitan District
+E07000202,Ipswich,Non-Metropolitan District
+E07000203,Mid Suffolk,Non-Metropolitan District
+E07000204,St Edmundsbury,Non-Metropolitan District
+E07000205,Suffolk Coastal,Non-Metropolitan District
+E07000206,Waveney,Non-Metropolitan District
+E07000207,Elmbridge,Non-Metropolitan District
+E07000208,Epsom and Ewell,Non-Metropolitan District
+E07000209,Guildford,Non-Metropolitan District
+E07000210,Mole Valley,Non-Metropolitan District
+E07000211,Reigate and Banstead,Non-Metropolitan District
+E07000212,Runnymede,Non-Metropolitan District
+E07000213,Spelthorne,Non-Metropolitan District
+E07000214,Surrey Heath,Non-Metropolitan District
+E07000215,Tandridge,Non-Metropolitan District
+E07000216,Waverley,Non-Metropolitan District
+E07000217,Woking,Non-Metropolitan District
+E07000218,North Warwickshire,Non-Metropolitan District
+E07000219,Nuneaton and Bedworth,Non-Metropolitan District
+E07000220,Rugby,Non-Metropolitan District
+E07000221,Stratford-on-Avon,Non-Metropolitan District
+E07000222,Warwick,Non-Metropolitan District
+E07000223,Adur,Non-Metropolitan District
+E07000224,Arun,Non-Metropolitan District
+E07000225,Chichester,Non-Metropolitan District
+E07000226,Crawley,Non-Metropolitan District
+E07000227,Horsham,Non-Metropolitan District
+E07000228,Mid Sussex,Non-Metropolitan District
+E07000229,Worthing,Non-Metropolitan District
+E07000230,Kennet,Non-Metropolitan District
+E07000231,North Wiltshire,Non-Metropolitan District
+E07000232,Salisbury,Non-Metropolitan District
+E07000233,West Wiltshire,Non-Metropolitan District
+E07000234,Bromsgrove,Non-Metropolitan District
+E07000235,Malvern Hills,Non-Metropolitan District
+E07000236,Redditch,Non-Metropolitan District
+E07000237,Worcester,Non-Metropolitan District
+E07000238,Wychavon,Non-Metropolitan District
+E07000239,Wyre Forest,Non-Metropolitan District
+E07000240,St Albans,Non-Metropolitan District
+E07000241,Welwyn Hatfield,Non-Metropolitan District
+E07000242,East Hertfordshire,Non-Metropolitan District
+E07000243,Stevenage,Non-Metropolitan District
+E07000244,East Suffolk,Non-Metropolitan District
+E07000245,West Suffolk,Non-Metropolitan District
+E07000246,Somerset West and Taunton,Non-Metropolitan District
+E09000001,City of London,London Borough
+E09000002,Barking and Dagenham,London Borough
+E09000003,Barnet,London Borough
+E09000004,Bexley,London Borough
+E09000005,Brent,London Borough
+E09000006,Bromley,London Borough
+E09000007,Camden,London Borough
+E09000008,Croydon,London Borough
+E09000009,Ealing,London Borough
+E09000010,Enfield,London Borough
+E09000011,Greenwich,London Borough
+E09000012,Hackney,London Borough
+E09000013,Hammersmith and Fulham,London Borough
+E09000014,Haringey,London Borough
+E09000015,Harrow,London Borough
+E09000016,Havering,London Borough
+E09000017,Hillingdon,London Borough
+E09000018,Hounslow,London Borough
+E09000019,Islington,London Borough
+E09000020,Kensington and Chelsea,London Borough
+E09000021,Kingston upon Thames,London Borough
+E09000022,Lambeth,London Borough
+E09000023,Lewisham,London Borough
+E09000024,Merton,London Borough
+E09000025,Newham,London Borough
+E09000026,Redbridge,London Borough
+E09000027,Richmond upon Thames,London Borough
+E09000028,Southwark,London Borough
+E09000029,Sutton,London Borough
+E09000030,Tower Hamlets,London Borough
+E09000031,Waltham Forest,London Borough
+E09000032,Wandsworth,London Borough
+E09000033,Westminster,London Borough
+S12000001,Aberdeen City,Council Area
+S12000002,Aberdeenshire,Council Area
+S12000003,Angus,Council Area
+S12000004,Argyll and Bute,Council Area
+S12000007,Dundee City,Council Area
+S12000009,East Dunbartonshire,Council Area
+S12000012,"Edinburgh, City of",Council Area
+S12000015,Fife,Council Area
+S12000016,Glasgow City,Council Area
+S12000022,North Lanarkshire,Council Area
+S12000024,Perth and Kinross,Council Area
+S12000025,Renfrewshire,Council Area
+S12000031,West Dunbartonshire,Council Area
+S12000032,West Lothian,Council Area
+S12000037,Glasgow City,Council Area
+S12000043,Glasgow City,Council Area
+S12000044,North Lanarkshire,Council Area
+S12000046,Glasgow City,Council Area
+S12000005,Clackmannanshire,Council Area
+S12000006,Dumfries and Galloway,Council Area
+S12000008,East Ayrshire,Council Area
+S12000010,East Lothian,Council Area
+S12000011,East Renfrewshire,Council Area
+S12000013,Na h-Eileanan Siar,Council Area
+S12000014,Falkirk,Council Area
+S12000017,Highland,Council Area
+S12000018,Inverclyde,Council Area
+S12000019,Midlothian,Council Area
+S12000020,Moray,Council Area
+S12000021,North Ayrshire,Council Area
+S12000023,Orkney Islands,Council Area
+S12000026,Scottish Borders,Council Area
+S12000027,Shetland Islands,Council Area
+S12000028,South Ayrshire,Council Area
+S12000029,South Lanarkshire,Council Area
+S12000030,Stirling,Council Area
+S12000033,Aberdeen City,Council Area
+S12000034,Aberdeenshire,Council Area
+S12000035,Argyll and Bute,Council Area
+S12000036,City of Edinburgh,Council Area
+S12000038,Renfrewshire,Council Area
+S12000039,West Dunbartonshire,Council Area
+S12000040,West Lothian,Council Area
+S12000041,Angus,Council Area
+S12000042,Dundee City,Council Area
+S12000045,East Dunbartonshire,Council Area
+S12000047,Fife,Council Area
+S12000048,Perth and Kinross,Council Area
+S12000049,Glasgow City,Council Area
+S12000050,North Lanarkshire,Council Area
+N09000001,Antrim and Newtownabbey,Local Government District
+N09000002,"Armagh City, Banbridge and Craigavon",Local Government District
+N09000002,"Armagh, Banbridge and Craigavon",Local Government District
+N09000003,Belfast,Local Government District
+N09000004,Causeway Coast and Glens,Local Government District
+N09000005,Derry City and Strabane,Local Government District
+N09000005,Derry and Strabane,Local Government District
+N09000006,Fermanagh and Omagh,Local Government District
+N09000007,Lisburn and Castlereagh,Local Government District
+N09000008,Mid and East Antrim,Local Government District
+N09000009,Mid Ulster,Local Government District
+N09000010,"Newry, Mourne and Down",Local Government District
+N09000011,Ards and North Down,Local Government District
+N09000011,North Down and Ards,Local Government District
