@@ -56,4 +56,4 @@ results<-rename(df,
                 real = Value,
                 value = MAD)
 # Write results
-write_excel_csv(results, "revised_data.csv")
+write_excel_csv(results, "../app/revised_data.csv")
