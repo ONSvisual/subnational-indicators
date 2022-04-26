@@ -32,13 +32,9 @@ raw <- map_df(sheets, ~mutate(read_excel(path, sheet = .x,
 
 # Clean data ---------------------------------
 
-# enrich with AREANM
+# enrich with AREANM values
 raw_geo <- left_join(raw, geographies, by = "AREACD") %>%
   relocate(c(AREANM, Geography), .after = AREACD)
-
-# Retrieve 2021 LTLA MAD scores
-MAD <- read_csv("../app/revised_data.csv") %>% 
-  select(AREACD = unique, Indicator, MAD = value)
 
 # pull in metadata
 df <- map_df(pull(distinct(raw_geo, Worksheet)), ~raw_geo %>%
@@ -50,9 +46,7 @@ df <- map_df(pull(distinct(raw_geo, Worksheet)), ~raw_geo %>%
                 Measure = pull(filter(metadata, Worksheet == .x), Measure),
                 Unit = pull(filter(metadata, Worksheet == .x), Unit)) %>%
            relocate(Value, .after = Unit)) %>% 
-  select(-Worksheet) %>% 
-  # add MAD scores
-  left_join(MAD, by = c("AREACD", "Indicator"))
+  select(-Worksheet)
 
 # Write data ---------------------------------
 cat("There may be some discrepancies between this data download and the accompanying dataset caused by rounding issues but these should be insignificant and are unlikely to affect any further analysis\n\n", file = "machine_readable.csv")
