@@ -920,13 +920,16 @@
               })
               .tickSize(0));
 
-              if(svgwidth < dvc.optional.mobileBreakpoint){//if mobile
+              // if(svgwidth < dvc.optional.mobileBreakpoint){//if mobile
                 d3.selectAll(".axis--x .tick text").each(function(d,i){//select all top ticks
                   if(i==1){//just the middle one
                     d3.select(this).attr('dy',-20)//move it up a bit
                   }
+                  if(i==2){
+                    d3.select(this).attr('dx',-20)
+                  }
                 })
-              }
+              // }
         }
 
         if (j == groups.length - 1) {
@@ -1519,14 +1522,14 @@
 
         posheadertable = postable.append('thead').append("tr");
 
-        posheadertable.append("th").attr("width", "70%").attr("class", "textCol").text("Positive indicators");
+        posheadertable.append("th").attr("width", "70%").attr("class", "textCol").text("Better than the median");
         // posheadertable.append("th").attr("width", "30%").attr("class", "numberCol").text("Value");
 
         negtable = d3.select("#negtable").append("table").attr("width", "98%");
 
         negheadertable = negtable.append('thead').append("tr");
 
-        negheadertable.append("th").attr("width", "70%").attr("class", "textCol").text("Negative indicators");
+        negheadertable.append("th").attr("width", "70%").attr("class", "textCol").text("Worse than the median");
         // negheadertable.append("th").attr("width", "30%").attr("class", "numberCol").text("Value");
 
         // formatTableNum = d3.format(".1f");
@@ -1560,8 +1563,10 @@
           return d['value'] > dvc.essential.threshold
         });
 
+
+        postable.selectAll('tbody').remove()
         if (PosFilteredData.length == 0) {
-          tablebody = postable.append('tbody')
+                    tablebody = postable.append('tbody')
           tablelines = tablebody.append("tr").attr("class", "tablelines");
 
           tablelines.append("td").text("No stand out indicators");
@@ -1583,6 +1588,8 @@
         NegFilteredData = areaIndicators.filter(function(d) {
           return d['value'] < (dvc.essential.threshold * -1)
         });
+
+        negtable.selectAll('tbody').remove()
 
         if (NegFilteredData.length == 0) {
           tablebody = negtable.append('tbody')
@@ -1606,16 +1613,14 @@
 
         //Out of the xx indicators for Fareham, xx were classified as positive, xx as negative and xx as neutral
 
-        if (PosFilteredData.length == 0) {
-          waswerenone = "were";
-        } else if (PosFilteredData.length == 1) {
-          waswerenone = "was";
-        } else {
-          waswerenone = "were";
+        function waswerenone(length){
+          if(length==1){return ' was '}
+          else {return ' were '}
         }
 
-        d3.select("#standoutLabel").html("Out of the " + areaIndicators.length + " measures available for <span style='color:#206095' class='areaHighlight'>" + name + "</span>, " + PosFilteredData.length + " " + waswerenone + " classified as <span style='color:#0F8577'>positive</span> and " + NegFilteredData
-          .length + " as <span style='color:#043b56'>negative</span>.");
+        d3.select("#standoutLabel").html("Out of the " + areaIndicators.length + " measures available for <span style='color:#206095' class='areaHighlight'>" + name + "</span>, " + PosFilteredData.length + waswerenone(PosFilteredData.length) + " <span style='color:#0F8577'>better than the median</span> and " + NegFilteredData
+          .length +waswerenone(NegFilteredData
+          .length) + "<span style='color:#043b56'>worse than the median</span>.");
 
         if(areaIndicators.length!=uniqueIndicators.length){
           d3.select("#unavailableMeasures").html("There are "+(uniqueIndicators.length-areaIndicators.length)+" measures unavailable for "+name+".")
