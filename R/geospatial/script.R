@@ -21,11 +21,15 @@ GET("https://www.gov.scot/binaries/content/documents/govscot/publications/statis
 # Extract GSS codes for each geography type ------------------------------------
 
 # Countries
-ctry_northern_ireland <- read_excel("RGC_March_2022_UK.xlsx", sheet = "N92_CTRY") %>% 
+ctry_uk <- tribble(
+  ~AREACD, ~AREANM, ~Geography,
+  "K02000001", "United Kingdom", "Country")
+
+ctry_england <- read_excel("RGC_March_2022_UK.xlsx", sheet = "E92_CTRY") %>% 
   select(AREACD = GEOGCD, AREANM = GEOGNM) %>% 
   mutate(Geography = "Country")
 
-ctry_england <- read_excel("RGC_March_2022_UK.xlsx", sheet = "E92_CTRY") %>% 
+ctry_northern_ireland <- read_excel("RGC_March_2022_UK.xlsx", sheet = "N92_CTRY") %>% 
   select(AREACD = GEOGCD, AREANM = GEOGNM) %>% 
   mutate(Geography = "Country")
 
@@ -37,7 +41,7 @@ ctry_wales <- read_excel("RGC_March_2022_UK.xlsx", sheet = "W92_CTRY") %>%
   select(AREACD = GEOGCD, AREANM = GEOGNM) %>% 
   mutate(Geography = "Country")
 
-ctry <- bind_rows(ctry_northern_ireland, ctry_england, ctry_scotland, ctry_wales)
+ctry <- bind_rows(ctry_uk, ctry_england, ctry_northern_ireland, ctry_scotland, ctry_wales)
 
 # Regions
 rgn <- read_excel("RGC_March_2022_UK.xlsx", sheet = "E12_RGN") %>% 
