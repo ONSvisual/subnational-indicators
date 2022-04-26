@@ -1,6 +1,7 @@
 AREACD,AREANM,Geography
-N92000002,Northern Ireland,Country
+K02000001,United Kingdom,Country
 E92000001,England,Country
+N92000002,Northern Ireland,Country
 S92000003,Scotland,Country
 W92000004,Wales,Country
 E12000001,North East,Region
