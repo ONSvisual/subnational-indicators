@@ -96,4 +96,5 @@ lgd <- read_excel("RGC_March_2022_UK.xlsx", sheet = "N09_LGD") %>%
 
 # Combine geography types and write results ------------------------------------
 bind_rows(ctry, rgn, cty, mcty, ua, md, nmd, londb, ca, lgd) %>% 
+  distinct(AREACD, .keep_all = TRUE) %>%
   write_csv("gss_codes.csv")
