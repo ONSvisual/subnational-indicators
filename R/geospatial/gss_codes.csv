@@ -130,10 +130,8 @@ W06000011,Swansea,Unitary Authority
 W06000012,Neath Port Talbot,Unitary Authority
 W06000013,Bridgend,Unitary Authority
 W06000014,Vale of Glamorgan,Unitary Authority
-W06000014,The Vale of Glamorgan,Unitary Authority
 W06000015,Cardiff,Unitary Authority
 W06000016,Rhondda Cynon Taf,Unitary Authority
-W06000016,"Rhondda, Cynon, Taff",Unitary Authority
 W06000017,Merthyr Tydfil,Unitary Authority
 W06000018,Caerphilly,Unitary Authority
 W06000019,Blaenau Gwent,Unitary Authority
@@ -291,7 +289,6 @@ E07000109,Gravesham,Non-Metropolitan District
 E07000110,Maidstone,Non-Metropolitan District
 E07000111,Sevenoaks,Non-Metropolitan District
 E07000112,Folkestone and Hythe,Non-Metropolitan District
-E07000112,Shepway,Non-Metropolitan District
 E07000113,Swale,Non-Metropolitan District
 E07000114,Thanet,Non-Metropolitan District
 E07000115,Tonbridge and Malling,Non-Metropolitan District
@@ -511,15 +508,12 @@ S12000049,Glasgow City,Council Area
 S12000050,North Lanarkshire,Council Area
 N09000001,Antrim and Newtownabbey,Local Government District
 N09000002,"Armagh City, Banbridge and Craigavon",Local Government District
-N09000002,"Armagh, Banbridge and Craigavon",Local Government District
 N09000003,Belfast,Local Government District
 N09000004,Causeway Coast and Glens,Local Government District
 N09000005,Derry City and Strabane,Local Government District
-N09000005,Derry and Strabane,Local Government District
 N09000006,Fermanagh and Omagh,Local Government District
 N09000007,Lisburn and Castlereagh,Local Government District
 N09000008,Mid and East Antrim,Local Government District
 N09000009,Mid Ulster,Local Government District
 N09000010,"Newry, Mourne and Down",Local Government District
 N09000011,Ards and North Down,Local Government District
-N09000011,North Down and Ards,Local Government District
