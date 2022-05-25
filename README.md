@@ -1,6 +1,6 @@
 # Subnational indicators explorer
 
-[See it live on the ONS website](https://www.ons.gov.uk/peoplepopulationandcommunity/wellbeing/articles/subnationalindicatorsexplorer/2022-01-06)
+The subnational indicators explorer brings together a core set of indicators, some of which align with some of the metrics selected to measure the progress of levelling up. [See it live on the ONS website](https://www.ons.gov.uk/peoplepopulationandcommunity/wellbeing/articles/subnationalindicatorsexplorer/2022-01-06)
 
 ## What's in this repo?
 
