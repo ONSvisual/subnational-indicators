@@ -5,11 +5,13 @@ library(tidyverse) ; library(readxl)
 # Read data ------------------------------
 
 # Metadata and indicators
-# Source: Open Government data
+# Source: ONS
 # URL: https://github.com/ONSdigital/LUDA
 metadata <- read_csv("metadata.csv")
-files <- list.files(path = "C:/Users/partrh/Downloads/LUDA-main/Output", pattern = "*.csv", full.names = TRUE)
-raw <- files %>%
+
+folder <- "C:/Users/partrh/Downloads/LUDA-main/Output"
+raw <- folder %>%
+  dir(pattern = "*.csv", full.names = T) %>% 
   setNames(nm = .) %>% 
   map_df(~read_csv(.x, col_types = cols(.default = "c")), .id = "Worksheet") %>%
   mutate(Worksheet = str_extract(Worksheet, "(?<=Output/)(.+)(?=\\.)")) %>% 
@@ -35,10 +37,12 @@ df <- raw %>%
     # reverse polarity
     Value = as.double(Value),
     Value = case_when(Polarity == -1 ~Value*(-1), TRUE ~ Value),
-    # calculate median absolute deviation
+    # median absolute deviation
     MAD = (Value - median(Value, na.rm = TRUE)) / median(abs(Value - median(Value, na.rm = TRUE))*1.4826, na.rm = TRUE),
     Value = case_when(Polarity == -1 ~abs(Value), TRUE ~ Value)) %>% 
   ungroup() %>% 
+  # sort as per technical annex 
+  arrange(factor(Worksheet, levels = pull(metadata, Worksheet))) %>%
   select(unique = AREACD, 
          group = AREANM, 
          Geography, Indicator, 
@@ -46,7 +50,7 @@ df <- raw %>%
          Category, Period, Measure,
          unit = Unit, 
          real = Value,
-         value = MAD) 
+         value = MAD)
 
 # Write results ------------------------------
 write_excel_csv(df, "../app/revised_data.csv")
