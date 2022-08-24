@@ -1,59 +1,49 @@
-# Machine readable file #
+#### Subnational Statistics Revised_data.csv to machine readable R Script ####
 
-library(tidyverse) ; library(sf) ; library(readxl)
+# 24th August 2022
+  # just for August 2022 iteration. Future iterations pull .csv files from D:/Coding_Repos/LUDA/Output directly
 
-# Load data ---------------------------------
+# remove all data and clear environment
 
-# Administrative geographies
-# Source: ONS OPen Geography Portal
-# URL: https://geoportal.statistics.gov.uk/datasets/register-of-geographic-codes-march-2022-for-the-united-kingdom/about
-geographies <- read_csv("geospatial/gss_codes.csv") %>% 
-  select(-Geography)
+rm(list = ls())
 
-# Local authority districts (2021)
-# Source: ONS Open Geography Portal
-# URL: https://geoportal.statistics.gov.uk/datasets/local-authority-districts-may-2021-uk-buc
-ltla <- read_csv("geospatial/Local_Authority_Districts_2021.csv") %>%
-  select(AREACD = LAD21CD) %>% 
-  pull(AREACD)
 
-# Metrics
-path <- "2022_04_22_MetricsData_input.xlsx"
-metadata <- read_xlsx(path, sheet = "Metadata")
+#### Import revised_data.csv ####
 
-sheets <- path %>%
-  excel_sheets() %>%
-  set_names() %>%
-  .[.!= "Metadata"]
+setwd("D:/Coding_Repos/subnational-indicators/app")
 
-raw <- map_df(sheets, ~mutate(read_excel(path, sheet = .x,
-                                         col_types = c("text", "numeric","text"),
-                                         skip = 1), Worksheet = .x))
+filename <- "revised_data.csv"
 
-# Clean data ---------------------------------
+data <-read.csv(filename)
 
-# enrich with AREANM
-raw_geo <- left_join(raw, geographies, by = "AREACD") %>%
-  relocate(c(AREANM, Geography), .after = AREACD)
 
-# Retrieve 2021 LTLA MAD scores
-MAD <- read_csv("../app/revised_data.csv") %>% 
-  select(AREACD = unique, Indicator, MAD = value)
+#### Rename and Select Columns for machine_readable csv File ####
 
-# pull in metadata
-df <- map_df(pull(distinct(raw_geo, Worksheet)), ~raw_geo %>%
-         filter(Worksheet == .x) %>%
-         mutate(Indicator = pull(filter(metadata, Worksheet == .x), Indicator),
-                Shortened = pull(filter(metadata, Worksheet == .x), Shortened),
-                Category = pull(filter(metadata, Worksheet == .x), Category),
-                Period = pull(filter(metadata, Worksheet == .x), Period),
-                Measure = pull(filter(metadata, Worksheet == .x), Measure),
-                Unit = pull(filter(metadata, Worksheet == .x), Unit)) %>%
-           relocate(Value, .after = Unit)) %>% 
-  select(-Worksheet) %>% 
-  # add MAD scores
-  left_join(MAD, by = c("AREACD", "Indicator"))
+csv_output <- rename(data, AREACD = ï..unique,
+                     AREANM = group,
+                     Unit = unit,
+                     Value = real,
+                     MAD = value) %>% 
+  select(all_of(c("AREACD",
+                  "AREANM",
+                  "Geography",
+                  "Indicator",
+                  "Category",
+                  "Period",
+                  "Measure",
+                  "Unit",
+                  "Value",
+                  "MAD")))
 
-# Write data ---------------------------------
-cat("There may be some discrepancies between this data download and the accompanying dataset caused by rounding issues but these should be insignificant and are unlikely to affect any further analysis\n\n", file = "machine_readable.csv")
-write_excel_csv(select(df, -c(Shortened)), "machine_readable.csv", append = TRUE, col_names = TRUE)
+
+#### Set up working directory structure for output ####
+
+setwd("D:/Coding_Repos/subnational-indicators/app")
+
+date <- Sys.Date()
+
+
+#### Write output ####
+
+cat("There may be some discrepancies between this data download and the accompanying dataset caused by rounding issues but these should be insignificant and are unlikely to affect any further analysis\n\n", file = paste0(date, "_machine_readable.csv"))
+write_excel_csv(csv_output, paste0(date, "_machine_readable.csv"), append = TRUE, col_names = TRUE)
