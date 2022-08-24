@@ -28,7 +28,7 @@ Smoke,Adults that currently smoke cigarettes,Cigarette smokers,Spreading opportu
 Overweight_child,Children (4 to 5 years old) overweight and obesity prevalence,Overweight children at reception age,Spreading opportunity and improving public services,Negative,2019 - 2020,Percentage,%,,,Y
 Overweight_adult,Adult (18+) overweight and obesity prevalence,Overweight adults,Spreading opportunity and improving public services,Negative,2020 - 2021,Percentage,%,,Updated,Y
 CancerDiagnosis,Cancer diagnosis at stage 1 and 2,Cancer diagnosis at stage 1 and 2,Spreading opportunity and improving public services,,2018,Percentage,%,,New,Y
-Under75MortalityRate,"Under 75 mortality rate from cardiovascular diseases considered preventable (per 100,000 population)",Under 75 cardiovascular mortality rate,Spreading opportunity and improving public services,Negative,2016 - 2018,Rate,NA,,New,Y
+Under75MortalityRate,"Under 75 mortality rate from cardiovascular diseases considered preventable (per 100,000 population)",Aged under 75 years cardiovascular mortality rate,Spreading opportunity and improving public services,Negative,2016 - 2018,Rate,NA,,New,Y
 LifeSatisfaction,Average life satisfaction rating,Life satisfaction,Spreading opportunity and improving public services,,04/2020 - 03/2021,Rating,NA,,,Y
 Worthwhile,Average feeling that things done in life are worthwhile rating,Feeling life is worthwhile,Spreading opportunity and improving public services,,04/2020 - 03/2021,Rating,NA,,,Y
 Happiness,Average happiness rating,Happiness,Spreading opportunity and improving public services,,04/2020 - 03/2021,Rating,NA,,,Y
