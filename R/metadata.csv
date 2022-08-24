@@ -1,11 +1,11 @@
 Worksheet,Indicator,Shortened,Category,Polarity,Period,Measure,Unit,Jitter,August 2022 update,Regional Values
-GVAperhourworked,Gross value added per hour worked,Gross value added per hour worked,"Boosting productivity, pay, jobs and living standards",,2020,Pounds,£,,Updated,Y
-PAYweekMEDIAN,Gross median weekly pay,Gross median weekly pay,"Boosting productivity, pay, jobs and living standards",,2021,Pounds,£,,,Y
+GVAperhourworked,Gross value added per hour worked,Gross value added per hour worked,"Boosting productivity, pay, jobs and living standards",,2020,Pounds,ï¿½,,Updated,Y
+PAYweekMEDIAN,Gross median weekly pay,Gross median weekly pay,"Boosting productivity, pay, jobs and living standards",,2021,Pounds,ï¿½,,,Y
 RateEmployment,Employment rate for 16 to 64 year olds,Employment rate for 16 to 64 year olds,"Boosting productivity, pay, jobs and living standards",,04/2021 - 03/2022,Percentage,%,,Updated,Y
-GDHIperhead,"Gross disposable household income, per head",Gross disposable household income per head,"Boosting productivity, pay, jobs and living standards",,2019,Pounds,£,,Updated,Y
-UKExports,Total value of UK exports,Total value of UK exports,"Boosting productivity, pay, jobs and living standards",,2020,Pounds,£,exclude,New,Y
-InwardFDI,Inward foreign direct investment (FDI),Inward foreign direct investment (FDI),"Boosting productivity, pay, jobs and living standards",,2019,Pounds,£,exclude,New,Y
-OutwardFDI,Outward foreign direct investment (FDI),Outward foreign direct investment (FDI),"Boosting productivity, pay, jobs and living standards",,2019,Pounds,£,exclude,New,Y
+GDHIperhead,"Gross disposable household income, per head",Gross disposable household income per head,"Boosting productivity, pay, jobs and living standards",,2019,Pounds,ï¿½,,Updated,Y
+UKExports,Total value of UK exports,Total value of UK exports,"Boosting productivity, pay, jobs and living standards",,2020,Pounds,ï¿½,exclude,New,Y
+InwardFDI,Inward foreign direct investment (FDI),Inward foreign direct investment (FDI),"Boosting productivity, pay, jobs and living standards",,2019,Pounds,ï¿½,exclude,New,Y
+OutwardFDI,Outward foreign direct investment (FDI),Outward foreign direct investment (FDI),"Boosting productivity, pay, jobs and living standards",,2019,Pounds,ï¿½,exclude,New,Y
 TIMEtravelWORKPT,Average travel time to nearest employment centre with 500 to 4999 jobs available by public transport or walking,Public transport or walk to employment centre with 500 to 4999 jobs,"Boosting productivity, pay, jobs and living standards",Negative,2019 revised,Minutes,mins,,Updated,Y
 TIMEtravelWORKCar,Average travel time to nearest employment centre with 500 to 4999 jobs available by car,Drive to employment centre with 500 to 4999 jobs,"Boosting productivity, pay, jobs and living standards",Negative,2019 revised,Minutes,mins,,Updated,Y
 TIMEtravelWORKBike,Average travel time to nearest employment centre with 500 to 4999 jobs available by cycle,Cycle to employment centre with 500 to 4999 jobs,"Boosting productivity, pay, jobs and living standards",Negative,2019 revised,Minutes,mins,,Updated,Y
@@ -14,13 +14,13 @@ broadbandAVAIL,Premises with gigabit capable broadband,Gigabit capable broadband
 KS2Attainment,"Percentage of pupils meeting the expected standard in reading, writing and maths by end of primary school (KS2)",Pupils at expected standards by end of primary school,Spreading opportunity and improving public services,,2019 revised,Percentage ,%,,Updated,Y
 GCSEbyAge19,Young people achieving GCSEs (and equivalent qualifications) in English and maths by age 19,GCSEs (and equivalent) in English and maths by age 19,Spreading opportunity and improving public services,,2020 - 2021,Percentage,%,,,Y
 Ofsted,Schools and nurseries rated good or outstanding by OFSTED,Schools and nurseries rated good or outstanding,Spreading opportunity and improving public services,,09/2020 - 12/2021,Percentage,%,,Updated,Y
-EarlyYearsFoundationComms,5 year olds achieving 'expected level' on communication early learning goals,Early years communication,Spreading opportunity and improving public services,,2019,Percentage,%,,,Y
-EarlyYearsFoundationLiteracy,5 year olds achieving 'expected level' on literacy early learning goals,Early years literacy,Spreading opportunity and improving public services,,2019,Percentage,%,,,Y
-EarlyYearsFoundationMaths,5 year olds achieving 'expected level' on maths early learning goals,Early years maths,Spreading opportunity and improving public services,,2019,Percentage,%,,,Y
+EarlyYearsFoundationComms,5 year olds achieving 'expected level' on communication early learning goals,Children at expected standard for communication and language by end of early years foundation stage,Spreading opportunity and improving public services,,2019,Percentage,%,,,Y
+EarlyYearsFoundationLiteracy,5 year olds achieving 'expected level' on literacy early learning goals,Children at expected standard for literacy by end of early years foundation stage,Spreading opportunity and improving public services,,2019,Percentage,%,,,Y
+EarlyYearsFoundationMaths,5 year olds achieving 'expected level' on maths early learning goals,Children at expected standard for maths by end of early years foundation stage,Spreading opportunity and improving public services,,2019,Percentage,%,,,Y
 FESkillsAchievements,"19+ further education and skills achievements (qualifications) excluding community learning, multiply and bootcamps",Aged 19 years and over further education and skills achievements,Spreading opportunity and improving public services,,2020/21,Achievements,NA,,New,
 ApprenticeshipStarts,Number of starts on apprenticeships,Apprenticeships starts,Spreading opportunity and improving public services,,2021/22,Starts,NA,exclude,Updated,Y
 ApprenticeshipCompletions,Number of completions on apprenticeships,Apprenticeships completions,Spreading opportunity and improving public services,,2021/22,Completions,NA,exclude,Updated,Y
-Level3+Qualifications,Proportion of the population aged 16 €“ 64 with level 3+ qualifications,Aged 16 to 64 years level 3 or above qualifications,Spreading opportunity and improving public services,,2021,Percentage,%,,New,Y
+Level3+Qualifications,Proportion of the population aged 16 ï¿½ï¿½ 64 with level 3+ qualifications,Aged 16 to 64 years level 3 or above qualifications,Spreading opportunity and improving public services,,2021,Percentage,%,,New,Y
 FESkillsParticipation,19+ further education and skills participation,Aged 19 years and over further education and skills participation,Spreading opportunity and improving public services,,2020/21,Participation,NA,,New,Y
 HLEFemale,Female healthy life expectancy,Female healthy life expectancy,Spreading opportunity and improving public services,,2018 - 2020,Years,yrs,,,Y
 HLEMale,Male healthy life expectancy,Male healthy life expectancy,Spreading opportunity and improving public services,,2018 - 2020,Years,yrs,,,Y
