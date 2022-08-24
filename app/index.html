@@ -723,7 +723,7 @@
 
       height = (heightper * groups.length) + (spaceForLabels * (breakingPoints.length - 1)) + margin.top + margin.bottom;
 
-      svg.attr("height", height + "px")
+      svg.attr("height", height + 20 + "px")
 
       var formatValue = d3.format(",.1f");
 
@@ -799,7 +799,7 @@
 
         if (svgwidth < dvc.optional.mobileBreakpoint) {
           // set label y on mobile
-          g.select(".label").attr("y", 20);
+          g.select(".label").attr("y", 13);
 
           numberticks = dvc.optional.x_num_ticks_sm_md[0];
 
@@ -1316,7 +1316,7 @@
 
       //add xaxislabel
       svg.append("g")
-        .attr("transform", "translate(" + (svgwidth - margin.right) + "," + (height + 20) + ")")
+        .attr("transform", "translate(" + (svgwidth - margin.right) + "," + (height + 40) + ")")
         .append("text")
         .attr("id", "xaxislabel")
         .attr("text-anchor", "end")
@@ -1796,8 +1796,7 @@
           });
 
         });
-
-        pymChild.sendHeight()
+		pymChild.sendHeight();
       }
 
 
