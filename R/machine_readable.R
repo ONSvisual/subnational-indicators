@@ -2,13 +2,18 @@
 
 library(tidyverse)
 
+# Local Authority districts (2021)
+# Source: ONS Open Geography Portal
+# URL: https://geoportal.statistics.gov.uk/datasets/local-authority-districts-may-2021-uk-buc
+lad <- pull(read_csv("geospatial/Local_Authority_Districts_2021.csv"), LAD21CD)
+
 # Metadata and indicators
 # Source: ONS
 # URL: https://github.com/ONSdigital/LUDA
 metadata <- read_csv("metadata.csv")
 
 folder <- "../../LUDA/Output"
-raw <- folder %>%
+jitter <- folder %>%
   dir(pattern = "*.csv", full.names = T) %>% 
   setNames(nm = .) %>% 
   map_df(~read_csv(.x, col_types = cols(.default = "c")), .id = "Worksheet") %>%
@@ -21,14 +26,7 @@ raw <- folder %>%
   # join metadata
   select(-Category) %>% 
   left_join(select(metadata, Worksheet, Category), by = "Worksheet") %>% 
-  select(Worksheet, Polarity, AREACD, AREANM, Geography, Indicator, Category, Period, Measure, Unit, Value)
-  
-# Local Authority districts (2021)
-# Source: ONS Open Geography Portal
-# URL: https://geoportal.statistics.gov.uk/datasets/local-authority-districts-may-2021-uk-buc
-lad <- pull(read_csv("geospatial/Local_Authority_Districts_2021.csv"), LAD21CD)
-
-mad <- raw %>% 
+  select(Worksheet, Polarity, AREACD, AREANM, Geography, Indicator, Category, Period, Measure, Unit, Value) %>% 
   filter(AREACD %in% lad) %>% # filter by local authority
   # drop Welsh names
   mutate(AREANM = case_when(str_detect(AREANM, "/") ~ str_remove_all(AREANM, "\\/.*"), TRUE ~ AREANM)) %>% 
@@ -45,11 +43,50 @@ mad <- raw %>%
     Value = case_when(Polarity == -1 ~abs(Value), TRUE ~ Value)) %>% 
   ungroup()
 
-non_mad <- raw %>% 
-  filter(!AREACD %in% lad) %>% 
-  mutate(MAD = as.character(NA)) 
+non_jitter <- folder %>%
+  dir(pattern = "*.csv", full.names = T) %>% 
+  setNames(nm = .) %>% 
+  map_df(~read_csv(.x, col_types = cols(.default = "c")), .id = "Worksheet") %>%
+  mutate(Worksheet = str_extract(Worksheet, "(?<=Output/)(.+)(?=\\.)")) %>% 
+  filter(
+    # include indicators that aren't to be normalised
+    Worksheet %in% pull(filter(metadata, Jitter == "exclude"), Worksheet),
+    # drop rows with missing values
+    !is.na(Value)) %>% 
+  # join metadata
+  select(-Category) %>% 
+  left_join(select(metadata, Worksheet, Category), by = "Worksheet") %>% 
+  select(Worksheet, Polarity, AREACD, AREANM, Geography, Indicator, Category, Period, Measure, Unit, Value) %>% 
+  filter(AREACD %in% lad) %>% # filter by local authority
+  # drop Welsh names
+  mutate(AREANM = case_when(str_detect(AREANM, "/") ~ str_remove_all(AREANM, "\\/.*"), TRUE ~ AREANM)) %>% 
+  group_by(Worksheet) %>% 
+  filter(Period == max(Period)) %>% # filter by latest period
+  ungroup() %>% 
+  mutate(MAD = as.character(NA))
+  
+other_geographies <- folder %>%
+  dir(pattern = "*.csv", full.names = T) %>% 
+  setNames(nm = .) %>% 
+  map_df(~read_csv(.x, col_types = cols(.default = "c")), .id = "Worksheet") %>%
+  mutate(Worksheet = str_extract(Worksheet, "(?<=Output/)(.+)(?=\\.)")) %>% 
+  filter(
+    # drop rows with missing values
+    !is.na(Value)) %>% 
+  # join metadata
+  select(-Category) %>% 
+  left_join(select(metadata, Worksheet, Category), by = "Worksheet") %>% 
+  select(Worksheet, Polarity, AREACD, AREANM, Geography, Indicator, Category, Period, Measure, Unit, Value) %>% 
+  filter(!AREACD %in% lad) %>% # exclude local authorities
+  group_by(Worksheet) %>% 
+  filter(Period == max(Period)) %>% # filter by latest period
+  ungroup() %>% 
+  mutate(MAD = as.character(NA))
 
-df <- bind_rows(mutate(mad, Value = as.character(Value), MAD = as.character(MAD)), non_mad) %>% 
+df <- bind_rows(
+  mutate(jitter, Value = as.character(Value), MAD = as.character(MAD)), 
+  non_jitter,
+  other_geographies) %>% 
   # sort as per technical annex 
   arrange(factor(Worksheet, levels = pull(metadata, Worksheet))) %>% 
   select(-c(Worksheet, Polarity))
