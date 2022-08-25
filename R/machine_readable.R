@@ -13,23 +13,26 @@ lad <- pull(read_csv("geospatial/Local_Authority_Districts_2021.csv"), LAD21CD)
 metadata <- read_csv("metadata.csv")
 
 folder <- "../../LUDA/Output"
-jitter <- folder %>%
+raw <- folder %>%
   dir(pattern = "*.csv", full.names = T) %>% 
   setNames(nm = .) %>% 
   map_df(~read_csv(.x, col_types = cols(.default = "c")), .id = "Worksheet") %>%
   mutate(Worksheet = str_extract(Worksheet, "(?<=Output/)(.+)(?=\\.)")) %>% 
+  select(Worksheet, Polarity, AREACD, AREANM, Geography, Indicator, Category, Period, Measure, Unit, Value)
+
+jitter <- raw %>% 
   filter(
+    # filter by local authority
+    AREACD %in% lad,
     # exclude indicators that aren't to be normalised
     !Worksheet %in% pull(filter(metadata, Jitter == "exclude"), Worksheet),
     # drop rows with missing values
     !is.na(Value)) %>% 
+  # drop Welsh names
+  mutate(AREANM = case_when(str_detect(AREANM, "/") ~ str_remove_all(AREANM, "\\/.*"), TRUE ~ AREANM)) %>% 
   # join metadata
   select(-Category) %>% 
   left_join(select(metadata, Worksheet, Category), by = "Worksheet") %>% 
-  select(Worksheet, Polarity, AREACD, AREANM, Geography, Indicator, Category, Period, Measure, Unit, Value) %>% 
-  filter(AREACD %in% lad) %>% # filter by local authority
-  # drop Welsh names
-  mutate(AREANM = case_when(str_detect(AREANM, "/") ~ str_remove_all(AREANM, "\\/.*"), TRUE ~ AREANM)) %>% 
   group_by(Worksheet) %>% 
   filter(Period == max(Period)) %>% # filter by latest period
   ungroup() %>% 
@@ -41,48 +44,43 @@ jitter <- folder %>%
     # median absolute deviation
     MAD = (Value - median(Value, na.rm = TRUE)) / median(abs(Value - median(Value, na.rm = TRUE))*1.4826, na.rm = TRUE),
     Value = case_when(Polarity == -1 ~abs(Value), TRUE ~ Value)) %>% 
-  ungroup()
+  ungroup() %>% 
+  relocate(Category, .after = Indicator)
 
-non_jitter <- folder %>%
-  dir(pattern = "*.csv", full.names = T) %>% 
-  setNames(nm = .) %>% 
-  map_df(~read_csv(.x, col_types = cols(.default = "c")), .id = "Worksheet") %>%
-  mutate(Worksheet = str_extract(Worksheet, "(?<=Output/)(.+)(?=\\.)")) %>% 
+non_jitter <- raw %>% 
   filter(
+    # filter by local authority
+    AREACD %in% lad,
     # include indicators that aren't to be normalised
     Worksheet %in% pull(filter(metadata, Jitter == "exclude"), Worksheet),
     # drop rows with missing values
     !is.na(Value)) %>% 
+  mutate(AREANM = case_when(str_detect(AREANM, "/") ~ str_remove_all(AREANM, "\\/.*"), TRUE ~ AREANM)) %>% 
   # join metadata
   select(-Category) %>% 
   left_join(select(metadata, Worksheet, Category), by = "Worksheet") %>% 
-  select(Worksheet, Polarity, AREACD, AREANM, Geography, Indicator, Category, Period, Measure, Unit, Value) %>% 
-  filter(AREACD %in% lad) %>% # filter by local authority
-  # drop Welsh names
-  mutate(AREANM = case_when(str_detect(AREANM, "/") ~ str_remove_all(AREANM, "\\/.*"), TRUE ~ AREANM)) %>% 
   group_by(Worksheet) %>% 
   filter(Period == max(Period)) %>% # filter by latest period
   ungroup() %>% 
-  mutate(MAD = as.character(NA))
+  mutate(MAD = as.character(NA)) %>% 
+  relocate(Category, .after = Indicator)
   
-other_geographies <- folder %>%
-  dir(pattern = "*.csv", full.names = T) %>% 
-  setNames(nm = .) %>% 
-  map_df(~read_csv(.x, col_types = cols(.default = "c")), .id = "Worksheet") %>%
-  mutate(Worksheet = str_extract(Worksheet, "(?<=Output/)(.+)(?=\\.)")) %>% 
+other_geographies <- raw %>% 
   filter(
+    # exclude local authorities
+    !AREACD %in% lad,
     # drop rows with missing values
     !is.na(Value)) %>% 
   # join metadata
   select(-Category) %>% 
   left_join(select(metadata, Worksheet, Category), by = "Worksheet") %>% 
-  select(Worksheet, Polarity, AREACD, AREANM, Geography, Indicator, Category, Period, Measure, Unit, Value) %>% 
-  filter(!AREACD %in% lad) %>% # exclude local authorities
   group_by(Worksheet) %>% 
   filter(Period == max(Period)) %>% # filter by latest period
   ungroup() %>% 
-  mutate(MAD = as.character(NA))
-
+  mutate(MAD = as.character(NA)) %>% 
+  relocate(Category, .after = Indicator) 
+  
+# Join dataframes
 df <- bind_rows(
   mutate(jitter, Value = as.character(Value), MAD = as.character(MAD)), 
   non_jitter,
