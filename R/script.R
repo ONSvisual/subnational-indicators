@@ -9,7 +9,7 @@ library(tidyverse) ; library(readxl)
 # URL: https://github.com/ONSdigital/LUDA
 metadata <- read_csv("metadata.csv")
 
-folder <- "../LUDA-main/Output"
+folder <- "../../LUDA/Output"
 raw <- folder %>%
   dir(pattern = "*.csv", full.names = T) %>% 
   setNames(nm = .) %>% 
