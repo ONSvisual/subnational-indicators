@@ -1,49 +1,59 @@
-#### Subnational Statistics Revised_data.csv to machine readable R Script ####
+# Machine readable #
 
-# 24th August 2022
-  # just for August 2022 iteration. Future iterations pull .csv files from D:/Coding_Repos/LUDA/Output directly
+library(tidyverse)
 
-# remove all data and clear environment
+# Metadata and indicators
+# Source: ONS
+# URL: https://github.com/ONSdigital/LUDA
+metadata <- read_csv("metadata.csv")
 
-rm(list = ls())
+folder <- "../../LUDA/Output"
+raw <- folder %>%
+  dir(pattern = "*.csv", full.names = T) %>% 
+  setNames(nm = .) %>% 
+  map_df(~read_csv(.x, col_types = cols(.default = "c")), .id = "Worksheet") %>%
+  mutate(Worksheet = str_extract(Worksheet, "(?<=Output/)(.+)(?=\\.)")) %>% 
+  filter(
+    # exclude indicators that aren't to be normalised
+    !Worksheet %in% pull(filter(metadata, Jitter == "exclude"), Worksheet),
+    # drop rows with missing values
+    !is.na(Value)) %>% 
+  # join metadata
+  select(-Category) %>% 
+  left_join(select(metadata, Worksheet, Category), by = "Worksheet") %>% 
+  select(Worksheet, Polarity, AREACD, AREANM, Geography, Indicator, Category, Period, Measure, Unit, Value)
+  
+# Local Authority districts (2021)
+# Source: ONS Open Geography Portal
+# URL: https://geoportal.statistics.gov.uk/datasets/local-authority-districts-may-2021-uk-buc
+lad <- pull(read_csv("geospatial/Local_Authority_Districts_2021.csv"), LAD21CD)
 
+mad <- raw %>% 
+  filter(AREACD %in% lad) %>% # filter by local authority
+  # drop Welsh names
+  mutate(AREANM = case_when(str_detect(AREANM, "/") ~ str_remove_all(AREANM, "\\/.*"), TRUE ~ AREANM)) %>% 
+  group_by(Worksheet) %>% 
+  filter(Period == max(Period)) %>% # filter by latest period
+  ungroup() %>% 
+  group_by(Worksheet) %>% 
+  mutate(
+    # reverse polarity
+    Value = as.double(Value),
+    Value = case_when(Polarity == -1 ~Value*(-1), TRUE ~ Value),
+    # median absolute deviation
+    MAD = (Value - median(Value, na.rm = TRUE)) / median(abs(Value - median(Value, na.rm = TRUE))*1.4826, na.rm = TRUE),
+    Value = case_when(Polarity == -1 ~abs(Value), TRUE ~ Value)) %>% 
+  ungroup()
 
-#### Import revised_data.csv ####
+non_mad <- raw %>% 
+  filter(!AREACD %in% lad) %>% 
+  mutate(MAD = as.character(NA)) 
 
-setwd("D:/Coding_Repos/subnational-indicators/app")
+df <- bind_rows(mutate(mad, Value = as.character(Value), MAD = as.character(MAD)), non_mad) %>% 
+  # sort as per technical annex 
+  arrange(factor(Worksheet, levels = pull(metadata, Worksheet))) %>% 
+  select(-c(Worksheet, Polarity))
 
-filename <- "revised_data.csv"
-
-data <-read.csv(filename)
-
-
-#### Rename and Select Columns for machine_readable csv File ####
-
-csv_output <- rename(data, AREACD = ï..unique,
-                     AREANM = group,
-                     Unit = unit,
-                     Value = real,
-                     MAD = value) %>% 
-  select(all_of(c("AREACD",
-                  "AREANM",
-                  "Geography",
-                  "Indicator",
-                  "Category",
-                  "Period",
-                  "Measure",
-                  "Unit",
-                  "Value",
-                  "MAD")))
-
-
-#### Set up working directory structure for output ####
-
-setwd("D:/Coding_Repos/subnational-indicators/app")
-
-date <- Sys.Date()
-
-
-#### Write output ####
-
-cat("There may be some discrepancies between this data download and the accompanying dataset caused by rounding issues but these should be insignificant and are unlikely to affect any further analysis\n\n", file = paste0(date, "_machine_readable.csv"))
-write_excel_csv(csv_output, paste0(date, "_machine_readable.csv"), append = TRUE, col_names = TRUE)
+# write results
+cat("There may be some discrepancies between this data download and the accompanying dataset caused by rounding issues but these should be insignificant and are unlikely to affect any further analysis\n\n", file = "machine_readable.csv")
+write_excel_csv(df, "machine_readable.csv", append = TRUE, col_names = TRUE)
