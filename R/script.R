@@ -44,8 +44,8 @@ df <- raw_df %>%
   filter(Period == max(Period)) %>% # filter by latest period
   ungroup() %>% 
   # join metadata
-  select(-Category) %>% 
-  left_join(select(metadata, Worksheet, Shortened, Category), by = "Worksheet") %>% 
+  select(-c(Category,Period)) %>% 
+  left_join(select(metadata, Worksheet, Shortened, Category, Period), by = "Worksheet") %>% 
   group_by(Worksheet) %>% 
   mutate(
     # reverse polarity
