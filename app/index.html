@@ -1096,6 +1096,7 @@
                 d3.select("#info").html("");
 
                 $("#dropselect").val(null).trigger('chosen:updated');
+                resetView()
               }
             })
 
@@ -1104,33 +1105,7 @@
 
 
           } else {
-            clicked = false;
-
-            d3.selectAll(".cell").classed("notselected", false)
-            d3.selectAll(".cell").classed("cellspermselected", false);
-            d3.selectAll(".cellspermselected2").attr('fill', '#aabfcd')
-            d3.selectAll(".cell").classed("cellspermselected2", false);
-            d3.selectAll(".cell").attr("pointer-events", "all");
-
-            resetZoom();
-            clearPlotValues();
-            clearLegend();
-            clearTable();
-            clearDataTable();
-
-            // clear second chosen dropdown
-            $('#dropselect2').val('').trigger('chosen:updated')
-            listnames = []; //clear stored names in the second dropdown
-            listcodes = []; //clear colours stored
-
-            // hide comparison
-            d3.select("#detaildiv").style("display", "none")
-
-            // hide comparison
-            d3.select("#dataTable").style("display", "none")
-
-            //resend height to pym
-            pymChild.sendHeight()
+            resetView()
 
           }
         });
@@ -1139,6 +1114,40 @@
         d3.select("div.chosen-search").append('label').attr('for', 'choseninput').attr('class', 'visuallyhidden').text("Type to choose a local authority.")
       } //end selectlist
 
+
+      function resetView(){
+        clicked = false;
+
+        d3.selectAll(".cell").classed("notselected", false)
+        d3.selectAll(".cell").classed("cellspermselected", false);
+        d3.selectAll(".cellspermselected2").attr('fill', '#aabfcd')
+        d3.selectAll(".cell").classed("cellspermselected2", false);
+        d3.selectAll(".cell").attr("pointer-events", "all");
+
+        resetZoom();
+        clearPlotValues();
+        clearLegend();
+        clearTable();
+        clearDataTable();
+
+        // clear second chosen dropdown
+        $('#dropselect2').val('').trigger('chosen:updated')
+        listnames = []; //clear stored names in the second dropdown
+        listcodes = []; //clear colours stored
+
+        // hide comparison
+        d3.select("#detaildiv").style("display", "none")
+
+        // hide comparison
+        d3.select("#dataTable").style("display", "none")
+
+        // clear unavailableMeasures
+        d3.select("#unavailableMeasures").html("")
+
+
+        //resend height to pym
+        pymChild.sendHeight()
+      }
 
       function multiselect(datacsv) {
 
