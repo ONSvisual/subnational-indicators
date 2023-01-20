@@ -40,7 +40,7 @@
       font-size: 18px;
     }
 
-    p{
+    p {
       font-size: 18px;
       font-weight: 400;
       line-height: 32px;
@@ -48,7 +48,7 @@
       padding: 0; */
     }
 
-    #unavailableMeasures p{
+    #unavailableMeasures p {
       font-size: 18px;
       font-weight: 400;
       line-height: 32px;
@@ -423,8 +423,11 @@
 
     /* Map */
 
-    #map .mapboxgl-canvas-container.mapboxgl-interactive, .mapboxgl-ctrl-group button.mapboxgl-ctrl-compass, .maplibregl-canvas-container.maplibregl-interactive, .maplibregl-ctrl-group button.maplibregl-ctrl-compass{
-      cursor:default!important;
+    #map .mapboxgl-canvas-container.mapboxgl-interactive,
+    .mapboxgl-ctrl-group button.mapboxgl-ctrl-compass,
+    .maplibregl-canvas-container.maplibregl-interactive,
+    .maplibregl-ctrl-group button.maplibregl-ctrl-compass {
+      cursor: default !important;
     }
 
     @media (min-width: 600px) {
@@ -580,8 +583,6 @@
       border-radius: 5px;
       padding: 5px;
     }
-
-
   </style>
 </head>
 
@@ -609,14 +610,19 @@
     </div>
     <div class="col-sm-6 col-xs-12" id="postable">
     </div>
-    <div class="col-xs-12" style="display:block;"><p style="margin-top:24px;" id="unavailableMeasures"><p></div>
+    <div class="col-xs-12" style="display:block;">
+      <p style="margin-top:24px;" id="unavailableMeasures">
+      <p>
+    </div>
   </div>
 
   <div class="row">
     <h2 id="measuresLabel">Explore all measures</h2>
     <div id="detaildiv">
-      <div id="indic_Pop" class="detailsvar" role="group" style="padding: 0px 0px 30px 0px; min-height: 20px; width: 100%">
-        <p id="summary0" style="font-weight: bold; font-size: 16px; color: rgb(32, 96, 149);">Select areas to compare</p>
+      <div id="indic_Pop" class="detailsvar" role="group"
+        style="padding: 0px 0px 30px 0px; min-height: 20px; width: 100%">
+        <p id="summary0" style="font-weight: bold; font-size: 16px; color: rgb(32, 96, 149);">Select areas to compare
+        </p>
         <div id="multidrop"></div>
       </div>
     </div>
@@ -686,13 +692,13 @@
       // Work out how many categories there are, and how many variables within each
 
       categoryCount = d3.nest()
-        .key(function(d) {
+        .key(function (d) {
           return d.Category;
         })
-        .key(function(d) {
+        .key(function (d) {
           return d.id;
         })
-        .rollup(function(ids) {
+        .rollup(function (ids) {
           return ids.length;
         })
         .entries(graphic_data);
@@ -714,9 +720,9 @@
 
 
       //get unique groups/variables
-      var groups = graphic_data.map(function(obj) {
+      var groups = graphic_data.map(function (obj) {
         return obj.id;
-      }).filter(function(v, i,a) {
+      }).filter(function (v, i, a) {
         return a.indexOf(v) == i;
       });
 
@@ -731,7 +737,7 @@
         .rangeRound([0, width]);
 
       if (dvc.essential.xAxisScale == "auto") {
-        x.domain(d3.extent(graphic_data, function(d) {
+        x.domain(d3.extent(graphic_data, function (d) {
           return +d.value;
         }));
       } else {
@@ -748,7 +754,7 @@
 
       for (var j = 0; j < groups.length; j++) {
 
-        groupeddata[j] = graphic_data.filter(function(v, i) {
+        groupeddata[j] = graphic_data.filter(function (v, i) {
           return v.id == groups[j];
         });
 
@@ -789,10 +795,10 @@
           };
         }
 
-        if(size=="sm"){
-          g.append("text").attr("class", "label").text(groups[j]).attr("y", (heightper / 2) + 5).attr("x", -margin.left).call(wrap,svgwidth)
-        }else{
-          g.append("text").attr("class", "label").text(groups[j]).attr("y", (heightper / 2) + 5).attr("x", -margin.left).call(wrap,margin.left)
+        if (size == "sm") {
+          g.append("text").attr("class", "label").text(groups[j]).attr("y", (heightper / 2) + 5).attr("x", -margin.left).call(wrap, svgwidth)
+        } else {
+          g.append("text").attr("class", "label").text(groups[j]).attr("y", (heightper / 2) + 5).attr("x", -margin.left).call(wrap, margin.left)
         }
 
         var cell = g.append("g").attr("class", "cell-group");
@@ -818,25 +824,25 @@
             .append("circle")
             .attr("class", "cell")
             .attr("r", dvc.essential.dotradius)
-            .attr("cx", function(d) {
+            .attr("cx", function (d) {
               return x(d.value);
             })
-            .attr("cy", function(d) {
+            .attr("cy", function (d) {
               return 23 + 5 + Math.random() * (heightper / 2 - 10);
             })
-            .attr("class", function(d, i) {
+            .attr("class", function (d, i) {
               return "cell " + "cellgroup" + d.unique.replace(/[,()/ ]+/g, "").trim()
             })
             .attr("fill", dvc.essential.colour_palette[0])
             .attr("opacity", 0.5)
             .attr("pointer-events", "all")
-            .on("mouseout", function(d, i) {
+            .on("mouseout", function (d, i) {
               d3.selectAll(".cellsselected").classed("cellsselected", false).attr("pointer-events", "all")
               hideTooltip();
 
               //d3.selectAll("." + pathgroup).classed("cellsselected",true);
             })
-            .on("mouseover", function(d, i) {
+            .on("mouseover", function (d, i) {
               pathidstr = d3.select(this).attr("class");
               pathgroup = pathidstr.split(" ")[1];
 
@@ -866,34 +872,34 @@
             .append("circle")
             .attr("class", "cell")
             .attr("r", dvc.essential.dotradius)
-            .attr("cx", function(d) {
+            .attr("cx", function (d) {
               return x(d.value);
             })
-            .attr("cy", function(d) {
+            .attr("cy", function (d) {
               return Math.random() * (heightper / 2) + heightper / 4;
             })
-            .attr("class", function(d, i) {
+            .attr("class", function (d, i) {
               return "cell " + "cellgroup" + d.unique.replace(/[,()/ ]+/g, "").trim()
             })
             .attr("fill", dvc.essential.colour_palette[0])
             .attr("opacity", 0.5)
             .attr("pointer-events", "all")
-            .on("mouseout", function(d, i) {
+            .on("mouseout", function (d, i) {
               d3.selectAll(".cellsselected").classed("cellsselected", false) //.lower();
               hideTooltip();
             })
-            .on("mouseover", function(d, i) {
+            .on("mouseover", function (d, i) {
               pathgroup = "cellgroup" + d.unique;
 
-              d3.selectAll("." + pathgroup).classed("cellsselected", true).each(function() {
+              d3.selectAll("." + pathgroup).classed("cellsselected", true).each(function () {
                 d3.select(this).raise()
               })
 
-              d3.selectAll(".cellspermselected2").each(function() {
+              d3.selectAll(".cellspermselected2").each(function () {
                 d3.select(this).raise()
               })// raise selected dots anyway
 
-              d3.selectAll(".cellspermselected").each(function() {
+              d3.selectAll(".cellspermselected").each(function () {
                 d3.select(this).raise()
               })// raise selected dots
 
@@ -915,21 +921,21 @@
             .call(d3.axisTop(x)
               //.ticks(numberticks, ".0s")
               .tickValues(dvc.essential.tickValuesForLabels)
-              .tickFormat(function(d, i) {
+              .tickFormat(function (d, i) {
                 return dvc.essential.tickValueLabels[i]
               })
               .tickSize(0));
 
-              // if(svgwidth < dvc.optional.mobileBreakpoint){//if mobile
-                d3.selectAll(".axis--x .tick text").each(function(d,i){//select all top ticks
-                  if(i==1){//just the middle one
-                    d3.select(this).attr('dy',-20)//move it up a bit
-                  }
-                  if(i==2){
-                    d3.select(this).attr('dx',-20)
-                  }
-                })
-              // }
+          // if(svgwidth < dvc.optional.mobileBreakpoint){//if mobile
+          d3.selectAll(".axis--x .tick text").each(function (d, i) {//select all top ticks
+            if (i == 1) {//just the middle one
+              d3.select(this).attr('dy', -20)//move it up a bit
+            }
+            if (i == 2) {
+              d3.select(this).attr('dx', -20)
+            }
+          })
+          // }
         }
 
         if (j == groups.length - 1) {
@@ -943,11 +949,11 @@
               .tickSize(height - heightper)
             );
 
-          d3.selectAll(".axis--x-bottom .tick text").each(function(d,i){
-            if(i==1){
-              d3.select(this).attr('dx',-10)
-            } else if(i==3){
-              d3.select(this).attr('dx',10)
+          d3.selectAll(".axis--x-bottom .tick text").each(function (d, i) {
+            if (i == 1) {
+              d3.select(this).attr('dx', -10)
+            } else if (i == 3) {
+              d3.select(this).attr('dx', 10)
             }
           })
 
@@ -965,26 +971,26 @@
 
           g.select(".axis--x-bottom")
             .selectAll("line")
-            .attr("class", function(d, i) {
+            .attr("class", function (d, i) {
               if (i == 2) {
                 return "centreLine"
               }
             })
-            .style("stroke", function(d, i) {
+            .style("stroke", function (d, i) {
               if (i == 2) {
                 return "orange"
               } else {
                 return "#ddd"
               }
             })
-            .style("stroke-width", function(d, i) {
+            .style("stroke-width", function (d, i) {
               if (i == 2) {
                 return "2px"
               } else {
                 return "1px"
               }
             })
-            .attr("stroke-dasharray", function(d, i) {
+            .attr("stroke-dasharray", function (d, i) {
               if (i == 2) {
                 return "none"
               } else {
@@ -996,7 +1002,7 @@
         }
       } //end j loop
 
-      d3.selectAll(".hierarchyLabel").each(function(d) {
+      d3.selectAll(".hierarchyLabel").each(function (d) {
         var bbox = this.getBBox()
         d3.select(this.parentNode).insert('rect', ".hierarchyLabel").attr('x', bbox.x).attr('y', bbox.y).attr('width', bbox.width).attr('height', bbox.height).attr('fill', 'white').attr('opacity', 0.8)
       })
@@ -1004,20 +1010,22 @@
       selectlist(graphic_data);
 
 
+
+
       function selectlist(datacsv) {
 
-        var dropnames = datacsv.map(function(d, i) {
+        var dropnames = datacsv.map(function (d, i) {
           return d.group
-        }).filter(function(item, pos, val) {
+        }).filter(function (item, pos, val) {
           return val.indexOf(item) == pos
         })
-        var dropcodes = datacsv.map(function(d, i) {
+        var dropcodes = datacsv.map(function (d, i) {
           return d.unique
-        }).filter(function(item, pos, val) {
+        }).filter(function (item, pos, val) {
           return val.indexOf(item) == pos
         })
 
-        var menuarea = d3.zip(dropnames, dropcodes).sort(function(a, b) {
+        var menuarea = d3.zip(dropnames, dropcodes).sort(function (a, b) {
           return d3.ascending(a[0], b[0]);
         });
 
@@ -1033,10 +1041,10 @@
         optns.append("option")
 
         optns.selectAll("p").data(menuarea).enter().append("option")
-          .attr("value", function(d) {
+          .attr("value", function (d) {
             return d[1]
           })
-          .text(function(d) {
+          .text(function (d) {
             return d[0]
           });
 
@@ -1046,67 +1054,12 @@
           width: "90%",
           allow_single_deselect: true,
           placeholder_text_single: "Choose a local authority"
-        }).on('change', function(evt, params) {
+        }).on('change', function (evt, params) {
 
           if ($('#dropselect').val() != "") {
-
-            // unhide comparison
-            d3.select("#detaildiv").style("display", "block")
-
-            // unhide comparison
-            d3.select("#dataTable").style("display", "block")
-
-            multiselect(graphic_data);
-
-            clicked = true;
-            d3.selectAll(".cell").classed("cellspermselected", false);
-            d3.selectAll(".cellspermselected2").attr('fill', '#aabfcd');
-            d3.selectAll(".cell").classed("cellspermselected2", false);
-            d3.selectAll(".cell").attr("pointer-events", "all")
-
-            dropcode = $('#dropselect').val();
-            dropname = $('#dropselect option:selected').text();
-            dropcodeid = +dropcode.substr(2);
-
-            zoomToArea(dropcode);
-            updateTable(dropcode, dropname);
-            updatePlotValues(dropcode, dropname);
-            clearLegend()
-            createLegend();
-            createDataTable();
-            //createiconArray(dropcode, dropname);
-
-            d3.selectAll(".cell").classed("notselected", true)
-            d3.selectAll(".cellgroup" + dropcode.replace(/[,()/ ]+/g, "").trim()).classed("cellspermselected", true).attr("pointer-events", "all").each(function() {
-              d3.select(this).raise()
-            });
-
-            //datafilter = datacsv.filter(function(d,i) {return "id" + i == dropcode})
-            // changetext(datafilter[0].value,datafilter[0].unique )
-
-            d3.select('abbr').on('keypress', function(evt) {
-              if (d3.event.keyCode == 13 || d3.event.keyCode == 32) {
-                d3.event.preventDefault()
-
-                clicked = false;
-
-                d3.select(".cell" + dropcodeid).classed("cellspermselected", false)
-                d3.selectAll(".cell").attr("pointer-events", "all")
-
-                d3.select("#info").html("");
-
-                $("#dropselect").val(null).trigger('chosen:updated');
-                resetView()
-              }
-            })
-
-            //resend height to pym
-            pymChild.sendHeight()
-
-
+            setView($('#dropselect').val())
           } else {
             resetView()
-
           }
         });
 
@@ -1115,7 +1068,63 @@
       } //end selectlist
 
 
-      function resetView(){
+      function setView(code) {
+
+        // unhide comparison
+        d3.select("#detaildiv").style("display", "block")
+
+        // unhide comparison
+        d3.select("#dataTable").style("display", "block")
+
+        multiselect(graphic_data);
+
+        clicked = true;
+        d3.selectAll(".cell").classed("cellspermselected", false);
+        d3.selectAll(".cellspermselected2").attr('fill', '#aabfcd');
+        d3.selectAll(".cell").classed("cellspermselected2", false);
+        d3.selectAll(".cell").attr("pointer-events", "all")
+
+        dropcode = code;
+        dropname = $('#dropselect option:selected').text();
+        dropcodeid = +dropcode.substr(2);
+
+        zoomToArea(dropcode);
+        updateTable(dropcode, dropname);
+        updatePlotValues(dropcode, dropname);
+        clearLegend()
+        createLegend();
+        createDataTable();
+        //createiconArray(dropcode, dropname);
+
+        d3.selectAll(".cell").classed("notselected", true)
+        d3.selectAll(".cellgroup" + dropcode.replace(/[,()/ ]+/g, "").trim()).classed("cellspermselected", true).attr("pointer-events", "all").each(function () {
+          d3.select(this).raise()
+        });
+
+        //datafilter = datacsv.filter(function(d,i) {return "id" + i == dropcode})
+        // changetext(datafilter[0].value,datafilter[0].unique )
+
+        d3.select('abbr').on('keypress', function (evt) {
+          if (d3.event.keyCode == 13 || d3.event.keyCode == 32) {
+            d3.event.preventDefault()
+
+            clicked = false;
+
+            d3.select(".cell" + dropcodeid).classed("cellspermselected", false)
+            d3.selectAll(".cell").attr("pointer-events", "all")
+
+            d3.select("#info").html("");
+
+            $("#dropselect").val(null).trigger('chosen:updated');
+            resetView()
+          }
+        })
+
+        //resend height to pym
+        pymChild.sendHeight()
+      }
+
+      function resetView() {
         clicked = false;
 
         d3.selectAll(".cell").classed("notselected", false)
@@ -1151,22 +1160,22 @@
 
       function multiselect(datacsv) {
 
-        var dropnames = datacsv.map(function(d, i) {
+        var dropnames = datacsv.map(function (d, i) {
           return d.group
-        }).filter(function(item, pos, val) {
+        }).filter(function (item, pos, val) {
           return val.indexOf(item) == pos //filter uniques
         })
 
-        var dropcodes = datacsv.map(function(d, i) {
+        var dropcodes = datacsv.map(function (d, i) {
           return d.unique
-        }).filter(function(item, pos, val) {
+        }).filter(function (item, pos, val) {
           return val.indexOf(item) == pos //filter uniques
         })
 
-        var menuarea = d3.zip(dropnames, dropcodes).sort(function(a, b) {
+        var menuarea = d3.zip(dropnames, dropcodes).sort(function (a, b) {
           return d3.ascending(a[0], b[0]);
-        }).filter(function(d){
-          return d[1]!=$("#dropselect").val()
+        }).filter(function (d) {
+          return d[1] != $("#dropselect").val()
         });
 
         //clear dropdown
@@ -1182,10 +1191,10 @@
         optns.append("option")
 
         optns.selectAll("p").data(menuarea).enter().append("option")
-          .attr("value", function(d) {
+          .attr("value", function (d) {
             return d[1]
           })
-          .text(function(d) {
+          .text(function (d) {
             return d[0]
           });
 
@@ -1199,7 +1208,7 @@
           width: "98%",
           max_selected_options: 3,
           placeholder_text_multiple: "Choose up to 3 areas"
-        }).on('change', function(evt, params) {
+        }).on('change', function (evt, params) {
 
           if (typeof params.selected != 'undefined') {
 
@@ -1213,8 +1222,8 @@
             //selectCellsforcomparison areas
             d3.selectAll(".cell").classed("notselected", true)
 
-            listcodes.forEach(function(d, i) {
-              d3.selectAll(".cellgroup" + d.replace(/[,()/ ]+/g, "").trim()).attr("fill", dvc.essential.colour_palette[i + 2]).classed("cellspermselected2", true).each(function(d) {
+            listcodes.forEach(function (d, i) {
+              d3.selectAll(".cellgroup" + d.replace(/[,()/ ]+/g, "").trim()).attr("fill", dvc.essential.colour_palette[i + 2]).classed("cellspermselected2", true).each(function (d) {
                 d3.select(this).raise()
               });
             });
@@ -1231,7 +1240,7 @@
             listnames.splice(indexdesel, 1);
 
             d3.selectAll(".cellspermselected2").classed("cellspermselected2", false).attr("fill", dvc.essential.colour_palette[0])
-            listcodes.forEach(function(d, i) {
+            listcodes.forEach(function (d, i) {
               d3.selectAll(".cellgroup" + d.replace(/[,()/ ]+/g, "").trim()).attr("fill", dvc.essential.colour_palette[i + 2]).classed("cellspermselected2", true).raise();
             });
             createLegend();
@@ -1246,7 +1255,7 @@
 
       function addCloseButtonDesc() {
         d3.selectAll(".search-choice-close").selectAll("span").remove();
-        d3.selectAll(".search-choice-close").append("span").attr("class", "visuallyhidden").text(function(d, i) {
+        d3.selectAll(".search-choice-close").append("span").attr("class", "visuallyhidden").text(function (d, i) {
           return "Remove " + listnames[i] + " from the comparison."
         })
       }
@@ -1296,15 +1305,15 @@
           .data(areaname)
           .enter()
           .append('li')
-          .attr('class', function(d, i) {
+          .attr('class', function (d, i) {
             return 'key-item key-' + i
           })
 
         legend.append('b').attr("class", "legendBlocks")
-          .style("background-color", function(d, i) {
+          .style("background-color", function (d, i) {
             return dvc.essential.colour_palette[i + 1];
           });
-        legend.append('label').text(function(d, i) {
+        legend.append('label').text(function (d, i) {
           var value = parseFloat(d).toFixed(1);
           return d;
         });
@@ -1342,13 +1351,13 @@
 
       function updatePlotValues(code, name) {
 
-        areaIndicators = graphic_data.filter(function(d) {
+        areaIndicators = graphic_data.filter(function (d) {
           if (d['unique'] == code) {
             return d;
           }
         });
 
-        areaIndicators.forEach(function(d) {
+        areaIndicators.forEach(function (d) {
           d3.select("." + d.id.replace(/[|&;$%@"<>()+, /\d]/g, "")).attr("fill", dvc.essential.colour_palette[1]).text(d.real)
 
 
@@ -1360,7 +1369,7 @@
       }
 
       function wrap(text, width) {
-        text.each(function() {
+        text.each(function () {
           var text = d3.select(this),
             words = text.text().split(/\s+/).reverse(),
             word,
@@ -1432,17 +1441,13 @@
           //Work out extend of loaded geography file so we can set map to fit total extent
           bounds = turf.bbox(areas);
 
-          //set map to total extent
-          setTimeout(function() {
-            map.fitBounds([
-              [bounds[0], bounds[1]],
-              [bounds[2], bounds[3]]
-            ])
-          }, 1000);
+
 
           map.on('load', defineLayers);
 
           function defineLayers() {
+
+
 
             map.addSource('area', {
               'type': 'geojson',
@@ -1466,20 +1471,29 @@
               "filter": ["==", "AREACD", ""]
             }, 'place_city');
 
+
+            //check url 
+            checkLAcode = new RegExp('([EWSN][0-9]{8})', 'g')
+            let parent = new URLSearchParams(document.location.search).get("parentUrl");
+            let code = parent ? parent.split("#")[1] : null;
+            if (code && checkLAcode.test(code)) {
+              // Action to select area in app using the GSS code "code"
+              $('#dropselect').val(code).trigger('chosen:updated')
+              setView(code)
+            } else {
+              //set map to total extent
+              setTimeout(function () {
+                map.fitBounds([
+                  [bounds[0], bounds[1]],
+                  [bounds[2], bounds[3]]
+                ])
+              }, 1000);
+            }
           }
-
-
-
           /*** End Map Code ***/
 
           /*** Table Code ***/
-
-
-
-
           pymChild.sendHeight();
-
-
         } //end ready
 
 
@@ -1488,7 +1502,7 @@
 
       function zoomToArea(code) {
 
-        specificpolygon = areas.features.filter(function(d) {
+        specificpolygon = areas.features.filter(function (d) {
           return d.properties.AREACD == code
         })
         map.setFilter("state-fills-hover", ["==", "AREACD", code]);
@@ -1556,26 +1570,26 @@
         d3.selectAll(".tablelines").remove();
         d3.select("#unavailableMeasures").html("")
 
-        areaIndicators = graphic_data.filter(function(d) {
+        areaIndicators = graphic_data.filter(function (d) {
           return d['unique'] == code
         });
 
-        uniqueIndicators = graphic_data.map(function(d){
+        uniqueIndicators = graphic_data.map(function (d) {
           return d.Indicator
-        }).filter(function(d,i,a){
-          return a.indexOf(d)==i;
+        }).filter(function (d, i, a) {
+          return a.indexOf(d) == i;
         })
 
 
         /* First filter the data for the area selected */
-        PosFilteredData = areaIndicators.filter(function(d) {
+        PosFilteredData = areaIndicators.filter(function (d) {
           return d['value'] > dvc.essential.threshold
         });
 
 
         postable.selectAll('tbody').remove()
         if (PosFilteredData.length == 0) {
-                    tablebody = postable.append('tbody')
+          tablebody = postable.append('tbody')
           tablelines = tablebody.append("tr").attr("class", "tablelines");
 
           tablelines.append("td").text("No stand out indicators");
@@ -1583,7 +1597,7 @@
 
         }
 
-        PosFilteredData.forEach(function(d) {
+        PosFilteredData.forEach(function (d) {
           tablebody = postable.append('tbody')
           tablelines = tablebody.append("tr").attr("class", "tablelines");
 
@@ -1594,7 +1608,7 @@
         })
 
 
-        NegFilteredData = areaIndicators.filter(function(d) {
+        NegFilteredData = areaIndicators.filter(function (d) {
           return d['value'] < (dvc.essential.threshold * -1)
         });
 
@@ -1609,7 +1623,7 @@
 
         }
 
-        NegFilteredData.forEach(function(d) {
+        NegFilteredData.forEach(function (d) {
           tablebody = negtable.append('tbody')
           tablelines = tablebody.append("tr").attr("class", "tablelines");
 
@@ -1622,23 +1636,23 @@
 
         //Out of the xx indicators for Fareham, xx were classified as positive, xx as negative and xx as neutral
 
-        function waswerenone(length){
-          if(length==1){return ' was '}
-          else {return ' were '}
+        function waswerenone(length) {
+          if (length == 1) { return ' was ' }
+          else { return ' were ' }
         }
 
         d3.select("#standoutLabel").html("Out of the " + areaIndicators.length + " measures available for <span style='color:#206095' class='areaHighlight'>" + name + "</span>, " + PosFilteredData.length + waswerenone(PosFilteredData.length) + " <span style='color:#0F8577'>better than the median</span> and " + NegFilteredData
-          .length +waswerenone(NegFilteredData
-          .length) + "<span style='color:#043b56'>worse than the median</span>.");
+          .length + waswerenone(NegFilteredData
+            .length) + "<span style='color:#043b56'>worse than the median</span>.");
 
-        if(areaIndicators.length!=uniqueIndicators.length){
-          d3.select("#unavailableMeasures").html("There are "+(uniqueIndicators.length-areaIndicators.length)+" measures unavailable for "+name+".")
+        if (areaIndicators.length != uniqueIndicators.length) {
+          d3.select("#unavailableMeasures").html("There are " + (uniqueIndicators.length - areaIndicators.length) + " measures unavailable for " + name + ".")
         }
 
       }
 
       function wrap(text, width) {
-        text.each(function() {
+        text.each(function () {
           var text = d3.select(this),
             words = text.text().split(/\s+/).reverse(),
             word,
@@ -1648,7 +1662,7 @@
             y = text.attr("y"),
             x = text.attr("x"),
             dy = parseFloat(text.attr("dy")),
-            tspan = text.text(null).append("tspan").attr('x',x);
+            tspan = text.text(null).append("tspan").attr('x', x);
           while (word = words.pop()) {
             line.push(word);
             tspan.text(line.join(" "));
@@ -1656,13 +1670,13 @@
               line.pop();
               tspan.text(line.join(" "));
               line = [word];
-              tspan = text.append("tspan").attr('x',x).attr("dy", lineHeight + "em").text(word);
+              tspan = text.append("tspan").attr('x', x).attr("dy", lineHeight + "em").text(word);
             }
           }
         });
 
         var breaks = text.selectAll("tspan").size();
-        text.attr("y", function(){return +text.attr('y')+(-6 * (breaks-1))});
+        text.attr("y", function () { return +text.attr('y') + (-6 * (breaks - 1)) });
       }
 
       function prefixer(d) {
@@ -1711,7 +1725,7 @@
             [dropcode], listcodes
           ])
 
-          areanamessorted=d3.zip(areanames,areacodes).sort(function(a, b) {
+          areanamessorted = d3.zip(areanames, areacodes).sort(function (a, b) {
             return d3.ascending(a[0], b[0]);
           })
 
@@ -1734,7 +1748,7 @@
         }
 
         //filter for of
-        areaIndicators = graphic_data_full.filter(function(d) {
+        areaIndicators = graphic_data_full.filter(function (d) {
           if (areacodes.includes(d['unique'])) {
             return d;
           }
@@ -1743,7 +1757,7 @@
 
         //add all the columns we need
 
-        if(size=="sm"){d3.select("#scrollInstructions").text("← Scroll or drag to see more →")}
+        if (size == "sm") { d3.select("#scrollInstructions").text("← Scroll or drag to see more →") }
         tabletable = d3.select("#dataHTMLTable").append("table").attr("width", "98%");
 
         headerRow = tabletable.append('thead').append('tr')
@@ -1753,24 +1767,24 @@
 
         //add column for each area
 
-        areanamessorted.forEach(function(d, i) {
+        areanamessorted.forEach(function (d, i) {
           headerRow.append("th").attr("width", "30%").attr("class", "numberCol").text(d[0]);
         })
 
         tablebody = tabletable.append('tbody')
 
         // https://stackoverflow.com/questions/18773778/create-array-of-unique-objects-by-property
-        var flags={}
-        uniqueIndicatorsForDataTable=areaIndicators.filter(function(d){
-          if(flags[d.Indicator]){
+        var flags = {}
+        uniqueIndicatorsForDataTable = areaIndicators.filter(function (d) {
+          if (flags[d.Indicator]) {
             return false;
           }
-          flags[d.Indicator]=true;
+          flags[d.Indicator] = true;
           return true;
         })
 
         //first populate the left hand columns with names, periods and units
-        uniqueIndicatorsForDataTable.forEach(function(d, i){
+        uniqueIndicatorsForDataTable.forEach(function (d, i) {
           tablelines = tablebody.append("tr").attr("class", "tablelines").attr("id", "tablelines" + d.id.replace(/[,()/ ]+/g, "").trim());
           tablelines.append("td").text(d.id);
           tablelines.append("td").text(d.Period);
@@ -1778,34 +1792,35 @@
         });
 
         // then loop through the areas
-        areanamessorted.forEach(function(d, i){
+        areanamessorted.forEach(function (d, i) {
           // filter the data for just this area
-          var tableDataForThisArea=areaIndicators.filter(function(e){return e.unique==d[1]});
+          var tableDataForThisArea = areaIndicators.filter(function (e) { return e.unique == d[1] });
           // loop through uniqueIndicators
-          uniqueIndicatorsForDataTable.forEach(function(f, i){
+          uniqueIndicatorsForDataTable.forEach(function (f, i) {
             // work out the data for this area and this indicator
-            var thisdatacell=tableDataForThisArea.filter(function(g){
-              return g.Indicator==f.Indicator
+            var thisdatacell = tableDataForThisArea.filter(function (g) {
+              return g.Indicator == f.Indicator
             })[0]
             // new variable for the table cell
-            tablecell=tabletable.select("#tablelines" + f.id.replace(/[,()/ ]+/g, "").trim()).append("td").attr("class", "numberCol")
+            tablecell = tabletable.select("#tablelines" + f.id.replace(/[,()/ ]+/g, "").trim()).append("td").attr("class", "numberCol")
             // if data exists
-            if(thisdatacell!==undefined){
-              tablecell.text(function(){
-              if(thisdatacell.real=="NA"){return "Unavailable"}
-              else if(Number.isInteger(+thisdatacell.real)){
-                return thisdatacell.real
-              }else{
-                return d3.format(",.1f")((Math.round(thisdatacell.real * 10) / 10));
-              }});
-            // if data doesn't exist
-            }else{
+            if (thisdatacell !== undefined) {
+              tablecell.text(function () {
+                if (thisdatacell.real == "NA") { return "Unavailable" }
+                else if (Number.isInteger(+thisdatacell.real)) {
+                  return thisdatacell.real
+                } else {
+                  return d3.format(",.1f")((Math.round(thisdatacell.real * 10) / 10));
+                }
+              });
+              // if data doesn't exist
+            } else {
               tablecell.text("Unavailable")
             }
           });
 
         });
-		pymChild.sendHeight();
+        pymChild.sendHeight();
       }
 
 
@@ -1817,14 +1832,14 @@
 
     if (Modernizr.svg) {
       //load config
-      d3.json("config.json", function(error, config) {
+      d3.json("config.json", function (error, config) {
         dvc = config
         //load chart data
-        d3.csv(dvc.essential.graphic_data_url, function(error, data) {
+        d3.csv(dvc.essential.graphic_data_url, function (error, data) {
 
           graphic_data_full = data;
 
-          graphic_data = data.filter(function(d, i) {
+          graphic_data = data.filter(function (d, i) {
 
             if (+d.value > dvc.essential.outlierLimits[1]) {
               d.value = (+dvc.essential.outlierLimits[1] + 0.2).toString();
@@ -1862,7 +1877,7 @@
       return d;
     }
     // includes polyfill
-    Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{value:function(r,e){if(null==this)throw new TypeError('"this" is null or not defined');var t=Object(this),n=t.length>>>0;if(0===n)return!1;var i,o,a=0|e,u=Math.max(0<=a?a:n-Math.abs(a),0);for(;u<n;){if((i=t[u])===(o=r)||"number"==typeof i&&"number"==typeof o&&isNaN(i)&&isNaN(o))return!0;u++}return!1}});
+    Array.prototype.includes || Object.defineProperty(Array.prototype, "includes", { value: function (r, e) { if (null == this) throw new TypeError('"this" is null or not defined'); var t = Object(this), n = t.length >>> 0; if (0 === n) return !1; var i, o, a = 0 | e, u = Math.max(0 <= a ? a : n - Math.abs(a), 0); for (; u < n;) { if ((i = t[u]) === (o = r) || "number" == typeof i && "number" == typeof o && isNaN(i) && isNaN(o)) return !0; u++ } return !1 } });
   </script>
 </body>
 
