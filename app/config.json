@@ -9,7 +9,7 @@
               "sm": 80,
               "lg": 50
             },
-            "dotradius":5,
+            "dotradius":3,
             "threshold":1,
             "colour_palette_icon": ["#0a6060", "#e2d377", "#d13135", "#A8BD3A", "27A0CC"],
             "gridWidth":"8",
