@@ -178,8 +178,12 @@
       fill: none;
       pointer-events: all;
       stroke-width: 2px;
-      stroke: rgba(255, 255, 255, 0)
+      stroke: rgba(255, 255, 255, 0);
     }
+
+    /* circle.cell:not(.cellspermselected):not(.cellspermselected2) {
+      mix-blend-mode: multiply;
+    } */
 
     .notselected {
       opacity: 0.6;
@@ -189,7 +193,7 @@
       opacity: 1;
       stroke-width: 2px;
       stroke: #fff;
-      r: 7;
+      r: 5;
       /* pointer-events: none; */
       fill: #206095;
     }
@@ -198,7 +202,7 @@
       opacity: 1;
       stroke-width: 2px;
       stroke: #fff;
-      r: 7;
+      r: 5;
       /* pointer-events: none; */
     }
 
@@ -654,6 +658,7 @@
   <script src="../lib/maplibre-gl.js"></script>
   <script src="../lib/turf.min.js"></script>
   <script src='../lib/d3-iconarray.js'></script>
+  <script src="https://unpkg.com/accurate-beeswarm-plot@1.0.9/dist/accurate-beeswarm-plot.nomodule.js"></script>
 
   <!-- <script src="../lib/jitter.js"></script> -->
 
@@ -754,11 +759,26 @@
 
       for (var j = 0; j < groups.length; j++) {
 
-        groupeddata[j] = graphic_data.filter(function (v, i) {
+        const data = graphic_data.filter(function (v, i) {
           return v.id == groups[j];
         });
+        const r = dvc.essential.dotradius + 1;
+        const maxY = 18;
 
+        beeswarm = new AccurateBeeswarm(data, r, d => x(d.value))
+          .withTiesBrokenRandomly()
+          .calculateYPositions()
+          .map(({datum, x, y}) => ({...datum, x, y}));
 
+        const maxYActual = Math.max(...beeswarm.map(d => Math.abs(d.y))); // Gets the maximum absolute Y value
+        const scaleFactor = maxY / maxYActual;
+
+        groupeddata[j] = beeswarm.map((d) => {
+          d.y = (d.y * scaleFactor) + (heightper / 2);
+          return d;
+        });
+
+        
 
         if (j > 0) {
           runningtotal = runningtotal + groupeddata[j - 1].length;
@@ -803,6 +823,7 @@
 
         var cell = g.append("g").attr("class", "cell-group");
 
+        console.log("rendering")
         if (svgwidth < dvc.optional.mobileBreakpoint) {
           // set label y on mobile
           g.select(".label").attr("y", 13);
@@ -825,16 +846,16 @@
             .attr("class", "cell")
             .attr("r", dvc.essential.dotradius)
             .attr("cx", function (d) {
-              return x(d.value);
+              return d.x;
             })
             .attr("cy", function (d) {
-              return 23 + 5 + Math.random() * (heightper / 2 - 10);
+              return d.y;
             })
             .attr("class", function (d, i) {
               return "cell " + "cellgroup" + d.unique.replace(/[,()/ ]+/g, "").trim()
             })
-            .attr("fill", dvc.essential.colour_palette[0])
-            .attr("opacity", 0.5)
+            .attr("fill", "#043b56")
+            .attr("opacity", 0.2)
             .attr("pointer-events", "all")
             .on("mouseout", function (d, i) {
               d3.selectAll(".cellsselected").classed("cellsselected", false).attr("pointer-events", "all")
@@ -873,16 +894,16 @@
             .attr("class", "cell")
             .attr("r", dvc.essential.dotradius)
             .attr("cx", function (d) {
-              return x(d.value);
+              return d.x;
             })
             .attr("cy", function (d) {
-              return Math.random() * (heightper / 2) + heightper / 4;
+              return d.y;
             })
             .attr("class", function (d, i) {
               return "cell " + "cellgroup" + d.unique.replace(/[,()/ ]+/g, "").trim()
             })
-            .attr("fill", dvc.essential.colour_palette[0])
-            .attr("opacity", 0.5)
+            .attr("fill", "#043b56")
+            .attr("opacity", 0.2)
             .attr("pointer-events", "all")
             .on("mouseout", function (d, i) {
               d3.selectAll(".cellsselected").classed("cellsselected", false) //.lower();
