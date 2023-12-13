@@ -1104,353 +1104,6 @@ N09000008,Mid and East Antrim,Local Authority District,Aged 16 to 64 years emplo
 N09000009,Mid Ulster,Local Authority District,Aged 16 to 64 years employment rate (Northern Ireland),Aged 16 to 64 years employment rate (Northern Ireland),"Boosting productivity, pay, jobs and living standards",2022,Percentage,%,73.8,0
 N09000010,"Newry, Mourne and Down",Local Authority District,Aged 16 to 64 years employment rate (Northern Ireland),Aged 16 to 64 years employment rate (Northern Ireland),"Boosting productivity, pay, jobs and living standards",2022,Percentage,%,74.9,0.618283196
 N09000011,Ards and North Down,Local Authority District,Aged 16 to 64 years employment rate (Northern Ireland),Aged 16 to 64 years employment rate (Northern Ireland),"Boosting productivity, pay, jobs and living standards",2022,Percentage,%,72.8,-0.562075633
-E06000005,Darlington,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
-E06000001,Hartlepool,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.7,-1.461396646
-E06000002,Middlesbrough,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.6,-1.348981519
-E06000003,Redcar and Cleveland,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
-E06000004,Stockton-on-Tees,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
-E08000037,Gateshead,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
-E08000021,Newcastle upon Tyne,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.2,-2.023472278
-E08000022,North Tyneside,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
-E08000023,South Tyneside,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6.7,-3.709699177
-E08000024,Sunderland,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
-E06000008,Blackburn with Darwen,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.9,-1.686226899
-E06000009,Blackpool,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.1,-1.911057152
-E06000006,Halton,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
-E06000007,Warrington,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
-E07000026,Allerdale,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
-E07000027,Barrow-in-Furness,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
-E07000028,Carlisle,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
-E07000029,Copeland,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
-E07000030,Eden,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.3,1.236566392
-E07000031,South Lakeland,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.4,1.124151266
-E08000001,Bolton,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.3,-2.135887405
-E08000002,Bury,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-E08000003,Manchester,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.5,-2.360717658
-E08000004,Oldham ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.5,-1.236566392
-E08000005,Rochdale,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.7,-1.461396646
-E08000006,Salford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.3,-2.135887405
-E08000007,Stockport,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
-E08000008,Tameside,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.7,-0.33724538
-E08000009,Trafford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-E08000010,Wigan,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-E07000117,Burnley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.9,-1.686226899
-E07000118,Chorley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
-E07000119,Fylde,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
-E07000120,Hyndburn,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4,-0.674490759
-E07000121,Lancaster,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
-E07000122,Pendle,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,7.1,-4.159359683
-E07000123,Preston,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.2,-0.899321013
-E07000124,Ribble Valley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.2,1.348981519
-E07000125,Rossendale,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
-E07000126,South Ribble,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.4,1.124151266
-E07000127,West Lancashire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
-E07000128,Wyre,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.3,-1.011736139
-E08000011,Knowsley ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.7,-0.33724538
-E08000012,Liverpool,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.4,-2.248302532
-E08000014,Sefton,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
-E08000013,St. Helens,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
-E08000015,Wirral,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
-E06000011,East Riding of Yorkshire,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
-E06000010,"Kingston upon Hull, City of",County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.2,-0.899321013
-E06000012,North East Lincolnshire,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-E06000013,North Lincolnshire,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
-E06000014,York,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.1,1.461396646
-E07000163,Craven,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
-E07000164,Hambleton,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2,1.573811772
-E07000165,Harrogate,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.1,1.461396646
-E07000166,Richmondshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
-E07000167,Ryedale,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.2,1.348981519
-E07000168,Scarborough,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-E07000169,Selby,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
-E08000016,Barnsley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-E08000017,Doncaster,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
-E08000018,Rotherham ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-E08000019,Sheffield,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4,-0.674490759
-E08000032,Bradford ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.5,-2.360717658
-E08000033,Calderdale,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
-E08000034,Kirklees ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4,-0.674490759
-E08000035,Leeds ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
-E08000036,Wakefield,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-E06000015,Derby ,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.6,-1.348981519
-E06000016,Leicester,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6.1,-3.035208418
-E06000018,Nottingham,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6,-2.922793291
-E06000017,Rutland ,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
-E07000032,Amber Valley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
-E07000033,Bolsover,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
-E07000034,Chesterfield,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
-E07000035,Derbyshire Dales,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
-E07000036,Erewash,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
-E07000037,High Peak,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
-E07000038,North East Derbyshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
-E07000039,South Derbyshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
-E07000129,Blaby,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.1,1.461396646
-E07000130,Charnwood,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-E07000131,Harborough,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.2,1.348981519
-E07000132,Hinckley and Bosworth,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-E07000133,Melton,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
-E07000134,North West Leicestershire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
-E07000135,Oadby and Wigston,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.2,-0.899321013
-E07000136,Boston,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
-E07000137,East Lindsey,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
-E07000138,Lincoln,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.6,-1.348981519
-E07000139,North Kesteven,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
-E07000140,South Holland,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
-E07000141,South Kesteven,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
-E07000142,West Lindsey,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
-E07000170,Ashfield,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.6,-1.348981519
-E07000171,Bassetlaw,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
-E07000172,Broxtowe,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
-E07000173,Gedling,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
-E07000174,Mansfield,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
-E07000175,Newark and Sherwood,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
-E07000176,Rushcliffe,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
-E06000019,"Herefordshire, County of",County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
-E06000021,Stoke-on-Trent,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.2,-0.899321013
-E06000020,Telford and Wrekin,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.7,-0.33724538
-E07000192,Cannock Chase,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
-E07000193,East Staffordshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
-E07000194,Lichfield,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
-E07000195,Newcastle-under-Lyme,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
-E07000196,South Staffordshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
-E07000197,Stafford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
-E07000198,Staffordshire Moorlands,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
-E07000199,Tamworth,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-E07000218,North Warwickshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
-E07000219,Nuneaton and Bedworth,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
-E07000220,Rugby,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-E07000221,Stratford-on-Avon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
-E07000222,Warwick,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
-E08000025,Birmingham,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,7.5,-4.60902019
-E08000026,Coventry,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.4,-2.248302532
-E08000027,Dudley ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.4,-1.124151266
-E08000028,Sandwell ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6.3,-3.260038671
-E08000029,Solihull,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
-E08000030,Walsall,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6.1,-3.035208418
-E08000031,Wolverhampton,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6.6,-3.597284051
-E07000234,Bromsgrove,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
-E07000235,Malvern Hills,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
-E07000236,Redditch,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
-E07000237,Worcester,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.7,-0.33724538
-E07000238,Wychavon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-E07000239,Wyre Forest,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-E06000055,Bedford,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.2,-0.899321013
-E06000032,Luton,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.8,-2.697963038
-E06000031,Peterborough,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.7,-1.461396646
-E06000033,Southend-on-Sea,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
-E06000034,Thurrock,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
-E07000008,Cambridge,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
-E07000009,East Cambridgeshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
-E07000010,Fenland,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4,-0.674490759
-E07000011,Huntingdonshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
-E07000012,South Cambridgeshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-E07000066,Basildon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.2,-0.899321013
-E07000067,Braintree,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
-E07000068,Brentwood,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
-E07000069,Castle Point,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
-E07000070,Chelmsford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
-E07000071,Colchester,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-E07000072,Epping Forest,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
-E07000073,Harlow,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.5,-2.360717658
-E07000074,Maldon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-E07000075,Rochford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
-E07000076,Tendring,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.2,-2.023472278
-E07000077,Uttlesford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.3,1.236566392
-E07000095,Broxbourne,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
-E07000096,Dacorum,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
-E07000242,East Hertfordshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
-E07000098,Hertsmere,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
-E07000099,North Hertfordshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
-E07000240,St Albans,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.1,1.461396646
-E07000243,Stevenage,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
-E07000102,Three Rivers,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
-E07000103,Watford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-E07000241,Welwyn Hatfield,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-E07000143,Breckland,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
-E07000144,Broadland,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.4,1.124151266
-E07000145,Great Yarmouth,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6.4,-3.372453797
-E07000146,King's Lynn and West Norfolk,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-E07000147,North Norfolk,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
-E07000148,Norwich,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
-E07000149,South Norfolk,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
-E07000200,Babergh,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-E07000202,Ipswich,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.7,-0.33724538
-E07000203,Mid Suffolk,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
-E09000007,Camden,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4,-0.674490759
-E09000001,City of London,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,NA,NA
-E09000012,Hackney,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.3,-1.011736139
-E09000013,Hammersmith and Fulham ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
-E09000014,Haringey,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.4,-1.124151266
-E09000019,Islington,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
-E09000020,Kensington and Chelsea,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.7,-1.461396646
-E09000022,Lambeth ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
-E09000023,Lewisham ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.7,-1.461396646
-E09000025,Newham ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.7,-1.461396646
-E09000028,Southwark,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
-E09000030,Tower Hamlets,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.2,-2.023472278
-E09000032,Wandsworth,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
-E09000033,Westminster,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.7,-0.33724538
-E09000002,Barking and Dagenham,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.5,-2.360717658
-E09000003,Barnet,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.7,-2.585547911
-E09000004,Bexley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-E09000005,Brent ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,7.3,-4.384189937
-E09000006,Bromley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4,-0.674490759
-E09000008,Croydon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.7,-2.585547911
-E09000009,Ealing,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.8,-2.697963038
-E09000010,Enfield,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.5,-2.360717658
-E09000011,Greenwich,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.7,-1.461396646
-E09000015,Harrow,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.1,-1.911057152
-E09000016,Havering,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-E09000017,Hillingdon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.1,-1.911057152
-E09000018,Hounslow,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.5,-1.236566392
-E09000021,Kingston upon Thames,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
-E09000024,Merton,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.2,-0.899321013
-E09000026,Redbridge,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.1,-1.911057152
-E09000027,Richmond upon Thames,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
-E09000029,Sutton,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
-E09000031,Waltham Forest,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6.6,-3.597284051
-E06000036,Bracknell Forest,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-E06000043,Brighton and Hove,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.4,-1.124151266
-E06000046,Isle of Wight,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5,-1.798642025
-E06000035,Medway,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-E06000042,Milton Keynes,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
-E06000044,Portsmouth,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
-E06000038,Reading,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
-E06000039,Slough,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6,-2.922793291
-E06000045,Southampton,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.8,-1.573811772
-E06000037,West Berkshire,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
-E06000040,Windsor and Maidenhead,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
-E06000041,Wokingham,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.4,1.124151266
-E07000061,Eastbourne,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.2,-2.023472278
-E07000062,Hastings,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
-E07000063,Lewes,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5,-1.798642025
-E07000064,Rother,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.2,-0.899321013
-E07000065,Wealden,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
-E07000084,Basingstoke and Deane,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-E07000085,East Hampshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
-E07000086,Eastleigh,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
-E07000087,Fareham,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
-E07000088,Gosport,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
-E07000089,Hart,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
-E07000090,Havant,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.7,-0.33724538
-E07000091,New Forest,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
-E07000092,Rushmoor,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
-E07000093,Test Valley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
-E07000094,Winchester,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
-E07000105,Ashford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
-E07000106,Canterbury,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
-E07000107,Dartford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
-E07000108,Dover,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.5,-1.236566392
-E07000112,Folkestone and Hythe,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.5,-2.360717658
-E07000109,Gravesham,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
-E07000110,Maidstone,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-E07000111,Sevenoaks,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
-E07000113,Swale,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
-E07000114,Thanet,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.1,-1.911057152
-E07000115,Tonbridge and Malling,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
-E07000116,Tunbridge Wells,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-E07000177,Cherwell,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
-E07000178,Oxford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
-E07000179,South Oxfordshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-E07000180,Vale of White Horse,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
-E07000181,West Oxfordshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
-E07000207,Elmbridge,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
-E07000208,Epsom and Ewell,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
-E07000209,Guildford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
-E07000210,Mole Valley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.1,1.461396646
-E07000211,Reigate and Banstead,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2,1.573811772
-E07000212,Runnymede,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-E07000213,Spelthorne,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4,-0.674490759
-E07000214,Surrey Heath,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
-E07000215,Tandridge,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-E07000216,Waverley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
-E07000217,Woking,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-E07000223,Adur,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
-E07000224,Arun,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
-E07000225,Chichester,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
-E07000226,Crawley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.2,-0.899321013
-E07000227,Horsham,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
-E07000228,Mid Sussex,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
-E07000229,Worthing,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
-E06000022,Bath and North East Somerset,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
-E06000023,"Bristol, City of",County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
-E06000053,Isles of Scilly,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,NA,NA
-E06000024,North Somerset,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-E06000026,Plymouth,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
-E06000025,South Gloucestershire,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.4,1.124151266
-E06000030,Swindon,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
-E06000027,Torbay,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
-E07000040,East Devon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
-E07000041,Exeter,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
-E07000042,Mid Devon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
-E07000043,North Devon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
-E07000044,South Hams,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.4,1.124151266
-E07000045,Teignbridge,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
-E07000046,Torridge,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.2,1.348981519
-E07000047,West Devon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
-E07000078,Cheltenham,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.4,1.124151266
-E07000079,Cotswold,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
-E07000080,Forest of Dean,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.2,1.348981519
-E07000081,Gloucester,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-E07000082,Stroud,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.2,1.348981519
-E07000083,Tewkesbury,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.3,1.236566392
-E07000187,Mendip,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
-E07000188,Sedgemoor,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
-E07000189,South Somerset,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-W06000001,Isle of Anglesey,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-W06000002,Gwynedd,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
-W06000003,Conwy,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
-W06000004,Denbighshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
-W06000005,Flintshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
-W06000006,Wrexham,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
-W06000023,Powys,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
-W06000008,Ceredigion,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
-W06000009,Pembrokeshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
-W06000010,Carmarthenshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
-W06000011,Swansea,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
-W06000012,Neath Port Talbot,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
-W06000013,Bridgend,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
-W06000014,Vale of Glamorgan,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
-W06000015,Cardiff,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4,-0.674490759
-W06000016,Rhondda Cynon Taf,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
-W06000024,Merthyr Tydfil,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
-W06000018,Caerphilly,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
-W06000019,Blaenau Gwent,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
-W06000020,Torfaen,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
-W06000021,Monmouthshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.4,1.124151266
-W06000022,Newport,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.3,-1.011736139
-S12000033,Aberdeen City,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
-S12000034,Aberdeenshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.1,1.461396646
-S12000041,Angus,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-S12000035,Argyll and Bute,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-S12000036,City of Edinburgh,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
-S12000005,Clackmannanshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
-S12000006,Dumfries and Galloway,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.7,-0.33724538
-S12000042,Dundee City,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6.1,-3.035208418
-S12000008,East Ayrshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
-S12000045,East Dunbartonshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
-S12000010,East Lothian,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.4,1.124151266
-S12000011,East Renfrewshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
-S12000014,Falkirk,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
-S12000047,Fife,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
-S12000049,Glasgow City,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.4,-1.124151266
-S12000017,Highland,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
-S12000018,Inverclyde,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
-S12000019,Midlothian,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.2,1.348981519
-S12000020,Moray,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
-S12000013,Na h-Eileanan Siar,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
-S12000021,North Ayrshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
-S12000050,North Lanarkshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
-S12000023,Orkney Islands,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,1.9,1.686226899
-S12000048,Perth and Kinross,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
-S12000038,Renfrewshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-S12000026,Scottish Borders ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
-S12000027,Shetland Islands,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2,1.573811772
-S12000028,South Ayrshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4,-0.674490759
-S12000029,South Lanarkshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
-S12000030,Stirling,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
-S12000039,West Dunbartonshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
-S12000040,West Lothian,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
 E06000047,County Durham,County or Unitary Authority,Gross disposable household income per head,Gross disposable household income per head,"Boosting productivity, pay, jobs and living standards",2021,Pounds,£,17228,-0.821806637
 E06000005,Darlington,County or Unitary Authority,Gross disposable household income per head,Gross disposable household income per head,"Boosting productivity, pay, jobs and living standards",2021,Pounds,£,18376,-0.52666069
 E06000001,Hartlepool,County or Unitary Authority,Gross disposable household income per head,Gross disposable household income per head,"Boosting productivity, pay, jobs and living standards",2021,Pounds,£,16934,-0.897392794
@@ -10241,3 +9894,350 @@ E07000187,Mendip,Local Authority District,Additions to the housing stock,Additio
 E07000188,Sedgemoor,Local Authority District,Additions to the housing stock,Additions to the housing stock,"Restoring a sense of community, local pride and belonging",Financial year ending 2023,"Net additional dwellings per 1,000 stock","Net additional dwellings per 1,000 stock",12,0.50586807
 E07000246,Somerset West and Taunton,Local Authority District,Additions to the housing stock,Additions to the housing stock,"Restoring a sense of community, local pride and belonging",Financial year ending 2023,"Net additional dwellings per 1,000 stock","Net additional dwellings per 1,000 stock",13,0.674490759
 E07000189,South Somerset,Local Authority District,Additions to the housing stock,Additions to the housing stock,"Restoring a sense of community, local pride and belonging",Financial year ending 2023,"Net additional dwellings per 1,000 stock","Net additional dwellings per 1,000 stock",11,0.33724538
+E06000005,Darlington,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
+E06000001,Hartlepool,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.7,-1.461396646
+E06000002,Middlesbrough,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.6,-1.348981519
+E06000003,Redcar and Cleveland,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
+E06000004,Stockton-on-Tees,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
+E08000037,Gateshead,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
+E08000021,Newcastle upon Tyne,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.2,-2.023472278
+E08000022,North Tyneside,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
+E08000023,South Tyneside,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6.7,-3.709699177
+E08000024,Sunderland,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
+E06000008,Blackburn with Darwen,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.9,-1.686226899
+E06000009,Blackpool,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.1,-1.911057152
+E06000006,Halton,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
+E06000007,Warrington,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
+E07000026,Allerdale,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
+E07000027,Barrow-in-Furness,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
+E07000028,Carlisle,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
+E07000029,Copeland,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
+E07000030,Eden,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.3,1.236566392
+E07000031,South Lakeland,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.4,1.124151266
+E08000001,Bolton,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.3,-2.135887405
+E08000002,Bury,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+E08000003,Manchester,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.5,-2.360717658
+E08000004,Oldham ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.5,-1.236566392
+E08000005,Rochdale,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.7,-1.461396646
+E08000006,Salford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.3,-2.135887405
+E08000007,Stockport,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
+E08000008,Tameside,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.7,-0.33724538
+E08000009,Trafford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+E08000010,Wigan,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+E07000117,Burnley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.9,-1.686226899
+E07000118,Chorley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
+E07000119,Fylde,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
+E07000120,Hyndburn,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4,-0.674490759
+E07000121,Lancaster,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
+E07000122,Pendle,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,7.1,-4.159359683
+E07000123,Preston,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.2,-0.899321013
+E07000124,Ribble Valley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.2,1.348981519
+E07000125,Rossendale,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
+E07000126,South Ribble,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.4,1.124151266
+E07000127,West Lancashire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
+E07000128,Wyre,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.3,-1.011736139
+E08000011,Knowsley ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.7,-0.33724538
+E08000012,Liverpool,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.4,-2.248302532
+E08000014,Sefton,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
+E08000013,St. Helens,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
+E08000015,Wirral,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
+E06000011,East Riding of Yorkshire,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
+E06000010,"Kingston upon Hull, City of",County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.2,-0.899321013
+E06000012,North East Lincolnshire,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+E06000013,North Lincolnshire,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
+E06000014,York,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.1,1.461396646
+E07000163,Craven,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
+E07000164,Hambleton,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2,1.573811772
+E07000165,Harrogate,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.1,1.461396646
+E07000166,Richmondshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
+E07000167,Ryedale,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.2,1.348981519
+E07000168,Scarborough,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+E07000169,Selby,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
+E08000016,Barnsley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+E08000017,Doncaster,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
+E08000018,Rotherham ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+E08000019,Sheffield,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4,-0.674490759
+E08000032,Bradford ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.5,-2.360717658
+E08000033,Calderdale,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
+E08000034,Kirklees ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4,-0.674490759
+E08000035,Leeds ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
+E08000036,Wakefield,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+E06000015,Derby ,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.6,-1.348981519
+E06000016,Leicester,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6.1,-3.035208418
+E06000018,Nottingham,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6,-2.922793291
+E06000017,Rutland ,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
+E07000032,Amber Valley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
+E07000033,Bolsover,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
+E07000034,Chesterfield,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
+E07000035,Derbyshire Dales,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
+E07000036,Erewash,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
+E07000037,High Peak,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
+E07000038,North East Derbyshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
+E07000039,South Derbyshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
+E07000129,Blaby,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.1,1.461396646
+E07000130,Charnwood,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+E07000131,Harborough,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.2,1.348981519
+E07000132,Hinckley and Bosworth,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+E07000133,Melton,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
+E07000134,North West Leicestershire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
+E07000135,Oadby and Wigston,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.2,-0.899321013
+E07000136,Boston,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
+E07000137,East Lindsey,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
+E07000138,Lincoln,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.6,-1.348981519
+E07000139,North Kesteven,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
+E07000140,South Holland,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
+E07000141,South Kesteven,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
+E07000142,West Lindsey,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
+E07000170,Ashfield,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.6,-1.348981519
+E07000171,Bassetlaw,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
+E07000172,Broxtowe,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
+E07000173,Gedling,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
+E07000174,Mansfield,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
+E07000175,Newark and Sherwood,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
+E07000176,Rushcliffe,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
+E06000019,"Herefordshire, County of",County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
+E06000021,Stoke-on-Trent,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.2,-0.899321013
+E06000020,Telford and Wrekin,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.7,-0.33724538
+E07000192,Cannock Chase,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
+E07000193,East Staffordshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
+E07000194,Lichfield,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
+E07000195,Newcastle-under-Lyme,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
+E07000196,South Staffordshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
+E07000197,Stafford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
+E07000198,Staffordshire Moorlands,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
+E07000199,Tamworth,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+E07000218,North Warwickshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
+E07000219,Nuneaton and Bedworth,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
+E07000220,Rugby,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+E07000221,Stratford-on-Avon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
+E07000222,Warwick,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
+E08000025,Birmingham,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,7.5,-4.60902019
+E08000026,Coventry,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.4,-2.248302532
+E08000027,Dudley ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.4,-1.124151266
+E08000028,Sandwell ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6.3,-3.260038671
+E08000029,Solihull,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
+E08000030,Walsall,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6.1,-3.035208418
+E08000031,Wolverhampton,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6.6,-3.597284051
+E07000234,Bromsgrove,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
+E07000235,Malvern Hills,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
+E07000236,Redditch,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
+E07000237,Worcester,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.7,-0.33724538
+E07000238,Wychavon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+E07000239,Wyre Forest,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+E06000055,Bedford,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.2,-0.899321013
+E06000032,Luton,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.8,-2.697963038
+E06000031,Peterborough,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.7,-1.461396646
+E06000033,Southend-on-Sea,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
+E06000034,Thurrock,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
+E07000008,Cambridge,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
+E07000009,East Cambridgeshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
+E07000010,Fenland,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4,-0.674490759
+E07000011,Huntingdonshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
+E07000012,South Cambridgeshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+E07000066,Basildon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.2,-0.899321013
+E07000067,Braintree,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
+E07000068,Brentwood,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
+E07000069,Castle Point,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
+E07000070,Chelmsford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
+E07000071,Colchester,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+E07000072,Epping Forest,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
+E07000073,Harlow,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.5,-2.360717658
+E07000074,Maldon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+E07000075,Rochford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
+E07000076,Tendring,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.2,-2.023472278
+E07000077,Uttlesford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.3,1.236566392
+E07000095,Broxbourne,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
+E07000096,Dacorum,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
+E07000242,East Hertfordshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
+E07000098,Hertsmere,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
+E07000099,North Hertfordshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
+E07000240,St Albans,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.1,1.461396646
+E07000243,Stevenage,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
+E07000102,Three Rivers,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
+E07000103,Watford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+E07000241,Welwyn Hatfield,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+E07000143,Breckland,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
+E07000144,Broadland,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.4,1.124151266
+E07000145,Great Yarmouth,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6.4,-3.372453797
+E07000146,King's Lynn and West Norfolk,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+E07000147,North Norfolk,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
+E07000148,Norwich,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
+E07000149,South Norfolk,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
+E07000200,Babergh,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+E07000202,Ipswich,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.7,-0.33724538
+E07000203,Mid Suffolk,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
+E09000007,Camden,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4,-0.674490759
+E09000001,City of London,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,NA,NA
+E09000012,Hackney,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.3,-1.011736139
+E09000013,Hammersmith and Fulham ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
+E09000014,Haringey,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.4,-1.124151266
+E09000019,Islington,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
+E09000020,Kensington and Chelsea,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.7,-1.461396646
+E09000022,Lambeth ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
+E09000023,Lewisham ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.7,-1.461396646
+E09000025,Newham ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.7,-1.461396646
+E09000028,Southwark,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
+E09000030,Tower Hamlets,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.2,-2.023472278
+E09000032,Wandsworth,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
+E09000033,Westminster,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.7,-0.33724538
+E09000002,Barking and Dagenham,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.5,-2.360717658
+E09000003,Barnet,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.7,-2.585547911
+E09000004,Bexley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+E09000005,Brent ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,7.3,-4.384189937
+E09000006,Bromley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4,-0.674490759
+E09000008,Croydon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.7,-2.585547911
+E09000009,Ealing,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.8,-2.697963038
+E09000010,Enfield,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.5,-2.360717658
+E09000011,Greenwich,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.7,-1.461396646
+E09000015,Harrow,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.1,-1.911057152
+E09000016,Havering,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+E09000017,Hillingdon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.1,-1.911057152
+E09000018,Hounslow,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.5,-1.236566392
+E09000021,Kingston upon Thames,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
+E09000024,Merton,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.2,-0.899321013
+E09000026,Redbridge,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.1,-1.911057152
+E09000027,Richmond upon Thames,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
+E09000029,Sutton,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
+E09000031,Waltham Forest,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6.6,-3.597284051
+E06000036,Bracknell Forest,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+E06000043,Brighton and Hove,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.4,-1.124151266
+E06000046,Isle of Wight,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5,-1.798642025
+E06000035,Medway,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+E06000042,Milton Keynes,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
+E06000044,Portsmouth,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
+E06000038,Reading,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
+E06000039,Slough,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6,-2.922793291
+E06000045,Southampton,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.8,-1.573811772
+E06000037,West Berkshire,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
+E06000040,Windsor and Maidenhead,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
+E06000041,Wokingham,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.4,1.124151266
+E07000061,Eastbourne,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.2,-2.023472278
+E07000062,Hastings,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
+E07000063,Lewes,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5,-1.798642025
+E07000064,Rother,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.2,-0.899321013
+E07000065,Wealden,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
+E07000084,Basingstoke and Deane,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+E07000085,East Hampshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
+E07000086,Eastleigh,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
+E07000087,Fareham,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
+E07000088,Gosport,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
+E07000089,Hart,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
+E07000090,Havant,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.7,-0.33724538
+E07000091,New Forest,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
+E07000092,Rushmoor,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
+E07000093,Test Valley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
+E07000094,Winchester,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
+E07000105,Ashford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
+E07000106,Canterbury,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
+E07000107,Dartford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
+E07000108,Dover,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.5,-1.236566392
+E07000112,Folkestone and Hythe,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.5,-2.360717658
+E07000109,Gravesham,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
+E07000110,Maidstone,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+E07000111,Sevenoaks,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
+E07000113,Swale,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
+E07000114,Thanet,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,5.1,-1.911057152
+E07000115,Tonbridge and Malling,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
+E07000116,Tunbridge Wells,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+E07000177,Cherwell,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
+E07000178,Oxford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
+E07000179,South Oxfordshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+E07000180,Vale of White Horse,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
+E07000181,West Oxfordshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
+E07000207,Elmbridge,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
+E07000208,Epsom and Ewell,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
+E07000209,Guildford,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
+E07000210,Mole Valley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.1,1.461396646
+E07000211,Reigate and Banstead,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2,1.573811772
+E07000212,Runnymede,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+E07000213,Spelthorne,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4,-0.674490759
+E07000214,Surrey Heath,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
+E07000215,Tandridge,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+E07000216,Waverley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
+E07000217,Woking,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+E07000223,Adur,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
+E07000224,Arun,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
+E07000225,Chichester,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
+E07000226,Crawley,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.2,-0.899321013
+E07000227,Horsham,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
+E07000228,Mid Sussex,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
+E07000229,Worthing,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.1,-0.786905886
+E06000022,Bath and North East Somerset,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
+E06000023,"Bristol, City of",County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
+E06000053,Isles of Scilly,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,NA,NA
+E06000024,North Somerset,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+E06000026,Plymouth,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
+E06000025,South Gloucestershire,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.4,1.124151266
+E06000030,Swindon,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
+E06000027,Torbay,County or Unitary Authority,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
+E07000040,East Devon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
+E07000041,Exeter,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
+E07000042,Mid Devon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
+E07000043,North Devon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
+E07000044,South Hams,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.4,1.124151266
+E07000045,Teignbridge,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
+E07000046,Torridge,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.2,1.348981519
+E07000047,West Devon,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
+E07000078,Cheltenham,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.4,1.124151266
+E07000079,Cotswold,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
+E07000080,Forest of Dean,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.2,1.348981519
+E07000081,Gloucester,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+E07000082,Stroud,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.2,1.348981519
+E07000083,Tewkesbury,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.3,1.236566392
+E07000187,Mendip,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
+E07000188,Sedgemoor,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
+E07000189,South Somerset,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+W06000001,Isle of Anglesey,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+W06000002,Gwynedd,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
+W06000003,Conwy,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
+W06000004,Denbighshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
+W06000005,Flintshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
+W06000006,Wrexham,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
+W06000023,Powys,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
+W06000008,Ceredigion,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
+W06000009,Pembrokeshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
+W06000010,Carmarthenshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
+W06000011,Swansea,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.6,-0.224830253
+W06000012,Neath Port Talbot,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
+W06000013,Bridgend,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
+W06000014,Vale of Glamorgan,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
+W06000015,Cardiff,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4,-0.674490759
+W06000016,Rhondda Cynon Taf,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
+W06000024,Merthyr Tydfil,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
+W06000018,Caerphilly,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
+W06000019,Blaenau Gwent,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
+W06000020,Torfaen,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
+W06000021,Monmouthshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.4,1.124151266
+W06000022,Newport,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.3,-1.011736139
+S12000033,Aberdeen City,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
+S12000034,Aberdeenshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.1,1.461396646
+S12000041,Angus,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+S12000035,Argyll and Bute,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+S12000036,City of Edinburgh,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
+S12000005,Clackmannanshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.9,-0.562075633
+S12000006,Dumfries and Galloway,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.7,-0.33724538
+S12000042,Dundee City,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,6.1,-3.035208418
+S12000008,East Ayrshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
+S12000045,East Dunbartonshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.5,1.011736139
+S12000010,East Lothian,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.4,1.124151266
+S12000011,East Renfrewshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
+S12000014,Falkirk,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
+S12000047,Fife,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
+S12000049,Glasgow City,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4.4,-1.124151266
+S12000017,Highland,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
+S12000018,Inverclyde,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.5,-0.112415127
+S12000019,Midlothian,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.2,1.348981519
+S12000020,Moray,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.3,0.112415127
+S12000013,Na h-Eileanan Siar,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.6,0.899321013
+S12000021,North Ayrshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.1,0.33724538
+S12000050,North Lanarkshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.4,0
+S12000023,Orkney Islands,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,1.9,1.686226899
+S12000048,Perth and Kinross,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.8,0.674490759
+S12000038,Renfrewshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+S12000026,Scottish Borders ,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.2,0.224830253
+S12000027,Shetland Islands,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2,1.573811772
+S12000028,South Ayrshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,4,-0.674490759
+S12000029,South Lanarkshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.7,0.786905886
+S12000030,Stirling,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3,0.449660506
+S12000039,West Dunbartonshire,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,3.8,-0.449660506
+S12000040,West Lothian,Local Authority District,Aged 16 years and over modelled unemployment,Aged 16 years and over modelled unemployment,Other,07/2022 - 06/2023,Percentage,%,2.9,0.562075633
